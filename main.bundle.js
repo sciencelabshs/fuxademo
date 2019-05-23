@@ -1431,17 +1431,18 @@ var ProjectService = (function () {
                     this.projectData = JSON.parse(res);
                 }
                 else if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].type === 'demo') {
-                    // load demo from server
-                    this.getDemoProject().subscribe(function (prj) {
+                    console.log('load Demo');
+                    // try root path
+                    this.http.get('./assets/project.demo.fuxap').subscribe(function (prj) {
                         _this.projectData = prj;
                     }, function (err) {
-                        console.log(err);
-                        // try root path
-                        _this.http.get('./assets/project.demo.fuxap').subscribe(function (data) {
-                            _this.projectData = data;
-                        }, function (err) {
-                        });
                     });
+                    // load demo from server
+                    // this.getDemoProject().subscribe(prj => {
+                    //     this.projectData = prj;
+                    // }, err => {
+                    //     console.log(err);                      
+                    // });
                 }
                 else {
                     this.projectData = new ProjectData();
