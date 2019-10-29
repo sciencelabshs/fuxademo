@@ -11271,9 +11271,9 @@ var environment = {
     version: __webpack_require__("../../../../../package.json").version,
     production: false,
     apiEndpoint: null,
-    apiPort: null,
-    serverEnabled: true,
-    type: null
+    apiPort: 1881,
+    serverEnabled: false,
+    type: 'demo'
 };
 
 
