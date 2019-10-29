@@ -3,7 +3,7 @@ webpackJsonp(["main"],{
 /***/ "../../../../../package.json":
 /***/ (function(module, exports) {
 
-module.exports = {"name":"fuxa-editor","version":"1.0.1","keywords":[],"author":"","description":"","private":true,"scripts":{"ng":"ng","start":"ng serve --dev","start-ele":"ng serve --env=winele","start-demo":"ng serve --env=demo","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"dependencies":{"@angular/animations":"5.2.0","@angular/cdk":"^5.2.5","@angular/common":"5.2.0","@angular/compiler":"5.2.0","@angular/core":"5.2.0","@angular/forms":"5.2.0","@angular/http":"5.2.0","@angular/material":"^5.2.5","@angular/platform-browser":"5.2.0","@angular/platform-browser-dynamic":"5.2.0","@angular/router":"5.2.0","@codebyjordan/scrollbar":"^2.1.6","bcryptjs":"^2.4.3","body-parser":"^1.18.2","core-js":"^2.4.1","express":"^4.16.4","file-saver":"^1.3.8","gulp-autoprefixer":"^5.0.0","gulp-concat":"^2.6.1","gulp-csso":"^3.0.1","gulp-htmlmin":"^4.0.0","gulp-minify":"^3.0.2","gulp-sass":"^4.0.1","gulp-sourcemaps":"^2.6.4","gulp-uglify":"^3.0.0","material-design-icons":"^3.0.1","ng5-slider":"^1.1.7","ngx-color-picker":"^7.4.0","ngx-toastr":"^8.10.2","rxjs":"^5.5.2","socket.io-client":"^2.2.0","zone.js":"^0.8.14"},"devDependencies":{"@angular-devkit/core":"^0.7.3","@angular/cli":"1.6.3","@angular/compiler-cli":"^5.0.0","@angular/language-service":"5.2.0","@types/jasmine":"~2.5.53","@types/jasminewd2":"~2.0.2","@types/node":"~6.0.60","codelyzer":"^4.0.2","gulp":"^4.0.0","jasmine-core":"~2.6.2","jasmine-spec-reporter":"~4.1.0","karma":"^4.0.1","karma-chrome-launcher":"~2.1.1","karma-cli":"~1.0.1","karma-coverage-istanbul-reporter":"^1.2.1","karma-jasmine":"~1.1.0","karma-jasmine-html-reporter":"^0.2.2","protractor":"^5.4.0","ts-node":"~3.2.0","tslint":"~5.7.0","typescript":"~2.4.2"},"repository":{}}
+module.exports = {"name":"fuxa","version":"1.0.1","keywords":[],"author":"frangoteam <4frango@gmail.com>","description":"Web-based Process Visualization (SCADA/HMI) software","repository":{"type":"git","url":"https://github.com/frangoteam/FUXA.git"},"scripts":{"ng":"ng","start":"ng serve --dev","start-ele":"ng serve --env=winele","start-demo":"ng serve --env=demo","build":"ng build","test":"ng test","lint":"ng lint","e2e":"ng e2e"},"dependencies":{"@angular/animations":"5.2.0","@angular/cdk":"^5.2.5","@angular/common":"5.2.0","@angular/compiler":"5.2.0","@angular/core":"5.2.0","@angular/forms":"5.2.0","@angular/http":"5.2.0","@angular/material":"^5.2.5","@angular/platform-browser":"5.2.0","@angular/platform-browser-dynamic":"5.2.0","@angular/router":"5.2.0","@codebyjordan/scrollbar":"^2.1.6","@ngx-translate/core":"^9.1.1","@ngx-translate/http-loader":"^2.0.1","bcryptjs":"^2.4.3","body-parser":"^1.18.2","core-js":"^2.4.1","express":"^4.16.4","file-saver":"^1.3.8","gulp-autoprefixer":"^5.0.0","gulp-concat":"^2.6.1","gulp-csso":"^3.0.1","gulp-htmlmin":"^4.0.0","gulp-minify":"^3.0.2","gulp-sass":"^4.0.1","gulp-sourcemaps":"^2.6.4","gulp-uglify":"^3.0.0","material-design-icons":"^3.0.1","ng5-slider":"^1.1.7","ngx-color-picker":"^7.4.0","ngx-drag-drop":"^1.1.0","ngx-toastr":"^8.10.2","rxjs":"^5.5.2","socket.io-client":"^2.2.0","zone.js":"^0.8.14"},"devDependencies":{"@angular-devkit/core":"^0.7.3","@angular/cli":"1.6.3","@angular/compiler-cli":"^5.0.0","@angular/language-service":"5.2.0","@types/jasmine":"~2.5.53","@types/jasminewd2":"~2.0.2","@types/node":"~6.0.60","codelyzer":"^4.0.2","gulp":"^4.0.0","jasmine-core":"~2.6.2","jasmine-spec-reporter":"~4.1.0","karma":"^4.0.1","karma-chrome-launcher":"~2.1.1","karma-cli":"~1.0.1","karma-coverage-istanbul-reporter":"^1.2.1","karma-jasmine":"~1.1.0","karma-jasmine-html-reporter":"^0.2.2","protractor":"^5.4.0","ts-node":"~3.2.0","tslint":"~5.7.0","typescript":"~2.4.2"}}
 
 /***/ }),
 
@@ -593,6 +593,132 @@ var customHttpProvider = {
 
 /***/ }),
 
+/***/ "../../../../../src/app/_helpers/define.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Define; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var Define = (function () {
+    function Define() {
+    }
+    Define.materialIcons = [
+        // Action
+        'accessibility', 'accessible', 'account_balance', 'account_box', 'account_circle', 'alarm', 'alarm_add', 'alarm_off',
+        'alarm_on', 'all_out', 'android', 'announcement', 'aspect_ratio', 'assessment', 'assignment', 'assignment_ind', 'assignment_late',
+        'assignment_return', 'assignment_returned', 'assignment_turned_in', 'autorenew', 'backup', 'book', 'bookmark', 'bookmark_border', 'bug_report', 'build',
+        'cached', 'camera_enhance', 'change_history', 'check_circle', 'check_circle_outline', 'chrome_reader_mode', 'class', 'code',
+        'compare_arrows', 'copyright', 'credit_card', 'dashboard', 'delete', 'delete_outline', 'description', 'dns',
+        'done', 'done_all', 'done_outline', 'donut_large', 'donut_small', 'eject', 'euro_symbol', 'event', 'event_seat', 'exit_to_app',
+        'explore', 'extension', 'face', 'favorite', 'favorite_border', 'feedback', 'find_in_page', 'find_replace', 'fingerprint', 'flight_land', 'flight_takeoff',
+        'flip_to_back', 'flip_to_front', 'gavel', 'get_app', 'gif', 'grade', 'group_work', 'help', 'help_outline', 'highlight_off', 'history',
+        'home', 'hourglass_empty', 'hourglass_full', 'important_devices', 'info', 'input', 'invert_colors', 'label',
+        'language', 'launch', 'list', 'lock', 'lock_open', 'loyalty', 'markunread_mailbox', 'motorcycle', 'note_add', 'offline_pin',
+        'opacity', 'open_in_browser', 'open_with', 'pageview', 'pan_tool', 'perm_camera_mic', 'perm_contact_calendar', 'perm_data_setting', 'perm_device_information', 'perm_identity', 'perm_media',
+        'perm_phone_msg', 'perm_scan_wifi', 'pets', 'picture_in_picture', 'play_for_work', 'polymer', 'power_settings_new', 'print', 'query_builder',
+        'question_answer', 'receipt', 'record_voice_over', 'reorder', 'report_problem', 'restore_page', 'room', 'rowing', 'search', 'settings',
+        'settings_applications', 'settings_backup_restore', 'settings_bluetooth', 'settings_brightness', 'settings_cell', 'settings_ethernet',
+        'settings_input_antenna', 'settings_input_component', 'settings_input_hdmi', 'settings_input_svideo',
+        'settings_overscan', 'settings_phone', 'settings_power', 'settings_remote', 'settings_voice', 'shop', 'shopping_basket', 'shopping_cart', 'speaker_notes', 'spellcheck',
+        'stars', 'store', 'subject', 'supervisor_account', 'swap_horiz', 'swap_horizontal_circle', 'swap_vert', 'swap_vertical_circle', 'tab',
+        'tab_unselected', 'theaters', 'thumb_down', 'thumb_up', 'thumbs_up_down', 'timeline', 'toc', 'toll', 'touch_app', 'track_changes',
+        'trending_down', 'trending_flat', 'trending_up', 'verified_user', 'view_agenda', 'view_array', 'view_carousel', 'view_column', 'view_day',
+        'view_list', 'view_module', 'view_quilt', 'view_stream', 'view_week', 'visibility', 'visibility_off', 'watch_later', 'work',
+        'zoom_in', 'zoom_out',
+        // Alert
+        'add_alert', 'error', 'error_outline', 'warning',
+        // Av
+        'airplay', 'av_timer',
+        'fast_forward', 'fast_rewind', 'featured_play_list', 'featured_video', 'fiber_manual_record', 'fiber_new', 'fiber_pin', 'fiber_smart_record', 'games',
+        'library_add', 'library_books', 'mic', 'mic_none', 'mic_off', 'new_releases', 'not_interested', 'note', 'pause', 'pause_circle_filled',
+        'pause_circle_outline', 'play_arrow', 'play_circle_filled', 'play_circle_outline', 'playlist_add', 'playlist_add_check', 'playlist_play', 'queue', 'queue_play_next', 'radio',
+        'recent_actors', 'remove_from_queue', 'repeat', 'repeat_one', 'shuffle', 'skip_next', 'skip_previous', 'slow_motion_video', 'snooze', 'sort_by_alpha',
+        'stop', 'subscriptions', 'subtitles', 'surround_sound', 'video_label', 'volume_down', 'volume_mute', 'volume_off', 'volume_up', 'web', 'web_asset',
+        // Communication
+        'business', 'call', 'call_end', 'call_made', 'call_merge', 'call_missed', 'call_missed_outgoing', 'call_received',
+        'call_split', 'cancel_presentation', 'chat ', 'chat_bubble', 'chat_bubble_outline', 'clear_all', 'comment', 'contact_mail', 'contact_phone', 'contacts',
+        'dialer_sip', 'dialpad', 'email', 'forum', 'import_contacts', 'import_export', 'invert_colors_off', 'list_alt',
+        'live_help', 'location_off', 'location_on', 'mail_outline', 'message', 'no_sim', 'pause_presentation', 'person_add_disabled', 'phonelink_erase', 'phonelink_lock',
+        'phonelink_ring', 'phonelink_setup', 'portable_wifi_off', 'present_to_all', 'print_disabled', 'ring_volume', 'rss_feed', 'screen_share', 'sentiment_satisfied_alt', 'speaker_phone', 'stay_current_landscape',
+        'stay_current_portrait', 'stop_screen_share', 'swap_calls', 'textsms', 'voicemail', 'vpn_key',
+        // Content
+        'add', 'add_box', 'add_circle', 'add_circle_outline',
+        'archive', 'backspace', 'block', 'clear', 'create', 'delete_sweep', 'drafts', 'filter_list', 'flag',
+        'font_download', 'forward', 'gesture', 'inbox', 'link', 'link_off', 'low_priority', 'move_to_inbox', 'next_week',
+        'redo', 'remove', 'remove_circle', 'remove_circle_outline', 'reply', 'reply_all', 'report', 'report_off', 'save', 'save_alt',
+        'select_all', 'send', 'sort', 'text_format', 'unarchive', 'undo', 'weekend',
+        // Device
+        'access_alarm', 'access_time', 'add_alarm', 'add_to_home_screen', 'airplanemode_active', 'airplanemode_inactive', 'battery_alert', 'battery_full', 'battery_unknown',
+        'bluetooth', 'bluetooth_connected', 'bluetooth_disabled', 'bluetooth_searching', 'brightness_auto', 'brightness_high', 'brightness_low', 'brightness_medium', 'data_usage',
+        'developer_mode', 'devices', 'dvr', 'gps_fixed', 'gps_not_fixed', 'gps_off', 'graphic_eq', 'network_cell', 'network_wifi', 'nfc',
+        'screen_rotation', 'screen_lock_rotation', 'sd_storage', 'settings_system_daydream', 'signal_cellular_no_sim',
+        'signal_cellular_null', 'signal_cellular_off', 'signal_wifi_4_bar_lock', 'signal_wifi_off', 'storage', 'usb', 'wallpaper', 'widgets', 'wifi_tethering',
+        // Editor
+        'attach_file', 'attach_money', 'border_all', 'border_bottom', 'border_clear', 'border_color', 'border_horizontal', 'border_inner', 'border_left', 'border_outer',
+        'border_right', 'border_style', 'border_top', 'border_vertical', 'bubble_chart', 'drag_handle', 'format_align_center', 'format_align_justify', 'format_align_left', 'format_align_right',
+        'format_bold', 'format_clear', 'format_color_fill', 'format_color_reset', 'format_color_text', 'format_indent_decrease', 'format_indent_increase', 'format_italic', 'format_line_spacing',
+        'format_list_bulleted', 'format_list_numbered', 'format_list_numbered_rtl', 'format_paint', 'format_quote', 'format_shapes', 'format_size', 'format_strikethrough', 'format_underlined',
+        'functions', 'highlight', 'insert_chart', 'insert_chart_outlined', 'insert_comment', 'insert_drive_file', 'insert_emoticon', 'insert_photo', 'linear_scale', 'merge_type', 'mode_comment',
+        'monetization_on', 'money_off', 'multiline_chart', 'notes', 'pie_chart', 'publish', 'short_text', 'show_chart', 'space_bar', 'strikethrough_s', 'table_chart',
+        'title', 'vertical_align_bottom', 'vertical_align_center', 'vertical_align_top', 'wrap_text',
+        // File
+        'attachment', 'cloud', 'cloud_circle', 'cloud_done', 'cloud_download', 'cloud_off', 'cloud_queue', 'cloud_upload', 'create_new_folder', 'folder', 'folder_open', 'folder_shared',
+        // Hardware
+        'cast', 'cast_connected', 'cast_for_education', 'computer', 'desktop_mac', 'desktop_windows', 'developer_board', 'device_hub', 'devices_other', 'dock', 'gamepad',
+        'headset', 'headset_mic', 'keyboard', 'keyboard_arrow_down', 'keyboard_arrow_left', 'keyboard_arrow_right', 'keyboard_arrow_up', 'keyboard_backspace', 'keyboard_capslock', 'keyboard_hide',
+        'keyboard_return', 'keyboard_tab', 'keyboard_voice', 'laptop', 'laptop_chromebook', 'laptop_windows', 'memory', 'mouse', 'power_input', 'router', 'scanner', 'security', 'sim_card',
+        'speaker', 'speaker_group', 'tablet_android', 'toys', 'tv', 'videogame_asset', 'watch',
+        // Image
+        'add_a_photo', 'add_to_photos', 'adjust', 'assistant', 'audiotrack', 'blur_circular', 'blur_linear', 'blur_on', 'brightness_1', 'brightness_2', 'brightness_3',
+        'brightness_5', 'brightness_6', 'brightness_7', 'broken_image', 'brush', 'burst_mode', 'camera', 'camera_alt', 'camera_front', 'camera_rear', 'center_focus_strong', 'center_focus_weak',
+        'collections', 'collections_bookmark', 'color_lens', 'colorize', 'compare', 'control_point_duplicate', 'crop', 'crop_7_5', 'crop_16_9', 'crop_5_4', 'crop_3_2', 'crop_din', 'crop_free',
+        'crop_original', 'crop_rotate', 'dehaze', 'details', 'edit', 'exposure', 'exposure_neg_1', 'exposure_neg_2', 'exposure_plus_1', 'exposure_plus_2', 'exposure_zero', 'filter',
+        'filter_1', 'filter_2', 'filter_3', 'filter_4', 'filter_5', 'filter_6', 'filter_7', 'filter_8', 'filter_9', 'filter_b_and_w', 'filter_drama', 'filter_frames', 'filter_hdr', 'filter_none',
+        'filter_tilt_shift', 'filter_vintage', 'flare', 'flash_auto', 'flash_off', 'flash_on', 'flip', 'gradient', 'grain', 'grid_off', 'grid_on', 'hdr_strong', 'hdr_weak', 'healing',
+        'image_aspect_ratio', 'iso', 'leak_add', 'leak_remove', 'looks', 'looks_one', 'looks_two', 'looks_3', 'looks_4', 'looks_5', 'looks_6', 'loupe', 'movie_creation',
+        'movie_filter', 'music_note', 'nature', 'nature_people', 'panorama_fish_eye', 'panorama_horizontal', 'panorama_vertical', 'panorama_wide_angle', 'photo_filter',
+        'photo_size_select_small', 'picture_as_pdf', 'portrait', 'remove_red_eye', 'rotate_left', 'rotate_right', 'slideshow', 'straighten', 'style', 'switch_camera', 'texture',
+        'timelapse', 'timer', 'timer_off', 'tonality', 'transform', 'tune', 'view_comfy', 'view_compact', 'vignette', 'wb_incandescent', 'wb_iridescent', 'wb_sunny',
+        // Maps
+        'beenhere', 'directions', 'directions_bike', 'directions_boat', 'directions_bus', 'directions_car', 'directions_railway', 'directions_run',
+        'directions_subway', 'directions_walk', 'edit_attributes', 'ev_station', 'flight', 'hotel', 'layers', 'layers_clear', 'local_activity', 'local_atm', 'local_bar', 'local_cafe',
+        'local_car_wash', 'local_dining', 'local_drink', 'local_florist', 'local_gas_station', 'local_hospital', 'local_laundry_service', 'local_library', 'local_mall', 'local_parking',
+        'local_pharmacy', 'local_pizza', 'local_printshop', 'local_shipping', 'local_taxi', 'map', 'navigation', 'near_me', 'person_pin', 'person_pin_circle', 'pin_drop', 'rate_review',
+        'restaurant', 'restaurant_menu', 'satellite', 'store_mall_directory', 'streetview', 'subway', 'traffic', 'train', 'tram', 'transfer_within_a_station', 'zoom_out_map',
+        // Navigation
+        'apps', 'arrow_back', 'arrow_downward', 'arrow_drop_down', 'arrow_drop_down_circle', 'arrow_drop_up', 'arrow_forward',
+        'arrow_upward', 'cancel', 'check', 'chevron_left', 'chevron_right', 'close', 'expand_less', 'expand_more', 'first_page', 'fullscreen', 'fullscreen_exit', 'last_page', 'menu', 'more_horiz',
+        'more_vert', 'refresh', 'subdirectory_arrow_left', 'subdirectory_arrow_right', 'unfold_less', 'unfold_more',
+        // Notification
+        'adb', 'airline_seat_flat', 'airline_seat_flat_angled', 'airline_seat_recline_extra', 'airline_seat_recline_normal', 'disc_full', 'more', 'network_check', 'network_locked', 'no_encryption',
+        'power', 'power_off', 'priority_high', 'sd_card', 'sms', 'sms_failed', 'sync', 'sync_disabled', 'sync_problem', 'system_update', 'vibration', 'vpn_lock', 'wc', 'wifi', 'wifi_off',
+        // Places
+        'ac_unit', 'airport_shuttle', 'all_inclusive', 'beach_access', 'business_center', 'casino', 'child_care', 'child_friendly', 'fitness_center', 'golf_course', 'hot_tub', 'kitchen',
+        'pool', 'room_service', 'rv_hookup', 'smoke_free', 'smoking_rooms', 'spa',
+        // Social
+        'cake', 'domain', 'group', 'group_add', 'location_city', 'mood', 'mood_bad', 'notifications', 'notifications_active', 'notifications_none', 'notifications_off', 'notifications_paused',
+        'pages', 'party_mode', 'people_outline', 'person', 'person_add', 'person_outline', 'public', 'school', 'sentiment_dissatisfied', 'sentiment_satisfied', 'sentiment_very_dissatisfied',
+        'sentiment_very_satisfied', 'share', 'thumb_down_alt', 'thumb_up_alt', 'whatshot',
+        // Toggle
+        'check_box', 'check_box_outline_blank', 'indeterminate_check_box', 'radio_button_checked', 'radio_button_unchecked', 'star', 'star_border', 'star_half'
+    ];
+    Define = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
+    ], Define);
+    return Define;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/_helpers/dictionary.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -758,9 +884,22 @@ var Utils = (function () {
         return uuid;
     };
     ;
+    Utils.getShortGUID = function () {
+        var uuid = "", i, random;
+        for (i = 0; i < 16; i++) {
+            random = Math.random() * 16 | 0;
+            if (i == 8) {
+                uuid += "-";
+            }
+            uuid += (i == 12 ? 4 : (i == 16 ? (random & 3 | 8) : random)).toString(16);
+        }
+        return uuid;
+    };
+    ;
     Utils.defaultColor = ['#FFFFFF', '#000000', '#EEECE1', '#1F497D', '#4F81BD', '#C0504D', '#9BBB59', '#8064A2', '#4BACC6',
         '#F79646', '#C00000', '#FF0000', '#FFC000', '#FFD04A', '#FFFF00', '#92D050', '#0AC97D', '#00B050', '#00B0F0', '#4484EF', '#3358C0',
         '#002060', '#7030A0', '#D8D8D8', '#BFBFBF', '#A5A5A5', '#7F7F7F', '#595959', '#3F3F3F', '#262626'];
+    Utils.lineColor = ['#4484ef', '#ef0909', '#00b050', '#ffd04a', '#7030a0', '#a5a5a5', '#c0504d', '#000000'];
     Utils = Utils_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])()
     ], Utils);
@@ -831,6 +970,65 @@ var WindowRef = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/_models/chart.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export Chart */
+/* unused harmony export ChartLine */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ChartViewType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ChartRangeType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartRangeConverter; });
+var Chart = (function () {
+    function Chart() {
+    }
+    return Chart;
+}());
+
+var ChartLine = (function () {
+    function ChartLine() {
+    }
+    return ChartLine;
+}());
+
+var ChartViewType;
+(function (ChartViewType) {
+    ChartViewType["realtime1"] = "chart.viewtype-realtime1";
+    ChartViewType["history"] = "chart.viewtype-history";
+})(ChartViewType || (ChartViewType = {}));
+var ChartRangeType;
+(function (ChartRangeType) {
+    ChartRangeType["last8h"] = "chart.rangetype-last8h";
+    ChartRangeType["last1d"] = "chart.rangetype-last1d";
+    ChartRangeType["last3d"] = "chart.rangetype-last3d";
+    ChartRangeType["last1w"] = "chart.rangetype-last1w";
+})(ChartRangeType || (ChartRangeType = {}));
+var ChartRangeConverter = (function () {
+    function ChartRangeConverter() {
+    }
+    ChartRangeConverter.ChartRangeToHours = function (crt) {
+        var types = Object.keys(ChartRangeType);
+        if (crt === types[0]) {
+            return 8;
+        }
+        else if (crt === types[1]) {
+            return 24;
+        }
+        else if (crt === types[2]) {
+            return 24 * 3;
+        }
+        else if (crt === types[3]) {
+            return 24 * 7;
+        }
+        return 0;
+    };
+    return ChartRangeConverter;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/_models/device.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -882,23 +1080,31 @@ var TagType;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return Hmi; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return View; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return Hmi; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return View; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return LayoutSettings; });
+/* unused harmony export NavigationSettings */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return NaviModeType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return NaviItemType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return NaviItem; });
+/* unused harmony export HeaderSettings */
 /* unused harmony export DocProfile */
 /* unused harmony export MyItem */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return GaugeSettings; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return GaugeProperty; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return GaugeEvent; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return GaugeEventType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return GaugeEventActionType; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return GaugeRangeProperty; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return Variable; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return GaugeSettings; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return GaugeProperty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return GaugeEvent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return GaugeEventType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return GaugeEventActionType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return GaugeRangeProperty; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return Variable; });
 /* unused harmony export VariableRange */
 /* unused harmony export Alarm */
 /* unused harmony export WindowLink */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return SelElement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Event; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return HelpData; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return SelElement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Event; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DaqQuery; });
+/* unused harmony export DaqResult */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return HelpData; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__device__ = __webpack_require__("../../../../../src/app/_models/device.ts");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -914,6 +1120,7 @@ var __extends = (this && this.__extends) || (function () {
 var Hmi = (function () {
     function Hmi() {
         this.name = '';
+        this.layout = new LayoutSettings();
         this.views = [];
         // variables: Variable[] = [];
         // alarmes: Alarm[] = [];
@@ -932,6 +1139,49 @@ var View = (function () {
         this.svgcontent = '';
     }
     return View;
+}());
+
+var LayoutSettings = (function () {
+    function LayoutSettings() {
+        this.start = '';
+        this.navigation = new NavigationSettings();
+        this.header = new HeaderSettings();
+    }
+    return LayoutSettings;
+}());
+
+var NavigationSettings = (function () {
+    function NavigationSettings() {
+        this.mode = Object.keys(NaviModeType).find(function (key) { return NaviModeType[key] === NaviModeType.over; });
+        this.type = Object.keys(NaviItemType).find(function (key) { return NaviItemType[key] === NaviItemType.block; });
+    }
+    return NavigationSettings;
+}());
+
+var NaviModeType;
+(function (NaviModeType) {
+    NaviModeType["void"] = "item.navsmode-none";
+    NaviModeType["push"] = "item.navsmode-push";
+    NaviModeType["over"] = "item.navsmode-over";
+    NaviModeType["fix"] = "item.navsmode-fix";
+})(NaviModeType || (NaviModeType = {}));
+var NaviItemType;
+(function (NaviItemType) {
+    NaviItemType["icon"] = "item.navtype-icons";
+    NaviItemType["text"] = "item.navtype-text";
+    NaviItemType["block"] = "item.navtype-icons-text-block";
+    NaviItemType["inline"] = "item.navtype-icons-text-inline";
+})(NaviItemType || (NaviItemType = {}));
+var NaviItem = (function () {
+    function NaviItem() {
+    }
+    return NaviItem;
+}());
+
+var HeaderSettings = (function () {
+    function HeaderSettings() {
+    }
+    return HeaderSettings;
 }());
 
 var DocProfile = (function () {
@@ -1038,6 +1288,18 @@ var Event = (function () {
     return Event;
 }());
 
+var DaqQuery = (function () {
+    function DaqQuery() {
+    }
+    return DaqQuery;
+}());
+
+var DaqResult = (function () {
+    function DaqResult() {
+    }
+    return DaqResult;
+}());
+
 var HelpData = (function () {
     function HelpData() {
     }
@@ -1061,6 +1323,7 @@ var HelpData = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__helpers_endpointapi__ = __webpack_require__("../../../../../src/app/_helpers/endpointapi.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_toastr__ = __webpack_require__("../../../../ngx-toastr/fesm5/ngx-toastr.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1077,15 +1340,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var HmiService = (function () {
-    function HmiService(projectService, toastr) {
+    function HmiService(projectService, translateService, toastr) {
         this.projectService = projectService;
+        this.translateService = translateService;
         this.toastr = toastr;
         // @Output() onSaveCurrent: EventEmitter<boolean> = new EventEmitter();
         this.onVariableChanged = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.onDeviceChanged = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.onDeviceBrowse = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.onDeviceNodeAttribute = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.onDaqResult = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.version = "1.00";
         this.hmiresource = "hmi-config";
         this.viewSignalGaugeMap = new ViewSignalGaugeMap();
@@ -1124,6 +1390,9 @@ var HmiService = (function () {
             // this.onVariableChanged.emit(this.variables[sigId]);
         }
     };
+    HmiService.prototype.getAllSignals = function () {
+        return this.variables;
+    };
     //#region Scket.io
     /**
      * Init the socket and subsribe to device status and signal value change
@@ -1137,7 +1406,9 @@ var HmiService = (function () {
             this.socket.on('device-status', function (message) {
                 _this.onDeviceChanged.emit(message);
                 if (message.status === 'connect-error') {
-                    _this.toastr.error('Device "' + message.id + '" connection error!', '', {
+                    var msg = '';
+                    _this.translateService.get('msg.device-connection-error', { value: message.id }).subscribe(function (txt) { msg = txt; });
+                    _this.toastr.error(msg, '', {
                         timeOut: 3000,
                         closeButton: true,
                     });
@@ -1149,7 +1420,7 @@ var HmiService = (function () {
                 for (var idx = 0; idx < message.values.length; idx++) {
                     var varid = message.id + HmiService_1.separator + message.values[idx].id;
                     if (!_this.variables[varid]) {
-                        _this.variables[varid] = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["k" /* Variable */](varid, message.id, message.values[idx].id);
+                        _this.variables[varid] = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["p" /* Variable */](varid, message.id, message.values[idx].id);
                     }
                     _this.variables[varid].value = message.values[idx].value;
                     _this.setSignalValue(_this.variables[varid]);
@@ -1162,6 +1433,10 @@ var HmiService = (function () {
             // device node attribute
             this.socket.on('device-node-attribute', function (message) {
                 _this.onDeviceNodeAttribute.emit(message);
+            });
+            // daq values
+            this.socket.on('daq-result', function (message) {
+                _this.onDaqResult.emit(message);
             });
             this.askDeviceValues();
         }
@@ -1182,16 +1457,6 @@ var HmiService = (function () {
             this.socket.emit('device-values', 'get');
         }
     };
-    HmiService.prototype.getAllSignals = function () {
-        return this.variables;
-    };
-    // public getMessages = () => {
-    //     return Observable.create((observer) => {
-    //         this.socket.on('device-status', (message) => {
-    //             observer.next(message);
-    //         });
-    //     });
-    // }
     HmiService.prototype.emitMappedSignalsGauge = function (domViewId) {
         var sigsToEmit = this.viewSignalGaugeMap.getSignalIds(domViewId);
         for (var idx = 0; idx < sigsToEmit.length; idx++) {
@@ -1218,8 +1483,21 @@ var HmiService = (function () {
             this.socket.emit('device-node-attribute', msg);
         }
     };
+    HmiService.prototype.queryDaqValues = function (msg) {
+        if (this.socket) {
+            this.socket.emit('daq-query', msg);
+        }
+    };
     //#endregion
     //#region Signals Gauges Mapping
+    HmiService.prototype.addSignal = function (signalId, ga) {
+        var sigsplit = signalId.split(HmiService_1.separator);
+        // add to variable list
+        if (!this.variables[signalId]) {
+            var v = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["p" /* Variable */](signalId, sigsplit[0], sigsplit[1]);
+            this.variables[signalId] = v;
+        }
+    };
     /**
      * map the dom view with signal and gauge settings
      * @param domViewId
@@ -1231,7 +1509,7 @@ var HmiService = (function () {
         var sigsplit = signalId.split(HmiService_1.separator);
         // add to variable list
         if (!this.variables[signalId]) {
-            var v = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["k" /* Variable */](signalId, sigsplit[0], sigsplit[1]);
+            var v = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["p" /* Variable */](signalId, sigsplit[0], sigsplit[1]);
             this.variables[signalId] = v;
         }
         // add to device list
@@ -1246,9 +1524,20 @@ var HmiService = (function () {
     /**
      * remove mapped dom view Gauges
      * @param domViewId
+     * return the removed gauge settings id list with signal id binded
      */
     HmiService.prototype.removeSignalGaugeFromMap = function (domViewId) {
+        var _this = this;
+        var sigsIdremoved = this.viewSignalGaugeMap.getSignalIds(domViewId);
+        var result = {};
+        sigsIdremoved.forEach(function (sigid) {
+            var gs = _this.viewSignalGaugeMap.signalsGauges(domViewId, sigid);
+            if (gs) {
+                result[sigid] = gs[0].id;
+            }
+        });
         this.viewSignalGaugeMap.remove(domViewId);
+        return result;
     };
     /**
      * get the gauges settings list of mapped dom view with the signal
@@ -1259,17 +1548,65 @@ var HmiService = (function () {
         return Object.values(this.viewSignalGaugeMap.signalsGauges(domViewId, sigid));
     };
     /**
-     * get all signals mapped in all dom views
+     * get all signals property mapped in all dom views
+     * @param fulltext a copy with item name and source
      */
-    HmiService.prototype.getMappedVariables = function () {
+    HmiService.prototype.getMappedVariables = function (fulltext) {
         var _this = this;
         var result = [];
         this.viewSignalGaugeMap.getAllSignalIds().forEach(function (sigid) {
             if (_this.variables[sigid]) {
-                result.push(_this.variables[sigid]);
+                var toadd = _this.variables[sigid];
+                if (fulltext) {
+                    toadd = Object.assign({}, _this.variables[sigid]);
+                    var device = _this.projectService.getDeviceFromId(toadd.source);
+                    if (device) {
+                        toadd['source'] = device.name;
+                        if (device.tags[toadd.name]) {
+                            toadd['name'] = device.tags[toadd.name].name;
+                        }
+                    }
+                }
+                result.push(toadd);
             }
         });
         return result;
+    };
+    /**
+     * get singal property, complate the signal property with device tag property
+     * @param sigid
+     * @param fulltext
+     */
+    HmiService.prototype.getMappedVariable = function (sigid, fulltext) {
+        if (this.variables[sigid]) {
+            var result = this.variables[sigid];
+            if (fulltext) {
+                result = Object.assign({}, this.variables[sigid]);
+                var device = this.projectService.getDeviceFromId(result.source);
+                if (device) {
+                    result['source'] = device.name;
+                    if (device.tags[result.name]) {
+                        result['name'] = device.tags[result.name].name;
+                    }
+                }
+            }
+            return result;
+        }
+    };
+    //#endregion
+    //#region Chart Function
+    HmiService.prototype.getChart = function (id) {
+        return this.projectService.getChart(id);
+    };
+    HmiService.prototype.getChartSignal = function (id) {
+        var chart = this.projectService.getChart(id);
+        if (chart) {
+            var varsId_1 = [];
+            chart.lines.forEach(function (line) {
+                varsId_1.push(HmiService_1.toVariableId(line.device, line.id));
+            });
+            return varsId_1;
+        }
     };
     //#endregion
     //#region My Static functions
@@ -1293,9 +1630,14 @@ var HmiService = (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
     ], HmiService.prototype, "onDeviceNodeAttribute", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
+    ], HmiService.prototype, "onDaqResult", void 0);
     HmiService = HmiService_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_project_service__["a" /* ProjectService */],
+            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_6_ngx_toastr__["b" /* ToastrService */]])
     ], HmiService);
     return HmiService;
@@ -1318,6 +1660,7 @@ var ViewSignalGaugeMap = (function () {
     };
     ViewSignalGaugeMap.prototype.remove = function (domViewId) {
         delete this.views[domViewId];
+        return;
     };
     ViewSignalGaugeMap.prototype.signalsGauges = function (domViewId, sigid) {
         return this.views[domViewId][sigid];
@@ -1359,8 +1702,9 @@ var ViewSignalGaugeMap = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_device__ = __webpack_require__("../../../../../src/app/_models/device.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__helpers_endpointapi__ = __webpack_require__("../../../../../src/app/_helpers/endpointapi.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_toastr__ = __webpack_require__("../../../../ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_file_saver__ = __webpack_require__("../../../../file-saver/FileSaver.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_file_saver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_file_saver__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_file_saver__ = __webpack_require__("../../../../file-saver/FileSaver.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_file_saver___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_file_saver__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1378,10 +1722,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ProjectService = (function () {
-    function ProjectService(http, toastr) {
+    function ProjectService(http, translateService, toastr) {
         var _this = this;
         this.http = http;
+        this.translateService = translateService;
         this.toastr = toastr;
         this.onSaveCurrent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.onLoadHmi = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
@@ -1391,6 +1737,7 @@ var ProjectService = (function () {
         this.prjresource = 'prj-data';
         this.endPointConfig = __WEBPACK_IMPORTED_MODULE_5__helpers_endpointapi__["a" /* EndPointApi */].getURL(); //"http://localhost:1881";
         this.projectOld = '';
+        this.saveworking = false;
         if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment */].serverEnabled) {
             this.checkServer().subscribe(function (result) {
                 _this.serverSettings = result;
@@ -1399,7 +1746,9 @@ var ProjectService = (function () {
             }, function (error) {
                 _this.load();
                 console.error(error);
-                _this.toastr.error('Server connection failed!', '', {
+                var msg = '';
+                _this.translateService.get('msg.server-connection-error').subscribe(function (txt) { msg = txt; });
+                _this.toastr.error(msg, '', {
                     timeOut: 3000,
                     closeButton: true,
                     disableTimeOut: true
@@ -1467,18 +1816,25 @@ var ProjectService = (function () {
             // if (prjdiff) {
             //     return true;
             // }
-            this.setServerProject(prjData).subscribe(function (result) {
-                _this.projectOld = JSON.parse(JSON.stringify(_this.projectData));
-                console.log(result);
-                // this.toastr.success('Project save successful!');
-            }, function (err) {
-                console.log(err);
-                _this.toastr.error('Project save failed', '', {
-                    timeOut: 3000,
-                    closeButton: true,
-                    disableTimeOut: true
+            if (this.checSaveWorking(true)) {
+                console.log('my save');
+                this.setServerProject(prjData).subscribe(function (result) {
+                    _this.projectOld = JSON.parse(JSON.stringify(_this.projectData));
+                    console.log(result);
+                    _this.checSaveWorking(false);
+                    // this.toastr.success('Project save successful!');
+                }, function (err) {
+                    console.log(err);
+                    _this.checSaveWorking(false);
+                    var msg = '';
+                    _this.translateService.get('msg.project-save-error').subscribe(function (txt) { msg = txt; });
+                    _this.toastr.error(msg, '', {
+                        timeOut: 3000,
+                        closeButton: true,
+                        disableTimeOut: true
+                    });
                 });
-            });
+            }
         }
         else {
             localStorage.setItem(this.prjresource, JSON.stringify(prjData));
@@ -1490,7 +1846,7 @@ var ProjectService = (function () {
         var date = new Date();
         var content = JSON.stringify(this.convertToSave(this.getProject()));
         var blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
-        __WEBPACK_IMPORTED_MODULE_7_file_saver__["saveAs"](blob, filename);
+        __WEBPACK_IMPORTED_MODULE_8_file_saver__["saveAs"](blob, filename);
     };
     /**
      * Remove Tag value to save without value
@@ -1515,6 +1871,13 @@ var ProjectService = (function () {
         }
         return result;
     };
+    ProjectService.prototype.checSaveWorking = function (check) {
+        if (check && this.saveworking) {
+            return false;
+        }
+        this.saveworking = check;
+        return true;
+    };
     //#region to server api
     ProjectService.prototype.getServerProject = function () {
         return this.http.get(this.endPointConfig + '/api/project', {});
@@ -1529,13 +1892,13 @@ var ProjectService = (function () {
     //#endregion
     //#region hmi resource json struct
     /**
-     * get hmiresource
+     * get hmi resource
      */
     ProjectService.prototype.getHmi = function () {
         return (this.projectData) ? this.projectData.hmi : null;
     };
     /**
-     * save hmi resource to backend
+     * save hmi resource to project
      * @param hmi hmiresource to save
      */
     ProjectService.prototype.setHmi = function (hmi, notify) {
@@ -1543,6 +1906,28 @@ var ProjectService = (function () {
         if (notify) {
             this.notifyToLoadHmi();
         }
+    };
+    //#endregion
+    //#region charts resource
+    /**
+     * get charts resource
+     */
+    ProjectService.prototype.getCharts = function () {
+        return (this.projectData) ? (this.projectData.charts) ? this.projectData.charts : [] : null;
+    };
+    ProjectService.prototype.getChart = function (id) {
+        for (var i = 0; i < this.projectData.charts.length; i++) {
+            if (this.projectData.charts[i].id === id) {
+                return this.projectData.charts[i];
+            }
+        }
+    };
+    /**
+     * save the charts to project
+     * @param charts
+     */
+    ProjectService.prototype.setCharts = function (charts) {
+        this.projectData.charts = charts;
     };
     //#endregion
     //#region Notify
@@ -1612,6 +1997,16 @@ var ProjectService = (function () {
     };
     ProjectService.prototype.getDevices = function () {
         return (this.projectData) ? this.projectData.devices : {};
+    };
+    ProjectService.prototype.getDeviceFromId = function (id) {
+        var _this = this;
+        var result;
+        Object.keys(this.projectData.devices).forEach(function (k) {
+            if (_this.projectData.devices[k].id === id) {
+                result = _this.projectData.devices[k];
+            }
+        });
+        return result;
     };
     ProjectService.prototype.setDevices = function (devices, nosave) {
         this.projectData.devices = devices;
@@ -1731,6 +2126,7 @@ var ProjectService = (function () {
     ProjectService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_7__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_6_ngx_toastr__["b" /* ToastrService */]])
     ], ProjectService);
     return ProjectService;
@@ -1740,8 +2136,9 @@ var ProjectData = (function () {
     function ProjectData() {
         this.version = "1.00";
         this.server = new __WEBPACK_IMPORTED_MODULE_4__models_device__["a" /* Device */]();
-        this.hmi = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["i" /* Hmi */]();
+        this.hmi = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["j" /* Hmi */]();
         this.devices = {};
+        this.charts = [];
     }
     return ProjectData;
 }());
@@ -1758,7 +2155,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".work-container {\r\n    /* min-height: 450px !important; */\r\n    /* height: 100% !important; */\r\n    background-color:#F1F1F1;\r\n    height: calc(100% - (46px));\r\n    min-width: 800px;\r\n}\r\n\r\n.header {\r\n    /* height: 40px !important;     */\r\n}\r\n\r\n.footer {\r\n    height: 20px;\r\n    position:absolute;\r\n    bottom:0px;\r\n}\r\n\r\n.mysidenav-container {\r\n    width: 100%;\r\n    height: 100% !important;\r\n    background-color:#F1F1F1;\r\n}\r\n\r\n.fab-button {\r\n    position: absolute;\r\n    bottom: 20px;\r\n    left: 10px;\r\n    color: rgba(255,255,255,1);\r\n    background-color: rgba(68,138,255, 0);\r\n    /* background-color: rgba(0,0,0,0.9); */\r\n}", ""]);
+exports.push([module.i, "\r\n.container {\r\n    width: 100%;\r\n    height: 100% !important;\r\n    background-color:#FFFFFF\r\n}\r\n\r\n.work-editor {\r\n    background-color:#FFFFFF;\r\n    height: calc(100% - (46px));\r\n    min-width: 800px;\r\n}\r\n\r\n.work-home {\r\n    background-color:#FFFFFF;\r\n    height: 100%;\r\n    min-width: 800px;\r\n}\r\n\r\n.header {\r\n    /* height: 40px !important;     */\r\n}\r\n\r\n.footer {\r\n    height: 20px;\r\n    position:absolute;\r\n    bottom:0px;\r\n}\r\n\r\n.fab-button {\r\n    position: absolute;\r\n    bottom: 20px;\r\n    left: 10px;\r\n    color: rgba(255,255,255,1);\r\n    background-color: rgba(68,138,255, 0);\r\n    /* background-color: rgba(0,0,0,0.9); */\r\n}", ""]);
 
 // exports
 
@@ -1771,7 +2168,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-sidenav-container class=\"mysidenav-container\">\r\n  <app-header class=\"header\" [hidden]=\"isHidden()\"></app-header>\r\n  <div class=\"work-container\">\r\n    <router-outlet></router-outlet>\r\n    <ngx-fab-button #fabmenu icon=\"menu\" iconOpen=\"menu\" class=\"fab-button\" color=\"rgba(68,138,255, 1)\">\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"editor\" (click)=\"onGoTo('editor')\">editor</ngx-fab-item-button>\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"lab\" (click)=\"onGoTo('lab')\">lab</ngx-fab-item-button>\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"home\" (click)=\"onGoTo('home')\">home</ngx-fab-item-button>\r\n    </ngx-fab-button>\r\n  </div>\r\n</mat-sidenav-container>"
+module.exports = "<div class=\"container\">\r\n  <app-header class=\"header\" [hidden]=\"isHidden()\"></app-header>\r\n  <div [ngClass]=\"(isHidden()) ? 'work-home' : 'work-editor'\">\r\n    <router-outlet></router-outlet>\r\n    <ngx-fab-button #fabmenu icon=\"menu\" iconOpen=\"menu\" class=\"fab-button\" color=\"rgba(68,138,255, 1)\">\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"editor\" (click)=\"onGoTo('editor')\">editor</ngx-fab-item-button>\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"lab\" (click)=\"onGoTo('lab')\">lab</ngx-fab-item-button>\r\n      <ngx-fab-item-button color=\"rgba(68,138,255, 1)\" content=\"home\" (click)=\"onGoTo('home')\">home</ngx-fab-item-button>\r\n    </ngx-fab-button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -1783,6 +2180,7 @@ module.exports = "<mat-sidenav-container class=\"mysidenav-container\">\r\n  <ap
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1795,18 +2193,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppComponent = (function () {
-    function AppComponent(router, location) {
+    function AppComponent(router, fuxaLanguage, location) {
         this.router = router;
+        this.fuxaLanguage = fuxaLanguage;
         this.title = 'app';
         this.location = location;
+        // this language will be used as a fallback when a translation isn't found in the current language
+        fuxaLanguage.setDefaultLang('en');
+        // the lang to use, if the lang isn't available, it will use the current loader to get them
+        fuxaLanguage.use('en');
     }
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent.prototype.ngAfterViewInit = function () {
     };
     AppComponent.prototype.isHidden = function () {
-        var list = ['/lab'], route = this.location.path();
+        var list = ['/lab', '/home'], route = this.location.path();
         return (list.indexOf(route) > -1);
     };
     AppComponent.prototype.onGoTo = function (goto) {
@@ -1823,7 +2227,9 @@ var AppComponent = (function () {
             template: __webpack_require__("../../../../../src/app/app.component.html"),
             styles: [__webpack_require__("../../../../../src/app/app.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_common__["f" /* Location */]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -1848,6 +2254,7 @@ var appConfig = {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* unused harmony export createTranslateLoader */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
@@ -1858,55 +2265,66 @@ var appConfig = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_ngx_color_picker__ = __webpack_require__("../../../../ngx-color-picker/dist/ngx-color-picker.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_ng5_slider__ = __webpack_require__("../../../../ng5-slider/esm5/ng5-slider.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_ngx_toastr__ = __webpack_require__("../../../../ngx-toastr/fesm5/ngx-toastr.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__ = __webpack_require__("../../../../../src/app/editor/editor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__lab_lab_component__ = __webpack_require__("../../../../../src/app/lab/lab.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__device_device_component__ = __webpack_require__("../../../../../src/app/device/device.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__device_device_property_device_property_component__ = __webpack_require__("../../../../../src/app/device/device-property/device-property.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__device_tag_property_tag_property_component__ = __webpack_require__("../../../../../src/app/device/tag-property/tag-property.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__device_device_list_device_list_component__ = __webpack_require__("../../../../../src/app/device/device-list/device-list.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__device_device_map_device_map_component__ = __webpack_require__("../../../../../src/app/device/device-map/device-map.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__fuxa_view_fuxa_view_component__ = __webpack_require__("../../../../../src/app/fuxa-view/fuxa-view.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__tester_tester_component__ = __webpack_require__("../../../../../src/app/tester/tester.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__helpers_custom_http__ = __webpack_require__("../../../../../src/app/_helpers/custom-http.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__tester_tester_service__ = __webpack_require__("../../../../../src/app/tester/tester.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__help_tutorial_tutorial_component__ = __webpack_require__("../../../../../src/app/help/tutorial/tutorial.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__helpers_windowref__ = __webpack_require__("../../../../../src/app/_helpers/windowref.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__helpers_dictionary__ = __webpack_require__("../../../../../src/app/_helpers/dictionary.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__gui_helpers_fab_button_ngx_fab_button_component__ = __webpack_require__("../../../../../src/app/gui-helpers/fab-button/ngx-fab-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__gui_helpers_fab_button_ngx_fab_item_button_component__ = __webpack_require__("../../../../../src/app/gui-helpers/fab-button/ngx-fab-item-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__gui_helpers_treetable_treetable_component__ = __webpack_require__("../../../../../src/app/gui-helpers/treetable/treetable.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__gui_helpers_confirm_dialog_confirm_dialog_component__ = __webpack_require__("../../../../../src/app/gui-helpers/confirm-dialog/confirm-dialog.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__directives_dialog_draggable_directive__ = __webpack_require__("../../../../../src/app/_directives/dialog-draggable.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__directives_modal_position_cache__ = __webpack_require__("../../../../../src/app/_directives/modal-position.cache.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__directives_ngx_draggable_directive__ = __webpack_require__("../../../../../src/app/_directives/ngx-draggable.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__directives_number_directive__ = __webpack_require__("../../../../../src/app/_directives/number.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__directives_lazyFor_directive__ = __webpack_require__("../../../../../src/app/_directives/lazyFor.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__gauges_gauge_base_gauge_base_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-base/gauge-base.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__dynamic_dynamic_component__ = __webpack_require__("../../../../../src/app/dynamic/dynamic.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__gauges_switch_switch_component__ = __webpack_require__("../../../../../src/app/gauges/switch/switch.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__gauges_controls_value_value_component__ = __webpack_require__("../../../../../src/app/gauges/controls/value/value.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__gauges_proc_eng_compressor_compressor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/compressor/compressor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__gauges_proc_eng_exchanger_exchanger_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/exchanger/exchanger.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__gauges_proc_eng_valve_valve_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/valve/valve.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__gauges_proc_eng_motor_motor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/motor/motor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__gauges_gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__gauges_gauge_property_flex_input_flex_input_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-input/flex-input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__gauges_gauge_property_flex_head_flex_head_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-head/flex-head.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__gauges_gauge_property_flex_event_flex_event_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-event/flex-event.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__gui_helpers_mat_select_search_mat_select_search_module__ = __webpack_require__("../../../../../src/app/gui-helpers/mat-select-search/mat-select-search.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__gauges_controls_html_input_html_input_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-input/html-input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__gauges_controls_html_button_html_button_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-button/html-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__gauges_controls_html_select_html_select_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-select/html-select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__gauges_controls_gauge_progress_gauge_progress_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-progress/gauge-progress.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__gauges_controls_gauge_semaphore_gauge_semaphore_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-semaphore/gauge-semaphore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9_ngx_drag_drop__ = __webpack_require__("../../../../ngx-drag-drop/ngx-drag-drop.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ngx_translate_http_loader__ = __webpack_require__("../../../../@ngx-translate/http-loader/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__app_component__ = __webpack_require__("../../../../../src/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__app_routing__ = __webpack_require__("../../../../../src/app/app.routing.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__home_home_component__ = __webpack_require__("../../../../../src/app/home/home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__header_header_component__ = __webpack_require__("../../../../../src/app/header/header.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__iframe_iframe_component__ = __webpack_require__("../../../../../src/app/iframe/iframe.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__sidenav_sidenav_component__ = __webpack_require__("../../../../../src/app/sidenav/sidenav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__ = __webpack_require__("../../../../../src/app/editor/editor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__editor_layout_property_layout_property_component__ = __webpack_require__("../../../../../src/app/editor/layout-property/layout-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__editor_chart_config_chart_config_component__ = __webpack_require__("../../../../../src/app/editor/chart-config/chart-config.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__lab_lab_component__ = __webpack_require__("../../../../../src/app/lab/lab.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__device_device_component__ = __webpack_require__("../../../../../src/app/device/device.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__device_device_property_device_property_component__ = __webpack_require__("../../../../../src/app/device/device-property/device-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__device_tag_property_tag_property_component__ = __webpack_require__("../../../../../src/app/device/tag-property/tag-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__device_device_list_device_list_component__ = __webpack_require__("../../../../../src/app/device/device-list/device-list.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__device_device_map_device_map_component__ = __webpack_require__("../../../../../src/app/device/device-map/device-map.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__fuxa_view_fuxa_view_component__ = __webpack_require__("../../../../../src/app/fuxa-view/fuxa-view.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__tester_tester_component__ = __webpack_require__("../../../../../src/app/tester/tester.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__helpers_custom_http__ = __webpack_require__("../../../../../src/app/_helpers/custom-http.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__tester_tester_service__ = __webpack_require__("../../../../../src/app/tester/tester.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__help_tutorial_tutorial_component__ = __webpack_require__("../../../../../src/app/help/tutorial/tutorial.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__helpers_windowref__ = __webpack_require__("../../../../../src/app/_helpers/windowref.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__helpers_define__ = __webpack_require__("../../../../../src/app/_helpers/define.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__helpers_dictionary__ = __webpack_require__("../../../../../src/app/_helpers/dictionary.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__gui_helpers_fab_button_ngx_fab_button_component__ = __webpack_require__("../../../../../src/app/gui-helpers/fab-button/ngx-fab-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__gui_helpers_fab_button_ngx_fab_item_button_component__ = __webpack_require__("../../../../../src/app/gui-helpers/fab-button/ngx-fab-item-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__gui_helpers_treetable_treetable_component__ = __webpack_require__("../../../../../src/app/gui-helpers/treetable/treetable.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__gui_helpers_confirm_dialog_confirm_dialog_component__ = __webpack_require__("../../../../../src/app/gui-helpers/confirm-dialog/confirm-dialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__gui_helpers_ngx_dygraphs_ngx_dygraphs_component__ = __webpack_require__("../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__directives_dialog_draggable_directive__ = __webpack_require__("../../../../../src/app/_directives/dialog-draggable.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__directives_modal_position_cache__ = __webpack_require__("../../../../../src/app/_directives/modal-position.cache.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__directives_ngx_draggable_directive__ = __webpack_require__("../../../../../src/app/_directives/ngx-draggable.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__directives_number_directive__ = __webpack_require__("../../../../../src/app/_directives/number.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__directives_lazyFor_directive__ = __webpack_require__("../../../../../src/app/_directives/lazyFor.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__gauges_gauge_base_gauge_base_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-base/gauge-base.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__dynamic_dynamic_component__ = __webpack_require__("../../../../../src/app/dynamic/dynamic.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__gauges_switch_switch_component__ = __webpack_require__("../../../../../src/app/gauges/switch/switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__gauges_controls_value_value_component__ = __webpack_require__("../../../../../src/app/gauges/controls/value/value.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__gauges_proc_eng_compressor_compressor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/compressor/compressor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__gauges_proc_eng_exchanger_exchanger_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/exchanger/exchanger.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__gauges_proc_eng_valve_valve_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/valve/valve.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__gauges_proc_eng_motor_motor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/motor/motor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__gauges_gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__gauges_chart_property_chart_property_component__ = __webpack_require__("../../../../../src/app/gauges/chart-property/chart-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__gauges_gauge_property_flex_input_flex_input_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-input/flex-input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__gauges_gauge_property_flex_head_flex_head_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-head/flex-head.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__gauges_gauge_property_flex_event_flex_event_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/flex-event/flex-event.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__gui_helpers_mat_select_search_mat_select_search_module__ = __webpack_require__("../../../../../src/app/gui-helpers/mat-select-search/mat-select-search.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__gauges_controls_html_input_html_input_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-input/html-input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__gauges_controls_html_button_html_button_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-button/html-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65__gauges_controls_html_select_html_select_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-select/html-select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_66__gauges_controls_html_chart_html_chart_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-chart/html-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_67__gauges_controls_gauge_progress_gauge_progress_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-progress/gauge-progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_68__gauges_controls_gauge_semaphore_gauge_semaphore_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-semaphore/gauge-semaphore.component.ts");
 // the start/root module that tells Angular how to assemble the application.
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1972,94 +2390,132 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+function createTranslateLoader(http) {
+    return new __WEBPACK_IMPORTED_MODULE_11__ngx_translate_http_loader__["a" /* TranslateHttpLoader */](http, './assets/i18n/', '.json');
+}
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_11__home_home_component__["a" /* HomeComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__["c" /* EditorComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__header_header_component__["b" /* HeaderComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */],
-                __WEBPACK_IMPORTED_MODULE_14__lab_lab_component__["a" /* LabComponent */],
-                __WEBPACK_IMPORTED_MODULE_15__device_device_component__["a" /* DeviceComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__device_tag_property_tag_property_component__["a" /* TagPropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__device_device_property_device_property_component__["a" /* DevicePropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_18__device_device_list_device_list_component__["a" /* DeviceListComponent */],
-                __WEBPACK_IMPORTED_MODULE_19__device_device_map_device_map_component__["a" /* DeviceMapComponent */],
-                __WEBPACK_IMPORTED_MODULE_20__fuxa_view_fuxa_view_component__["a" /* FuxaViewComponent */],
-                __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__["b" /* DialogDocProperty */],
-                __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__["a" /* DialogDocName */],
-                __WEBPACK_IMPORTED_MODULE_33__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__header_header_component__["a" /* DialogInfo */],
-                __WEBPACK_IMPORTED_MODULE_40__gauges_gauge_base_gauge_base_component__["a" /* GaugeBaseComponent */],
-                __WEBPACK_IMPORTED_MODULE_42__gauges_switch_switch_component__["a" /* SwitchComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__gauges_proc_eng_compressor_compressor_component__["a" /* CompressorComponent */],
-                __WEBPACK_IMPORTED_MODULE_46__gauges_proc_eng_valve_valve_component__["a" /* ValveComponent */],
-                __WEBPACK_IMPORTED_MODULE_47__gauges_proc_eng_motor_motor_component__["a" /* MotorComponent */],
-                __WEBPACK_IMPORTED_MODULE_45__gauges_proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */],
-                __WEBPACK_IMPORTED_MODULE_53__gauges_controls_html_input_html_input_component__["a" /* HtmlInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__gauges_controls_html_button_html_button_component__["a" /* HtmlButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__gauges_controls_html_select_html_select_component__["a" /* HtmlSelectComponent */],
-                __WEBPACK_IMPORTED_MODULE_56__gauges_controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */],
-                __WEBPACK_IMPORTED_MODULE_57__gauges_controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_21__tester_tester_component__["a" /* TesterComponent */],
-                __WEBPACK_IMPORTED_MODULE_26__help_tutorial_tutorial_component__["a" /* TutorialComponent */],
-                __WEBPACK_IMPORTED_MODULE_49__gauges_gauge_property_flex_input_flex_input_component__["a" /* FlexInputComponent */],
-                __WEBPACK_IMPORTED_MODULE_50__gauges_gauge_property_flex_head_flex_head_component__["a" /* FlexHeadComponent */],
-                __WEBPACK_IMPORTED_MODULE_51__gauges_gauge_property_flex_event_flex_event_component__["a" /* FlexEventComponent */],
-                __WEBPACK_IMPORTED_MODULE_41__dynamic_dynamic_component__["a" /* DynamicComponent */],
-                __WEBPACK_IMPORTED_MODULE_43__gauges_controls_value_value_component__["a" /* ValueComponent */],
-                __WEBPACK_IMPORTED_MODULE_34__directives_dialog_draggable_directive__["a" /* DialogDraggableDirective */],
-                __WEBPACK_IMPORTED_MODULE_28__helpers_utils__["a" /* EnumToArrayPipe */],
-                __WEBPACK_IMPORTED_MODULE_36__directives_ngx_draggable_directive__["a" /* DraggableDirective */],
-                __WEBPACK_IMPORTED_MODULE_37__directives_number_directive__["a" /* NumberOnlyDirective */],
-                __WEBPACK_IMPORTED_MODULE_30__gui_helpers_fab_button_ngx_fab_button_component__["a" /* NgxFabButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_31__gui_helpers_fab_button_ngx_fab_item_button_component__["a" /* NgxFabItemButtonComponent */],
-                __WEBPACK_IMPORTED_MODULE_32__gui_helpers_treetable_treetable_component__["b" /* TreetableComponent */],
-                __WEBPACK_IMPORTED_MODULE_38__directives_lazyFor_directive__["a" /* LazyForDirective */]
+                __WEBPACK_IMPORTED_MODULE_14__home_home_component__["a" /* HomeComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__["c" /* EditorComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__header_header_component__["b" /* HeaderComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__sidenav_sidenav_component__["a" /* SidenavComponent */],
+                __WEBPACK_IMPORTED_MODULE_16__iframe_iframe_component__["a" /* IframeComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__lab_lab_component__["a" /* LabComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__device_device_component__["a" /* DeviceComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__device_tag_property_tag_property_component__["a" /* TagPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__device_device_property_device_property_component__["a" /* DevicePropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__editor_layout_property_layout_property_component__["b" /* LayoutPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__editor_layout_property_layout_property_component__["a" /* DialogMenuItem */],
+                __WEBPACK_IMPORTED_MODULE_25__device_device_list_device_list_component__["a" /* DeviceListComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__device_device_map_device_map_component__["a" /* DeviceMapComponent */],
+                __WEBPACK_IMPORTED_MODULE_27__fuxa_view_fuxa_view_component__["a" /* FuxaViewComponent */],
+                __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__["b" /* DialogDocProperty */],
+                __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__["a" /* DialogDocName */],
+                __WEBPACK_IMPORTED_MODULE_41__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__header_header_component__["a" /* DialogInfo */],
+                __WEBPACK_IMPORTED_MODULE_49__gauges_gauge_base_gauge_base_component__["a" /* GaugeBaseComponent */],
+                __WEBPACK_IMPORTED_MODULE_51__gauges_switch_switch_component__["a" /* SwitchComponent */],
+                __WEBPACK_IMPORTED_MODULE_53__gauges_proc_eng_compressor_compressor_component__["a" /* CompressorComponent */],
+                __WEBPACK_IMPORTED_MODULE_55__gauges_proc_eng_valve_valve_component__["a" /* ValveComponent */],
+                __WEBPACK_IMPORTED_MODULE_56__gauges_proc_eng_motor_motor_component__["a" /* MotorComponent */],
+                __WEBPACK_IMPORTED_MODULE_54__gauges_proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */],
+                __WEBPACK_IMPORTED_MODULE_63__gauges_controls_html_input_html_input_component__["a" /* HtmlInputComponent */],
+                __WEBPACK_IMPORTED_MODULE_64__gauges_controls_html_button_html_button_component__["a" /* HtmlButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_65__gauges_controls_html_select_html_select_component__["a" /* HtmlSelectComponent */],
+                __WEBPACK_IMPORTED_MODULE_66__gauges_controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */],
+                __WEBPACK_IMPORTED_MODULE_67__gauges_controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */],
+                __WEBPACK_IMPORTED_MODULE_68__gauges_controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */],
+                __WEBPACK_IMPORTED_MODULE_57__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_58__gauges_chart_property_chart_property_component__["a" /* ChartPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_28__tester_tester_component__["a" /* TesterComponent */],
+                __WEBPACK_IMPORTED_MODULE_33__help_tutorial_tutorial_component__["a" /* TutorialComponent */],
+                __WEBPACK_IMPORTED_MODULE_59__gauges_gauge_property_flex_input_flex_input_component__["a" /* FlexInputComponent */],
+                __WEBPACK_IMPORTED_MODULE_60__gauges_gauge_property_flex_head_flex_head_component__["a" /* FlexHeadComponent */],
+                __WEBPACK_IMPORTED_MODULE_61__gauges_gauge_property_flex_event_flex_event_component__["a" /* FlexEventComponent */],
+                __WEBPACK_IMPORTED_MODULE_50__dynamic_dynamic_component__["a" /* DynamicComponent */],
+                __WEBPACK_IMPORTED_MODULE_52__gauges_controls_value_value_component__["a" /* ValueComponent */],
+                __WEBPACK_IMPORTED_MODULE_43__directives_dialog_draggable_directive__["a" /* DialogDraggableDirective */],
+                __WEBPACK_IMPORTED_MODULE_35__helpers_utils__["a" /* EnumToArrayPipe */],
+                __WEBPACK_IMPORTED_MODULE_45__directives_ngx_draggable_directive__["a" /* DraggableDirective */],
+                __WEBPACK_IMPORTED_MODULE_46__directives_number_directive__["a" /* NumberOnlyDirective */],
+                __WEBPACK_IMPORTED_MODULE_38__gui_helpers_fab_button_ngx_fab_button_component__["a" /* NgxFabButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_39__gui_helpers_fab_button_ngx_fab_item_button_component__["a" /* NgxFabItemButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_40__gui_helpers_treetable_treetable_component__["b" /* TreetableComponent */],
+                __WEBPACK_IMPORTED_MODULE_47__directives_lazyFor_directive__["a" /* LazyForDirective */],
+                __WEBPACK_IMPORTED_MODULE_42__gui_helpers_ngx_dygraphs_ngx_dygraphs_component__["a" /* NgxDygraphsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__editor_chart_config_chart_config_component__["a" /* ChartConfigComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__editor_chart_config_chart_config_component__["b" /* DialogListItem */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["d" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["i" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_10__app_routing__["a" /* routing */],
+                __WEBPACK_IMPORTED_MODULE_13__app_routing__["a" /* routing */],
                 __WEBPACK_IMPORTED_MODULE_4__material_module__["a" /* MaterialModule */],
                 __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_animations__["a" /* BrowserAnimationsModule */],
                 __WEBPACK_IMPORTED_MODULE_6_ngx_color_picker__["a" /* ColorPickerModule */],
                 __WEBPACK_IMPORTED_MODULE_7_ng5_slider__["a" /* Ng5SliderModule */],
-                __WEBPACK_IMPORTED_MODULE_52__gui_helpers_mat_select_search_mat_select_search_module__["a" /* MatSelectSearchModule */],
+                __WEBPACK_IMPORTED_MODULE_62__gui_helpers_mat_select_search_mat_select_search_module__["a" /* MatSelectSearchModule */],
                 __WEBPACK_IMPORTED_MODULE_8_ngx_toastr__["a" /* ToastrModule */].forRoot({
                     timeOut: 3000,
-                    positionClass: 'toast-bottom-right',
-                    preventDuplicates: false,
+                    positionClass: "toast-bottom-right",
+                    preventDuplicates: false
                 }),
+                __WEBPACK_IMPORTED_MODULE_9_ngx_drag_drop__["a" /* DndModule */],
+                __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__["b" /* TranslateModule */].forRoot({
+                    loader: {
+                        provide: __WEBPACK_IMPORTED_MODULE_10__ngx_translate_core__["a" /* TranslateLoader */],
+                        useFactory: createTranslateLoader,
+                        deps: [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]]
+                    }
+                })
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_25__services_hmi_service__["a" /* HmiService */],
-                __WEBPACK_IMPORTED_MODULE_24__services_project_service__["a" /* ProjectService */],
-                __WEBPACK_IMPORTED_MODULE_23__tester_tester_service__["a" /* TesterService */],
-                __WEBPACK_IMPORTED_MODULE_22__helpers_custom_http__["a" /* customHttpProvider */],
-                __WEBPACK_IMPORTED_MODULE_39__gauges_gauges_component__["a" /* GaugesManager */],
-                __WEBPACK_IMPORTED_MODULE_27__helpers_windowref__["a" /* WindowRef */],
-                __WEBPACK_IMPORTED_MODULE_28__helpers_utils__["b" /* Utils */],
-                __WEBPACK_IMPORTED_MODULE_29__helpers_dictionary__["a" /* Dictionary */],
-                __WEBPACK_IMPORTED_MODULE_35__directives_modal_position_cache__["a" /* ModalPositionCache */]
+                __WEBPACK_IMPORTED_MODULE_32__services_hmi_service__["a" /* HmiService */],
+                __WEBPACK_IMPORTED_MODULE_31__services_project_service__["a" /* ProjectService */],
+                __WEBPACK_IMPORTED_MODULE_30__tester_tester_service__["a" /* TesterService */],
+                __WEBPACK_IMPORTED_MODULE_29__helpers_custom_http__["a" /* customHttpProvider */],
+                __WEBPACK_IMPORTED_MODULE_48__gauges_gauges_component__["a" /* GaugesManager */],
+                __WEBPACK_IMPORTED_MODULE_34__helpers_windowref__["a" /* WindowRef */],
+                __WEBPACK_IMPORTED_MODULE_35__helpers_utils__["b" /* Utils */],
+                __WEBPACK_IMPORTED_MODULE_37__helpers_dictionary__["a" /* Dictionary */],
+                __WEBPACK_IMPORTED_MODULE_44__directives_modal_position_cache__["a" /* ModalPositionCache */],
+                __WEBPACK_IMPORTED_MODULE_36__helpers_define__["a" /* Define */]
             ],
             entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__["b" /* DialogDocProperty */],
-                __WEBPACK_IMPORTED_MODULE_13__editor_editor_component__["a" /* DialogDocName */],
-                __WEBPACK_IMPORTED_MODULE_12__header_header_component__["a" /* DialogInfo */],
-                __WEBPACK_IMPORTED_MODULE_41__dynamic_dynamic_component__["a" /* DynamicComponent */],
-                __WEBPACK_IMPORTED_MODULE_48__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_16__device_device_property_device_property_component__["a" /* DevicePropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__device_tag_property_tag_property_component__["a" /* TagPropertyComponent */],
-                __WEBPACK_IMPORTED_MODULE_33__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */]
+                __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__["b" /* DialogDocProperty */],
+                __WEBPACK_IMPORTED_MODULE_18__editor_editor_component__["a" /* DialogDocName */],
+                __WEBPACK_IMPORTED_MODULE_15__header_header_component__["a" /* DialogInfo */],
+                __WEBPACK_IMPORTED_MODULE_50__dynamic_dynamic_component__["a" /* DynamicComponent */],
+                __WEBPACK_IMPORTED_MODULE_57__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_58__gauges_chart_property_chart_property_component__["a" /* ChartPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_23__device_device_property_device_property_component__["a" /* DevicePropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_24__device_tag_property_tag_property_component__["a" /* TagPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_41__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__editor_layout_property_layout_property_component__["b" /* LayoutPropertyComponent */],
+                __WEBPACK_IMPORTED_MODULE_19__editor_layout_property_layout_property_component__["a" /* DialogMenuItem */],
+                __WEBPACK_IMPORTED_MODULE_42__gui_helpers_ngx_dygraphs_ngx_dygraphs_component__["a" /* NgxDygraphsComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__editor_chart_config_chart_config_component__["a" /* ChartConfigComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__editor_chart_config_chart_config_component__["b" /* DialogListItem */]
             ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]]
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_12__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -2093,7 +2549,7 @@ var appRoutes = [
     // otherwise redirect to home
     { path: '**', redirectTo: '' }
 ];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot(appRoutes);
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(appRoutes);
 
 
 /***/ }),
@@ -2119,7 +2575,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/device/device-list/device-list.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"filter\" *ngIf=\"deviceSelected\">\n    <button mat-icon-button title=\"Device Map\" (click)=\"onGoBack()\" style=\"margin-right:10px;margin-left:-10px;\">\n      <mat-icon aria-label=\"Show devices map\">arrow_back</mat-icon>\n    </button>\n    <div class=\"my-form-field\" style=\"\">\n      <span>Device</span>\n      <mat-select [(value)]=\"deviceSelected\" style=\"width: 300px\" (selectionChange)=\"onDeviceChange($event.source)\">\n        <mat-option *ngFor=\"let device of devicesValue()\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"\">\n      <span>Filter</span>\n      <input (keyup)=\"applyFilter($event.target.value)\" style=\"width: 450px\" type=\"text\">\n    </div>\n    <!-- <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field> -->\n    <!-- <div class=\"my-form-field\" style=\"padding: 10 20 10 20\">\n      <input (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\" type=\"text\" style=\"width: 100%\">\n    </div> -->\n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n    <!-- Checkbox Column -->\n    <ng-container matColumnDef=\"select\">\n      <mat-header-cell *matHeaderCellDef [ngClass]=\"'selectidthClass'\">\n        <button mat-icon-button (click)=\"onAddTag()\" class=\"remove\">\n          <mat-icon>add</mat-icon>\n        </button>\n        <!-- <mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\"\n          [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\n        </mat-checkbox> -->\n      </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\" [ngClass]=\"'selectidthClass'\">\n        <button mat-icon-button (click)=\"onEditRow(element)\" class=\"remove\" *ngIf=\"deviceSelected.type === deviceType.SiemensS7\">\n          <mat-icon>edit</mat-icon>\n        </button>\n        <!-- <mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\">\n        </mat-checkbox> -->\n      </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n    </ng-container>\n\n    <!-- Address Column -->\n    <ng-container matColumnDef=\"address\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Address </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.address}} </mat-cell>\n    </ng-container>\n\n    <!-- Device Column -->\n    <ng-container matColumnDef=\"device\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Device </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{deviceSelected.name}} </mat-cell>\n    </ng-container>\n\n    <!-- Device Column -->\n    <ng-container matColumnDef=\"type\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Type </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.type}} </mat-cell>\n    </ng-container>\n\n    <!-- Min Column -->\n    <ng-container matColumnDef=\"min\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Min </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.min}} </mat-cell>\n    </ng-container>\n\n    <!-- Max Column -->\n    <ng-container matColumnDef=\"max\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Max </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.max}} </mat-cell>\n    </ng-container>\n\n    <!-- Value Column -->\n    <ng-container matColumnDef=\"value\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> Value </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.value}} </mat-cell>\n    </ng-container>\n\n    <!-- Button remove Column -->\n    <ng-container matColumnDef=\"remove\">\n      <mat-header-cell *matHeaderCellDef> </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\">\n        <button mat-icon-button (click)=\"$event.stopPropagation();onRemoveRow(element)\" class=\"remove\">\n          <mat-icon>clear</mat-icon>\n        </button>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\" class=\"my-mat-row\"></mat-row>\n  </mat-table>\n</div>\n\n<button mat-fab color=\"primary\" (click)=\"onAddTag()\" style=\"position: absolute; right: 20px; bottom: 30px; z-index: 9999;\">\n  <mat-icon class=\"\">add</mat-icon>\n</button>"
+module.exports = "<div class=\"container\">\n  <div class=\"filter\" *ngIf=\"deviceSelected\">\n    <button mat-icon-button title=\"Device Map\" (click)=\"onGoBack()\" style=\"margin-right:10px;margin-left:-10px;\">\n      <mat-icon aria-label=\"Show devices map\">arrow_back</mat-icon>\n    </button>\n    <div class=\"my-form-field\" style=\"\">\n      <span>{{'device.list-device' | translate}}</span>\n      <mat-select [(value)]=\"deviceSelected\" style=\"width: 300px\" (selectionChange)=\"onDeviceChange($event.source)\">\n        <mat-option *ngFor=\"let device of devicesValue()\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"\">\n      <span>{{'device.list-filter' | translate}}</span>\n      <input (keyup)=\"applyFilter($event.target.value)\" style=\"width: 450px\" type=\"text\">\n    </div>\n    <!-- <mat-form-field>\n      <input matInput (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\">\n    </mat-form-field> -->\n    <!-- <div class=\"my-form-field\" style=\"padding: 10 20 10 20\">\n      <input (keyup)=\"applyFilter($event.target.value)\" placeholder=\"Filter\" type=\"text\" style=\"width: 100%\">\n    </div> -->\n  </div>\n  <mat-table #table [dataSource]=\"dataSource\" matSort>\n    <!-- Checkbox Column -->\n    <ng-container matColumnDef=\"select\">\n      <mat-header-cell *matHeaderCellDef [ngClass]=\"'selectidthClass'\">\n        <button mat-icon-button (click)=\"onAddTag()\" class=\"remove\">\n          <mat-icon>add</mat-icon>\n        </button>\n        <!-- <mat-checkbox (change)=\"$event ? masterToggle() : null\" [checked]=\"selection.hasValue() && isAllSelected()\"\n          [indeterminate]=\"selection.hasValue() && !isAllSelected()\">\n        </mat-checkbox> -->\n      </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\" [ngClass]=\"'selectidthClass'\">\n        <button mat-icon-button (click)=\"onEditRow(element)\" class=\"remove\" *ngIf=\"deviceSelected.type === deviceType.SiemensS7\">\n          <mat-icon>edit</mat-icon>\n        </button>\n        <!-- <mat-checkbox (click)=\"$event.stopPropagation()\" (change)=\"$event ? selection.toggle(row) : null\" [checked]=\"selection.isSelected(row)\">\n        </mat-checkbox> -->\n      </mat-cell>\n    </ng-container>\n\n    <!-- Name Column -->\n    <ng-container matColumnDef=\"name\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-name' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.name}} </mat-cell>\n    </ng-container>\n\n    <!-- Address Column -->\n    <ng-container matColumnDef=\"address\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-address' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.address}} </mat-cell>\n    </ng-container>\n\n    <!-- Device Column -->\n    <ng-container matColumnDef=\"device\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-device' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{deviceSelected.name}} </mat-cell>\n    </ng-container>\n\n    <!-- Device Column -->\n    <ng-container matColumnDef=\"type\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-type' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.type}} </mat-cell>\n    </ng-container>\n\n    <!-- Min Column -->\n    <ng-container matColumnDef=\"min\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-min' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.min}} </mat-cell>\n    </ng-container>\n\n    <!-- Max Column -->\n    <ng-container matColumnDef=\"max\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-max' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.max}} </mat-cell>\n    </ng-container>\n\n    <!-- Value Column -->\n    <ng-container matColumnDef=\"value\">\n      <mat-header-cell *matHeaderCellDef mat-sort-header> {{'device.list-value' | translate}} </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\"> {{element.value}} </mat-cell>\n    </ng-container>\n\n    <!-- Button remove Column -->\n    <ng-container matColumnDef=\"remove\">\n      <mat-header-cell *matHeaderCellDef> </mat-header-cell>\n      <mat-cell *matCellDef=\"let element\">\n        <button mat-icon-button (click)=\"$event.stopPropagation();onRemoveRow(element)\" class=\"remove\">\n          <mat-icon>clear</mat-icon>\n        </button>\n      </mat-cell>\n    </ng-container>\n\n    <mat-header-row *matHeaderRowDef=\"displayedColumns\"></mat-header-row>\n    <mat-row *matRowDef=\"let row; columns: displayedColumns;\" class=\"my-mat-row\"></mat-row>\n  </mat-table>\n</div>\n\n<button mat-fab color=\"primary\" (click)=\"onAddTag()\" style=\"position: absolute; right: 20px; bottom: 30px; z-index: 9999;\">\n  <mat-icon class=\"\">add</mat-icon>\n</button>"
 
 /***/ }),
 
@@ -2158,7 +2614,7 @@ var DeviceListComponent = (function () {
         this.hmiService = hmiService;
         this.projectService = projectService;
         this.displayedColumns = ['select', 'name', 'address', 'device', 'type', 'min', 'max', 'value', 'remove'];
-        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatTableDataSource */]([]);
+        this.dataSource = new __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTableDataSource */]([]);
         this.selection = new __WEBPACK_IMPORTED_MODULE_2__angular_cdk_collections__["b" /* SelectionModel */](true, []);
         this.dirty = false;
         this.deviceType = __WEBPACK_IMPORTED_MODULE_4__models_device__["c" /* DeviceType */];
@@ -2286,6 +2742,7 @@ var DeviceListComponent = (function () {
             if (result) {
                 _this.dirty = true;
                 // console.log('The Edit Tag was closed');
+                // tag.id = (tag.id) ? tag.id : Utils.getShortGUID();
                 tag.id = temptag.name;
                 tag.name = temptag.name;
                 tag.type = temptag.type;
@@ -2346,12 +2803,12 @@ var DeviceListComponent = (function () {
         __metadata("design:type", Object)
     ], DeviceListComponent.prototype, "goto", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTable */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatTable */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatTable */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatTable */])
     ], DeviceListComponent.prototype, "table", void 0);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSort */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSort */])
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatSort */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatSort */])
     ], DeviceListComponent.prototype, "sort", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["t" /* MatMenuTrigger */]),
@@ -2649,7 +3106,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/device/device-property/device-property.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <div style=\"width: 100%;\"> -->\n<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\n  <div *ngIf=\"isToRemove\" style=\"margin-top: 20px;margin-bottom: 20px;\">\n    Would you like to remove Device '{{data.device.name}}' ?\n  </div>\n  <div *ngIf=\"!isToRemove\">\n    <h1 mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable *ngIf=\"!isFuxaServer\">\n      Device Property</h1>\n    <h1 mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable *ngIf=\"isFuxaServer\">FUXA\n      Server Property</h1>\n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  </div>\n  <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" *ngIf=\"!isToRemove\">\n    <div style=\"display: block;\">\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>Name</span>\n        <input [(ngModel)]=\"data.device.name\" style=\"width: 300px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\" *ngIf=\"!isFuxaServer\">\n        <span>Type</span>\n        <mat-select [(value)]=\"data.device.type\" style=\"width: 200px\" [disabled]=\"isFuxaServer\">\n          <mat-option *ngFor=\"let type of deviceType | enumToArray\" [value]=\"type.key\">\n            {{ type.value }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;margin-left: 20px;\" *ngIf=\"!isFuxaServer\">\n        <span>Enable</span>\n        <mat-slide-toggle color=\"primary\" [(ngModel)]=\"data.device.enabled\"></mat-slide-toggle>\n      </div>      \n      <div class=\"my-form-field\" *ngIf=\"data.device.property\" style=\"display: block;margin-bottom: 10px;\">\n        <span>Address (IP or opc.tcp://[server]:[port])</span>\n        <input [(ngModel)]=\"data.device.property.address\" style=\"width: 300px\" type=\"ip\">\n      </div>\n      <div *ngIf=\"data.device.property && isSiemensS7(data.device.type)\">\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>Port</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.port\" style=\"width: 80px\" type=\"text\">\n        </div>\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>Rack</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.rack\" style=\"width: 80px\" type=\"text\">\n        </div>\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>Slot</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.slot\" style=\"width: 80px\" type=\"text\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\n  </div>\n</div>"
+module.exports = "<!-- <div style=\"width: 100%;\"> -->\n<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\n  <div *ngIf=\"isToRemove\" style=\"margin-top: 20px;margin-bottom: 20px;\">\n    {{'msg.device-remove' | translate}} '{{data.device.name}}' ?\n  </div>\n  <div *ngIf=\"!isToRemove\">\n    <h1 mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable *ngIf=\"!isFuxaServer\">\n      {{'device.property-client' | translate}}</h1>\n    <h1 mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable *ngIf=\"isFuxaServer\">\n      {{'device.property-server' | translate}}</h1>\n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  </div>\n  <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" *ngIf=\"!isToRemove\">\n    <div style=\"display: block;\">\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.property-name' | translate}}</span>\n        <input [(ngModel)]=\"data.device.name\" style=\"width: 300px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\" *ngIf=\"!isFuxaServer\">\n        <span>{{'device.property-type' | translate}}</span>\n        <mat-select [(value)]=\"data.device.type\" style=\"width: 200px\" [disabled]=\"isFuxaServer\">\n          <mat-option *ngFor=\"let type of deviceType | enumToArray\" [value]=\"type.key\">\n            {{ type.value }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;margin-left: 20px;\" *ngIf=\"!isFuxaServer\">\n        <span>{{'device.property-enable' | translate}}</span>\n        <mat-slide-toggle color=\"primary\" [(ngModel)]=\"data.device.enabled\"></mat-slide-toggle>\n      </div>      \n      <div class=\"my-form-field\" *ngIf=\"data.device.property\" style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.property-address' | translate}}</span>\n        <input [(ngModel)]=\"data.device.property.address\" style=\"width: 300px\" type=\"ip\">\n      </div>\n      <div *ngIf=\"data.device.property && isSiemensS7(data.device.type)\">\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>{{'device.property-port' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.port\" style=\"width: 80px\" type=\"text\">\n        </div>\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>{{'device.property-rack' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.rack\" style=\"width: 80px\" type=\"text\">\n        </div>\n        <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n          <span>{{'device.property-slot' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"data.device.property.slot\" style=\"width: 80px\" type=\"text\">\n        </div>\n      </div>\n    </div>\n  </div>\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2895,7 +3352,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/device/tag-property/tag-property.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\n  <div *ngIf=\"isToRemove\" style=\"margin-top: 20px;margin-bottom: 20px;\">\n    Would you like to remove Tag '{{data.tag.name}}' from {{data.device.name}} ?\n  </div>\n  <div *ngIf=\"!isToRemove\">\n    <h1 *ngIf=\"!withtree\" mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable>\n      Tag Property\n    </h1>\n    <h1 *ngIf=\"withtree\" mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable>\n      Browse Tags in OPC UA Server\n    </h1>    \n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  </div>\n  <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" *ngIf=\"!isToRemove && !withtree\">\n    <div style=\"display: block;\">\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>Device</span>\n        <mat-select [(value)]=\"data.device.name\" style=\"width: 300px\" [disabled]=\"true\">\n          <mat-option *ngFor=\"let device of devicesValue()\" [value]=\"device.name\">\n            {{ device.name }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>Tagname</span>\n        <input [(ngModel)]=\"data.tag.name\" style=\"width: 300px\" type=\"text\" (input)=\"onCheckValue($event)\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>Type</span>\n        <mat-select [(value)]=\"data.tag.type\" style=\"width: 300px\">\n          <mat-option *ngFor=\"let type of tagType | enumToArray\" [value]=\"type.key\">\n            {{ type.value }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\"style=\"display: block;margin-bottom: 10px;\">\n        <span>Address (ex. db5.dbb3   db4.dbx2.0)</span>\n        <input [(ngModel)]=\"data.tag.address\" style=\"width: 300px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n        <span>Min</span>\n        <input numberOnly [(ngModel)]=\"data.tag.min\" style=\"width: 80px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n        <span>Max</span>\n        <input numberOnly [(ngModel)]=\"data.tag.max\" style=\"width: 80px\" type=\"text\">\n      </div>\n      <div class=\"error\" *ngIf=\"error\">\n          <span>{{error}}</span>\n      </div>\n    </div>\n  </div>\n\n  <div style=\"overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" [hidden]=\"isToRemove && !withtree\">\n    <ngx-treetable #treetable [config]=\"config\" (expand)=\"queryNext($event)\"></ngx-treetable>\n  </div>\n\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\n    <button mat-raised-button [disabled]=\"(error) ? 'true' : 'false'\" color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\n  </div>\n</div>"
+module.exports = "<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\n  <div *ngIf=\"isToRemove\" style=\"margin-top: 20px;margin-bottom: 20px;\">\n    {{'msg.device-tag-remove' | translate}} '{{data.tag.name}}' ({{data.device.name}}) ?\n  </div>\n  <div *ngIf=\"!isToRemove\">\n    <h1 *ngIf=\"!withtree\" mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable>\n      {{'device.tag-property-title' | translate}}\n    </h1>\n    <h1 *ngIf=\"withtree\" mat-dialog-title style=\"display:inline-block; cursor:move; padding-top: 15px\" mat-dialog-draggable>\n      {{'device.opctag-property-title' | translate}}\n    </h1>    \n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  </div>\n  <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" *ngIf=\"!isToRemove && !withtree\">\n    <div style=\"display: block;\">\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-device' | translate}}</span>\n        <mat-select [(value)]=\"data.device.name\" style=\"width: 300px\" [disabled]=\"true\">\n          <mat-option *ngFor=\"let device of devicesValue()\" [value]=\"device.name\">\n            {{ device.name }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-name' | translate}}</span>\n        <input [(ngModel)]=\"data.tag.name\" style=\"width: 300px\" type=\"text\" (input)=\"onCheckValue($event)\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-type' | translate}}</span>\n        <mat-select [(value)]=\"data.tag.type\" style=\"width: 300px\">\n          <mat-option *ngFor=\"let type of tagType | enumToArray\" [value]=\"type.key\">\n            {{ type.value }}\n          </mat-option>\n        </mat-select>\n      </div>\n      <div class=\"my-form-field\"style=\"display: block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-address' | translate}}</span>\n        <input [(ngModel)]=\"data.tag.address\" style=\"width: 300px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-min' | translate}}</span>\n        <input numberOnly [(ngModel)]=\"data.tag.min\" style=\"width: 80px\" type=\"text\">\n      </div>\n      <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\n        <span>{{'device.tag-property-max' | translate}}</span>\n        <input numberOnly [(ngModel)]=\"data.tag.max\" style=\"width: 80px\" type=\"text\">\n      </div>\n      <div class=\"error\" *ngIf=\"error\">\n          <span>{{error}}</span>\n      </div>\n    </div>\n  </div>\n\n  <div style=\"overflow-y: auto; overflow-x: hidden; padding-top: 5px;\" [hidden]=\"isToRemove && !withtree\">\n    <ngx-treetable #treetable [config]=\"config\" (expand)=\"queryNext($event)\"></ngx-treetable>\n  </div>\n\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\n    <button mat-raised-button [disabled]=\"(error) ? 'true' : 'false'\" color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -2909,6 +3366,7 @@ module.exports = "<div style=\"width: 100%;position: relative;padding-bottom: 40
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_device__ = __webpack_require__("../../../../../src/app/_models/device.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gui_helpers_treetable_treetable_component__ = __webpack_require__("../../../../../src/app/gui-helpers/treetable/treetable.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2926,10 +3384,12 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
 var TagPropertyComponent = (function () {
-    function TagPropertyComponent(hmiService, dialogRef, data) {
+    function TagPropertyComponent(hmiService, translateService, dialogRef, data) {
         var _this = this;
         this.hmiService = hmiService;
+        this.translateService = translateService;
         this.dialogRef = dialogRef;
         this.data = data;
         this.existing = [];
@@ -3014,11 +3474,13 @@ var TagPropertyComponent = (function () {
         });
     };
     TagPropertyComponent.prototype.onCheckValue = function (tag) {
+        var _this = this;
         if (this.existing.indexOf(tag.target.value) !== -1) {
-            this.error = "Tagname exist!";
+            this.error = '';
+            this.translateService.get('msg.device-tag-exist').subscribe(function (txt) { _this.error = txt; });
         }
         else {
-            this.error = "";
+            this.error = '';
         }
     };
     TagPropertyComponent.prototype.addNodes = function (parent, nodes) {
@@ -3044,10 +3506,10 @@ var TagPropertyComponent = (function () {
             return '';
         }
         else if (n.class === 'Variable') {
-            return "Variable";
+            return 'Variable';
         }
         else if (n.class === 'Method') {
-            return "Method";
+            return 'Method';
         }
         return '';
     };
@@ -3082,8 +3544,9 @@ var TagPropertyComponent = (function () {
             template: __webpack_require__("../../../../../src/app/device/tag-property/tag-property.component.html"),
             styles: [__webpack_require__("../../../../../src/app/device/tag-property/tag-property.component.css")]
         }),
-        __param(2, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __param(3, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_hmi_service__["a" /* HmiService */],
+            __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogRef */], Object])
     ], TagPropertyComponent);
     return TagPropertyComponent;
@@ -3114,7 +3577,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/dynamic/dynamic.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content\" [style.left]=\"position.x + 'px'\" [style.top]=\"position.y + 'px'\" [style.width]=\"size.width + 'px'\" [style.height]=\"size.height + 40 + 'px'\">\r\n  <div #dataContainer></div>\r\n  <!-- <span>dynamically attached {{message}} {{position.x}} / {{position.y}}</span> -->\r\n\r\n  <!-- <div mat-dialog-actions class=\"close\"> -->\r\n    <button mat-button (click)=\"close()\" class=\"close\">Close</button>\r\n  <!-- </div> -->\r\n</div>\r\n"
+module.exports = "<div class=\"content\" [style.left]=\"position.x + 'px'\" [style.top]=\"position.y + 'px'\" [style.width]=\"size.width + 'px'\" [style.height]=\"size.height + 40 + 'px'\">\r\n  <div #dataContainer></div>\r\n  <!-- <span>dynamically attached {{message}} {{position.x}} / {{position.y}}</span> -->\r\n\r\n  <!-- <div mat-dialog-actions class=\"close\"> -->\r\n    <button mat-button (click)=\"close()\" class=\"close\">{{'general.close' | translate}}</button>\r\n  <!-- </div> -->\r\n</div>\r\n"
 
 /***/ }),
 
@@ -3181,17 +3644,314 @@ var DynamicComponent = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/editor/chart-config/chart-config.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n.panelTop {\r\n    display: block;\r\n    /* position: relative;\r\n    top: 20px; */\r\n    /* margin-top: 10px; */\r\n    width: 100%;\r\n    height: 580px;\r\n    /* border: 1px solid rgba(0, 0, 0, 0.1); */\r\n}\r\n\r\n.panelBottom {\r\n    /* position: relative; */\r\n    /* bottom: 10px; */\r\n    display: block;\r\n    width: 100%;\r\n    height: 160px;\r\n    /* margin-top: 2px; */\r\n    /* border: 1px solid rgba(0, 0, 0, 0.1); */\r\n}\r\n\r\n.list {\r\n    width: 100% !important; \r\n    height: 100% !important; \r\n    font-size: 16px !important; \r\n    padding-top: 0px !important;\r\n}\r\n\r\n.list span  {\r\n    padding-left: 10px;\r\n    /* padding-right: 10px; */\r\n}\r\n\r\n.list mat-list-option  {\r\n    padding-left: 10px;\r\n    /* padding-right: 10px; */\r\n}\r\n\r\n.chart-list {\r\n    /* margin-right: 2px; */\r\n    overflow-y: auto;\r\n}\r\n\r\n.list-item {\r\n    width: 100%;\r\n    display: block;\r\n    font-size: 14px;\r\n    height: 26px !important;\r\n\r\n    cursor: pointer;\r\n}\r\n\r\n.list-item mat-icon {\r\n    font-size: 20px;\r\n}\r\n\r\n.list-item-selected {\r\n  background-color: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.list-header {\r\n    background-color: rgba(0, 0, 0, 0.8);\r\n    color: #ffffff;\r\n}\r\n\r\n.device-list {\r\n    margin-right: 2px;\r\n    overflow-y: auto;\r\n    /* border-left: 1px solid rgba(0, 0, 0, 0.1); */\r\n}\r\n\r\n.tag-list {\r\n    margin-right: 2px;\r\n    overflow-y: auto;\r\n    /* border-left: 1px solid rgba(0, 0, 0, 0.1); */\r\n}\r\n\r\n.color-line {\r\n    width: 30px;\r\n    border: unset;\r\n    border: 1px solid rgba(0,0,0,0.1);\r\n    border-radius: 2px;\r\n    opacity: 1;\r\n    background-color: #f1f3f4;\r\n  }\r\n\r\n/* ::ng-deep .mat-dialog-container {\r\n    display: inline-table !important;\r\n    padding: 0px 10px 10px 10px;\r\n} */\r\n\r\n/* ::ng-deep .mat-list-item-content {\r\n    padding-left: 8px !important;\r\n    padding-right: 8px !important;\r\n} */", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/chart-config/chart-config.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n    <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>{{'chart.config-title' | translate}}</h1>\n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\n    <div style=\"display: inline-block; width: 100%\">\n        <div class=\"panelTop\">\n            <mat-grid-list cols=\"3\" rowHeight=\"100%\">\n                <mat-grid-tile class=\"chart-list\">\n                    <mat-list class=\"list\" >\n                        <mat-list-item class=\"list-item list-header\">\n                            <span>{{'chart.config-charts' | translate}}</span>\n                            <mat-icon style=\"position: absolute; right: 10px;cursor:pointer;color:rgba(255, 255, 255, 0.9);\" (click)=\"editChart()\">add</mat-icon>\n                        </mat-list-item>\n                        <mat-list-item *ngFor=\"let chart of data.charts\" class=\"list-item\" [ngClass]=\"isChartSelected(chart)\" (click)=\"selectedChart = chart;loadChartConfig();\">\n                            <span>{{chart.name}}</span>\n                            <mat-icon [matMenuTriggerFor]=\"configMenu\" style=\"position: absolute; right: 10px;cursor:pointer;color:gray;\">more_vert</mat-icon>\n                            <mat-menu #configMenu [overlapTrigger]=\"false\" style=\"color:#000000\">\n                                <button mat-menu-item (click)=\"editChart(chart)\" style=\"color:#000000;font-size: 14px;\">edit chart</button>\n                                <button mat-menu-item (click)=\"deleteChart(chart)\" style=\"color:#000000;font-size: 14px;\">delete chart</button>\n                            </mat-menu>\n                        </mat-list-item>\n                    </mat-list>\n                </mat-grid-tile>\n                <mat-grid-tile class=\"device-list\">\n                    <mat-list class=\"list\">\n                        <mat-list-item class=\"list-item list-header\">\n                            <span>{{'chart.config-devices' | translate}}</span>\n                        </mat-list-item>\n                        <mat-list-item *ngFor=\"let device of data.devices;\" class=\"list-item\" [ngClass]=\"isDeviceSelected(device)\" (click)=\"selectDevice(device);\">\n                            <span>{{device.name}}</span>\n                        </mat-list-item>\n                    </mat-list>\n                </mat-grid-tile>\n                <mat-grid-tile class=\"tag-list\">\n                    <mat-list class=\"list\">\n                        <mat-list-item class=\"list-item list-header\">\n                            <span>{{'chart.config-tags' | translate}}</span>\n                        </mat-list-item>\n                        <mat-selection-list #selTags [(ngModel)]=\"selectedTags\" [disabled]=\"(selectedChart.id)?false:true\" (selectionChange)=\"tagSelectionChanged($event)\" style=\"padding-top: 0px;\">\n                            <mat-list-option *ngFor=\"let tag of selectedDevice.tags\" [selected]=\"tag.selected\" [value]=\"tag\" class=\"list-item\" checkboxPosition=\"before\">\n                                {{tag.name}}\n                            </mat-list-option>\n                        </mat-selection-list>\n                    </mat-list>\n                </mat-grid-tile>\n            </mat-grid-list>\n        </div>\n        <div class=\"panelBottom\">\n            <mat-list class=\"list\">\n                <mat-list-item class=\"list-item list-header\">\n                    <span>{{'chart.config-lines' | translate}}</span>\n                </mat-list-item>\n                <div style=\"height: calc(100% - 36px); overflow-y: auto\">\n                    <mat-list-item *ngFor=\"let tag of selectedChart.lines\" class=\"list-item\" (click)=\"editChartLine(tag)\">\n                        <mat-icon (click)=\"$event.stopPropagation();removeChartLine(tag)\" style=\"color:gray;font-size: 20px\">delete</mat-icon>\n                        <div style=\"width: 50%;max-width: 50%\">\n                            <span>{{getDeviceTagName(tag)}}</span>\n                        </div>\n                        <div style=\"width: 30%;max-width: 30%\">\n                            <span>{{tag.device}}</span>\n                        </div>\n                        <div>\n                            <input [(colorPicker)]=\"tag.color\" class=\"color-line\" title=\"{{'chart.config-line-color' | translate}}\" \n                            [style.background]=\"tag.color\" [cpAlphaChannel]=\"'disabled'\" [cpPosition]=\"'top'\"\n                            [cpPresetColors]=\"defaultColor\" [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\"\n                            [cpCancelButtonText]=\"'Cancel'\" [cpOKButton]=\"true\" [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" />\n                        </div>\n                    </mat-list-item>\n                </div>\n            </mat-list>\n        </div>\n    </div>\n\n    <!-- <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\"> -->\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\n        <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\"\n            cdkFocusInitial>OK</button>\n    </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/chart-config/chart-config.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartConfigComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DialogListItem; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+var ChartConfigComponent = (function () {
+    function ChartConfigComponent(dialog, dialogRef, param) {
+        var _this = this;
+        this.dialog = dialog;
+        this.dialogRef = dialogRef;
+        this.param = param;
+        this.selectedChart = { id: null, name: null, lines: [] };
+        this.selectedDevice = { id: null, name: null, tags: [] };
+        this.selectedTags = [];
+        this.data = { charts: [], devices: [] };
+        this.defaultColor = __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].defaultColor;
+        this.lineColor = __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].lineColor;
+        this.data.charts = param.charts;
+        Object.values(param.devices).forEach(function (device) {
+            var devicobj = Object.assign({}, device);
+            devicobj.tags = Object.values(device.tags);
+            _this.data.devices.push(devicobj);
+        });
+    }
+    ChartConfigComponent.prototype.ngOnInit = function () {
+        // this.data = {
+        //     charts: [{ id: 'My chart A', name: 'My chart A', lines: [{ device: 'a', id: 'ab', name: 'aB' }] },
+        //              { id: 'My chart B', name: 'My chart B', lines: []}],
+        //     devices: [{ id: 'a', name: 'Device A', tags: [{ id: 'aa', name: 'aA' }, { id: 'ab', name: 'aB' }, { id: 'ac', name: 'aC' }]},
+        //         { id: 'b', name: 'Device B', tags: [{ id: 'ba', name: 'bA' }, { id: 'bb', name: 'bB' }, { id: 'bc', name: 'bC' }, { id: 'bd', name: 'bD' }]}] };
+    };
+    ChartConfigComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ChartConfigComponent.prototype.onOkClick = function () {
+        this.dialogRef.close({ charts: this.data.charts });
+    };
+    ChartConfigComponent.prototype.editChart = function (chart) {
+        var _this = this;
+        var dialogRef = this.dialog.open(DialogListItem, {
+            // minWidth: '700px',
+            // minHeight: '700px',
+            panelClass: 'dialog-property',
+            data: { name: (chart) ? chart.name : '' },
+            position: { top: '80px' }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result && result.name && result.name.length > 0) {
+                // this.dirty = true;
+                if (chart) {
+                    chart.name = result.name;
+                }
+                else {
+                    _this.data.charts.push({ id: __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].getShortGUID(), name: result.name, lines: [] });
+                }
+            }
+        });
+    };
+    ChartConfigComponent.prototype.deleteChart = function (chart) {
+        var found = -1;
+        for (var i = 0; i < this.data.charts.length; i++) {
+            if (chart.id === this.data.charts[i].id) {
+                found = i;
+            }
+        }
+        if (found >= 0) {
+            this.data.charts.splice(found, 1);
+            this.selectedChart = { id: null, name: null, lines: [] };
+        }
+    };
+    ChartConfigComponent.prototype.selectDevice = function (device) {
+        this.selectedDevice = JSON.parse(JSON.stringify(device));
+        this.loadDeviceConfig();
+    };
+    ChartConfigComponent.prototype.loadChartConfig = function () {
+        this.selectedDevice = { id: null, name: null, tags: [] };
+        this.loadDeviceConfig();
+    };
+    ChartConfigComponent.prototype.loadDeviceConfig = function () {
+        var _this = this;
+        if (this.selectedChart && this.selectedChart.lines && this.selectedDevice) {
+            this.selectedChart.lines.forEach(function (line) {
+                _this.selectedDevice.tags.forEach(function (tag) {
+                    if (line.device === _this.selectedDevice.name && line.id === ((tag.name) ? tag.name : tag.address)) {
+                        tag.selected = true;
+                    }
+                });
+            });
+        }
+    };
+    /**
+     * add or remove the selected device tags to the selected chart in char-line list
+     * @param chart
+     * @param device
+     * @param tags
+     */
+    ChartConfigComponent.prototype.checkChartTags = function (chart, device, tags) {
+        if (chart && chart.id) {
+            var toremove = [];
+            // check to remove
+            if (chart.lines) {
+                for (var i = 0; i < chart.lines.length; i++) {
+                    if (chart.lines[i].device === device.name) {
+                        var found = -1;
+                        for (var x = 0; x < tags.length; x++) {
+                            if (chart.lines[i].id === ((tags[x].name) ? tags[x].name : tags[x].address)) {
+                                found = i;
+                                break;
+                            }
+                        }
+                        if (found < 0) {
+                            toremove.push(i);
+                        }
+                        // if (tags.map(x => x.id).indexOf(chart.lines[i].id) === -1) {
+                        //     toremove.push(i);
+                        // }
+                    }
+                }
+            }
+            // remove
+            for (var i = 0; i < toremove.length; i++) {
+                chart.lines.splice(toremove[i], 1);
+            }
+            // add if not exist
+            for (var x = 0; x < tags.length; x++) {
+                var found = false;
+                if (chart.lines) {
+                    for (var i = 0; i < chart.lines.length; i++) {
+                        if (chart.lines[i].device === device.name && chart.lines[i].id === ((tags[x].name) ? tags[x].name : tags[x].address)) {
+                            found = true;
+                        }
+                    }
+                }
+                if (!found) {
+                    var myCopiedObject = {}; //Object.assign({}, tags[x]);
+                    myCopiedObject['id'] = tags[x].name; // (tags[x].id) ? tags[x].id : tags[x].address;
+                    myCopiedObject['name'] = tags[x].name;
+                    myCopiedObject['device'] = device.name;
+                    myCopiedObject['color'] = this.getNextColor();
+                    chart.lines.push(myCopiedObject);
+                }
+            }
+        }
+    };
+    ChartConfigComponent.prototype.tagSelectionChanged = function (event) {
+        this.checkChartTags(this.selectedChart, this.selectedDevice, this.selectedTags);
+    };
+    ChartConfigComponent.prototype.editChartLine = function (tag) {
+        console.log('ed ' + tag);
+    };
+    ChartConfigComponent.prototype.removeChartLine = function (tag) {
+        console.log('rm ' + tag);
+        var found = -1;
+        for (var i = 0; i < this.selectedTags.length; i++) {
+            if (tag.id === this.selectedTags[i].id) {
+                found = i;
+                break;
+            }
+        }
+        if (found >= 0) {
+            this.selectedTags.splice(found, 1);
+        }
+        this.checkChartTags(this.selectedChart, this.selectedDevice, this.selectedTags);
+    };
+    ChartConfigComponent.prototype.isChartSelected = function (chart) {
+        if (chart === this.selectedChart) {
+            return 'list-item-selected';
+        }
+    };
+    ChartConfigComponent.prototype.isDeviceSelected = function (device) {
+        if (device && device.name === this.selectedDevice.name) {
+            return 'list-item-selected';
+        }
+    };
+    ChartConfigComponent.prototype.getDeviceTagName = function (tag) {
+        var devices = this.data.devices.filter(function (x) { return x.name === tag.device; });
+        if (devices && devices.length > 0) {
+            var tags = devices[0].tags;
+            for (var i = 0; i < tags.length; i++) {
+                if (tag.id === tags[i].id) {
+                    return tags[i].name;
+                }
+            }
+        }
+        return '';
+    };
+    ChartConfigComponent.prototype.getNextColor = function () {
+        for (var x = 0; x < this.lineColor.length; x++) {
+            var found = false;
+            if (this.selectedChart.lines) {
+                for (var i = 0; i < this.selectedChart.lines.length; i++) {
+                    if (this.selectedChart.lines[i].color === this.lineColor[x]) {
+                        found = true;
+                    }
+                }
+            }
+            if (!found) {
+                return this.lineColor[x];
+            }
+        }
+        return __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].lineColor[0];
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSelectionList */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSelectionList */])
+    ], ChartConfigComponent.prototype, "selTags", void 0);
+    ChartConfigComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-chart-config',
+            template: __webpack_require__("../../../../../src/app/editor/chart-config/chart-config.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/editor/chart-config/chart-config.component.css")]
+        }),
+        __param(2, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogRef */], Object])
+    ], ChartConfigComponent);
+    return ChartConfigComponent;
+}());
+
+var DialogListItem = (function () {
+    // defaultColor = Utils.defaultColor;
+    function DialogListItem(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+    }
+    DialogListItem.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    DialogListItem.prototype.onOkClick = function () {
+        this.dialogRef.close(true);
+    };
+    DialogListItem = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'dialog-list-item',
+            template: __webpack_require__("../../../../../src/app/editor/chart-config/list-item.dialog.html"),
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogRef */], Object])
+    ], DialogListItem);
+    return DialogListItem;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/chart-config/list-item.dialog.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>menu</h1>\r\n    <div mat-dialog-content>\r\n        <!-- <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>Icon</span>\r\n            <mat-select [(value)]=\"data.item.icon\" style=\"width: 60px; height: 30px\" #iconsel>\r\n                <mat-select-trigger>\r\n                    <mat-icon>{{iconsel.value}}</mat-icon>\r\n                </mat-select-trigger>\r\n                <mat-option *ngFor=\"let icon of icons\" [value]=\"icon\">\r\n                    <mat-icon class=\"\">{{ icon }}</mat-icon>\r\n                </mat-option>\r\n            </mat-select>\r\n        </div> -->\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>name</span>\r\n            <input [(ngModel)]=\"data.name\" type=\"text\" style=\"width:100%\">\r\n        </div>\r\n        <!-- <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>{{'dlg.menuitem-view' | translate}}</span>\r\n            <mat-select [(value)]=\"data.item.view\" style=\"width: 300px\">\r\n                <mat-option *ngFor=\"let view of data.views\" [value]=\"view.id\">\r\n                    {{ view.name }}\r\n                </mat-option>\r\n            </mat-select>\r\n        </div>\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>{{'dlg.menuitem-link' | translate}}</span>\r\n            <input [(ngModel)]=\"data.item.link\" type=\"text\" style=\"width:100%\" [readonly]=\"data.item.view\">\r\n        </div> -->\r\n    </div>\r\n    <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n        <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\r\n        <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\"\r\n            cdkFocusInitial>OK</button>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/editor/docname.dialog.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>Rename</h1>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content>\r\n    <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n        <span>Name</span>\r\n        <input [(ngModel)]=\"data.name\" type=\"text\" width=\"100%\" [readonly]=\"data.readonly\">\r\n    </div>\r\n    <!-- <div style=\"display: grid; margin-bottom: 20px;\">\r\n      <input [(ngModel)]=\"data.name\" type=\"text\" width=\"100%\" [readonly]=\"data.readonly\">\r\n    </div> -->\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\r\n    <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\r\n  </div>\r\n</div>"
+module.exports = "<div>\r\n  <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>{{'dlg.docname-title' | translate}}</h1>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content>\r\n    <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n        <span>{{'dlg.docname-name' | translate}}</span>\r\n        <input [(ngModel)]=\"data.name\" type=\"text\" width=\"100%\" [readonly]=\"data.readonly\">\r\n    </div>\r\n    <!-- <div style=\"display: grid; margin-bottom: 20px;\">\r\n      <input [(ngModel)]=\"data.name\" type=\"text\" width=\"100%\" [readonly]=\"data.readonly\">\r\n    </div> -->\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\r\n    <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
 /***/ "../../../../../src/app/editor/docproperty.dialog.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>Properties</h1>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content>\r\n    <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\r\n      <span>Width</span>\r\n      <input numberOnly [(ngModel)]=\"data.width\" style=\"width: 100px\" type=\"text\">\r\n    </div>\r\n    <div class=\"my-form-field\" style=\"margin-bottom: 10px; float:right\">\r\n        <span>Height</span>\r\n        <input numberOnly [(ngModel)]=\"data.height\" style=\"width: 100px\" type=\"text\">\r\n    </div>    \r\n    <div style=\"display: block; margin-top: 10px;margin-bottom:10px\">\r\n      <span style=\"font-size:12px;color:darkgray\">Background</span>\r\n      <input style=\"width:100%;height:24px;border:1px solid rgba(0,0,0,0.2);margin-top: 4px;\" readonly [(colorPicker)]=\"data.bkcolor\"\r\n        class=\"color-stroke\" title=\"Change stroke color\" [style.background]=\"data.bkcolor\" [cpPresetColors]=\"defaultColor\"\r\n        [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" [value]=\"data.bkcolor\" [cpCancelButton]=\"true\"\r\n        [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\" [cpOKButton]=\"true\"\r\n        [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" />\r\n    </div>\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\r\n    <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\r\n  </div>\r\n</div>"
+module.exports = "<div>\r\n  <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>{{'dlg.docproperty-title' | translate}}</h1>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content>\r\n    <div class=\"my-form-field\" style=\"display: inline-block;margin-bottom: 10px;\">\r\n      <span>{{'dlg.docproperty-width' | translate}}</span>\r\n      <input numberOnly [(ngModel)]=\"data.width\" style=\"width: 100px\" type=\"text\">\r\n    </div>\r\n    <div class=\"my-form-field\" style=\"margin-bottom: 10px; float:right\">\r\n        <span>{{'dlg.docproperty-height' | translate}}</span>\r\n        <input numberOnly [(ngModel)]=\"data.height\" style=\"width: 100px\" type=\"text\">\r\n    </div>    \r\n    <div style=\"display: block; margin-top: 10px;margin-bottom:10px\">\r\n      <span style=\"font-size:12px;color:darkgray\">{{'dlg.docproperty-background' | translate}}</span>\r\n      <input style=\"width:100%;height:24px;border:1px solid rgba(0,0,0,0.2);margin-top: 4px;\" readonly [(colorPicker)]=\"data.bkcolor\"\r\n        class=\"color-stroke\" title=\"Change stroke color\" [style.background]=\"data.bkcolor\" [cpPresetColors]=\"defaultColor\"\r\n        [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" [value]=\"data.bkcolor\" [cpCancelButton]=\"true\"\r\n        [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\" [cpOKButton]=\"true\"\r\n        [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" />\r\n    </div>\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\r\n    <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -3203,7 +3963,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "#svg_editor_container {\r\n  /* position: absolute; */\r\n  /* bottom: 0px; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n  /* display: block; */\r\n  background:#AAA;\r\n  height:100%; \r\n  width:100%;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-direction: column;\r\n      flex-direction: column;\r\n  position: absolute;\r\n  top: 0px;\r\n  left: 0px;\r\n}\r\n\r\n.svg-workarea-toolbar {\r\n  min-height: 46px;\r\n  height: 46px;\r\n}\r\n.svg-workarea-leftbar-p {\r\n  box-shadow: none !important;\r\n  background-color: rgba(33,33,33,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h {\r\nmax-height: 26px;\r\ntext-align: center;\r\nvertical-align: middle;\r\npadding-left: 0px;\r\npadding-right: 0px;\r\nbackground-color: rgba(33,33,33,1);\r\ncolor: rgba(255,255,255,1);\r\n/* border-bottom: solid 1px rgba(0, 0, 0, 0.07); */\r\n}\r\n\r\n.svg-workarea-leftbar-h mat-icon {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h span {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  padding-top: 5px !important;\r\n  padding-left: 3px;\r\n  font-size: 11px;\r\n}\r\n\r\n/* .svg-workarea-leftbar-h:hover {\r\n} */\r\n\r\n.svg-workarea-leftbar-h:enabled .svg-workarea-leftbar-h::-moz-selection{\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h:enabled .svg-workarea-leftbar-h::selection{\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n/* .mat-expansion-panel-content {\r\n  background-color: rgb(53, 3, 3);\r\n} */\r\n\r\n.svg-workarea-flybar-h {\r\n  max-height: 26px;\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  padding-left: 0px;\r\n  padding-right: 0px;\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  /* border-bottom: solid 1px rgba(0, 0, 0, 0.07); */\r\n }\r\n \r\n .svg-workarea-flybar-h mat-icon {\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }\r\n \r\n .svg-workarea-flybar-h span {\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n     padding-top: 5px !important;\r\n     padding-left: 3px;\r\n     font-size: 11px;\r\n }\r\n \r\n /* .svg-workarea-flybar-h:hover {\r\n } */\r\n \r\n .svg-workarea-flybar-h:enabled .svg-workarea-flybar-h::-moz-selection{\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }\r\n \r\n .svg-workarea-flybar-h:enabled .svg-workarea-flybar-h::selection{\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }   \r\n\r\n.svg-workarea-fly-p {\r\n  box-shadow: none !important;\r\n  background-color: rgba(33,33,33,1);\r\n  width: 200px;\r\n  padding-left: 0px;\r\n  padding-right: 0px;\r\n}\r\n\r\n.svg-property-split3:after {\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.svg-property-split3 div {\r\n  /* float: left; */\r\n  /* width: 49%; */\r\n  display: inline-block;\r\n}\r\n\r\n.svg-property-split2:after {\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.svg-property-split2 div {\r\n  /* float: left; */\r\n  /* width: 49%; */\r\n  display: inline-block;\r\n}\r\n\r\n.svg-property {\r\n  /* display: block; */\r\n  color: rgba(255,255,255,0.75);\r\n  /* position: relative; */\r\n  /* left: 5px; */\r\n  /* right: 5px; */\r\n  /* width: 100%; */\r\n}\r\n\r\n.svg-property span {\r\n  /* float: left; */\r\n  display: block;\r\n  font-size: 10px;\r\n  margin: 0px 5px 0px 10px;\r\n}\r\n\r\n.svg-property input {\r\n  /* float: right; */\r\n  /* position: relative; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  border: unset;\r\n  background-color: inherit;\r\n  color: inherit;\r\n  border-bottom: 1px solid rgba(255,255,255,0.75);\r\n}\r\n\r\n.svg-workarea-container {\r\n  /* position: relative; */\r\n  display: block;\r\n  height: 100%;\r\n  /* height: calc(100% - 46px);  */\r\n  /* bottom: 0px; */\r\n  /* top: 0px; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n}\r\n\r\n.svg-tools-fly {\r\n  z-index: 9999;\r\n  position:absolute; \r\n  right:25px; \r\n  top:55px; \r\n  overflow-y: auto;\r\n  max-height: calc(100% - 75px); \r\n\r\n}\r\n\r\n.svg-tool-button {\r\n  vertical-align: middle;\r\n  display: inline-table;\r\n  /* display: inline-block; */\r\n  cursor: pointer;\r\n  height: 30px;\r\n  width: 30px;\r\n  border-radius: 50%;\r\n  margin: 2px 2px 2px 2px;\r\n  /* padding-top: 5px; */\r\n}\r\n\r\n.svg-tool-button span {\r\n  display: block;\r\n  margin: auto;\r\n  /* height: 30px; */\r\n  /* width: 30px; */\r\n}\r\n\r\n.svg-tool-button:hover {\r\n  background: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.svg-tool-active:active {\r\n  /* border: 1px solid #000000; */\r\n  background-color: rgba(48,89,175,1);        \r\n}\r\n\r\n.svg-tool-active {\r\n  /* border: 1px solid #000000; */\r\n  background-color: rgba(48,89,175,1);        \r\n}\r\n\r\n.leave-header-area {\r\n  margin-top: 36px;\r\n}\r\n\r\n.svg-sidenav {\r\n  min-width: 160px;\r\n  max-width: 200px;\r\n  background: rgba(33,33,33,1);\r\n}\r\n\r\n/* tool bar top */\r\n.tools_panel {\r\n  background-color: rgba(33,33,33,0.92);\r\n  color: rgba(255,255,255,1);\r\n}\r\n.main-btn {\r\n  height: 34px;\r\n  width: 34px;\r\n  min-width: unset !important;\r\n  padding:unset !important;\r\n  line-height: 34px;\r\n  margin-left: 5px;\r\n  margin-right: 5px;\r\n}\r\n\r\n.main-btn mat-icon {\r\n  font-size: 24px;\r\n  height: unset;\r\n  width: unset;\r\n}\r\n\r\n.main-btn .to-top {\r\n  background: url('/assets/images/to-top.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .to-bottom {\r\n  background: url('/assets/images/to-bottom.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .to-path {\r\n  background: url('/assets/images/to-path.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .group {\r\n  background: url('/assets/images/group.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .ungroup {\r\n  background: url('/assets/images/ungroup.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn-sep {\r\n  width: 1px;\r\n  background: #888;\r\n  border-left: 1px outset #888;\r\n  margin: 5px 3px;\r\n  padding: 0;\r\n  height: 24px;\r\n}\r\n\r\n.leftbar-edit-btn {\r\n  margin-top: 2px;\r\n  font-size: 18px;\r\n  height: 18px;\r\n  width: 18px;\r\n  padding-right: 20px;\r\n}\r\n\r\n/* .leftbar-edit-btn:hover{\r\n} */\r\n\r\n.leftbar-panel {\r\n  padding: 0px 0px 0px 0px;\r\n  font-size: 11px;\r\n  /* background-color: rgb(34, 107, 241); */\r\n  background-color: rgba(47,47,47,1);\r\n  /* overflow: auto; */\r\n}\r\n\r\n.leftbar-item {\r\n  /* padding-top: 6px; */\r\n  /* padding-bottom: 6px; */\r\n  /* width: 100%; */\r\n  padding: 3px 0px 1px 0px;\r\n  display: flow-root;\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.leftbar-item-active {\r\n  /* font-weight: 600; */\r\n  background-color: rgba(48,89,175,1);    \r\n}\r\n\r\n.leftbar-item span {\r\n  padding-left: 15px;    \r\n  float: left;\r\n}\r\n.leftbar-item mat-icon {\r\n  float: right;\r\n  font-size: 18px;\r\n  /* color: rgba(0, 0, 0, 0.4); */\r\n}\r\n\r\n::ng-deep .leftbar-item-menu {\r\n  background-color: rgba(47,47,47,1);\r\n}\r\n\r\n::ng-deep .svg-workarea-leftbar-p .mat-expansion-panel-body {\r\n  margin: 0px 0px 0px 0px !important;\r\n  padding: 0px 0px 0px 0px !important;\r\n  /* padding-left: 10px !important; */\r\n  -ms-flex-wrap: wrap !important;\r\n      flex-wrap: wrap !important;\r\n}\r\n\r\n::ng-deep .svg-workarea-fly-p .mat-expansion-panel-body {\r\n  margin: 0px 0px 0px 0px !important;\r\n  padding: 0px 0px 0px 0px !important;\r\n  /* padding-left: 10px !important; */\r\n  -ms-flex-wrap: wrap !important;\r\n      flex-wrap: wrap !important;\r\n  background-color: rgba(47,47,47,1);\r\n  \r\n}\r\n\r\n::ng-deep .mat-menu-item {\r\n  font-size: 11px;\r\n  color: rgba(255,255,255,1);\r\n  height: 30px !important;\r\n  line-height: unset !important;\r\n}\r\n\r\n.rightbar-panel {\r\n  /* padding: 0px 0px 0px 0px; */\r\n  /* font-size: 11px; */\r\n  /* background-color: rgb(34, 107, 241); */\r\n  background-color: rgba(47,47,47,1);\r\n  /* overflow: auto; */\r\n}\r\n\r\n.mat-expansion-panel-header-title span {\r\n  padding-top: 3px;\r\n}\r\n.mat-expansion-panel-spacing {\r\n  margin: 0px 0px 0px 0px !important;\r\n}\r\n\r\n.bottom-bar {\r\n  position: absolute;\r\n  left: 0px;\r\n  right: 0;\r\n  bottom: 0;\r\n  height: 30px;\r\n  overflow: visible;\r\n}\r\n\r\n.zoom-menu {\r\n  float: left;\r\n  padding-left: 5px;\r\n  width: 90px;  \r\n}\r\n\r\n.zoom-value {\r\n  background-color: inherit;\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n  display: inline-block;\r\n}\r\n\r\n.zoom-label {\r\n  display: inline-block;\r\n  height: 25px;\r\n}\r\n.zoom-value span {\r\n  display: inline-block;\r\n  /* position: absolute; */\r\n  /* top: 5px; */\r\n  /* left: 5px; */\r\n  /* height: 10px; */\r\n  /* width: 10px; */\r\n}\r\n\r\n.zoom-value .selection, button {\r\n  display: inline-block;\r\n  /* height: 10px; */\r\n  /* width: 10px; */\r\n  /* position: absolute; */\r\n  /* top: 3px; */\r\n  /* left: 55px; */\r\n}\r\n.zoom-value button {\r\n  /* width: unset; */\r\n  z-index: 9999;\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n}\r\n\r\n.zoom-value ul, li {\r\n  /* width: unset; */\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n}\r\n\r\n.zoom-value ul {\r\n  left: 0px;\r\n}\r\n\r\n.zoom-value li:hover {\r\n  background-color: rgb(22, 22, 22);\r\n  \r\n}\r\n\r\n.colors {\r\n  position: absolute;\r\n  left: 25px;\r\n  top: 0px;\r\n}\r\n\r\n.colors-palette {\r\n  position: absolute;\r\n  left: 850px;\r\n  top: 0px;\r\n}\r\n\r\n.color-fill {\r\n  position: relative;\r\n  top: 3px;\r\n  left: 10px;\r\n  cursor: pointer;\r\n  width: 14px;\r\n  height: 14px;\r\n  border: 1px solid  rgba(255,255,255,0.75);\r\n}\r\n\r\n.color-stroke {\r\n  position: absolute;\r\n  top: 3px;\r\n  left: 30px;\r\n  cursor: pointer;\r\n  width: 14px;\r\n  height: 14px;\r\n  border: 1px solid  rgba(255,255,255,0.75);\r\n}\r\n\r\n.style-stroke {\r\n  display: block !important;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.style-stroke option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.font-family {\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.font-family option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.text-align {\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.text-align option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\nselect#start_marker option[value=\"A\"] { background:url('/assets/images/select-pointer.svg');   }\r\nselect#start_marker option[value=\"B\"] { background:url('/assets/images/select-pointer.svg'); }\r\nselect#start_marker option[value=\"C\"] { background:url('/assets/images/select-pointer.svg'); }\r\nselect#start_marker option[value=\"D\"] { background:url('/assets/images/select-pointer.svg'); }\r\n\r\n.icon-select {\r\n  background: url('/assets/images/select-pointer.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-pencil {\r\n  background: url('/assets/images/pencil.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-line {\r\n  background: url('/assets/images/line.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-rect {\r\n  background: url('/assets/images/rect.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-circle {\r\n  background: url('/assets/images/circle.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-ellipse {\r\n  background: url('/assets/images/ellipse.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-path {\r\n  background: url('/assets/images/path.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-text {\r\n  background: url('/assets/images/text.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px; \r\n}\r\n\r\n.icon-image {\r\n  background: url('/assets/images/image.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-left {\r\n  background: url('/assets/images/align-left.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-center {\r\n  background: url('/assets/images/align-center.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-right {\r\n  background: url('/assets/images/align-right.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-top {\r\n  background: url('/assets/images/align-top.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-middle {\r\n  background: url('/assets/images/align-middle.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-bottom {\r\n  background: url('/assets/images/align-bottom.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-flip-orizontal {\r\n  background: url('/assets/images/flip-orizontal.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-flip-vertical {\r\n  background: url('/assets/images/flip-vertical.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-miter {\r\n  background: url('/assets/images/linejoin-miter.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-round {\r\n  background: url('/assets/images/linejoin-round.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-bevel {\r\n  background: url('/assets/images/linejoin-bevel.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-butt {\r\n  background: url('/assets/images/linecap-butt.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-square {\r\n  background: url('/assets/images/linecap-square.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-round {\r\n  background: url('/assets/images/linecap-round.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-tool {\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.icon-switch {\r\n  background: url('/assets/images/switch.svg') no-repeat center center;\r\n}\r\n.icon-compressor-void {\r\n  background: url('/assets/images/compressor-void.svg') no-repeat center center;\r\n}\r\n.icon-compressor-fan {\r\n  background: url('/assets/images/compressor-fan.svg') no-repeat center center;\r\n}\r\n.icon-compressor-piston {\r\n  background: url('/assets/images/compressor-piston.svg') no-repeat center center;\r\n}\r\n.icon-valve-ax {\r\n  background: url('/assets/images/valve-ax.svg') no-repeat center center;\r\n}\r\n.icon-valve-bx {\r\n  background: url('/assets/images/valve-bx.svg') no-repeat center center;\r\n}\r\n.icon-valve-cx {\r\n  background: url('/assets/images/valve-cx.svg') no-repeat center center;\r\n}\r\n.icon-value {\r\n  background: url('/assets/images/value.svg') no-repeat center center;\r\n}\r\n.icon-editvalue {\r\n  background: url('/assets/images/editvalue.svg') no-repeat center center;\r\n}\r\n.icon-selectvalue {\r\n  background: url('/assets/images/selectvalue.svg') no-repeat center center;\r\n}\r\n.icon-progress-v {\r\n  background: url('/assets/images/progress-v.svg') no-repeat center center;\r\n}\r\n.icon-semaphore {\r\n  background: url('/assets/images/semaphore.svg') no-repeat center center;\r\n}\r\n.icon-shape-diamond {\r\n  background: url('/assets/images/shape-diamond.svg') no-repeat center center;\r\n}\r\n.icon-shape-triangle {\r\n  background: url('/assets/images/shape-triangle.svg') no-repeat center center;\r\n}\r\n.icon-shape-halfcircle {\r\n  background: url('/assets/images/shape-halfcircle.svg') no-repeat center center;\r\n}\r\n.icon-shape-delay {\r\n  background: url('/assets/images/shape-delay.svg') no-repeat center center;\r\n}\r\n.icon-shape-looplimit {\r\n  background: url('/assets/images/shape-looplimit.svg') no-repeat center center;\r\n}\r\n.icon-shape-prepara {\r\n  background: url('/assets/images/shape-prepara.svg') no-repeat center center;\r\n}\r\n.icon-shape-trape {\r\n  background: url('/assets/images/shape-trape.svg') no-repeat center center;\r\n}\r\n.icon-shape-offpage {\r\n  background: url('/assets/images/shape-offpage.svg') no-repeat center center;\r\n}\r\n.icon-shape-ticket {\r\n  background: url('/assets/images/shape-ticket.svg') no-repeat center center;\r\n}\r\n.icon-shape-arrow {\r\n  background: url('/assets/images/shape-arrow.svg') no-repeat center center;\r\n}\r\n.icon-shape-doublearrow {\r\n  background: url('/assets/images/shape-doublearrow.svg') no-repeat center center;\r\n}\r\n.icon-shape-rectindi {\r\n  background: url('/assets/images/shape-rectindi.svg') no-repeat center center;\r\n}\r\n.icon-shape-circleindi {\r\n  background: url('/assets/images/shape-circleindi.svg') no-repeat center center;\r\n}\r\n.icon-button {\r\n  background: url('/assets/images/button.svg') no-repeat center center;\r\n}\r\n.icon-motor-simb {\r\n  background: url('/assets/images/motor-simb.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-filter {\r\n  background: url('/assets/images/exchanger-filter.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-heat {\r\n  background: url('/assets/images/exchanger-heat.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-tube {\r\n  background: url('/assets/images/exchanger-tube.svg') no-repeat center center;\r\n}", ""]);
+exports.push([module.i, "#svg_editor_container {\r\n  /* position: absolute; */\r\n  /* bottom: 0px; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n  /* display: block; */\r\n  background:#AAA;\r\n  height:100%; \r\n  width:100%;\r\n  display: -ms-flexbox;\r\n  display: flex;\r\n  -ms-flex-direction: column;\r\n      flex-direction: column;\r\n  position: absolute;\r\n  top: 0px;\r\n  left: 0px;\r\n}\r\n\r\n.svg-workarea-toolbar {\r\n  min-height: 46px;\r\n  height: 46px;\r\n}\r\n.svg-workarea-leftbar-p {\r\n  box-shadow: none !important;\r\n  background-color: rgba(33,33,33,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h {\r\nmax-height: 26px;\r\ntext-align: center;\r\nvertical-align: middle;\r\npadding-left: 0px;\r\npadding-right: 0px;\r\nbackground-color: rgba(33,33,33,1);\r\ncolor: rgba(255,255,255,1);\r\n/* border-bottom: solid 1px rgba(0, 0, 0, 0.07); */\r\n}\r\n\r\n.svg-workarea-leftbar-h mat-icon {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h span {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  padding-top: 5px !important;\r\n  padding-left: 3px;\r\n  font-size: 11px;\r\n}\r\n\r\n/* .svg-workarea-leftbar-h:hover {\r\n} */\r\n\r\n.svg-workarea-leftbar-h:enabled .svg-workarea-leftbar-h::-moz-selection{\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.svg-workarea-leftbar-h:enabled .svg-workarea-leftbar-h::selection{\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n/* .mat-expansion-panel-content {\r\n  background-color: rgb(53, 3, 3);\r\n} */\r\n\r\n.svg-workarea-flybar-h {\r\n  max-height: 26px;\r\n  text-align: center;\r\n  vertical-align: middle;\r\n  padding-left: 0px;\r\n  padding-right: 0px;\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  /* border-bottom: solid 1px rgba(0, 0, 0, 0.07); */\r\n }\r\n \r\n .svg-workarea-flybar-h mat-icon {\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }\r\n \r\n .svg-workarea-flybar-h span {\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n     padding-top: 5px !important;\r\n     padding-left: 3px;\r\n     font-size: 11px;\r\n }\r\n \r\n /* .svg-workarea-flybar-h:hover {\r\n } */\r\n \r\n .svg-workarea-flybar-h:enabled .svg-workarea-flybar-h::-moz-selection{\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }\r\n \r\n .svg-workarea-flybar-h:enabled .svg-workarea-flybar-h::selection{\r\n     background-color: rgba(33,33,33,1);\r\n     color: rgba(255,255,255,1);\r\n }   \r\n\r\n.svg-workarea-fly-p {\r\n  box-shadow: none !important;\r\n  background-color: rgba(33,33,33,1);\r\n  width: 200px;\r\n  padding-left: 0px;\r\n  padding-right: 0px;\r\n}\r\n\r\n.svg-property-split3:after {\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.svg-property-split3 div {\r\n  /* float: left; */\r\n  /* width: 49%; */\r\n  display: inline-block;\r\n}\r\n\r\n.svg-property-split2:after {\r\n  display: table;\r\n  clear: both;\r\n}\r\n\r\n.svg-property-split2 div {\r\n  /* float: left; */\r\n  /* width: 49%; */\r\n  display: inline-block;\r\n}\r\n\r\n.svg-property {\r\n  /* display: block; */\r\n  color: rgba(255,255,255,0.75);\r\n  /* position: relative; */\r\n  /* left: 5px; */\r\n  /* right: 5px; */\r\n  /* width: 100%; */\r\n}\r\n\r\n.svg-property span {\r\n  /* float: left; */\r\n  display: block;\r\n  font-size: 10px;\r\n  margin: 0px 5px 0px 10px;\r\n}\r\n\r\n.svg-property input {\r\n  /* float: right; */\r\n  /* position: relative; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  border: unset;\r\n  background-color: inherit;\r\n  color: inherit;\r\n  border-bottom: 1px solid rgba(255,255,255,0.75);\r\n}\r\n\r\n.svg-workarea-container {\r\n  /* position: relative; */\r\n  display: block;\r\n  height: 100%;\r\n  /* height: calc(100% - 46px);  */\r\n  /* bottom: 0px; */\r\n  /* top: 0px; */\r\n  /* left: 0px; */\r\n  /* right: 0px; */\r\n}\r\n\r\n.svg-tools-fly {\r\n  z-index: 9999;\r\n  position:absolute; \r\n  right:25px; \r\n  top:55px; \r\n  overflow-y: auto;\r\n  max-height: calc(100% - 75px); \r\n\r\n}\r\n\r\n.svg-tool-button {\r\n  vertical-align: middle;\r\n  display: inline-table;\r\n  /* display: inline-block; */\r\n  cursor: pointer;\r\n  height: 30px;\r\n  width: 30px;\r\n  border-radius: 50%;\r\n  margin: 2px 2px 2px 2px;\r\n  /* padding-top: 5px; */\r\n}\r\n\r\n.svg-tool-button span {\r\n  display: block;\r\n  margin: auto;\r\n  /* height: 30px; */\r\n  /* width: 30px; */\r\n}\r\n\r\n.svg-tool-button:hover {\r\n  background: rgba(0, 0, 0, 0.1);\r\n}\r\n\r\n.svg-tool-active:active {\r\n  /* border: 1px solid #000000; */\r\n  background-color: rgba(48,89,175,1);        \r\n}\r\n\r\n.svg-tool-active {\r\n  /* border: 1px solid #000000; */\r\n  background-color: rgba(48,89,175,1);        \r\n}\r\n\r\n.leave-header-area {\r\n  margin-top: 36px;\r\n}\r\n\r\n.svg-sidenav {\r\n  min-width: 160px;\r\n  max-width: 200px;\r\n  background: rgba(33,33,33,1);\r\n}\r\n\r\n/* tool bar top */\r\n.tools_panel {\r\n  background-color: rgba(33,33,33,0.92);\r\n  color: rgba(255,255,255,1);\r\n}\r\n.main-btn {\r\n  height: 34px;\r\n  width: 34px;\r\n  min-width: unset !important;\r\n  padding:unset !important;\r\n  line-height: 34px;\r\n  margin-left: 5px;\r\n  margin-right: 5px;\r\n}\r\n\r\n.main-btn mat-icon {\r\n  font-size: 24px;\r\n  height: unset;\r\n  width: unset;\r\n}\r\n\r\n.main-btn .to-top {\r\n  background: url('/assets/images/to-top.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .to-bottom {\r\n  background: url('/assets/images/to-bottom.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .to-path {\r\n  background: url('/assets/images/to-path.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .group {\r\n  background: url('/assets/images/group.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn .ungroup {\r\n  background: url('/assets/images/ungroup.svg') no-repeat center center;\r\n  background-size: contain;\r\n  display: inline-block;\r\n  height: 34px;\r\n  width: 34px;\r\n}\r\n\r\n.main-btn-sep {\r\n  width: 1px;\r\n  background: #888;\r\n  border-left: 1px outset #888;\r\n  margin: 5px 3px;\r\n  padding: 0;\r\n  height: 24px;\r\n}\r\n\r\n/* --------------- */\r\n/* left panel */\r\n/* --------------- */\r\n.view-panel {\r\n  max-height: 400px;\r\n  overflow: auto;\r\n}\r\n.leftbar-edit-btn {\r\n  margin-top: 2px;\r\n  font-size: 18px;\r\n  height: 18px;\r\n  width: 18px;\r\n  padding-right: 15px;\r\n}\r\n\r\n.leftbar-panel {\r\n  padding: 0px 0px 0px 0px;\r\n  font-size: 11px;\r\n  /* background-color: rgb(34, 107, 241); */\r\n  background-color: rgba(47,47,47,1);\r\n  /* overflow: auto; */\r\n}\r\n\r\n.leftbar-item {\r\n  /* padding-top: 6px; */\r\n  /* padding-bottom: 6px; */\r\n  /* width: 100%; */\r\n  padding: 3px 0px 1px 0px;\r\n  display: flow-root;\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.leftbar-item-active {\r\n  /* font-weight: 600; */\r\n  background-color: rgba(48,89,175,1);    \r\n}\r\n\r\n.leftbar-item span {\r\n  padding-left: 15px;    \r\n  float: left;\r\n}\r\n.leftbar-item mat-icon {\r\n  float: right;\r\n  font-size: 18px;\r\n  /* color: rgba(0, 0, 0, 0.4); */\r\n}\r\n\r\n::ng-deep .leftbar-item-menu {\r\n  background-color: rgba(47,47,47,1);\r\n}\r\n\r\n::ng-deep .svg-workarea-leftbar-p .mat-expansion-panel-body {\r\n  margin: 0px 0px 0px 0px !important;\r\n  padding: 0px 0px 0px 0px !important;\r\n  /* padding-left: 10px !important; */\r\n  -ms-flex-wrap: wrap !important;\r\n      flex-wrap: wrap !important;\r\n}\r\n\r\n::ng-deep .svg-workarea-fly-p .mat-expansion-panel-body {\r\n  margin: 0px 0px 0px 0px !important;\r\n  padding: 0px 0px 0px 0px !important;\r\n  /* padding-left: 10px !important; */\r\n  -ms-flex-wrap: wrap !important;\r\n      flex-wrap: wrap !important;\r\n  background-color: rgba(47,47,47,1);\r\n  \r\n}\r\n\r\n::ng-deep .mat-menu-item {\r\n  font-size: 11px;\r\n  color: rgba(255,255,255,1);\r\n  height: 30px !important;\r\n  line-height: unset !important;\r\n}\r\n\r\n.rightbar-panel {\r\n  /* padding: 0px 0px 0px 0px; */\r\n  /* font-size: 11px; */\r\n  /* background-color: rgb(34, 107, 241); */\r\n  background-color: rgba(47,47,47,1);\r\n  /* overflow: auto; */\r\n}\r\n\r\n.mat-expansion-panel-header-title span {\r\n  padding-top: 3px;\r\n}\r\n.mat-expansion-panel-spacing {\r\n  margin: 0px 0px 0px 0px !important;\r\n}\r\n\r\n.bottom-bar {\r\n  position: absolute;\r\n  left: 0px;\r\n  right: 0;\r\n  bottom: 0;\r\n  height: 30px;\r\n  overflow: visible;\r\n}\r\n\r\n.zoom-menu {\r\n  float: left;\r\n  padding-left: 5px;\r\n  width: 90px;  \r\n}\r\n\r\n.zoom-value {\r\n  background-color: inherit;\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n  display: inline-block;\r\n}\r\n\r\n.zoom-label {\r\n  display: inline-block;\r\n  height: 25px;\r\n}\r\n.zoom-value span {\r\n  display: inline-block;\r\n  /* position: absolute; */\r\n  /* top: 5px; */\r\n  /* left: 5px; */\r\n  /* height: 10px; */\r\n  /* width: 10px; */\r\n}\r\n\r\n.zoom-value .selection, button {\r\n  display: inline-block;\r\n  /* height: 10px; */\r\n  /* width: 10px; */\r\n  /* position: absolute; */\r\n  /* top: 3px; */\r\n  /* left: 55px; */\r\n}\r\n.zoom-value button {\r\n  /* width: unset; */\r\n  z-index: 9999;\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n}\r\n\r\n.zoom-value ul, li {\r\n  /* width: unset; */\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n  border: unset;\r\n}\r\n\r\n.zoom-value ul {\r\n  left: 0px;\r\n}\r\n\r\n.zoom-value li:hover {\r\n  background-color: rgb(22, 22, 22);\r\n  \r\n}\r\n\r\n.colors {\r\n  position: absolute;\r\n  left: 25px;\r\n  top: 0px;\r\n}\r\n\r\n.colors-palette {\r\n  position: absolute;\r\n  left: 850px;\r\n  top: 0px;\r\n}\r\n\r\n.color-fill {\r\n  position: relative;\r\n  top: 3px;\r\n  left: 10px;\r\n  cursor: pointer;\r\n  width: 14px;\r\n  height: 14px;\r\n  border: 1px solid  rgba(255,255,255,0.75);\r\n}\r\n\r\n.color-stroke {\r\n  position: absolute;\r\n  top: 3px;\r\n  left: 30px;\r\n  cursor: pointer;\r\n  width: 14px;\r\n  height: 14px;\r\n  border: 1px solid  rgba(255,255,255,0.75);\r\n}\r\n\r\n.style-stroke {\r\n  display: block !important;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.style-stroke option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.font-family {\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.font-family option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.text-align {\r\n  display: block;\r\n  margin: 0px 10px 12px 10px;\r\n  background-color: inherit;\r\n  color: inherit;\r\n}\r\n\r\n.text-align option {\r\n  background-color: rgba(33,33,33,1);\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\nselect#start_marker option[value=\"A\"] { background:url('/assets/images/select-pointer.svg');   }\r\nselect#start_marker option[value=\"B\"] { background:url('/assets/images/select-pointer.svg'); }\r\nselect#start_marker option[value=\"C\"] { background:url('/assets/images/select-pointer.svg'); }\r\nselect#start_marker option[value=\"D\"] { background:url('/assets/images/select-pointer.svg'); }\r\n\r\n.icon-select {\r\n  background: url('/assets/images/select-pointer.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-pencil {\r\n  background: url('/assets/images/pencil.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-line {\r\n  background: url('/assets/images/line.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-rect {\r\n  background: url('/assets/images/rect.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-circle {\r\n  background: url('/assets/images/circle.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-ellipse {\r\n  background: url('/assets/images/ellipse.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-path {\r\n  background: url('/assets/images/path.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-text {\r\n  background: url('/assets/images/text.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px; \r\n}\r\n\r\n.icon-image {\r\n  background: url('/assets/images/image.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-left {\r\n  background: url('/assets/images/align-left.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-center {\r\n  background: url('/assets/images/align-center.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-right {\r\n  background: url('/assets/images/align-right.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-top {\r\n  background: url('/assets/images/align-top.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-middle {\r\n  background: url('/assets/images/align-middle.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-align-bottom {\r\n  background: url('/assets/images/align-bottom.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-flip-orizontal {\r\n  background: url('/assets/images/flip-orizontal.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-flip-vertical {\r\n  background: url('/assets/images/flip-vertical.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-miter {\r\n  background: url('/assets/images/linejoin-miter.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-round {\r\n  background: url('/assets/images/linejoin-round.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linejoin-bevel {\r\n  background: url('/assets/images/linejoin-bevel.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-butt {\r\n  background: url('/assets/images/linecap-butt.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-square {\r\n  background: url('/assets/images/linecap-square.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-linecap-round {\r\n  background: url('/assets/images/linecap-round.svg') no-repeat center center;\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n}\r\n\r\n.icon-tool {\r\n  background-size: contain;\r\n  height: 30px;\r\n  width: 30px;\r\n  color: rgba(255,255,255,1);\r\n}\r\n\r\n.icon-switch {\r\n  background: url('/assets/images/switch.svg') no-repeat center center;\r\n}\r\n.icon-compressor-void {\r\n  background: url('/assets/images/compressor-void.svg') no-repeat center center;\r\n}\r\n.icon-compressor-fan {\r\n  background: url('/assets/images/compressor-fan.svg') no-repeat center center;\r\n}\r\n.icon-compressor-piston {\r\n  background: url('/assets/images/compressor-piston.svg') no-repeat center center;\r\n}\r\n.icon-valve-ax {\r\n  background: url('/assets/images/valve-ax.svg') no-repeat center center;\r\n}\r\n.icon-valve-bx {\r\n  background: url('/assets/images/valve-bx.svg') no-repeat center center;\r\n}\r\n.icon-valve-cx {\r\n  background: url('/assets/images/valve-cx.svg') no-repeat center center;\r\n}\r\n.icon-value {\r\n  background: url('/assets/images/value.svg') no-repeat center center;\r\n}\r\n.icon-editvalue {\r\n  background: url('/assets/images/editvalue.svg') no-repeat center center;\r\n}\r\n.icon-selectvalue {\r\n  background: url('/assets/images/selectvalue.svg') no-repeat center center;\r\n}\r\n.icon-progress-v {\r\n  background: url('/assets/images/progress-v.svg') no-repeat center center;\r\n}\r\n.icon-semaphore {\r\n  background: url('/assets/images/semaphore.svg') no-repeat center center;\r\n}\r\n.icon-shape-diamond {\r\n  background: url('/assets/images/shape-diamond.svg') no-repeat center center;\r\n}\r\n.icon-shape-triangle {\r\n  background: url('/assets/images/shape-triangle.svg') no-repeat center center;\r\n}\r\n.icon-shape-halfcircle {\r\n  background: url('/assets/images/shape-halfcircle.svg') no-repeat center center;\r\n}\r\n.icon-shape-delay {\r\n  background: url('/assets/images/shape-delay.svg') no-repeat center center;\r\n}\r\n.icon-shape-looplimit {\r\n  background: url('/assets/images/shape-looplimit.svg') no-repeat center center;\r\n}\r\n.icon-shape-prepara {\r\n  background: url('/assets/images/shape-prepara.svg') no-repeat center center;\r\n}\r\n.icon-shape-trape {\r\n  background: url('/assets/images/shape-trape.svg') no-repeat center center;\r\n}\r\n.icon-shape-offpage {\r\n  background: url('/assets/images/shape-offpage.svg') no-repeat center center;\r\n}\r\n.icon-shape-ticket {\r\n  background: url('/assets/images/shape-ticket.svg') no-repeat center center;\r\n}\r\n.icon-shape-arrow {\r\n  background: url('/assets/images/shape-arrow.svg') no-repeat center center;\r\n}\r\n.icon-shape-doublearrow {\r\n  background: url('/assets/images/shape-doublearrow.svg') no-repeat center center;\r\n}\r\n.icon-shape-rectindi {\r\n  background: url('/assets/images/shape-rectindi.svg') no-repeat center center;\r\n}\r\n.icon-shape-circleindi {\r\n  background: url('/assets/images/shape-circleindi.svg') no-repeat center center;\r\n}\r\n.icon-button {\r\n  background: url('/assets/images/button.svg') no-repeat center center;\r\n}\r\n.icon-motor-simb {\r\n  background: url('/assets/images/motor-simb.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-filter {\r\n  background: url('/assets/images/exchanger-filter.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-heat {\r\n  background: url('/assets/images/exchanger-heat.svg') no-repeat center center;\r\n}\r\n.icon-exchanger-tube {\r\n  background: url('/assets/images/exchanger-tube.svg') no-repeat center center;\r\n}\r\n.icon-chart {\r\n  background: url('/assets/images/chart.svg') no-repeat center center;\r\n}", ""]);
 
 // exports
 
@@ -3216,7 +3976,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/editor/editor.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"svg_editor_container\">\r\n  <mat-drawer-container class=\"svg-workarea-container\">\r\n    <!-- LEFT BAR -->\r\n    <mat-drawer mode=\"side\" opened=\"true\" class=\"svg-sidenav leave-header-area\">\r\n      <mat-accordion multi=\"true\">\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelA=true;savePanelState()\" (closed)=\"panelsState.panelA=false;savePanelState()\"\r\n          hideToggle=\"true\" [expanded]=\"panelsState.panelA\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelA\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelA\">expand_more</mat-icon>\r\n              <span>View</span>  <!-- PROJECT FILES -->\r\n            </mat-panel-title>\r\n            <mat-icon aria-label=\"Add\" *ngIf=\"panelsState.panelA\" class=\"leftbar-edit-btn\" (click)=\"onAddView();$event.stopPropagation()\">add</mat-icon>\r\n          </mat-expansion-panel-header>\r\n          <div class=\"leftbar-panel\">\r\n            <div *ngIf=\"hmi.views && hmi.views.length <= 0\">\r\n              <br>\r\n            </div>\r\n            <div *ngFor=\"let item of hmi.views; let i = index\" (click)=\"onSelectView(item)\" [ngClass]=\"{'leftbar-item-active': isViewActive(item)}\"\r\n              class=\"leftbar-item mycursor-pointer\">\r\n              <span>{{item.name}}</span>\r\n              <mat-icon aria-label=\"More\" [matMenuTriggerFor]=\"menuview\" class=\"\">more_vert</mat-icon>\r\n              <mat-menu #menuview=\"matMenu\" class=\"leftbar-item-menu\">\r\n                <button mat-menu-item (click)=\"onDeleteView(item)\">Delete</button>\r\n                <button mat-menu-item (click)=\"onRenameView(item)\">Rename</button>\r\n                <button mat-menu-item (click)=\"onPropertyView(item)\">Property</button>\r\n              </mat-menu>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelB=true;savePanelState()\" (closed)=\"panelsState.panelB=false;savePanelState()\"\r\n          hideToggle=\"true\" [expanded]=\"panelsState.panelB\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelB\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelB\">expand_more</mat-icon>\r\n              <span>General</span>  <!-- GENERAL -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          \r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('select')}\" (click)=\"setMode('select')\">\r\n              <span class=\"icon-select\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('fhpath')}\" (click)=\"setMode('fhpath')\">\r\n              <span class=\"icon-pencil\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('line')}\" (click)=\"setMode('line')\">\r\n              <span class=\"icon-line\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('rect')}\" (click)=\"setMode('rect')\">\r\n              <span class=\"icon-rect\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('circle')}\" (click)=\"setMode('circle')\">\r\n              <span class=\"icon-circle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('ellipse')}\" (click)=\"setMode('ellipse')\">\r\n              <span class=\"icon-ellipse\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('path')}\" (click)=\"setMode('path')\">\r\n              <span class=\"icon-path\"></span>\r\n            </div>            \r\n            <!-- <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('path')}\" (click)=\"setMode('path')\">\r\n              <span class=\"icon-path\"></span>\r\n            </div> -->\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('text')}\" (click)=\"setMode('text')\">\r\n              <span class=\"icon-text\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('image')}\" (click)=\"setMode('image');imagefile.click();\">\r\n              <span class=\"icon-image\"></span>\r\n              <input #imagefile type=\"file\" style=\"display: none;\" (change)=\"onSetImage($event)\" accept=\"image/png|jpg|svg\"/>\r\n            </div>\r\n            <div id=\"tool_line\" style=\"display: none;\">\r\n              <span class=\"icon-image\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelS=true;savePanelState()\" (closed)=\"panelsState.panelS=false;savePanelState()\"\r\n          hideToggle=\"true\" [expanded]=\"panelsState.panelS\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelS\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelS\">expand_more</mat-icon>\r\n              <span>Shape</span>  <!-- SHAPE -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-diamond')}\" (click)=\"setMode('shape-diamond')\">\r\n              <span class=\"icon-tool icon-shape-diamond\"> </span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-triangle')}\" (click)=\"setMode('shape-triangle')\">\r\n              <span class=\"icon-tool icon-shape-triangle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-halfcircle')}\" (click)=\"setMode('shape-halfcircle')\">\r\n              <span class=\"icon-tool icon-shape-halfcircle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-delay')}\" (click)=\"setMode('shape-delay')\">\r\n              <span class=\"icon-tool icon-shape-delay\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-looplimit')}\" (click)=\"setMode('shape-looplimit')\">\r\n              <span class=\"icon-tool icon-shape-looplimit\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-prepara')}\" (click)=\"setMode('shape-prepara')\">\r\n              <span class=\"icon-tool icon-shape-prepara\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-trape')}\" (click)=\"setMode('shape-trape')\">\r\n              <span class=\"icon-tool icon-shape-trape\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-offpage')}\" (click)=\"setMode('shape-offpage')\">\r\n              <span class=\"icon-tool icon-shape-offpage\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-ticket')}\" (click)=\"setMode('shape-ticket')\">\r\n              <span class=\"icon-tool icon-shape-ticket\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-arrow')}\" (click)=\"setMode('shape-arrow')\">\r\n              <span class=\"icon-tool icon-shape-arrow\"></span>\r\n            </div> \r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-doublearrow')}\" (click)=\"setMode('shape-doublearrow')\">\r\n              <span class=\"icon-tool icon-shape-doublearrow\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-rectindi')}\" (click)=\"setMode('shape-rectindi')\">\r\n              <span class=\"icon-tool icon-shape-rectindi\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-circleindi')}\" (click)=\"setMode('shape-circleindi')\">\r\n              <span class=\"icon-tool icon-shape-circleindi\"></span>\r\n            </div>           \r\n          </div>\r\n        </mat-expansion-panel>        \r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelC=true;savePanelState()\" (closed)=\"panelsState.panelC=false;savePanelState()\"\r\n          hideToggle=\"true\" [expanded]=\"panelsState.panelC\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelC\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelC\">expand_more</mat-icon>\r\n              <span>Proc. Eng.</span>  <!-- PROCESS  -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <!-- <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('switch')}\" (click)=\"setMode('switch')\">\r\n              <span class=\"icon-tool icon-switch\"></span>\r\n            </div> -->\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-void')}\" (click)=\"setMode('compressor-void')\">\r\n              <span class=\"icon-tool icon-compressor-void\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-fan')}\" (click)=\"setMode('compressor-fan')\">\r\n              <span class=\"icon-tool icon-compressor-fan\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-piston')}\" (click)=\"setMode('compressor-piston')\">\r\n              <span class=\"icon-tool icon-compressor-piston\"></span>\r\n            </div>                        \r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-ax')}\" (click)=\"setMode('valve-ax')\">\r\n              <span class=\"icon-tool icon-valve-ax\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-bx')}\" (click)=\"setMode('valve-bx')\">\r\n              <span class=\"icon-tool icon-valve-bx\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-cx')}\" (click)=\"setMode('valve-cx')\">\r\n              <span class=\"icon-tool icon-valve-cx\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('motor-simb')}\" (click)=\"setMode('motor-simb')\">\r\n              <span class=\"icon-tool icon-motor-simb\"></span>\r\n            </div>         \r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-filter')}\" (click)=\"setMode('exchanger-filter')\">\r\n              <span class=\"icon-tool icon-exchanger-filter\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-heat')}\" (click)=\"setMode('exchanger-heat')\">\r\n              <span class=\"icon-tool icon-exchanger-heat\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-tube')}\" (click)=\"setMode('exchanger-tube')\">\r\n              <span class=\"icon-tool icon-exchanger-tube\"></span>\r\n            </div>                       \r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelD=true;savePanelState()\" (closed)=\"panelsState.panelD=false;savePanelState()\"\r\n          hideToggle=\"true\" [expanded]=\"panelsState.panelD\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelD\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelD\">expand_more</mat-icon>\r\n              <span>Controlls</span>  <!-- CONTROLLS  -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_input')}\" (click)=\"setMode('html_input')\">\r\n              <span class=\"icon-tool icon-editvalue\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('value')}\" (click)=\"setMode('value')\">\r\n              <span class=\"icon-tool icon-value\"></span>\r\n            </div>            \r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_button')}\" (click)=\"setMode('html_button')\">\r\n              <span class=\"icon-tool icon-button\"></span>\r\n            </div>            \r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_select')}\" (click)=\"setMode('html_select')\">\r\n              <span class=\"icon-tool icon-selectvalue\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('gauge_progress')}\" (click)=\"setMode('gauge_progress')\">\r\n              <span class=\"icon-tool icon-progress-v\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('gauge_semaphore')}\" (click)=\"setMode('gauge_semaphore')\">\r\n              <span class=\"icon-tool icon-semaphore\"></span>\r\n            </div>              \r\n          </div>\r\n        </mat-expansion-panel>        \r\n      </mat-accordion>\r\n    </mat-drawer>\r\n    <!-- END LEFT BAR -->\r\n    <!-- WORK AREA -->\r\n    <mat-drawer-content>\r\n      <!-- RIGHT BAR -->\r\n      <div class=\"svg-tools-fly\">\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelPropertyIdOpenState = true\" (closed)=\"panelPropertyIdOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\" style=\"display:none\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-flybar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelPropertyIdOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelPropertyIdOpenState\">expand_more</mat-icon>\r\n              <span>Interactivity</span>  <!-- INTERACTIVITY -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"_selected_panel\">\r\n            <div class=\"_toolset\">\r\n              <label id=\"idLabel\" title=\"Identify the element\" class=\"svg-property\">\r\n                <span>id:</span>\r\n                <input id=\"elem_id\" #selid class=\"attr_changer\" data-attr=\"id\" type=\"text\" />\r\n              </label>\r\n              <label id=\"classLabel\" title=\"Element class\" class=\"svg-property\">\r\n                <span>class:</span>\r\n                <input id=\"elem_class\" class=\"attr_changer\" data-attr=\"class\" type=\"text\" />\r\n              </label>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelPropertyTransformOpenState = true\" (closed)=\"panelPropertyTransformOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelPropertyTransformOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelPropertyTransformOpenState\">expand_more</mat-icon>\r\n              <span>Transform</span>  <!-- TRANSFORM SIZE/POSITION-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"_selected_panel\" class=\"rightbar-panel\">\r\n            <div class=\"_toolset\">\r\n              <div id=\"xy_panel\" class=\"_toolset\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>x</span>\r\n                    <input id=\"selected_x\" class=\"attr_changer\" title=\"Change X coordinate\" size=\"4\"  data-attr=\"x\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>y</span>\r\n                    <input id=\"selected_y\" class=\"attr_changer\" title=\"Change Y coordinate\" size=\"3\" data-attr=\"y\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"line_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>x1</span>\r\n                    <input id=\"line_x1\" class=\"attr_changer\" title=\"Change line's starting x coordinate\" size=\"3\" data-attr=\"x1\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>y1</span>\r\n                    <input id=\"line_y1\" class=\"attr_changer\" title=\"Change line's starting y coordinate\" size=\"3\" data-attr=\"y1\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>x2</span>\r\n                    <input id=\"line_x2\" class=\"attr_changer\" title=\"Change line's starting x coordinate\" size=\"3\" data-attr=\"x2\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>y2</span>\r\n                    <input id=\"line_y2\" class=\"attr_changer\" title=\"Change line's starting y coordinate\" size=\"3\" data-attr=\"y2\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"rect_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change rectangle width\">\r\n                    <span>width</span>\r\n                    <input id=\"rect_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"Change rectangle height\">\r\n                    <span>height</span>\r\n                    <input id=\"rect_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change Rectangle Corner Radius\">\r\n                    <span>radius corner</span>\r\n                    <input id=\"rect_rx\" size=\"3\" value=\"0\" type=\"text\" data-attr=\"Corner Radius\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"htmlctrl_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change rectangle width\">\r\n                    <span>width</span>\r\n                    <input id=\"htmlctrl_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"Change rectangle height\">\r\n                    <span>height</span>\r\n                    <input id=\"htmlctrl_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"shape_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change rectangle width\">\r\n                    <span>width</span>\r\n                    <input id=\"shape_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"Change rectangle height\">\r\n                    <span>height</span>\r\n                    <input id=\"shape_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div>                          \r\n              <div id=\"circle_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>cx</span>\r\n                    <input id=\"circle_cx\" class=\"attr_changer\" title=\"Change circle's cx coordinate\" size=\"3\" data-attr=\"cx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>cy</span>\r\n                    <input id=\"circle_cy\" class=\"attr_changer\" title=\"Change circle's cy coordinate\" size=\"3\" data-attr=\"cy\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>r</span>\r\n                    <input id=\"circle_r\" class=\"attr_changer\" title=\"Change circle's radius\" size=\"3\" data-attr=\"r\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"ellipse_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>cx</span>\r\n                    <input id=\"ellipse_cx\" class=\"attr_changer\" title=\"Change ellipse's cx coordinate\" size=\"3\" data-attr=\"cx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>cy</span>\r\n                    <input id=\"ellipse_cy\" class=\"attr_changer\" title=\"Change ellipse's cy coordinate\" size=\"3\" data-attr=\"cy\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>rx</span>\r\n                    <input id=\"ellipse_rx\" class=\"attr_changer\" title=\"Change ellipse's x radius\" size=\"3\" data-attr=\"rx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>ry</span>\r\n                    <input id=\"ellipse_ry\" class=\"attr_changer\" title=\"Change ellipse's y radius\" size=\"3\" data-attr=\"ry\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"text_panel\">\r\n                <div class=\"svg-property\">\r\n                  <span>font family</span>\r\n                  <select class=\"font-family\" id=\"font_family\" #fontfamily (change)=\"onFontFamilyChange(fontfamily.value)\">\r\n                    <option style=\"font-family:serif\">Serif</option>\r\n                    <option style=\"font-family:sans-serif\">Sans-serif</option>\r\n                    <option style=\"font-family:cursive\">Cursive</option>\r\n                    <option style=\"font-family:fantasy\">Fantasy</option>\r\n                    <option style=\"font-family:monospace\">Monospace</option>\r\n                  </select>\r\n                </div>\r\n\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>font size</span>\r\n                    <input id=\"font_size\" size=\"3\" value=\"0\" class=\"attr_changer\" title=\"Change Font Size\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>text align</span>\r\n                    <select class=\"text-align\" id=\"text_anchor\" #textalign (change)=\"onTextAlignChange(textalign.value)\">\r\n                      <option value=\"start\">left</option>\r\n                      <option value=\"middle\">center</option>\r\n                      <option value=\"end\">right</option>\r\n                    </select>\r\n                    <!-- <div class=\"tool_button\" id=\"tool_bold\" title=\"Bold Text [B]\">\r\n                      <span>B</span>\r\n                    </div> -->\r\n                  </div>\r\n                  <!-- <div class=\"svg-property\">\r\n                    <div class=\"tool_button\" id=\"tool_italic\" title=\"Italic Text [I]\">\r\n                      <span>i</span>\r\n                    </div>\r\n                  </div> -->\r\n                </div>\r\n\r\n                <!-- Not visible, but still used -->\r\n                <input id=\"text\" type=\"text\" size=\"35\" />\r\n              </div>\r\n              <div id=\"image_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>width</span>\r\n                    <input id=\"image_width\" class=\"attr_changer\" title=\"Change image width\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>height</span>\r\n                    <input id=\"image_height\" class=\"attr_changer\" title=\"Change image height\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property\" style=\"display: none;\">\r\n                  <div class=\"svg-property\">\r\n                    <span>url</span>\r\n                    <input id=\"image_url\" class=\"attr_changer\" type=\"text\" title=\"Change URL\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <div class=\"svg-property\">\r\n                      <button id=\"change_image_url\" style=\"display:none;\">Change Image</button>\r\n                      <span id=\"url_notice\" title=\"NOTE: This image cannot be embedded. It will depend on this path to be displayed\"></span>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- <div id=\"hw_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change rectangle width\">\r\n                    <span>width</span>\r\n                    <input id=\"rect_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"Change rectangle height\">\r\n                    <span>height</span>\r\n                    <input id=\"rect_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div> -->\r\n              <div id=\"tool_angle\" title=\"Change rotation angle\" class=\"svg-property\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>angle:</span>\r\n                    <input id=\"angle\" size=\"2\" value=\"0\" type=\"text\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <!-- <div class=\"svg-tool-button\" (click)=\"flipSelected('vertical')\" title=\"Flip vertically\">\r\n                      <span class=\"icon-flip-vertical\"></span>\r\n                    </div>\r\n                    <div class=\"svg-tool-button\" (click)=\"flipSelected('orizontal')\" title=\"Flip orizontally\">\r\n                      <span class=\"icon-flip-orizontal\"></span>\r\n                    </div> -->\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelAlignOpenState = true\" (closed)=\"panelAlignOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelAlignOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelAlignOpenState\">expand_more</mat-icon>\r\n              <span>Align</span>  <!-- ALIGN-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"align_panel\" class=\"rightbar_panel\">\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('left')\" title=\"Align Left\">\r\n              <span class=\"icon-align-left\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('center')\" title=\"Align Center\">\r\n              <span class=\"icon-align-center\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('right')\" title=\"Align Right\">\r\n              <span class=\"icon-align-right\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('top')\" title=\"Align Top\">\r\n              <span class=\"icon-align-top\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('middle')\" title=\"Align Middle\">\r\n              <span class=\"icon-align-middle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('bottom')\" title=\"Align Bottom\">\r\n              <span class=\"icon-align-bottom\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelFillOpenState = true\" (closed)=\"panelFillOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelFillOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelFillOpenState\">expand_more</mat-icon>\r\n              <span>Stroke</span> <!-- STROKE-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div class=\"rightbar_panel\">\r\n            <div class=\"_color_tool\" id=\"tool_stroke\">\r\n              <div class=\"svg-property-split2\">\r\n                <div class=\"svg-property\">\r\n                  <span>stroke width</span>\r\n                  <input id=\"stroke_width\" title=\"Change stroke width by 1, shift-click to change by 0.1\" size=\"2\" value=\"1\" type=\"text\" data-attr=\"Stroke Width\"\r\n                  />\r\n                </div>\r\n                <div class=\"svg-property\">\r\n                  <span>stroke style</span>\r\n                  <select id=\"stroke_style\" class=\"style-stroke\" title=\"Change stroke dash style\">\r\n                    <option selected=\"selected\" value=\"none\">&#8212;</option>\r\n                    <option value=\"2,2\">...</option>\r\n                    <option value=\"5,5\">- -</option>\r\n                    <option value=\"5,2,2,2\">- .</option>\r\n                    <option value=\"5,2,2,2,2,2\">- ..</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <div class=\"svg-tool-button\" id=\"linejoin_miter\" #linejoinmiter (click)=\"onSetStrokeOption(linejoinmiter)\" title=\"Linejoin Miter\">\r\n                  <span class=\"icon-linejoin-miter\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linejoin_round\" #linejoinround (click)=\"onSetStrokeOption(linejoinround)\" title=\"Linejoin Round\">\r\n                  <span class=\"icon-linejoin-round\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linejoin_bevel\" #linejoinbevel (click)=\"onSetStrokeOption(linejoinbevel)\" title=\"Linejoin Bevel\">\r\n                  <span class=\"icon-linejoin-bevel\"></span>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <div class=\"svg-tool-button\" id=\"linecap_butt\" #linecapbutt (click)=\"onSetStrokeOption(linecapbutt)\" title=\"Linecap Butt\">\r\n                  <span class=\"icon-linecap-butt\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linecap_square\" #linecapsquare (click)=\"onSetStrokeOption(linecapsquare)\" title=\"Linecap Square\">\r\n                  <span class=\"icon-linecap-square\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linecap_round\" #linecapround (click)=\"onSetStrokeOption(linecapround)\" title=\"Linecap Round\">\r\n                  <span class=\"icon-linecap-round\"></span>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property-split2\" style=\"display: none\">\r\n                <div class=\"svg-property\">\r\n                  <span for=\"class_shadow\">shadow</span>\r\n                  <input type=\"checkbox\" id=\"class_shadow\" name=\"class_shadow\" class=\"attr_changer\" title=\"With shadow\" (change)=\"onSetShadowOption($event.target.checked)\" label=\"shadow\"/>\r\n                </div>\r\n                <div class=\"svg-property\">\r\n                </div>\r\n              </div>\r\n              <!-- <ul id=\"linejoin_opts\">\r\n                <li class=\"tool_button current\" id=\"linejoin_miter\" title=\"Linejoin: Miter\"></li>\r\n                <li class=\"tool_button\" id=\"linejoin_round\" title=\"Linejoin: Round\"></li>\r\n                <li class=\"tool_button\" id=\"linejoin_bevel\" title=\"Linejoin: Bevel\"></li>\r\n              </ul>\r\n\r\n              <ul id=\"linecap_opts\">\r\n                <li class=\"tool_button current\" id=\"linecap_butt\" title=\"Linecap: Butt\"></li>\r\n                <li class=\"tool_button\" id=\"linecap_square\" title=\"Linecap: Square\"></li>\r\n                <li class=\"tool_button\" id=\"linecap_round\" title=\"Linecap: Round\"></li>\r\n              </ul> -->\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelMarkerOpenState = true\" (closed)=\"panelMarkerOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelMarkerOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelMarkerOpenState\">expand_more</mat-icon>\r\n              <span>Marker</span> <!-- MARKER-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"marker_panel\" class=\"rightbar_panel\">\r\n            <div class=\"svg-property-split3\">\r\n              <div class=\"svg-property\">\r\n                <span>start</span>\r\n                <select id=\"start_marker\" #smarker class=\"style-stroke\" title=\"Select start marker type\" (click)=\"onSetMarker('start_marker', smarker.selectedIndex);\" onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <span>middle</span>\r\n                <select id=\"mid_marker\" #mmarker class=\"style-stroke\" title=\"Select mid marker type\" (click)=\"onSetMarker('mid_marker', mmarker.selectedIndex);\" onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <span>end</span>\r\n                <select id=\"end_marker\" #emarker class=\"style-stroke\" title=\"Select end marker type\" (click)=\"onSetMarker('end_marker', emarker.selectedIndex);\" onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>        \r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelEventOpenState = true\" (closed)=\"panelEventOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelEventOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelEventOpenState\">expand_more</mat-icon>\r\n              <span>Interactivity</span>  <!-- INTERACTIVITY -->\r\n            </mat-panel-title>\r\n            <!-- <mat-icon aria-label=\"Add\" class=\"leftbar-edit-btn\" (click)=\"addEvent();$event.stopPropagation()\" *ngif=\"selectedElement\">add</mat-icon> -->\r\n          </mat-expansion-panel-header>\r\n          <div id=\"interaction_panel\" class=\"rightbar_panel\">\r\n            <gauge-base #gaugepanel *ngIf=\"selectedElement\" [settings]=getGaugeSettings(selectedElement) \r\n            (edit)=\"onGaugeEdit($event)\"></gauge-base>\r\n            <!-- (edit)=\"onGaugeEdit($event)\" [withEvents]=\"isWithEvents(selectedElement)\"></gauge-base> -->\r\n          </div>\r\n        </mat-expansion-panel>\r\n      </div>\r\n      <!-- END RIGHT BAR -->\r\n      <!-- Work Area -->\r\n      <div id=\"svg_editor\" style=\"z-index:-1\">\r\n        <!-- Rules bar -->\r\n        <div id=\"rulers\">\r\n          <div id=\"ruler_corner\"></div>\r\n          <div id=\"ruler_x\">\r\n            <div>\r\n              <canvas height=\"15\"></canvas>\r\n            </div>\r\n          </div>\r\n          <div id=\"ruler_y\">\r\n            <div>\r\n              <canvas width=\"15\"></canvas>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <!-- END Rules bar -->\r\n        <!-- Draw Area -->\r\n        <div id=\"workarea\">\r\n          <style id=\"styleoverrides\" type=\"text/css\" media=\"screen\" scoped=\"scoped\"></style>\r\n          <div id=\"svgcanvas\" style=\"position:relative\">\r\n          </div>\r\n        </div>\r\n        <!-- END Draw Area -->\r\n        <!-- Draw top tool bar -->\r\n        <div id=\"tools_top\" class=\"tools_panel\">\r\n          <div id=\"editor_panel\">\r\n            <!-- <button mat-button title=\"Save Project\" [matMenuTriggerFor]=\"prjview\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Save Project\">save</mat-icon>\r\n            </button> -->\r\n            <!-- <mat-menu #prjview=\"matMenu\" class=\"leftbar-item-menu\" yPosition=\"below\" [overlapTrigger]=\"false\"> -->\r\n              <!-- <button mat-menu-item (click)=\"onSaveProject()\">Save</button> -->\r\n              <!-- <button mat-menu-item (click)=\"onSaveProjectAs()\">Save as...</button> -->\r\n              <!-- <button mat-menu-item (click)=\"onOpenProject();$event.stopPropagation()\">Open Project</button> -->\r\n              <!-- <button mat-menu-item (click)=\"onImportVariable();$event.stopPropagation()\">Import Variable</button> -->\r\n              <!-- <input type=\"file\" #fileImportInput style=\"display: none\" id=\"projectFileUpload\" (change)=\"onFileChangeListener($event)\" accept=\".wvc\"/> -->\r\n            <!-- </mat-menu> -->\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button title=\"Launch Current View\" class=\"main-btn\" (click)=\"onStartCurrent()\">\r\n              <mat-icon aria-label=\"Launch Current View\">play_arrow</mat-icon>\r\n            </button>            \r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button title=\"Zoom Tool [Ctrl+Up/Down]\" class=\"main-btn\" (click)=\"onZoomSelect()\">\r\n              <mat-icon aria-label=\"Zoom Tool [Ctrl+Up/Down]\">zoom_in</mat-icon>\r\n            </button>\r\n            <button mat-button title=\"Show Hide Grid\" class=\"main-btn\" (click)=\"onShowGrid()\">\r\n              <mat-icon aria-label=\"Show Hide Grid\" *ngIf=\"!gridOn\">grid_on</mat-icon>\r\n              <mat-icon aria-label=\"Show Hide Grid\" *ngIf=\"gridOn\">grid_off</mat-icon>\r\n            </button>\r\n            <div id=\"history_panel\">\r\n              <button mat-button id=\"tool_undo\" title=\"Undo [Z]\" class=\"main-btn\">\r\n                <mat-icon aria-label=\"Undo [Z]\">undo</mat-icon>\r\n              </button>\r\n              <button mat-button id=\"tool_redo\" title=\"Redo [Y]\" class=\"main-btn\">\r\n                <mat-icon aria-label=\"Redo [Y]\">redo</mat-icon>\r\n              </button>\r\n            </div>\r\n\r\n            <!-- <div class=\"push_button\" title=\"Save Project\" (click)=\"saveProject()\"></div> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <div class=\"push_button\" id=\"tool_source\" title=\"Edit Source [U]\"></div> -->\r\n            <!-- <div class=\"tool_button\" id=\"tool_wireframe\" title=\"Wireframe Mode [F]\"></div> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <div class=\"tool_button\" id=\"tool_zoom\" title=\"Zoom Tool [Ctrl+Up/Down]\"></div> -->\r\n          </div>\r\n          <div id=\"selected_panel\">\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button id=\"tool_clone\" title=\"Duplicate Element [D]\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Duplicate Element [D]\">content_copy</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_delete\" title=\"Delete Element [Delete/Backspace]\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Delete Element [Delete/Backspace]\">content_cut</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_move_bottom\" title=\"Send to Back [ Ctrl+Shift+[ ]\" class=\"main-btn\">\r\n              <span class=\"to-bottom\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_move_top\" title=\"Bring to Front [ Ctrl+Shift+] ]\" class=\"main-btn\">\r\n              <span class=\"to-top\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_topath\" title=\"Convert to Path\" class=\"main-btn\">\r\n              <mat-icon>linear_scale</mat-icon>\r\n            </button>\r\n          </div>\r\n          <div id=\"multiselected_panel\">\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button id=\"tool_clone_multi\" title=\"Clone Elements [C]\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Clone Elements [C]\">content_copy</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_delete_multi\" title=\"Delete Selected Elements [Delete/Backspace]\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Delete Selected Elements [Delete/Backspace]\">content_cut</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_group_elements\" title=\"Group Elements [G]\" class=\"main-btn\">\r\n              <span class=\"group\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_alignleft\" title=\"Align Left\" class=\"main-btn\">\r\n              <mat-icon>format_align_left</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_aligncenter\" title=\"Align Center\" class=\"main-btn\">\r\n              <mat-icon>format_align_center</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignright\" title=\"Align Right\" class=\"main-btn\">\r\n              <mat-icon>format_align_right</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_aligntop\" title=\"Align Top\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_top</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignmiddle\" title=\"Align Middle\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_center</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignbottom\" title=\"Align Bottom\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_bottom</mat-icon>\r\n            </button>\r\n          </div>\r\n          <div id=\"g_panel\">\r\n            <button mat-button id=\"tool_ungroup\" title=\"Ungroup Elements [G]\" class=\"main-btn\">\r\n              <span class=\"ungroup\"></span>\r\n            </button>\r\n          </div>\r\n\r\n          <!-- History buttons -->\r\n          <!-- <div id=\"history_panel\">\r\n            <div class=\"tool_sep\"></div>\r\n            <div class=\"push_button tool_button_disabled\" id=\"tool_undo\" title=\"Undo [Z]\"></div>\r\n            <div class=\"push_button tool_button_disabled\" id=\"tool_redo\" title=\"Redo [Y]\"></div>\r\n          </div> -->\r\n          <!-- Buttons when a single element is selected -->\r\n          <!-- <div id=\"_selected_panel\"> -->\r\n          <!-- <div class=\"toolset\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_clone\" title=\"Duplicate Element [D]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_delete\" title=\"Delete Element [Delete/Backspace]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_move_top\" title=\"Bring to Front [ Ctrl+Shift+] ]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_move_bottom\" title=\"Send to Back [ Ctrl+Shift+[ ]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_topath\" title=\"Convert to Path\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_reorient\" title=\"Reorient path\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_make_link\" title=\"Make (hyper)link\"></div> -->\r\n          <!-- </div> -->\r\n          <!-- </div> -->\r\n          <!-- select panel END -->\r\n          <!-- Buttons when multiple elements are selected -->\r\n          <!-- <div id=\"_multiselected_panel\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_clone_multi\" title=\"Clone Elements [C]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_delete_multi\" title=\"Delete Selected Elements [Delete/Backspace]\"></div> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_group_elements\" title=\"Group Elements [G]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_make_link_multi\" title=\"Make (hyper)link\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignleft\" title=\"Align Left\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_aligncenter\" title=\"Align Center\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignright\" title=\"Align Right\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_aligntop\" title=\"Align Top\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignmiddle\" title=\"Align Middle\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignbottom\" title=\"Align Bottom\"></div> -->\r\n          <!-- <label id=\"tool_align_relative\">\r\n              <span id=\"relativeToLabel\">relative to:</span>\r\n              <select id=\"align_relative_to\" title=\"Align relative to ...\">\r\n                <option id=\"selected_objects\" value=\"selected\">selected objects</option>\r\n                <option id=\"largest_object\" value=\"largest\">largest object</option>\r\n                <option id=\"smallest_object\" value=\"smallest\">smallest object</option>\r\n                <option id=\"page\" value=\"page\">page</option>\r\n              </select>\r\n            </label> -->\r\n          <!-- </div> -->\r\n\r\n          <!-- formerly gsvg_panel -->\r\n          <!-- <div id=\"container_panel\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- Add viewBox field here? -->\r\n          <!-- <label id=\"group_title\" title=\"Group identification label\">\r\n              <span>label:</span>\r\n              <input id=\"g_title\" data-attr=\"title\" size=\"10\" type=\"text\" />\r\n            </label> -->\r\n          <!-- </div> -->\r\n\r\n          <!-- <div id=\"use_panel\">\r\n            <div class=\"push_button\" id=\"tool_unlink_use\" title=\"Break link to reference element (make unique)\"></div>\r\n          </div> -->\r\n\r\n          <!-- <div id=\"g_panel\">\r\n            <div class=\"push_button\" id=\"tool_ungroup\" title=\"Ungroup Elements [G]\"></div>\r\n          </div> -->\r\n\r\n          <!-- For anchor elements -->\r\n          <!-- <div id=\"a_panel\">\r\n            <label id=\"tool_link_url\" title=\"Set link URL (leave empty to remove)\">\r\n              <span id=\"linkLabel\" class=\"icon_label\"></span>\r\n              <input id=\"link_url\" type=\"text\" size=\"35\" />\r\n            </label>\r\n          </div> -->\r\n\r\n          <!-- <div id=\"path_node_panel\"> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <div class=\"tool_button push_button_pressed\" id=\"tool_node_link\" title=\"Link Control Points\"></div> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <label id=\"tool_node_x\">x:\r\n              <input id=\"path_node_x\" class=\"attr_changer\" title=\"Change node's x coordinate\" size=\"3\" data-attr=\"x\" />\r\n            </label>\r\n            <label id=\"tool_node_y\">y:\r\n              <input id=\"path_node_y\" class=\"attr_changer\" title=\"Change node's y coordinate\" size=\"3\" data-attr=\"y\" />\r\n            </label> -->\r\n\r\n            <!-- <select id=\"seg_type\" title=\"Change Segment type\">\r\n              <option id=\"straight_segments\" selected=\"selected\" value=\"4\">Straight</option>\r\n              <option id=\"curve_segments\" value=\"6\">Curve</option>\r\n            </select> -->\r\n            <!-- <div class=\"tool_button\" id=\"tool_node_clone\" title=\"Clone Node\"></div>\r\n            <div class=\"tool_button\" id=\"tool_node_delete\" title=\"Delete Node\"></div>\r\n            <div class=\"tool_button\" id=\"tool_openclose_path\" title=\"Open/close sub-path\"></div>\r\n            <div class=\"tool_button\" id=\"tool_add_subpath\" title=\"Add sub-path\"></div> -->\r\n          <!-- </div> -->\r\n        </div>\r\n        <!-- tools_top -->\r\n        <div id=\"cur_context_panel\">\r\n\r\n        </div>\r\n\r\n        <!-- tools_left -->\r\n        <!-- <div id=\"tools_left\" class=\"tools_panel\">\r\n      <div class=\"tool_button\" id=\"tool_select\" title=\"Select Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_fhpath\" title=\"Pencil Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_line\" title=\"Line Tool\"></div>\r\n      <div class=\"tool_button flyout_current\" id=\"tools_rect_show\" title=\"Square/Rect Tool\">\r\n        <div class=\"flyout_arrow_horiz\"></div>\r\n      </div>\r\n      <div class=\"tool_button flyout_current\" id=\"tools_ellipse_show\" title=\"Ellipse/Circle Tool\">\r\n        <div class=\"flyout_arrow_horiz\"></div>\r\n      </div>\r\n      <div class=\"tool_button\" id=\"tool_path\" title=\"Path Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_text\" title=\"Text Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_image\" title=\"Image Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_zoom\" title=\"Zoom Tool [Ctrl+Up/Down]\"></div>\r\n\r\n      <div style=\"display: none\">\r\n        <div id=\"tool_rect\" title=\"Rectangle\"></div>\r\n        <div id=\"tool_square\" title=\"Square\"></div>\r\n        <div id=\"tool_fhrect\" title=\"Free-Hand Rectangle\"></div>\r\n        <div id=\"tool_ellipse\" title=\"Ellipse\"></div>\r\n        <div id=\"tool_circle\" title=\"Circle\"></div>\r\n        <div id=\"tool_fhellipse\" title=\"Free-Hand Ellipse\"></div>\r\n      </div>\r\n    </div> -->\r\n        <!-- tools_left -->\r\n\r\n        <!-- tool bottom -->\r\n        <div class=\"bottom-bar tools_panel\">\r\n          <!-- Zoom buttons -->\r\n          <div class=\"zoom-menu\" title=\"Zoom level\">\r\n            <div class=\"zoom-value\">\r\n              <input id=\"zoom\" size=\"3\" value=\"100\" type=\"text\" #zoomValue hidden/>\r\n              <span id=\"zoomLabel\">{{zoomValue.value}} %</span>\r\n              <div id=\"zoom_dropdown\" class=\"dropdown selection\">\r\n                <button>O\r\n                </button>\r\n                <ul>\r\n                  <li>1000%</li>\r\n                  <li>400%</li>\r\n                  <li>200%</li>\r\n                  <li>100%</li>\r\n                  <li>50%</li>\r\n                  <li>25%</li>\r\n                  <li id=\"fit_to_canvas\" data-val=\"canvas\">Fit to canvas</li>\r\n                  <li id=\"fit_to_sel\" data-val=\"selection\">Fit to selection</li>\r\n                  <!-- <li id=\"fit_to_layer_content\" data-val=\"layer\">Fit to layer content</li> -->\r\n                  <li id=\"fit_to_all\" data-val=\"content\">Fit to all content</li>\r\n                  <li>100%</li>\r\n                </ul>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div id=\"tools_bottom_2\" class=\"colors\">\r\n            <input readonly [(colorPicker)]=\"colorFill\" class=\"color-fill\" title=\"Change fill color\" [style.background]=\"colorFill\" \r\n              [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" (colorPickerChange)=\"onChangeFillColor($event)\" [cpPresetColors]=\"defaultColor\" \r\n              [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\r\n              [cpOKButton]=\"true\" [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\"/>\r\n            <input readonly [(colorPicker)]=\"colorStroke\" class=\"color-stroke\" title=\"Change stroke color\" [style.background]=\"colorStroke\"\r\n              [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" (colorPickerChange)=\"onChangeStrokeColor($event)\" [cpPresetColors]=\"defaultColor\" \r\n              [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\r\n              [cpOKButton]=\"true\" [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\"/>\r\n            <!-- <div id=\"color_tools\"> -->\r\n            <div class=\"color_tool\" id=\"tool_fill\" hidden>\r\n              <label class=\"icon_label\" for=\"fill_color\" title=\"Change fill color\"></label>\r\n              <div class=\"color_block\">\r\n                <div id=\"fill_color\" class=\"color_block\" [style.border-color]=\"colorFill\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"color_tool\" id=\"tool_stroke\" hidden>\r\n              <label class=\"icon_label\" title=\"Change stroke color\"></label>\r\n              <div class=\"color_block\">\r\n                <div id=\"stroke_bg\"></div>\r\n                <div id=\"stroke_color\" class=\"color_block\" title=\"Change stroke color\" [style.border-color]=\"colorStroke\"></div>\r\n              </div>\r\n\r\n              <!-- <div id=\"toggle_stroke_tools\" title=\"Show/hide more stroke tools\"></div> -->\r\n\r\n              <!-- <label class=\"stroke_tool\">\r\n                  <select id=\"stroke_style\" title=\"Change stroke dash style\">\r\n                    <option selected=\"selected\" value=\"none\">&#8212;</option>\r\n                    <option value=\"2,2\">...</option>\r\n                    <option value=\"5,5\">- -</option>\r\n                    <option value=\"5,2,2,2\">- .</option>\r\n                    <option value=\"5,2,2,2,2,2\">- ..</option>\r\n                  </select>\r\n                </label> -->\r\n\r\n              <!-- <div class=\"stroke_tool dropdown\" id=\"stroke_linejoin\">\r\n                  <div id=\"cur_linejoin\" title=\"Linejoin: Miter\"></div>\r\n                  <button></button>\r\n                </div> -->\r\n\r\n              <!-- <div class=\"stroke_tool dropdown\" id=\"stroke_linecap\">\r\n                  <div id=\"cur_linecap\" title=\"Linecap: Butt\"></div>\r\n                  <button></button>\r\n                </div> -->\r\n\r\n              <!-- </div> -->\r\n\r\n              <!-- <div class=\"color_tool\" id=\"tool_opacity\" title=\"Change selected item opacity\">\r\n                <label>\r\n                  <span id=\"group_opacityLabel\" class=\"icon_label\"></span>\r\n                  <input id=\"group_opacity\" size=\"3\" value=\"100\" type=\"text\" />\r\n                </label>\r\n                <div id=\"opacity_dropdown\" class=\"dropdown\">\r\n                  <button></button>\r\n                  <ul>\r\n                    <li>0%</li>\r\n                    <li>25%</li>\r\n                    <li>50%</li>\r\n                    <li>75%</li>\r\n                    <li>100%</li>\r\n                    <li class=\"special\">\r\n                      <div id=\"opac_slider\"></div>\r\n                    </li>\r\n                  </ul>\r\n                </div>\r\n              </div> -->\r\n            </div>\r\n          </div>\r\n\r\n          <div id=\"tools_bottom_3\" class=\"colors-palette\">\r\n            <div id=\"palette_holder\">\r\n              <div id=\"palette\" title=\"Click to change fill color, shift-click to change stroke color\"></div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div id=\"option_lists\" class=\"dropdown\">\r\n          <!-- <ul id=\"linejoin_opts\">\r\n            <li class=\"tool_button current\" id=\"linejoin_miter\" title=\"Linejoin: Miter\"></li>\r\n            <li class=\"tool_button\" id=\"linejoin_round\" title=\"Linejoin: Round\"></li>\r\n            <li class=\"tool_button\" id=\"linejoin_bevel\" title=\"Linejoin: Bevel\"></li>\r\n          </ul>\r\n\r\n          <ul id=\"linecap_opts\">\r\n            <li class=\"tool_button current\" id=\"linecap_butt\" title=\"Linecap: Butt\"></li>\r\n            <li class=\"tool_button\" id=\"linecap_square\" title=\"Linecap: Square\"></li>\r\n            <li class=\"tool_button\" id=\"linecap_round\" title=\"Linecap: Round\"></li>\r\n          </ul> -->\r\n\r\n          <ul id=\"position_opts\" class=\"optcols3\">\r\n            <li class=\"push_button\" id=\"tool_posleft\" title=\"Align Left\"></li>\r\n            <li class=\"push_button\" id=\"tool_poscenter\" title=\"Align Center\"></li>\r\n            <li class=\"push_button\" id=\"tool_posright\" title=\"Align Right\"></li>\r\n            <li class=\"push_button\" id=\"tool_postop\" title=\"Align Top\"></li>\r\n            <li class=\"push_button\" id=\"tool_posmiddle\" title=\"Align Middle\"></li>\r\n            <li class=\"push_button\" id=\"tool_posbottom\" title=\"Align Bottom\"></li>\r\n          </ul>\r\n        </div>\r\n\r\n\r\n        <!-- hidden divs -->\r\n        <!-- <div id=\"color_picker\"></div> -->\r\n\r\n      </div>\r\n    </mat-drawer-content>\r\n    <!-- work area END -->\r\n  </mat-drawer-container>\r\n\r\n\r\n  <!-- svg_editor -->\r\n\r\n  <div id=\"svg_source_editor\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_source_container\">\r\n      <div id=\"tool_source_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_source_save\">Apply Changes</button>\r\n        <button id=\"tool_source_cancel\">Cancel</button>\r\n      </div>\r\n      <div id=\"save_output_btns\">\r\n        <p id=\"copy_save_note\">Copy the contents of this box into a text editor, then save the file with a .svg extension.</p>\r\n        <button id=\"copy_save_done\">Done</button>\r\n      </div>\r\n      <form>\r\n        <textarea id=\"svg_source_textarea\" spellcheck=\"false\"></textarea>\r\n      </form>\r\n    </div>\r\n  </div>\r\n\r\n\r\n  <div id=\"svg_docprops\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_docprops_container\">\r\n      <div id=\"tool_docprops_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_docprops_save\">OK</button>\r\n        <button id=\"tool_docprops_cancel\">Cancel</button>\r\n      </div>\r\n\r\n\r\n      <fieldset id=\"svg_docprops_docprops\">\r\n        <legend id=\"svginfo_image_props\">Image Properties</legend>\r\n        <label>\r\n          <span id=\"svginfo_title\">Title:</span>\r\n          <input type=\"text\" id=\"canvas_title\" />\r\n        </label>\r\n\r\n        <fieldset id=\"change_resolution\">\r\n          <legend id=\"svginfo_dim\">Canvas Dimensions</legend>\r\n\r\n          <label>\r\n            <span id=\"svginfo_width\">width:</span>\r\n            <input type=\"text\" id=\"canvas_width\" size=\"6\" />\r\n          </label>\r\n\r\n          <label>\r\n            <span id=\"svginfo_height\">height:</span>\r\n            <input type=\"text\" id=\"canvas_height\" size=\"6\" />\r\n          </label>\r\n\r\n          <label>\r\n            <select id=\"resolution\">\r\n              <option id=\"selectedPredefined\" selected=\"selected\">Select predefined:</option>\r\n              <option>640x480</option>\r\n              <option>800x600</option>\r\n              <option>1024x768</option>\r\n              <option>1280x960</option>\r\n              <option>1600x1200</option>\r\n              <option id=\"fitToContent\" value=\"content\">Fit to Content</option>\r\n            </select>\r\n          </label>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"image_save_opts\">\r\n          <legend id=\"includedImages\">Included Images</legend>\r\n          <label>\r\n            <input type=\"radio\" name=\"image_opt\" value=\"embed\" checked=\"checked\" />\r\n            <span id=\"image_opt_embed\">Embed data (local files)</span>\r\n          </label>\r\n          <label>\r\n            <input type=\"radio\" name=\"image_opt\" value=\"ref\" />\r\n            <span id=\"image_opt_ref\">Use file reference</span>\r\n          </label>\r\n        </fieldset>\r\n      </fieldset>\r\n\r\n    </div>\r\n  </div>\r\n\r\n  <div id=\"svg_prefs\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_prefs_container\">\r\n      <div id=\"tool_prefs_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_prefs_save\">OK</button>\r\n        <button id=\"tool_prefs_cancel\">Cancel</button>\r\n      </div>\r\n\r\n      <fieldset>\r\n        <legend id=\"svginfo_editor_prefs\">Editor Preferences</legend>\r\n\r\n        <label>\r\n          <span id=\"svginfo_lang\">Language:</span>\r\n          <!-- Source: http://en.wikipedia.org/wiki/Language_names -->\r\n          <select id=\"lang_select\">\r\n            <option id=\"lang_ar\" value=\"ar\">العربية</option>\r\n            <option id=\"lang_cs\" value=\"cs\">Čeština</option>\r\n            <option id=\"lang_de\" value=\"de\">Deutsch</option>\r\n            <option id=\"lang_en\" value=\"en\" selected=\"selected\">English</option>\r\n            <option id=\"lang_es\" value=\"es\">Español</option>\r\n            <option id=\"lang_fa\" value=\"fa\">فارسی</option>\r\n            <option id=\"lang_fr\" value=\"fr\">Français</option>\r\n            <option id=\"lang_fy\" value=\"fy\">Frysk</option>\r\n            <option id=\"lang_hi\" value=\"hi\">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;, &#2361;&#2367;&#2306;&#2342;&#2368;</option>\r\n            <option id=\"lang_it\" value=\"it\">Italiano</option>\r\n            <option id=\"lang_ja\" value=\"ja\">日本語</option>\r\n            <option id=\"lang_nl\" value=\"nl\">Nederlands</option>\r\n            <option id=\"lang_pl\" value=\"pl\">Polski</option>\r\n            <option id=\"lang_pt-BR\" value=\"pt-BR\">Português (BR)</option>\r\n            <option id=\"lang_ro\" value=\"ro\">Română</option>\r\n            <option id=\"lang_ru\" value=\"ru\">Русский</option>\r\n            <option id=\"lang_sk\" value=\"sk\">Slovenčina</option>\r\n            <option id=\"lang_sl\" value=\"sl\">Slovenščina</option>\r\n            <option id=\"lang_zh-TW\" value=\"zh-TW\">繁體中文</option>\r\n          </select>\r\n        </label>\r\n\r\n        <label>\r\n          <span id=\"svginfo_icons\">Icon size:</span>\r\n          <select id=\"iconsize\">\r\n            <option id=\"icon_small\" value=\"s\">Small</option>\r\n            <option id=\"icon_medium\" value=\"m\" selected=\"selected\">Medium</option>\r\n            <option id=\"icon_large\" value=\"l\">Large</option>\r\n            <option id=\"icon_xlarge\" value=\"xl\">Extra Large</option>\r\n          </select>\r\n        </label>\r\n\r\n        <fieldset id=\"change_background\">\r\n          <legend id=\"svginfo_change_background\">Editor Background</legend>\r\n          <div id=\"bg_blocks\"></div>\r\n          <label>\r\n            <span id=\"svginfo_bg_url\">URL:</span>\r\n            <input type=\"text\" id=\"canvas_bg_url\" />\r\n          </label>\r\n          <p id=\"svginfo_bg_note\">Note: Background will not be saved with image.</p>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"change_grid\">\r\n          <legend id=\"svginfo_grid_settings\">Grid</legend>\r\n          <label>\r\n            <span id=\"svginfo_snap_onoff\">Snapping on/off</span>\r\n            <input type=\"checkbox\" value=\"snapping_on\" id=\"grid_snapping_on\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_snap_step\">Snapping Step-Size:</span>\r\n            <input type=\"text\" id=\"grid_snapping_step\" size=\"3\" value=\"10\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_grid_color\">Grid color:</span>\r\n            <input type=\"text\" id=\"grid_color\" size=\"3\" value=\"#000\" />\r\n          </label>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"units_rulers\">\r\n          <legend id=\"svginfo_units_rulers\">Units &amp; Rulers</legend>\r\n          <label>\r\n            <span id=\"svginfo_rulers_onoff\">Show rulers</span>\r\n            <input type=\"checkbox\" value=\"show_rulers\" id=\"show_rulers\" checked=\"checked\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_unit\">Base Unit:</span>\r\n            <select id=\"base_unit\">\r\n              <option value=\"px\">Pixels</option>\r\n              <option value=\"cm\">Centimeters</option>\r\n              <option value=\"mm\">Millimeters</option>\r\n              <option value=\"in\">Inches</option>\r\n              <option value=\"pt\">Points</option>\r\n              <option value=\"pc\">Picas</option>\r\n              <option value=\"em\">Ems</option>\r\n              <option value=\"ex\">Exs</option>\r\n            </select>\r\n          </label>\r\n          <!-- Should this be an export option instead? -->\r\n          <!-- \r\n          <span id=\"svginfo_unit_system\">Unit System:</span>\r\n          <label>\r\n            <input type=\"radio\" name=\"unit_system\" value=\"single\" checked=\"checked\"/>\r\n            <span id=\"svginfo_single_type_unit\">Single type unit</span>\r\n            <small id=\"svginfo_single_type_unit_sub\">CSS unit type is set on root element. If a different unit type is entered in a text field, it is converted back to user units on export.</small>\r\n          </label>\r\n          <label>\r\n            <input type=\"radio\" name=\"unit_system\" value=\"multi\"/>\r\n            <span id=\"svginfo_multi_units\">Multiple CSS units</span> \r\n            <small id=\"svginfo_single_type_unit_sub\">Attributes can be given different CSS units, which may lead to inconsistant results among viewers.</small>\r\n          </label>\r\n   -->\r\n        </fieldset>\r\n\r\n      </fieldset>\r\n\r\n    </div>\r\n  </div>\r\n\r\n  <div id=\"dialog_box\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"dialog_container\">\r\n      <div id=\"dialog_content\"></div>\r\n      <div id=\"dialog_buttons\"></div>\r\n    </div>\r\n  </div>\r\n\r\n  <ul id=\"cmenu_canvas\" class=\"contextMenu svg-workarea-contextmenu\">\r\n    <!-- <li>\r\n      <a href=\"#deselect\">Clear selection</a>\r\n    </li> -->\r\n    <li>\r\n      <a id=\"#interactivity\" (click)=\"isInteractivtyEnabled(selectedElement) && onGaugeEditEx()\">Interactivity</a>\r\n    </li>    \r\n    <li class=\"separator\">\r\n      <a id=\"#cut\">Cut</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#copy\">Copy</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#paste\">Paste</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#paste_in_place\">Paste in Place</a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#delete\">Delete</a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#group\">Group\r\n        <span class=\"shortcut\">G</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#ungroup\">Ungroup\r\n        <span class=\"shortcut\">G</span>\r\n      </a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#move_front\">Bring to Front\r\n        <span class=\"shortcut\">SHFT+CTRL+]</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_up\">Bring Forward\r\n        <span class=\"shortcut\">CTRL+]</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_down\">Send Backward\r\n        <span class=\"shortcut\">CTRL+[</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_back\">Send to Back\r\n        <span class=\"shortcut\">SHFT+CTRL+[</span>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n\r\n  <ul id=\"cmenu_layers\" class=\"contextMenu\" style=\"display: none\">\r\n    <li>\r\n      <a href=\"#dupe\">Duplicate Layer...</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#delete\">Delete Layer</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#merge_down\">Merge Down</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#merge_all\">Merge All</a>\r\n    </li>\r\n  </ul>\r\n</div>"
+module.exports = "<div id=\"svg_editor_container\">\r\n  <mat-drawer-container class=\"svg-workarea-container\">\r\n    <!-- LEFT BAR -->\r\n    <mat-drawer mode=\"side\" opened=\"true\" class=\"svg-sidenav leave-header-area\">\r\n      <mat-accordion multi=\"true\">\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelA=true;savePanelState()\"\r\n          (closed)=\"panelsState.panelA=false;savePanelState()\" hideToggle=\"true\" [expanded]=\"panelsState.panelA\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelA\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelA\">expand_more</mat-icon>\r\n              <span>{{'editor.views' | translate}}</span> <!-- PROJECT VIEWS -->\r\n            </mat-panel-title>\r\n            <mat-icon aria-label=\"Set\" title=\"{{'editor.layout-settings' | translate}}\" *ngIf=\"panelsState.panelA\" class=\"leftbar-edit-btn\"\r\n              (click)=\"onLayoutProperty();$event.stopPropagation()\">settings</mat-icon>\r\n            <mat-icon aria-label=\"Add\" title=\"Add View\" *ngIf=\"panelsState.panelA\" class=\"leftbar-edit-btn\" (click)=\"onAddView();$event.stopPropagation()\">add</mat-icon>\r\n          </mat-expansion-panel-header>\r\n          <div class=\"leftbar-panel view-panel\">\r\n            <div *ngIf=\"hmi.views && hmi.views.length <= 0\">\r\n              <br>\r\n            </div>\r\n            <div *ngFor=\"let item of hmi.views; let i = index\" (click)=\"onSelectView(item)\" [ngClass]=\"{'leftbar-item-active': isViewActive(item)}\"\r\n              class=\"leftbar-item mycursor-pointer\">\r\n              <span>{{item.name}}</span>\r\n              <mat-icon aria-label=\"More\" [matMenuTriggerFor]=\"menuview\" class=\"\">more_vert</mat-icon>\r\n              <mat-menu #menuview=\"matMenu\" class=\"leftbar-item-menu\">\r\n                <button mat-menu-item (click)=\"onDeleteView(item)\">{{'editor.view-delete' | translate}}</button>\r\n                <button mat-menu-item (click)=\"onRenameView(item)\">{{'editor.view-rename' | translate}}</button>\r\n                <button mat-menu-item (click)=\"onPropertyView(item)\">{{'editor.view-property' | translate}}</button>\r\n              </mat-menu>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelB=true;savePanelState()\"\r\n          (closed)=\"panelsState.panelB=false;savePanelState()\" hideToggle=\"true\" [expanded]=\"panelsState.panelB\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelB\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelB\">expand_more</mat-icon>\r\n              <span>{{'editor.general' | translate}}</span> <!-- GENERAL -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('select')}\" (click)=\"setMode('select')\">\r\n              <span class=\"icon-select\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('fhpath')}\" (click)=\"setMode('fhpath')\">\r\n              <span class=\"icon-pencil\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('line')}\" (click)=\"setMode('line')\">\r\n              <span class=\"icon-line\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('rect')}\" (click)=\"setMode('rect')\">\r\n              <span class=\"icon-rect\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('circle')}\" (click)=\"setMode('circle')\">\r\n              <span class=\"icon-circle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('ellipse')}\" (click)=\"setMode('ellipse')\">\r\n              <span class=\"icon-ellipse\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('path')}\" (click)=\"setMode('path')\">\r\n              <span class=\"icon-path\"></span>\r\n            </div>\r\n            <!-- <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('path')}\" (click)=\"setMode('path')\">\r\n              <span class=\"icon-path\"></span>\r\n            </div> -->\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('text')}\" (click)=\"setMode('text')\">\r\n              <span class=\"icon-text\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': (isModeActive('image') || isModeActive('svg-image'))}\"\r\n              (click)=\"imagefile.value = '';imagefile.click();\">\r\n              <span class=\"icon-image\"></span>\r\n              <input #imagefile type=\"file\" style=\"display: none;\" (change)=\"onSetImage($event)\" accept=\"image/png|jpg|svg\" />\r\n            </div>\r\n            <div id=\"tool_line\" style=\"display: none;\">\r\n              <span class=\"icon-image\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelS=true;savePanelState()\"\r\n          (closed)=\"panelsState.panelS=false;savePanelState()\" hideToggle=\"true\" [expanded]=\"panelsState.panelS\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelS\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelS\">expand_more</mat-icon>\r\n              <span>{{'editor.shape' | translate}}</span> <!-- SHAPE -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-diamond')}\" (click)=\"setMode('shape-diamond')\">\r\n              <span class=\"icon-tool icon-shape-diamond\"> </span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-triangle')}\" (click)=\"setMode('shape-triangle')\">\r\n              <span class=\"icon-tool icon-shape-triangle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-halfcircle')}\" (click)=\"setMode('shape-halfcircle')\">\r\n              <span class=\"icon-tool icon-shape-halfcircle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-delay')}\" (click)=\"setMode('shape-delay')\">\r\n              <span class=\"icon-tool icon-shape-delay\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-looplimit')}\" (click)=\"setMode('shape-looplimit')\">\r\n              <span class=\"icon-tool icon-shape-looplimit\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-prepara')}\" (click)=\"setMode('shape-prepara')\">\r\n              <span class=\"icon-tool icon-shape-prepara\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-trape')}\" (click)=\"setMode('shape-trape')\">\r\n              <span class=\"icon-tool icon-shape-trape\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-offpage')}\" (click)=\"setMode('shape-offpage')\">\r\n              <span class=\"icon-tool icon-shape-offpage\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-ticket')}\" (click)=\"setMode('shape-ticket')\">\r\n              <span class=\"icon-tool icon-shape-ticket\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-arrow')}\" (click)=\"setMode('shape-arrow')\">\r\n              <span class=\"icon-tool icon-shape-arrow\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-doublearrow')}\" (click)=\"setMode('shape-doublearrow')\">\r\n              <span class=\"icon-tool icon-shape-doublearrow\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-rectindi')}\" (click)=\"setMode('shape-rectindi')\">\r\n              <span class=\"icon-tool icon-shape-rectindi\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('shape-circleindi')}\" (click)=\"setMode('shape-circleindi')\">\r\n              <span class=\"icon-tool icon-shape-circleindi\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelC=true;savePanelState()\"\r\n          (closed)=\"panelsState.panelC=false;savePanelState()\" hideToggle=\"true\" [expanded]=\"panelsState.panelC\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelC\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelC\">expand_more</mat-icon>\r\n              <span>{{'editor.processeng' | translate}}</span> <!-- PROCESS  -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <!-- <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('switch')}\" (click)=\"setMode('switch')\">\r\n              <span class=\"icon-tool icon-switch\"></span>\r\n            </div> -->\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-void')}\" (click)=\"setMode('compressor-void')\">\r\n              <span class=\"icon-tool icon-compressor-void\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-fan')}\" (click)=\"setMode('compressor-fan')\">\r\n              <span class=\"icon-tool icon-compressor-fan\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('compressor-piston')}\" (click)=\"setMode('compressor-piston')\">\r\n              <span class=\"icon-tool icon-compressor-piston\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-ax')}\" (click)=\"setMode('valve-ax')\">\r\n              <span class=\"icon-tool icon-valve-ax\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-bx')}\" (click)=\"setMode('valve-bx')\">\r\n              <span class=\"icon-tool icon-valve-bx\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('valve-cx')}\" (click)=\"setMode('valve-cx')\">\r\n              <span class=\"icon-tool icon-valve-cx\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('motor-simb')}\" (click)=\"setMode('motor-simb')\">\r\n              <span class=\"icon-tool icon-motor-simb\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-filter')}\" (click)=\"setMode('exchanger-filter')\">\r\n              <span class=\"icon-tool icon-exchanger-filter\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-heat')}\" (click)=\"setMode('exchanger-heat')\">\r\n              <span class=\"icon-tool icon-exchanger-heat\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('exchanger-tube')}\" (click)=\"setMode('exchanger-tube')\">\r\n              <span class=\"icon-tool icon-exchanger-tube\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-leftbar-p\" (opened)=\"panelsState.panelD=true;savePanelState()\"\r\n          (closed)=\"panelsState.panelD=false;savePanelState()\" hideToggle=\"true\" [expanded]=\"panelsState.panelD\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelsState.panelD\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelsState.panelD\">expand_more</mat-icon>\r\n              <span>{{'editor.controls' | translate}}</span> <!-- CONTROLS  -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"__tools_left\" class=\"leftbar-panel\">\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_input')}\" (click)=\"setMode('html_input')\">\r\n              <span class=\"icon-tool icon-editvalue\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('value')}\" (click)=\"setMode('value')\">\r\n              <span class=\"icon-tool icon-value\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_button')}\" (click)=\"setMode('html_button')\">\r\n              <span class=\"icon-tool icon-button\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_select')}\" (click)=\"setMode('html_select')\">\r\n              <span class=\"icon-tool icon-selectvalue\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('gauge_progress')}\" (click)=\"setMode('gauge_progress')\">\r\n              <span class=\"icon-tool icon-progress-v\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('gauge_semaphore')}\" (click)=\"setMode('gauge_semaphore')\">\r\n              <span class=\"icon-tool icon-semaphore\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" [ngClass]=\"{'svg-tool-active': isModeActive('html_chart')}\" (click)=\"setMode('html_chart')\">\r\n              <span class=\"icon-tool icon-chart\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n      </mat-accordion>\r\n    </mat-drawer>\r\n    <!-- END LEFT BAR -->\r\n    <!-- WORK AREA -->\r\n    <mat-drawer-content>\r\n      <!-- RIGHT BAR -->\r\n      <div class=\"svg-tools-fly\">\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelPropertyIdOpenState = true\" (closed)=\"panelPropertyIdOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\" style=\"display:none\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-flybar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelPropertyIdOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelPropertyIdOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.interactivity' | translate}}</span> <!-- INTERACTIVITY -->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"_selected_panel\">\r\n            <div class=\"_toolset\">\r\n              <label id=\"idLabel\" title=\"{{'editor.interactivity-id-title' | translate}}\" class=\"svg-property\">\r\n                <span>{{'editor.interactivity-id' | translate}}</span>\r\n                <input id=\"elem_id\" #selid class=\"attr_changer\" data-attr=\"id\" type=\"text\" />\r\n              </label>\r\n              <label id=\"classLabel\" title=\"{{'editor.interactivity-class-title' | translate}}\" class=\"svg-property\">\r\n                <span>{{'editor.interactivity-class' | translate}}</span>\r\n                <input id=\"elem_class\" class=\"attr_changer\" data-attr=\"class\" type=\"text\" />\r\n              </label>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelPropertyTransformOpenState = true\" (closed)=\"panelPropertyTransformOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelPropertyTransformOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelPropertyTransformOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.transform' | translate}}</span> <!-- TRANSFORM SIZE/POSITION-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"_selected_panel\" class=\"rightbar-panel\">\r\n            <div class=\"_toolset\">\r\n              <div id=\"xy_panel\" class=\"_toolset\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-x' | translate}}</span>\r\n                    <input id=\"selected_x\" class=\"attr_changer\" title=\"{{'editor.transform-x-title' | translate}}\" size=\"4\" data-attr=\"x\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-y' | translate}}</span>\r\n                    <input id=\"selected_y\" class=\"attr_changer\" title=\"{{'editor.transform-y-title' | translate}}\" size=\"3\" data-attr=\"y\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"line_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-x1' | translate}}</span>\r\n                    <input id=\"line_x1\" class=\"attr_changer\" title=\"{{'editor.transform-x1-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"x1\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-y1' | translate}}</span>\r\n                    <input id=\"line_y1\" class=\"attr_changer\" title=\"{{'editor.transform-y1-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"y1\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-x2' | translate}}</span>\r\n                    <input id=\"line_x2\" class=\"attr_changer\" title=\"{{'editor.transform-x2-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"x2\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-y2' | translate}}</span>\r\n                    <input id=\"line_y2\" class=\"attr_changer\" title=\"{{'editor.transform-y2-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"y2\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"rect_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-width-title' | translate}}\">\r\n                    <span>{{'editor.transform-width' | translate}}</span>\r\n                    <input id=\"rect_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-height-title' | translate}}\">\r\n                    <span>{{'editor.transform-height' | translate}}</span>\r\n                    <input id=\"rect_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-radius-title' | translate}}\">\r\n                    <span>{{'editor.transform-radiuscorner' | translate}}</span>\r\n                    <input id=\"rect_rx\" size=\"3\" value=\"0\" type=\"text\" data-attr=\"Corner Radius\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"htmlctrl_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-width-title' | translate}}\">\r\n                    <span>{{'editor.transform-width' | translate}}</span>\r\n                    <input id=\"htmlctrl_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-height-title' | translate}}\">\r\n                    <span>{{'editor.transform-height' | translate}}</span>\r\n                    <input id=\"htmlctrl_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"shape_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-width-title' | translate}}\">\r\n                    <span>{{'editor.transform-width' | translate}}</span>\r\n                    <input id=\"shape_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"{{'editor.transform-rect-height-title' | translate}}\">\r\n                    <span>{{'editor.transform-height' | translate}}</span>\r\n                    <input id=\"shape_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"circle_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-circlecx' | translate}}</span>\r\n                    <input id=\"circle_cx\" class=\"attr_changer\" title=\"{{'editor.transform-circlecx-title' | translate}}\" size=\"3\" data-attr=\"cx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-circlecy' | translate}}</span>\r\n                    <input id=\"circle_cy\" class=\"attr_changer\" title=\"{{'editor.transform-circlecy-title' | translate}}\" size=\"3\" data-attr=\"cy\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-circler' | translate}}</span>\r\n                    <input id=\"circle_r\" class=\"attr_changer\" title=\"{{'editor.transform-circler-title' | translate}}\" size=\"3\" data-attr=\"r\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"ellipse_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-ellipsecx' | translate}}</span>\r\n                    <input id=\"ellipse_cx\" class=\"attr_changer\" title=\"{{'editor.transform-ellipsecx-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"cx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-ellipsecy' | translate}}</span>\r\n                    <input id=\"ellipse_cy\" class=\"attr_changer\" title=\"{{'editor.transform-ellipsecy-title' | translate}}\" size=\"3\"\r\n                      data-attr=\"cy\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-ellipserx' | translate}}</span>\r\n                    <input id=\"ellipse_rx\" class=\"attr_changer\" title=\"{{'editor.transform-ellipserx-title' | translate}}\" size=\"3\" data-attr=\"rx\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-ellipsery' | translate}}</span>\r\n                    <input id=\"ellipse_ry\" class=\"attr_changer\" title=\"{{'editor.transform-ellipsery-title' | translate}}\" size=\"3\" data-attr=\"ry\" />\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <div id=\"text_panel\">\r\n                <div class=\"svg-property\">\r\n                  <span>{{'editor.transform-fontfamily' | translate}}</span>\r\n                  <select class=\"font-family\" id=\"font_family\" #fontfamily (change)=\"onFontFamilyChange(fontfamily.value)\">\r\n                    <option style=\"font-family:serif\">{{'editor.transform-font-serif' | translate}}</option>\r\n                    <option style=\"font-family:sans-serif\">{{'editor.transform-font-sansserif' | translate}}</option>\r\n                    <option style=\"font-family:cursive\">{{'editor.transform-font-cursive' | translate}}</option>\r\n                    <option style=\"font-family:fantasy\">{{'editor.transform-font-fantasy' | translate}}</option>\r\n                    <option style=\"font-family:monospace\">{{'editor.transform-font-monospace' | translate}}</option>\r\n                  </select>\r\n                </div>\r\n\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-fontsize' | translate}}</span>\r\n                    <input id=\"font_size\" size=\"3\" value=\"0\" class=\"attr_changer\" title=\"{{'editor.transform-fontsize-title' | translate}}\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-textalign' | translate}}</span>\r\n                    <select class=\"text-align\" id=\"text_anchor\" #textalign (change)=\"onTextAlignChange(textalign.value)\">\r\n                      <option value=\"start\">{{'editor.transform-left' | translate}}</option>\r\n                      <option value=\"middle\">{{'editor.transform-center' | translate}}</option>\r\n                      <option value=\"end\">{{'editor.transform-right' | translate}}</option>\r\n                    </select>\r\n                    <!-- <div class=\"tool_button\" id=\"tool_bold\" title=\"Bold Text [B]\">\r\n                      <span>B</span>\r\n                    </div> -->\r\n                  </div>\r\n                  <!-- <div class=\"svg-property\">\r\n                    <div class=\"tool_button\" id=\"tool_italic\" title=\"Italic Text [I]\">\r\n                      <span>i</span>\r\n                    </div>\r\n                  </div> -->\r\n                </div>\r\n\r\n                <!-- Not visible, but still used -->\r\n                <input id=\"text\" type=\"text\" size=\"35\" />\r\n              </div>\r\n              <div id=\"image_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-width' | translate}}</span>\r\n                    <input id=\"image_width\" class=\"attr_changer\" title=\"{{'editor.transform-image-width-title' | translate}}\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-height' | translate}}</span>\r\n                    <input id=\"image_height\" class=\"attr_changer\" title=\"{{'editor.transform-image-height-title' | translate}}\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n                <div class=\"svg-property\" style=\"display: none;\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-url' | translate}}</span>\r\n                    <input id=\"image_url\" class=\"attr_changer\" type=\"text\" title=\"{{'editor.transform-image-url-title' | translate}}\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <div class=\"svg-property\">\r\n                      <button id=\"change_image_url\" style=\"display:none;\">{{'editor.transform-change-image' | translate}}</button>\r\n                      <span id=\"url_notice\" title=\"{{'editor.transform-change-image-title' | translate}}\"></span>\r\n                    </div>\r\n                  </div>\r\n                </div>\r\n              </div>\r\n              <!-- <div id=\"hw_panel\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\" title=\"Change rectangle width\">\r\n                    <span>width</span>\r\n                    <input id=\"rect_width\" class=\"attr_changer\" size=\"3\" data-attr=\"width\" />\r\n                  </div>\r\n                  <div class=\"svg-property\" title=\"Change rectangle height\">\r\n                    <span>height</span>\r\n                    <input id=\"rect_height\" class=\"attr_changer\" size=\"3\" data-attr=\"height\" />\r\n                  </div>\r\n                </div>\r\n              </div> -->\r\n              <div id=\"tool_angle\" title=\"{{'editor.transform-angle-title' | translate}}\" class=\"svg-property\">\r\n                <div class=\"svg-property-split2\">\r\n                  <div class=\"svg-property\">\r\n                    <span>{{'editor.transform-angle' | translate}}</span>\r\n                    <input id=\"angle\" size=\"2\" value=\"0\" type=\"text\" />\r\n                  </div>\r\n                  <div class=\"svg-property\">\r\n                    <!-- <div class=\"svg-tool-button\" (click)=\"flipSelected('vertical')\" title=\"Flip vertically\">\r\n                      <span class=\"icon-flip-vertical\"></span>\r\n                    </div>\r\n                    <div class=\"svg-tool-button\" (click)=\"flipSelected('orizontal')\" title=\"Flip orizontally\">\r\n                      <span class=\"icon-flip-orizontal\"></span>\r\n                    </div> -->\r\n                  </div>\r\n                </div>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelAlignOpenState = true\" (closed)=\"panelAlignOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelAlignOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelAlignOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.align' | translate}}</span> <!-- ALIGN-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"align_panel\" class=\"rightbar_panel\">\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('left')\" title=\"{{'editor.align-left-title' | translate}}\">\r\n              <span class=\"icon-align-left\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('center')\" title=\"{{'editor.align-center-title' | translate}}Align Center\">\r\n              <span class=\"icon-align-center\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('right')\" title=\"{{'editor.align-right-title' | translate}}Align Right\">\r\n              <span class=\"icon-align-right\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('top')\" title=\"{{'editor.align-top-title' | translate}}Align Top\">\r\n              <span class=\"icon-align-top\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('middle')\" title=\"{{'editor.align-middle-title' | translate}}Align Middle\">\r\n              <span class=\"icon-align-middle\"></span>\r\n            </div>\r\n            <div class=\"svg-tool-button\" (click)=\"onAlignSelected('bottom')\" title=\"{{'editor.align-bottom-title' | translate}}Align Bottom\">\r\n              <span class=\"icon-align-bottom\"></span>\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelFillOpenState = true\" (closed)=\"panelFillOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelFillOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelFillOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.stroke' | translate}}</span> <!-- STROKE-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div class=\"rightbar_panel\">\r\n            <div class=\"_color_tool\" id=\"tool_stroke\">\r\n              <div class=\"svg-property-split2\">\r\n                <div class=\"svg-property\">\r\n                  <span>{{'editor.stroke-width' | translate}}</span>\r\n                  <input id=\"stroke_width\" title=\"{{'editor.stroke-width-title' | translate}}\" size=\"2\"\r\n                    value=\"1\" type=\"text\" data-attr=\"Stroke Width\" />\r\n                </div>\r\n                <div class=\"svg-property\">\r\n                  <span>{{'editor.stroke-style' | translate}}</span>\r\n                  <select id=\"stroke_style\" class=\"style-stroke\" title=\"{{'editor.stroke-style-title' | translate}}\">\r\n                    <option selected=\"selected\" value=\"none\">&#8212;</option>\r\n                    <option value=\"2,2\">...</option>\r\n                    <option value=\"5,5\">- -</option>\r\n                    <option value=\"5,2,2,2\">- .</option>\r\n                    <option value=\"5,2,2,2,2,2\">- ..</option>\r\n                  </select>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <div class=\"svg-tool-button\" id=\"linejoin_miter\" #linejoinmiter (click)=\"onSetStrokeOption(linejoinmiter)\"\r\n                  title=\"{{'editor.stroke-joinmiter-title' | translate}}\">\r\n                  <span class=\"icon-linejoin-miter\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linejoin_round\" #linejoinround (click)=\"onSetStrokeOption(linejoinround)\"\r\n                  title=\"{{'editor.stroke-joinround-title' | translate}}\">\r\n                  <span class=\"icon-linejoin-round\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linejoin_bevel\" #linejoinbevel (click)=\"onSetStrokeOption(linejoinbevel)\"\r\n                  title=\"{{'editor.stroke-joinbevel-title' | translate}}\">\r\n                  <span class=\"icon-linejoin-bevel\"></span>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <div class=\"svg-tool-button\" id=\"linecap_butt\" #linecapbutt (click)=\"onSetStrokeOption(linecapbutt)\"\r\n                  title=\"{{'editor.stroke-capbutt-title' | translate}}\">\r\n                  <span class=\"icon-linecap-butt\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linecap_square\" #linecapsquare (click)=\"onSetStrokeOption(linecapsquare)\"\r\n                  title=\"{{'editor.stroke-capsquare-title' | translate}}\">\r\n                  <span class=\"icon-linecap-square\"></span>\r\n                </div>\r\n                <div class=\"svg-tool-button\" id=\"linecap_round\" #linecapround (click)=\"onSetStrokeOption(linecapround)\"\r\n                  title=\"{{'editor.stroke-capround-title' | translate}}\">\r\n                  <span class=\"icon-linecap-round\"></span>\r\n                </div>\r\n              </div>\r\n              <div class=\"svg-property-split2\" style=\"display: none\">\r\n                <div class=\"svg-property\">\r\n                  <span for=\"class_shadow\">{{'editor.stroke-shadow' | translate}}</span>\r\n                  <input type=\"checkbox\" id=\"class_shadow\" name=\"class_shadow\" class=\"attr_changer\" title=\"{{'editor.stroke-shadow-title' | translate}}\"\r\n                    (change)=\"onSetShadowOption($event.target.checked)\" label=\"shadow\" />\r\n                </div>\r\n                <div class=\"svg-property\">\r\n                </div>\r\n              </div>\r\n              <!-- <ul id=\"linejoin_opts\">\r\n                <li class=\"tool_button current\" id=\"linejoin_miter\" title=\"Linejoin: Miter\"></li>\r\n                <li class=\"tool_button\" id=\"linejoin_round\" title=\"Linejoin: Round\"></li>\r\n                <li class=\"tool_button\" id=\"linejoin_bevel\" title=\"Linejoin: Bevel\"></li>\r\n              </ul>\r\n\r\n              <ul id=\"linecap_opts\">\r\n                <li class=\"tool_button current\" id=\"linecap_butt\" title=\"Linecap: Butt\"></li>\r\n                <li class=\"tool_button\" id=\"linecap_square\" title=\"Linecap: Square\"></li>\r\n                <li class=\"tool_button\" id=\"linecap_round\" title=\"Linecap: Round\"></li>\r\n              </ul> -->\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelMarkerOpenState = true\" (closed)=\"panelMarkerOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelMarkerOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelMarkerOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.marker' | translate}}</span> <!-- MARKER-->\r\n            </mat-panel-title>\r\n          </mat-expansion-panel-header>\r\n          <div id=\"marker_panel\" class=\"rightbar_panel\">\r\n            <div class=\"svg-property-split3\">\r\n              <div class=\"svg-property\">\r\n                <span>{{'editor.marker-start' | translate}}</span>\r\n                <select id=\"start_marker\" #smarker class=\"style-stroke\" title=\"{{'editor.marker-start-title' | translate}}\" (click)=\"onSetMarker('start_marker', smarker.selectedIndex);\"\r\n                  onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <span>{{'editor.marker-middle' | translate}}</span>\r\n                <select id=\"mid_marker\" #mmarker class=\"style-stroke\" title=\"{{'editor.marker-middle-title' | translate}}\" (click)=\"onSetMarker('mid_marker', mmarker.selectedIndex);\"\r\n                  onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n              <div class=\"svg-property\">\r\n                <span>{{'editor.marker-end' | translate}}</span>\r\n                <select id=\"end_marker\" #emarker class=\"style-stroke\" title=\"{{'editor.marker-end-title' | translate}}\" (click)=\"onSetMarker('end_marker', emarker.selectedIndex);\"\r\n                  onfocus=\"this.selectedIndex=-1;this.blur();\">\r\n                </select>\r\n              </div>\r\n\r\n            </div>\r\n          </div>\r\n        </mat-expansion-panel>\r\n        <mat-expansion-panel class=\"svg-workarea-fly-p\" (opened)=\"panelEventOpenState = true\" (closed)=\"panelEventOpenState = false\"\r\n          hideToggle=\"true\" expanded=\"true\">\r\n          <mat-expansion-panel-header class=\"svg-workarea-leftbar-h\">\r\n            <mat-panel-title>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"panelEventOpenState\">expand_less</mat-icon>\r\n              <mat-icon aria-label=\"Select\" *ngIf=\"!panelEventOpenState\">expand_more</mat-icon>\r\n              <span>{{'editor.interactivity' | translate}}</span> <!-- INTERACTIVITY -->\r\n            </mat-panel-title>\r\n            <!-- <mat-icon aria-label=\"Add\" class=\"leftbar-edit-btn\" (click)=\"addEvent();$event.stopPropagation()\" *ngif=\"selectedElement\">add</mat-icon> -->\r\n          </mat-expansion-panel-header>\r\n          <div id=\"interaction_panel\" class=\"rightbar_panel\">\r\n            <gauge-base #gaugepanel *ngIf=\"selectedElement\" [settings]=getGaugeSettings(selectedElement) (edit)=\"onGaugeEdit($event)\"></gauge-base>\r\n            <!-- (edit)=\"onGaugeEdit($event)\" [withEvents]=\"isWithEvents(selectedElement)\"></gauge-base> -->\r\n          </div>\r\n        </mat-expansion-panel>\r\n      </div>\r\n      <!-- END RIGHT BAR -->\r\n      <!-- Work Area -->\r\n      <div id=\"svg_editor\" style=\"z-index:-1\">\r\n        <!-- Rules bar -->\r\n        <div id=\"rulers\">\r\n          <div id=\"ruler_corner\"></div>\r\n          <div id=\"ruler_x\">\r\n            <div>\r\n              <canvas height=\"15\"></canvas>\r\n            </div>\r\n          </div>\r\n          <div id=\"ruler_y\">\r\n            <div>\r\n              <canvas width=\"15\"></canvas>\r\n            </div>\r\n          </div>\r\n        </div>\r\n        <!-- END Rules bar -->\r\n        <!-- Draw Area -->\r\n        <div id=\"workarea\">\r\n          <style id=\"styleoverrides\" type=\"text/css\" media=\"screen\" scoped=\"scoped\"></style>\r\n          <div id=\"svgcanvas\" style=\"position:relative\">\r\n          </div>\r\n        </div>\r\n        <!-- END Draw Area -->\r\n        <!-- Draw top tool bar -->\r\n        <div id=\"tools_top\" class=\"tools_panel\">\r\n          <div id=\"editor_panel\">\r\n            <!-- <button mat-button title=\"Save Project\" [matMenuTriggerFor]=\"prjview\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Save Project\">save</mat-icon>\r\n            </button> -->\r\n            <!-- <mat-menu #prjview=\"matMenu\" class=\"leftbar-item-menu\" yPosition=\"below\" [overlapTrigger]=\"false\"> -->\r\n            <!-- <button mat-menu-item (click)=\"onSaveProject()\">Save</button> -->\r\n            <!-- <button mat-menu-item (click)=\"onSaveProjectAs()\">Save as...</button> -->\r\n            <!-- <button mat-menu-item (click)=\"onOpenProject();$event.stopPropagation()\">Open Project</button> -->\r\n            <!-- <button mat-menu-item (click)=\"onImportVariable();$event.stopPropagation()\">Import Variable</button> -->\r\n            <!-- <input type=\"file\" #fileImportInput style=\"display: none\" id=\"projectFileUpload\" (change)=\"onFileChangeListener($event)\" accept=\".wvc\"/> -->\r\n            <!-- </mat-menu> -->\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button title=\"{{'editor.tools-launch-title' | translate}}\" class=\"main-btn\" (click)=\"onStartCurrent()\">\r\n              <mat-icon aria-label=\"Launch Current View\">play_arrow</mat-icon>\r\n            </button>\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button title=\"{{'editor.tools-zoom-title' | translate}}\" class=\"main-btn\" (click)=\"onZoomSelect()\">\r\n              <mat-icon aria-label=\"Zoom Tool [Ctrl+Up/Down]\">zoom_in</mat-icon>\r\n            </button>\r\n            <button mat-button title=\"{{'editor.tools-grid-title' | translate}}\" class=\"main-btn\" (click)=\"onShowGrid()\">\r\n              <mat-icon aria-label=\"Show Hide Grid\" *ngIf=\"!gridOn\">grid_on</mat-icon>\r\n              <mat-icon aria-label=\"Show Hide Grid\" *ngIf=\"gridOn\">grid_off</mat-icon>\r\n            </button>\r\n            <div id=\"history_panel\">\r\n              <button mat-button id=\"tool_undo\" title=\"{{'editor.tools-undo-title' | translate}}\" class=\"main-btn\">\r\n                <mat-icon aria-label=\"Undo [Z]\">undo</mat-icon>\r\n              </button>\r\n              <button mat-button id=\"tool_redo\" title=\"{{'editor.tools-redo-title' | translate}}\" class=\"main-btn\">\r\n                <mat-icon aria-label=\"Redo [Y]\">redo</mat-icon>\r\n              </button>\r\n            </div>\r\n\r\n            <!-- <div class=\"push_button\" title=\"Save Project\" (click)=\"saveProject()\"></div> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <div class=\"push_button\" id=\"tool_source\" title=\"Edit Source [U]\"></div> -->\r\n            <!-- <div class=\"tool_button\" id=\"tool_wireframe\" title=\"Wireframe Mode [F]\"></div> -->\r\n            <!-- <div class=\"tool_sep\"></div> -->\r\n            <!-- <div class=\"tool_button\" id=\"tool_zoom\" title=\"Zoom Tool [Ctrl+Up/Down]\"></div> -->\r\n          </div>\r\n          <div id=\"selected_panel\">\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button id=\"tool_clone\" title=\"{{'editor.tools-clone-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Duplicate Element [D]\">content_copy</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_delete\" title=\"{{'editor.tools-delete-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Delete Element [Delete/Backspace]\">content_cut</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_move_bottom\" title=\"{{'editor.tools-movebottom-title' | translate}}\" class=\"main-btn\">\r\n              <span class=\"to-bottom\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_move_top\" title=\"{{'editor.tools-movetop-title' | translate}}\" class=\"main-btn\">\r\n              <span class=\"to-top\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_topath\" title=\"{{'editor.tools-topath-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>linear_scale</mat-icon>\r\n            </button>\r\n          </div>\r\n          <div id=\"multiselected_panel\">\r\n            <div class=\"main-btn-sep\"></div>\r\n            <button mat-button id=\"tool_clone_multi\" title=\"{{'editor.tools-clonemulti-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Clone Elements [C]\">content_copy</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_delete_multi\" title=\"{{'editor.tools-deletemulti-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon aria-label=\"Delete Selected Elements [Delete/Backspace]\">content_cut</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_group_elements\" title=\"{{'editor.tools-group-title' | translate}}\" class=\"main-btn\">\r\n              <span class=\"group\"></span>\r\n            </button>\r\n            <button mat-button id=\"tool_alignleft\" title=\"{{'editor.tools-alignleft-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>format_align_left</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_aligncenter\" title=\"{{'editor.tools-aligncenter-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>format_align_center</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignright\" title=\"{{'editor.tools-alignright-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>format_align_right</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_aligntop\" title=\"{{'editor.tools-aligntop-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_top</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignmiddle\" title=\"{{'editor.tools-alignmiddle-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_center</mat-icon>\r\n            </button>\r\n            <button mat-button id=\"tool_alignbottom\" title=\"{{'editor.tools-alignbottom-title' | translate}}\" class=\"main-btn\">\r\n              <mat-icon>vertical_align_bottom</mat-icon>\r\n            </button>\r\n          </div>\r\n          <div id=\"g_panel\">\r\n            <button mat-button id=\"tool_ungroup\" title=\"{{'editor.tools-ungroup-title' | translate}}\" class=\"main-btn\">\r\n              <span class=\"ungroup\"></span>\r\n            </button>\r\n          </div>\r\n\r\n          <!-- History buttons -->\r\n          <!-- <div id=\"history_panel\">\r\n            <div class=\"tool_sep\"></div>\r\n            <div class=\"push_button tool_button_disabled\" id=\"tool_undo\" title=\"Undo [Z]\"></div>\r\n            <div class=\"push_button tool_button_disabled\" id=\"tool_redo\" title=\"Redo [Y]\"></div>\r\n          </div> -->\r\n          <!-- Buttons when a single element is selected -->\r\n          <!-- <div id=\"_selected_panel\"> -->\r\n          <!-- <div class=\"toolset\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_clone\" title=\"Duplicate Element [D]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_delete\" title=\"Delete Element [Delete/Backspace]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_move_top\" title=\"Bring to Front [ Ctrl+Shift+] ]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_move_bottom\" title=\"Send to Back [ Ctrl+Shift+[ ]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_topath\" title=\"Convert to Path\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_reorient\" title=\"Reorient path\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_make_link\" title=\"Make (hyper)link\"></div> -->\r\n          <!-- </div> -->\r\n          <!-- </div> -->\r\n          <!-- select panel END -->\r\n          <!-- Buttons when multiple elements are selected -->\r\n          <!-- <div id=\"_multiselected_panel\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_clone_multi\" title=\"Clone Elements [C]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_delete_multi\" title=\"Delete Selected Elements [Delete/Backspace]\"></div> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_group_elements\" title=\"Group Elements [G]\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_make_link_multi\" title=\"Make (hyper)link\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignleft\" title=\"Align Left\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_aligncenter\" title=\"Align Center\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignright\" title=\"Align Right\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_aligntop\" title=\"Align Top\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignmiddle\" title=\"Align Middle\"></div> -->\r\n          <!-- <div class=\"push_button\" id=\"tool_alignbottom\" title=\"Align Bottom\"></div> -->\r\n          <!-- <label id=\"tool_align_relative\">\r\n              <span id=\"relativeToLabel\">relative to:</span>\r\n              <select id=\"align_relative_to\" title=\"Align relative to ...\">\r\n                <option id=\"selected_objects\" value=\"selected\">selected objects</option>\r\n                <option id=\"largest_object\" value=\"largest\">largest object</option>\r\n                <option id=\"smallest_object\" value=\"smallest\">smallest object</option>\r\n                <option id=\"page\" value=\"page\">page</option>\r\n              </select>\r\n            </label> -->\r\n          <!-- </div> -->\r\n\r\n          <!-- formerly gsvg_panel -->\r\n          <!-- <div id=\"container_panel\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- Add viewBox field here? -->\r\n          <!-- <label id=\"group_title\" title=\"Group identification label\">\r\n              <span>label:</span>\r\n              <input id=\"g_title\" data-attr=\"title\" size=\"10\" type=\"text\" />\r\n            </label> -->\r\n          <!-- </div> -->\r\n\r\n          <!-- <div id=\"use_panel\">\r\n            <div class=\"push_button\" id=\"tool_unlink_use\" title=\"Break link to reference element (make unique)\"></div>\r\n          </div> -->\r\n\r\n          <!-- <div id=\"g_panel\">\r\n            <div class=\"push_button\" id=\"tool_ungroup\" title=\"Ungroup Elements [G]\"></div>\r\n          </div> -->\r\n\r\n          <!-- For anchor elements -->\r\n          <!-- <div id=\"a_panel\">\r\n            <label id=\"tool_link_url\" title=\"Set link URL (leave empty to remove)\">\r\n              <span id=\"linkLabel\" class=\"icon_label\"></span>\r\n              <input id=\"link_url\" type=\"text\" size=\"35\" />\r\n            </label>\r\n          </div> -->\r\n\r\n          <!-- <div id=\"path_node_panel\"> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <div class=\"tool_button push_button_pressed\" id=\"tool_node_link\" title=\"Link Control Points\"></div> -->\r\n          <!-- <div class=\"tool_sep\"></div> -->\r\n          <!-- <label id=\"tool_node_x\">x:\r\n              <input id=\"path_node_x\" class=\"attr_changer\" title=\"Change node's x coordinate\" size=\"3\" data-attr=\"x\" />\r\n            </label>\r\n            <label id=\"tool_node_y\">y:\r\n              <input id=\"path_node_y\" class=\"attr_changer\" title=\"Change node's y coordinate\" size=\"3\" data-attr=\"y\" />\r\n            </label> -->\r\n\r\n          <!-- <select id=\"seg_type\" title=\"Change Segment type\">\r\n              <option id=\"straight_segments\" selected=\"selected\" value=\"4\">Straight</option>\r\n              <option id=\"curve_segments\" value=\"6\">Curve</option>\r\n            </select> -->\r\n          <!-- <div class=\"tool_button\" id=\"tool_node_clone\" title=\"Clone Node\"></div>\r\n            <div class=\"tool_button\" id=\"tool_node_delete\" title=\"Delete Node\"></div>\r\n            <div class=\"tool_button\" id=\"tool_openclose_path\" title=\"Open/close sub-path\"></div>\r\n            <div class=\"tool_button\" id=\"tool_add_subpath\" title=\"Add sub-path\"></div> -->\r\n          <!-- </div> -->\r\n        </div>\r\n        <!-- tools_top -->\r\n        <div id=\"cur_context_panel\">\r\n\r\n        </div>\r\n\r\n        <!-- tools_left -->\r\n        <!-- <div id=\"tools_left\" class=\"tools_panel\">\r\n      <div class=\"tool_button\" id=\"tool_select\" title=\"Select Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_fhpath\" title=\"Pencil Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_line\" title=\"Line Tool\"></div>\r\n      <div class=\"tool_button flyout_current\" id=\"tools_rect_show\" title=\"Square/Rect Tool\">\r\n        <div class=\"flyout_arrow_horiz\"></div>\r\n      </div>\r\n      <div class=\"tool_button flyout_current\" id=\"tools_ellipse_show\" title=\"Ellipse/Circle Tool\">\r\n        <div class=\"flyout_arrow_horiz\"></div>\r\n      </div>\r\n      <div class=\"tool_button\" id=\"tool_path\" title=\"Path Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_text\" title=\"Text Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_image\" title=\"Image Tool\"></div>\r\n      <div class=\"tool_button\" id=\"tool_zoom\" title=\"Zoom Tool [Ctrl+Up/Down]\"></div>\r\n\r\n      <div style=\"display: none\">\r\n        <div id=\"tool_rect\" title=\"Rectangle\"></div>\r\n        <div id=\"tool_square\" title=\"Square\"></div>\r\n        <div id=\"tool_fhrect\" title=\"Free-Hand Rectangle\"></div>\r\n        <div id=\"tool_ellipse\" title=\"Ellipse\"></div>\r\n        <div id=\"tool_circle\" title=\"Circle\"></div>\r\n        <div id=\"tool_fhellipse\" title=\"Free-Hand Ellipse\"></div>\r\n      </div>\r\n    </div> -->\r\n        <!-- tools_left -->\r\n\r\n        <!-- tool bottom -->\r\n        <div class=\"bottom-bar tools_panel\">\r\n          <!-- Zoom buttons -->\r\n          <div class=\"zoom-menu\" title=\"{{'editor.tools-zoomlevel-title' | translate}}\">\r\n            <div class=\"zoom-value\">\r\n              <input id=\"zoom\" size=\"3\" value=\"100\" type=\"text\" #zoomValue hidden />\r\n              <span id=\"zoomLabel\">{{zoomValue.value}} %</span>\r\n              <div id=\"zoom_dropdown\" class=\"dropdown selection\">\r\n                <button>O\r\n                </button>\r\n                <ul>\r\n                  <li>1000%</li>\r\n                  <li>400%</li>\r\n                  <li>200%</li>\r\n                  <li>100%</li>\r\n                  <li>50%</li>\r\n                  <li>25%</li>\r\n                  <li id=\"fit_to_canvas\" data-val=\"canvas\">{{'editor.tools-zoomlevel-fitcanvas' | translate}}</li>\r\n                  <li id=\"fit_to_sel\" data-val=\"selection\">{{'editor.tools-zoomlevel-fitsection' | translate}}</li>\r\n                  <!-- <li id=\"fit_to_layer_content\" data-val=\"layer\">Fit to layer content</li> -->\r\n                  <li id=\"fit_to_all\" data-val=\"content\">{{'editor.tools-zoomlevel-fitcontent' | translate}}</li>\r\n                  <li>100%</li>\r\n                </ul>\r\n              </div>\r\n            </div>\r\n          </div>\r\n\r\n          <div id=\"tools_bottom_2\" class=\"colors\">\r\n            <input readonly [(colorPicker)]=\"colorFill\" class=\"color-fill\" title=\"{{'editor.tools-fillcolor-title' | translate}}\" [style.background]=\"colorFill\"\r\n              [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" (colorPickerChange)=\"onChangeFillColor($event)\"\r\n              [cpPresetColors]=\"defaultColor\" [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\"\r\n              [cpCancelButtonText]=\"'Cancel'\" [cpOKButton]=\"true\" [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" />\r\n            <input readonly [(colorPicker)]=\"colorStroke\" class=\"color-stroke\" title=\"{{'editor.tools-strokecolor-title' | translate}}\"\r\n              [style.background]=\"colorStroke\" [cpAlphaChannel]=\"'always'\" [cpPosition]=\"'top'\" (colorPickerChange)=\"onChangeStrokeColor($event)\"\r\n              [cpPresetColors]=\"defaultColor\" [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\"\r\n              [cpCancelButtonText]=\"'Cancel'\" [cpOKButton]=\"true\" [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" />\r\n            <!-- <div id=\"color_tools\"> -->\r\n            <div class=\"color_tool\" id=\"tool_fill\" hidden>\r\n              <label class=\"icon_label\" for=\"fill_color\" title=\"{{'editor.tools-fillcolor-title' | translate}}\"></label>\r\n              <div class=\"color_block\">\r\n                <div id=\"fill_color\" class=\"color_block\" [style.border-color]=\"colorFill\"></div>\r\n              </div>\r\n            </div>\r\n            <div class=\"color_tool\" id=\"tool_stroke\" hidden>\r\n              <label class=\"icon_label\" title=\"Change stroke color\"></label>\r\n              <div class=\"color_block\">\r\n                <div id=\"stroke_bg\"></div>\r\n                <div id=\"stroke_color\" class=\"color_block\" title=\"{{'editor.tools-strokecolor-title' | translate}}\" [style.border-color]=\"colorStroke\"></div>\r\n              </div>\r\n\r\n              <!-- <div id=\"toggle_stroke_tools\" title=\"Show/hide more stroke tools\"></div> -->\r\n\r\n              <!-- <label class=\"stroke_tool\">\r\n                  <select id=\"stroke_style\" title=\"Change stroke dash style\">\r\n                    <option selected=\"selected\" value=\"none\">&#8212;</option>\r\n                    <option value=\"2,2\">...</option>\r\n                    <option value=\"5,5\">- -</option>\r\n                    <option value=\"5,2,2,2\">- .</option>\r\n                    <option value=\"5,2,2,2,2,2\">- ..</option>\r\n                  </select>\r\n                </label> -->\r\n\r\n              <!-- <div class=\"stroke_tool dropdown\" id=\"stroke_linejoin\">\r\n                  <div id=\"cur_linejoin\" title=\"Linejoin: Miter\"></div>\r\n                  <button></button>\r\n                </div> -->\r\n\r\n              <!-- <div class=\"stroke_tool dropdown\" id=\"stroke_linecap\">\r\n                  <div id=\"cur_linecap\" title=\"Linecap: Butt\"></div>\r\n                  <button></button>\r\n                </div> -->\r\n\r\n              <!-- </div> -->\r\n\r\n              <!-- <div class=\"color_tool\" id=\"tool_opacity\" title=\"Change selected item opacity\">\r\n                <label>\r\n                  <span id=\"group_opacityLabel\" class=\"icon_label\"></span>\r\n                  <input id=\"group_opacity\" size=\"3\" value=\"100\" type=\"text\" />\r\n                </label>\r\n                <div id=\"opacity_dropdown\" class=\"dropdown\">\r\n                  <button></button>\r\n                  <ul>\r\n                    <li>0%</li>\r\n                    <li>25%</li>\r\n                    <li>50%</li>\r\n                    <li>75%</li>\r\n                    <li>100%</li>\r\n                    <li class=\"special\">\r\n                      <div id=\"opac_slider\"></div>\r\n                    </li>\r\n                  </ul>\r\n                </div>\r\n              </div> -->\r\n            </div>\r\n          </div>\r\n\r\n          <div id=\"tools_bottom_3\" class=\"colors-palette\">\r\n            <div id=\"palette_holder\">\r\n              <div id=\"palette\" title=\"{{'editor.tools-palettecolor-title' | translate}}\"></div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div id=\"option_lists\" class=\"dropdown\">\r\n          <!-- <ul id=\"linejoin_opts\">\r\n            <li class=\"tool_button current\" id=\"linejoin_miter\" title=\"Linejoin: Miter\"></li>\r\n            <li class=\"tool_button\" id=\"linejoin_round\" title=\"Linejoin: Round\"></li>\r\n            <li class=\"tool_button\" id=\"linejoin_bevel\" title=\"Linejoin: Bevel\"></li>\r\n          </ul>\r\n\r\n          <ul id=\"linecap_opts\">\r\n            <li class=\"tool_button current\" id=\"linecap_butt\" title=\"Linecap: Butt\"></li>\r\n            <li class=\"tool_button\" id=\"linecap_square\" title=\"Linecap: Square\"></li>\r\n            <li class=\"tool_button\" id=\"linecap_round\" title=\"Linecap: Round\"></li>\r\n          </ul> -->\r\n\r\n          <ul id=\"position_opts\" class=\"optcols3\">\r\n            <li class=\"push_button\" id=\"tool_posleft\" title=\"Align Left\"></li>\r\n            <li class=\"push_button\" id=\"tool_poscenter\" title=\"Align Center\"></li>\r\n            <li class=\"push_button\" id=\"tool_posright\" title=\"Align Right\"></li>\r\n            <li class=\"push_button\" id=\"tool_postop\" title=\"Align Top\"></li>\r\n            <li class=\"push_button\" id=\"tool_posmiddle\" title=\"Align Middle\"></li>\r\n            <li class=\"push_button\" id=\"tool_posbottom\" title=\"Align Bottom\"></li>\r\n          </ul>\r\n        </div>\r\n\r\n\r\n        <!-- hidden divs -->\r\n        <!-- <div id=\"color_picker\"></div> -->\r\n\r\n      </div>\r\n    </mat-drawer-content>\r\n    <!-- work area END -->\r\n  </mat-drawer-container>\r\n\r\n  <!-- svg_editor -->\r\n\r\n  <!-- NOT USED -->\r\n  <div id=\"svg_source_editor\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_source_container\">\r\n      <div id=\"tool_source_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_source_save\">Apply Changes</button>\r\n        <button id=\"tool_source_cancel\">Cancel</button>\r\n      </div>\r\n      <div id=\"save_output_btns\">\r\n        <p id=\"copy_save_note\">Copy the contents of this box into a text editor, then save the file with a .svg\r\n          extension.</p>\r\n        <button id=\"copy_save_done\">Done</button>\r\n      </div>\r\n      <form>\r\n        <textarea id=\"svg_source_textarea\" spellcheck=\"false\"></textarea>\r\n      </form>\r\n    </div>\r\n  </div>\r\n\r\n  <div id=\"svg_docprops\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_docprops_container\">\r\n      <div id=\"tool_docprops_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_docprops_save\">OK</button>\r\n        <button id=\"tool_docprops_cancel\">Cancel</button>\r\n      </div>\r\n\r\n\r\n      <fieldset id=\"svg_docprops_docprops\">\r\n        <legend id=\"svginfo_image_props\">Image Properties</legend>\r\n        <label>\r\n          <span id=\"svginfo_title\">Title:</span>\r\n          <input type=\"text\" id=\"canvas_title\" />\r\n        </label>\r\n\r\n        <fieldset id=\"change_resolution\">\r\n          <legend id=\"svginfo_dim\">Canvas Dimensions</legend>\r\n\r\n          <label>\r\n            <span id=\"svginfo_width\">width:</span>\r\n            <input type=\"text\" id=\"canvas_width\" size=\"6\" />\r\n          </label>\r\n\r\n          <label>\r\n            <span id=\"svginfo_height\">height:</span>\r\n            <input type=\"text\" id=\"canvas_height\" size=\"6\" />\r\n          </label>\r\n\r\n          <label>\r\n            <select id=\"resolution\">\r\n              <option id=\"selectedPredefined\" selected=\"selected\">Select predefined:</option>\r\n              <option>640x480</option>\r\n              <option>800x600</option>\r\n              <option>1024x768</option>\r\n              <option>1280x960</option>\r\n              <option>1600x1200</option>\r\n              <option id=\"fitToContent\" value=\"content\">Fit to Content</option>\r\n            </select>\r\n          </label>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"image_save_opts\">\r\n          <legend id=\"includedImages\">Included Images</legend>\r\n          <label>\r\n            <input type=\"radio\" name=\"image_opt\" value=\"embed\" checked=\"checked\" />\r\n            <span id=\"image_opt_embed\">Embed data (local files)</span>\r\n          </label>\r\n          <label>\r\n            <input type=\"radio\" name=\"image_opt\" value=\"ref\" />\r\n            <span id=\"image_opt_ref\">Use file reference</span>\r\n          </label>\r\n        </fieldset>\r\n      </fieldset>\r\n\r\n    </div>\r\n  </div>\r\n\r\n  <div id=\"svg_prefs\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"svg_prefs_container\">\r\n      <div id=\"tool_prefs_back\" class=\"toolbar_button\">\r\n        <button id=\"tool_prefs_save\">OK</button>\r\n        <button id=\"tool_prefs_cancel\">Cancel</button>\r\n      </div>\r\n\r\n      <fieldset>\r\n        <legend id=\"svginfo_editor_prefs\">Editor Preferences</legend>\r\n\r\n        <label>\r\n          <span id=\"svginfo_lang\">Language:</span>\r\n          <!-- Source: http://en.wikipedia.org/wiki/Language_names -->\r\n          <select id=\"lang_select\">\r\n            <option id=\"lang_ar\" value=\"ar\">العربية</option>\r\n            <option id=\"lang_cs\" value=\"cs\">Čeština</option>\r\n            <option id=\"lang_de\" value=\"de\">Deutsch</option>\r\n            <option id=\"lang_en\" value=\"en\" selected=\"selected\">English</option>\r\n            <option id=\"lang_es\" value=\"es\">Español</option>\r\n            <option id=\"lang_fa\" value=\"fa\">فارسی</option>\r\n            <option id=\"lang_fr\" value=\"fr\">Français</option>\r\n            <option id=\"lang_fy\" value=\"fy\">Frysk</option>\r\n            <option id=\"lang_hi\" value=\"hi\">&#2361;&#2367;&#2344;&#2381;&#2342;&#2368;,\r\n              &#2361;&#2367;&#2306;&#2342;&#2368;</option>\r\n            <option id=\"lang_it\" value=\"it\">Italiano</option>\r\n            <option id=\"lang_ja\" value=\"ja\">日本語</option>\r\n            <option id=\"lang_nl\" value=\"nl\">Nederlands</option>\r\n            <option id=\"lang_pl\" value=\"pl\">Polski</option>\r\n            <option id=\"lang_pt-BR\" value=\"pt-BR\">Português (BR)</option>\r\n            <option id=\"lang_ro\" value=\"ro\">Română</option>\r\n            <option id=\"lang_ru\" value=\"ru\">Русский</option>\r\n            <option id=\"lang_sk\" value=\"sk\">Slovenčina</option>\r\n            <option id=\"lang_sl\" value=\"sl\">Slovenščina</option>\r\n            <option id=\"lang_zh-TW\" value=\"zh-TW\">繁體中文</option>\r\n          </select>\r\n        </label>\r\n\r\n        <label>\r\n          <span id=\"svginfo_icons\">Icon size:</span>\r\n          <select id=\"iconsize\">\r\n            <option id=\"icon_small\" value=\"s\">Small</option>\r\n            <option id=\"icon_medium\" value=\"m\" selected=\"selected\">Medium</option>\r\n            <option id=\"icon_large\" value=\"l\">Large</option>\r\n            <option id=\"icon_xlarge\" value=\"xl\">Extra Large</option>\r\n          </select>\r\n        </label>\r\n\r\n        <fieldset id=\"change_background\">\r\n          <legend id=\"svginfo_change_background\">Editor Background</legend>\r\n          <div id=\"bg_blocks\"></div>\r\n          <label>\r\n            <span id=\"svginfo_bg_url\">URL:</span>\r\n            <input type=\"text\" id=\"canvas_bg_url\" />\r\n          </label>\r\n          <p id=\"svginfo_bg_note\">Note: Background will not be saved with image.</p>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"change_grid\">\r\n          <legend id=\"svginfo_grid_settings\">Grid</legend>\r\n          <label>\r\n            <span id=\"svginfo_snap_onoff\">Snapping on/off</span>\r\n            <input type=\"checkbox\" value=\"snapping_on\" id=\"grid_snapping_on\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_snap_step\">Snapping Step-Size:</span>\r\n            <input type=\"text\" id=\"grid_snapping_step\" size=\"3\" value=\"10\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_grid_color\">Grid color:</span>\r\n            <input type=\"text\" id=\"grid_color\" size=\"3\" value=\"#000\" />\r\n          </label>\r\n        </fieldset>\r\n\r\n        <fieldset id=\"units_rulers\">\r\n          <legend id=\"svginfo_units_rulers\">Units &amp; Rulers</legend>\r\n          <label>\r\n            <span id=\"svginfo_rulers_onoff\">Show rulers</span>\r\n            <input type=\"checkbox\" value=\"show_rulers\" id=\"show_rulers\" checked=\"checked\" />\r\n          </label>\r\n          <label>\r\n            <span id=\"svginfo_unit\">Base Unit:</span>\r\n            <select id=\"base_unit\">\r\n              <option value=\"px\">Pixels</option>\r\n              <option value=\"cm\">Centimeters</option>\r\n              <option value=\"mm\">Millimeters</option>\r\n              <option value=\"in\">Inches</option>\r\n              <option value=\"pt\">Points</option>\r\n              <option value=\"pc\">Picas</option>\r\n              <option value=\"em\">Ems</option>\r\n              <option value=\"ex\">Exs</option>\r\n            </select>\r\n          </label>\r\n          <!-- Should this be an export option instead? -->\r\n          <!-- \r\n          <span id=\"svginfo_unit_system\">Unit System:</span>\r\n          <label>\r\n            <input type=\"radio\" name=\"unit_system\" value=\"single\" checked=\"checked\"/>\r\n            <span id=\"svginfo_single_type_unit\">Single type unit</span>\r\n            <small id=\"svginfo_single_type_unit_sub\">CSS unit type is set on root element. If a different unit type is entered in a text field, it is converted back to user units on export.</small>\r\n          </label>\r\n          <label>\r\n            <input type=\"radio\" name=\"unit_system\" value=\"multi\"/>\r\n            <span id=\"svginfo_multi_units\">Multiple CSS units</span> \r\n            <small id=\"svginfo_single_type_unit_sub\">Attributes can be given different CSS units, which may lead to inconsistant results among viewers.</small>\r\n          </label>\r\n   -->\r\n        </fieldset>\r\n\r\n      </fieldset>\r\n\r\n    </div>\r\n  </div>\r\n  <!-- NOT USED END -->\r\n\r\n  <div id=\"dialog_box\">\r\n    <div class=\"overlay\"></div>\r\n    <div id=\"dialog_container\">\r\n      <div id=\"dialog_content\"></div>\r\n      <div id=\"dialog_buttons\"></div>\r\n    </div>\r\n  </div>\r\n\r\n  <!-- canvas context menu -->\r\n  <ul id=\"cmenu_canvas\" class=\"contextMenu svg-workarea-contextmenu\">\r\n    <!-- <li>\r\n      <a href=\"#deselect\">Clear selection</a>\r\n    </li> -->\r\n    <li>\r\n      <a id=\"#interactivity\" (click)=\"isInteractivtyEnabled(selectedElement) && onGaugeEditEx()\">{{'editor.interactivity' | translate}}</a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#cut\">{{'editor.cmenu-cut' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#copy\">{{'editor.cmenu-copy' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#paste\">{{'editor.cmenu-paste' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#paste_in_place\">{{'editor.cmenu-paste-place' | translate}}</a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#delete\">{{'editor.cmenu-delete' | translate}}</a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#group\">{{'editor.cmenu-group' | translate}}\r\n        <span class=\"shortcut\">G</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#ungroup\">{{'editor.cmenu-ungroup' | translate}}\r\n        <span class=\"shortcut\">G</span>\r\n      </a>\r\n    </li>\r\n    <li class=\"separator\">\r\n      <a id=\"#move_front\">{{'editor.cmenu-bring-front' | translate}}\r\n        <span class=\"shortcut\">SHFT+CTRL+]</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_up\">{{'editor.cmenu-bring-forward' | translate}}\r\n        <span class=\"shortcut\">CTRL+]</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_down\">{{'editor.cmenu-send-backward' | translate}}\r\n        <span class=\"shortcut\">CTRL+[</span>\r\n      </a>\r\n    </li>\r\n    <li>\r\n      <a id=\"#move_back\">{{'editor.cmenu-send-back' | translate}}\r\n        <span class=\"shortcut\">SHFT+CTRL+[</span>\r\n      </a>\r\n    </li>\r\n  </ul>\r\n  <!-- canvas context menu END -->\r\n\r\n  <!-- layers context menu -->\r\n  <ul id=\"cmenu_layers\" class=\"contextMenu\" style=\"display: none\">\r\n    <li>\r\n      <a href=\"#dupe\">{{'editor.cmenu-layer-duplicate' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#delete\">{{'editor.cmenu-layer-delete' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#merge_down\">{{'editor.cmenu-layer-marge-down' | translate}}</a>\r\n    </li>\r\n    <li>\r\n      <a href=\"#merge_all\">{{'editor.cmenu-layer-marge-all' | translate}}</a>\r\n    </li>\r\n  </ul>\r\n  <!-- layers context menu END -->\r\n</div>"
 
 /***/ }),
 
@@ -3230,14 +3990,17 @@ module.exports = "<div id=\"svg_editor_container\">\r\n  <mat-drawer-container c
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__helpers_windowref__ = __webpack_require__("../../../../../src/app/_helpers/windowref.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__gauges_gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__gauges_gauge_base_gauge_base_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-base/gauge-base.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gui_helpers_confirm_dialog_confirm_dialog_component__ = __webpack_require__("../../../../../src/app/gui-helpers/confirm-dialog/confirm-dialog.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__helpers_windowref__ = __webpack_require__("../../../../../src/app/_helpers/windowref.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gauges_gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__gauges_chart_property_chart_property_component__ = __webpack_require__("../../../../../src/app/gauges/chart-property/chart-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layout_property_layout_property_component__ = __webpack_require__("../../../../../src/app/editor/layout-property/layout-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__gauges_gauge_base_gauge_base_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-base/gauge-base.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__gui_helpers_confirm_dialog_confirm_dialog_component__ = __webpack_require__("../../../../../src/app/gui-helpers/confirm-dialog/confirm-dialog.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3262,22 +4025,28 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
+
+
 var EditorComponent = (function () {
-    function EditorComponent(projectService, winRef, dialog, gaugesManager, mdIconRegistry, sanitizer) {
+    function EditorComponent(projectService, winRef, dialog, translateService, gaugesManager, viewContainerRef, resolver, mdIconRegistry, sanitizer) {
         this.projectService = projectService;
         this.winRef = winRef;
         this.dialog = dialog;
+        this.translateService = translateService;
         this.gaugesManager = gaugesManager;
+        this.viewContainerRef = viewContainerRef;
+        this.resolver = resolver;
         this.mdIconRegistry = mdIconRegistry;
         this.sanitizer = sanitizer;
-        this.defaultColor = __WEBPACK_IMPORTED_MODULE_9__helpers_utils__["b" /* Utils */].defaultColor;
+        this.defaultColor = __WEBPACK_IMPORTED_MODULE_12__helpers_utils__["b" /* Utils */].defaultColor;
         this.colorFill = '#FFFFFF';
         this.colorStroke = '#000000';
         this.currentView = null;
-        this.hmi = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["i" /* Hmi */](); // = {_id: '', name: '', networktype: '', ipaddress: '', maskaddress: '' };
+        this.hmi = new __WEBPACK_IMPORTED_MODULE_5__models_hmi__["j" /* Hmi */](); // = {_id: '', name: '', networktype: '', ipaddress: '', maskaddress: '' };
         this.currentMode = '';
         this.gridOn = false;
-        this.selectedElement = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["j" /* SelElement */]();
+        this.selectedElement = new __WEBPACK_IMPORTED_MODULE_5__models_hmi__["o" /* SelElement */]();
         this.panelsState = {
             enabled: false,
             panelA: true,
@@ -3286,6 +4055,7 @@ var EditorComponent = (function () {
             panelD: true,
             panelS: true
         };
+        this.gaugesRef = [];
         mdIconRegistry.addSvgIcon('group', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/group.svg'));
         mdIconRegistry.addSvgIcon('to_bottom', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/to-bottom.svg'));
         mdIconRegistry.addSvgIcon('to_top', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/to-top.svg'));
@@ -3307,6 +4077,7 @@ var EditorComponent = (function () {
             this.subscriptionLoad = this.projectService.onLoadHmi.subscribe(function (load) {
                 _this.loadHmi();
             });
+            this.gaugesManager.clearMemory();
         }
         catch (e) {
             console.log(e);
@@ -3360,23 +4131,26 @@ var EditorComponent = (function () {
             // init svg-editor
             var toinit = mysvgeditor.initSvgEditor($, function (selected) {
                 _this.onSelectedElement(selected);
+                var ga = _this.getGaugeSettings(selected);
             }, function (args) {
                 _this.onExtensionLoaded(args);
                 _this.clearSelection();
             }, function (type, color) {
-                if (type == 'fill') {
+                if (type === 'fill') {
                     _this.colorFill = color;
                     _this.setFillColor(_this.colorFill);
                     _this.checkMySelectedToSetColor(_this.colorFill, null, _this.winRef.nativeWindow.svgEditor.getSelectedElements());
                     // console.log('fill ' + color);
                 }
-                else if (type == 'stroke') {
+                else if (type === 'stroke') {
                     _this.colorStroke = color;
                     _this.checkMySelectedToSetColor(null, _this.colorStroke, _this.winRef.nativeWindow.svgEditor.getSelectedElements());
                     // console.log('stroke ' + color);
                 }
             }, function (eleadded) {
-                // console.log('added: ' + eleadded.id + ' ' + eleadded.type);
+                console.log('added: ' + eleadded.id + ' ' + eleadded.type);
+                var ga = _this.getGaugeSettings(eleadded);
+                _this.checkGaugeAdded(ga);
                 // this.hmiService.addGauge(this.hmi, eleadded);
             }, function (eleremoved) {
                 _this.onRemoveElement(eleremoved);
@@ -3472,7 +4246,7 @@ var EditorComponent = (function () {
         if (eles && (eles.length <= 1 || !eles[1]) && eles[0]) {
             // check for gauge fill and stroke color
             var colors = { fill: clrfill, stroke: clrstroke };
-            if (__WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */].checkGaugeColor(ele, eles, colors)) {
+            if (__WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__["a" /* GaugesManager */].checkGaugeColor(ele, eles, colors)) {
                 if (colors.fill) {
                     this.colorFill = colors.fill;
                 }
@@ -3499,13 +4273,14 @@ var EditorComponent = (function () {
      * @param view view to load
      */
     EditorComponent.prototype.loadView = function (view) {
+        var _this = this;
         if (view) {
             this.clearEditor();
             // this.loadHmi();
             var svgcontent = '';
-            var v = this.getView(view.name);
-            if (v) {
-                svgcontent = v.svgcontent;
+            var v_1 = this.getView(view.name);
+            if (v_1) {
+                svgcontent = v_1.svgcontent;
             }
             if (svgcontent.length <= 0) {
                 svgcontent = '<svg id="' + view.name + '" width="' + view.profile.width + '" height="' + view.profile.height +
@@ -3523,6 +4298,15 @@ var EditorComponent = (function () {
             }
             this.winRef.nativeWindow.svgEditor.setDocProperty(view.name, view.profile.width, view.profile.height, view.profile.bkcolor);
             this.winRef.nativeWindow.svgEditor.setSvgString(svgcontent);
+            // check gauge to init
+            this.gaugesRef = [];
+            setTimeout(function () {
+                for (var key in v_1.items) {
+                    var ga = _this.getGaugeSettings(v_1.items[key]);
+                    _this.checkGaugeAdded(ga);
+                    // GaugesManager.initElementAdded(v.items[key], this.resolver, this.viewContainerRef);                
+                }
+            }, 500);
         }
     };
     /**
@@ -3531,7 +4315,7 @@ var EditorComponent = (function () {
      */
     EditorComponent.prototype.getView = function (name) {
         for (var i = 0; i < this.hmi.views.length; i++) {
-            if (this.hmi.views[i].name == name) {
+            if (this.hmi.views[i].name === name) {
                 return this.hmi.views[i];
             }
         }
@@ -3553,7 +4337,7 @@ var EditorComponent = (function () {
      * @param mode mode to check
      */
     EditorComponent.prototype.isModeActive = function (mode) {
-        return (this.currentMode == mode);
+        return (this.currentMode === mode);
     };
     /**
      * clear svg-editor and the canvas
@@ -3569,7 +4353,7 @@ var EditorComponent = (function () {
         this.selectedElement = null;
         try {
             // to remove some strange effects
-            if (document.activeElement != document.body)
+            if (document.activeElement !== document.body)
                 document.activeElement.blur();
         }
         catch (e) { }
@@ -3687,14 +4471,23 @@ var EditorComponent = (function () {
      */
     EditorComponent.prototype.onSetImage = function (event) {
         if (event.target.files) {
-            // console.log('image ' + event.target.files[0]);
             this.imagefile = 'assets/images/' + event.target.files[0].name;
             var self_1 = this;
-            this.getBase64Image(event.target.files[0], function (imgdata) {
-                var data = imgdata;
-                self_1.winRef.nativeWindow.svgEditor.promptImgURLcallback = data; //this.imagefile;
-                self_1.setMode('image');
-            });
+            if (this.imagefile.split('.').pop().toLowerCase() === 'svg') {
+                var reader = new FileReader();
+                reader.onloadend = function (e) {
+                    self_1.winRef.nativeWindow.svgEditor.setSvgImageToAdd(e.target.result);
+                    self_1.setMode('svg-image');
+                };
+                reader.readAsText(event.target.files[0]);
+            }
+            else {
+                this.getBase64Image(event.target.files[0], function (imgdata) {
+                    var data = imgdata;
+                    self_1.winRef.nativeWindow.svgEditor.promptImgURLcallback = data;
+                    self_1.setMode('image');
+                });
+            }
         }
     };
     /**
@@ -3738,11 +4531,24 @@ var EditorComponent = (function () {
         this.winRef.nativeWindow.svgEditor.setTextAlign(align);
     };
     EditorComponent.prototype.checkMySelectedToSetColor = function (bkcolor, color, elems) {
-        __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */].initElementColor(bkcolor, color, elems);
+        __WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__["a" /* GaugesManager */].initElementColor(bkcolor, color, elems);
         // for (let i = 0; i < elems.length; i++) {
         //     HtmlButtonComponent.initElementColor(bkcolor, color, elems[i]);
         //     GaugeProgressComponent.initElementColor(bkcolor, color, elems[i]);
         // }
+    };
+    /**
+     * check and set the special gauge like ngx-dygraphs if added
+     * @param ga
+     */
+    EditorComponent.prototype.checkGaugeAdded = function (ga) {
+        var gauge = this.gaugesManager.initElementAdded(ga, this.resolver, this.viewContainerRef, false);
+        if (gauge) {
+            if (this.gaugesRef.indexOf(ga.id) === -1) {
+                this.gaugesRef[ga.id] = { type: ga.type, ref: gauge };
+            }
+            this.setGaugeSettings(ga);
+        }
     };
     //#endregion
     //#region Toolbar Top Events
@@ -3784,12 +4590,13 @@ var EditorComponent = (function () {
                 if (!found)
                     break;
             }
-            var v = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["l" /* View */]();
+            var v = new __WEBPACK_IMPORTED_MODULE_5__models_hmi__["q" /* View */]();
             if (this.hmi.views.length <= 0) {
                 v.name = 'MainView';
             }
             else {
                 v.name = nn + idx;
+                v.profile.bkcolor = '#ffffffff';
             }
             v.id = 'v_' + Date.now();
             this.hmi.views.push(v);
@@ -3802,9 +4609,11 @@ var EditorComponent = (function () {
      */
     EditorComponent.prototype.onDeleteView = function (view) {
         var _this = this;
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_10__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */], {
+        var msg = '';
+        this.translateService.get('msg.view-remove', { value: view.name }).subscribe(function (txt) { msg = txt; });
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_13__gui_helpers_confirm_dialog_confirm_dialog_component__["a" /* ConfirmDialogComponent */], {
             minWidth: '350px',
-            data: { msg: "Would you like to remove View '" + view.name + "' ?" },
+            data: { msg: msg },
             position: { top: '80px' }
         });
         dialogRef.afterClosed().subscribe(function (result) {
@@ -3825,22 +4634,6 @@ var EditorComponent = (function () {
                 _this.saveHmi();
             }
         });
-        // let dialogRef = this.dialog.open(DialogDocName, {
-        //     minWidth: '250px',
-        //     data: { name: view.name, readonly: true }
-        // });
-        // dialogRef.afterClosed().subscribe(result => {
-        //     view.name = result.name;
-        //     if (this.hmi.views) {
-        //         for (var i = 0; i < this.hmi.views.length; i++) {
-        //             if (this.hmi.views[i].name == view.name) {
-        //                 this.hmi.views.splice(i, 1);
-        //                 break;
-        //             }
-        //         }
-        //         this.saveHmi();
-        //     }
-        // });
     };
     /**
      * Rename the View (only name)
@@ -3868,8 +4661,8 @@ var EditorComponent = (function () {
             data: { name: view.name, width: view.profile.width, height: view.profile.height, bkcolor: view.profile.bkcolor }
         });
         dialogRef.afterClosed().subscribe(function (result) {
-            view.profile.width = result.width;
-            view.profile.height = result.height;
+            view.profile.width = parseInt(result.width);
+            view.profile.height = parseInt(result.height);
             view.profile.bkcolor = result.bkcolor;
             _this.winRef.nativeWindow.svgEditor.setDocProperty(view.name, view.profile.width, view.profile.height, view.profile.bkcolor);
             _this.saveHmi();
@@ -3902,6 +4695,30 @@ var EditorComponent = (function () {
      */
     EditorComponent.prototype.isViewActive = function (view) {
         return (this.currentView && this.currentView.name == view.name);
+    };
+    /**
+     * edit the layout property of project views
+     */
+    EditorComponent.prototype.onLayoutProperty = function () {
+        var _this = this;
+        // console.log('The Edit Device open');
+        var templayout = null;
+        if (this.hmi.layout) {
+            templayout = JSON.parse(JSON.stringify(this.hmi.layout));
+        }
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_9__layout_property_layout_property_component__["b" /* LayoutPropertyComponent */], {
+            // minWidth: '700px',
+            // minHeight: '700px',
+            panelClass: 'dialog-property',
+            data: { layout: templayout, views: this.hmi.views },
+            position: { top: '80px' }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result) {
+                _this.hmi.layout = JSON.parse(JSON.stringify(result.layout));
+                _this.saveHmi();
+            }
+        });
     };
     //#endregion
     //#region Panels State
@@ -3960,27 +4777,46 @@ var EditorComponent = (function () {
     EditorComponent.prototype.isWithEvents = function (type) {
         return this.gaugesManager.isWithEvents(type);
     };
+    /**
+     * edit the gauge/chart settings property, the settings are composed from gauge id... and property
+     * in property will be the result values saved
+     * @param settings
+     * @param callback
+     */
     EditorComponent.prototype.openEditGauge = function (settings, callback) {
         var _this = this;
         // console.log('The Edit Gauge open');
         var tempsettings = JSON.parse(JSON.stringify(settings));
         var hmi = this.projectService.getHmi();
-        var dlgType = __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */].getEditDialogTypeToUse(settings.type);
+        var dlgType = __WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__["a" /* GaugesManager */].getEditDialogTypeToUse(settings.type);
         var eventsSupported = this.isWithEvents(settings.type);
-        var defaultValue = __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */].getDefaultValue(settings.type);
+        var defaultValue = __WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__["a" /* GaugesManager */].getDefaultValue(settings.type);
         // settings.property = JSON.parse(settings.property);
-        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_6__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */], {
-            // data: { settings: tempsettings, signals: this.signals, views: hmi.views }
-            minWidth: '700px',
-            minHeight: '700px',
-            panelClass: 'dialog-property',
-            data: {
-                settings: tempsettings, devices: Object.values(this.projectService.getDevices()),
-                views: hmi.views, dlgType: dlgType, withEvents: eventsSupported, default: defaultValue
-            },
-            position: { top: '80px' }
-            // data: data
-        });
+        var dialogRef;
+        if (dlgType === __WEBPACK_IMPORTED_MODULE_7__gauges_gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Chart) {
+            dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_8__gauges_chart_property_chart_property_component__["a" /* ChartPropertyComponent */], {
+                minWidth: '700px',
+                minHeight: '700px',
+                panelClass: 'dialog-property',
+                data: {
+                    settings: tempsettings, devices: Object.values(this.projectService.getDevices()),
+                    views: hmi.views, dlgType: dlgType, charts: this.projectService.getCharts()
+                },
+                position: { top: '80px' }
+            });
+        }
+        else {
+            dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_7__gauges_gauge_property_gauge_property_component__["b" /* GaugePropertyComponent */], {
+                minWidth: '700px',
+                minHeight: '700px',
+                panelClass: 'dialog-property',
+                data: {
+                    settings: tempsettings, devices: Object.values(this.projectService.getDevices()),
+                    views: hmi.views, dlgType: dlgType, withEvents: eventsSupported, default: defaultValue
+                },
+                position: { top: '80px' }
+            });
+        }
         dialogRef.afterClosed().subscribe(function (result) {
             // console.log('The Edit Gauge was closed');
             if (result) {
@@ -4019,7 +4855,7 @@ var EditorComponent = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('gaugepanel'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_8__gauges_gauge_base_gauge_base_component__["a" /* GaugeBaseComponent */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_11__gauges_gauge_base_gauge_base_component__["a" /* GaugeBaseComponent */])
     ], EditorComponent.prototype, "gaugePanelComponent", void 0);
     EditorComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -4027,10 +4863,13 @@ var EditorComponent = (function () {
             template: __webpack_require__("../../../../../src/app/editor/editor.component.html"),
             styles: [__webpack_require__("../../../../../src/app/editor/editor.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_project_service__["a" /* ProjectService */],
-            __WEBPACK_IMPORTED_MODULE_5__helpers_windowref__["a" /* WindowRef */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4__services_project_service__["a" /* ProjectService */],
+            __WEBPACK_IMPORTED_MODULE_6__helpers_windowref__["a" /* WindowRef */],
             __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */],
-            __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */],
+            __WEBPACK_IMPORTED_MODULE_3__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_10__gauges_gauges_component__["a" /* GaugesManager */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewContainerRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */],
             __WEBPACK_IMPORTED_MODULE_1__angular_material__["p" /* MatIconRegistry */], __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */]])
     ], EditorComponent);
     return EditorComponent;
@@ -4040,7 +4879,7 @@ var DialogDocProperty = (function () {
     function DialogDocProperty(dialogRef, data) {
         this.dialogRef = dialogRef;
         this.data = data;
-        this.defaultColor = __WEBPACK_IMPORTED_MODULE_9__helpers_utils__["b" /* Utils */].defaultColor;
+        this.defaultColor = __WEBPACK_IMPORTED_MODULE_12__helpers_utils__["b" /* Utils */].defaultColor;
     }
     DialogDocProperty.prototype.onNoClick = function () {
         this.dialogRef.close();
@@ -4086,6 +4925,238 @@ var DialogDocName = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/editor/layout-property/layout-property.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n\r\n.layout-menu-item-icon {\r\n    /* position: absolute; */\r\n    font-size: 17px;\r\n    height: 18px;\r\n    width: 18px;\r\n    /* color: rgba(255,255,255,0.8); */\r\n    cursor:pointer;\r\n}\r\n.layout-menu-item-edit {\r\n    /* bottom: 0px; */\r\n    /* right: 2px; */\r\n}\r\n\r\n.layout-menu-item-delete {\r\n    /* top: 2px; */\r\n    /* right: 2px; */\r\n    /* font-size: 17px; */\r\n}\r\n\r\n.layout-menu-item-link {\r\n    /* min-width: 150px; */\r\n    /* color: rgba(0,0,0,0.3); */\r\n    font-size: 14px;\r\n    white-space: nowrap;\r\n  }", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/layout-property/layout-property.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"width: 100%;min-height: 650px;min-width: 950px;position: relative;padding-bottom: 40px\">\n    <h1 mat-dialog-title style=\"display:inline-block;padding-top: 14px; margin-bottom: 0px !important;\">{{'dlg.layout-title' | translate}}</h1>\n    <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n    <mat-tab-group style=\"width: 100%;height: 100%\">\n        <mat-tab label=\"{{'dlg.layout-general' | translate}}\">\n            <div class=\"my-form-field\" style=\"display: inline-block;margin-top: 25px;\">\n                <span>{{'dlg.layout-lbl-sview' | translate}}</span>\n                <mat-select [(value)]=\"data.layout.start\" style=\"width: 400px\">\n                    <mat-option *ngFor=\"let view of data.views\" [value]=\"view.id\">\n                        {{ view.name }}\n                    </mat-option>\n                </mat-select>\n            </div>\n\n            <!-- <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n                <div style=\"display: block;\">\n                    <div class=\"my-form-field\">\n                        <span>Name</span>\n                        <input [(ngModel)]=\"data.settings.name\" style=\"width: 220px\" type=\"text\">\n                    </div>\n                    <div class=\"toolbox\" *ngIf=\"isToolboxToShow()\">\n                        <button mat-icon-button (click)=\"onAddInput()\">\n                            <mat-icon>add_circle_outline</mat-icon>\n                        </button>\n                        <button mat-icon-button (click)=\"slideView = !slideView;onRangeViewToggle()\" *ngIf=\"isRangeToShow()\">\n                            <mat-icon class=\"header-icon\" *ngIf=\"slideView\">toll</mat-icon>\n                            <mat-icon class=\"header-icon\" *ngIf=\"!slideView\">input</mat-icon>\n                        </button>\n                        <button mat-icon-button (click)=\"withAlarm = !withAlarm;onAlarmToggle();\" *ngIf=\"isAlarmToShow()\">\n                            <mat-icon class=\"header-icon\" *ngIf=\"!withAlarm\">notifications</mat-icon>\n                            <mat-icon class=\"header-icon\" *ngIf=\"withAlarm\">notifications_off</mat-icon>\n                        </button>\n                    </div>\n                </div>\n                <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n                    <flex-head [data]=\"data\" [property]=\"property\" #flexhead></flex-head>\n                </div>\n            </div> -->\n        </mat-tab>\n        <mat-tab label=\"{{'dlg.layout-navigation' | translate}}\">\n            <div style=\"display: inline-block;margin-top: 10px;width:50%; min-height: 500px; overflow-y: auto; height: 620px\">\n                <div>\n                    <button mat-icon-button>\n                        <mat-icon aria-label=\"Menu\">menu</mat-icon>\n                    </button>\n                    <div style=\"display: inline-block;padding-left: 140px\">\n                        <button mat-icon-button (click)=\"onAddMenuItem()\">\n                            <mat-icon aria-label=\"Add\">control_point</mat-icon>\n                        </button>\n                    </div>\n                </div>\n                <div class=\"sidenav-menu\" style=\"height: calc(100% - 50px);\" [ngClass]=\"'sidenav-menu-' + data.layout.navigation.type\">\n                    <mat-list dndDropzone [dndHorizontal]=\"layout.dndHorizontal\" dndEffectAllowed=\"copyMove\" (dndDrop)=\"onDrop($event, draggableListLeft)\"\n                        class=\"dndList\" style=\"padding-top: 10px; background-color: rgba(244,245,247, 1)\">\n\n                        <mat-list-item dndPlaceholderRef class=\"dndPlaceholder\">\n                        </mat-list-item>\n\n                        <mat-list-item *ngFor=\"let item of draggableListLeft; let i = index\" [dndDraggable]=\"item\"\n                            [dndEffectAllowed]=\"'move'\" (dndStart)=\"onDragStart($event)\" (dndMoved)=\"onDragged(item, draggableListLeft, 'move')\"\n                            (dndCanceled)=\"onDragged(item, draggableListLeft, 'none')\" (dndEnd)=\"onDragEnd($event)\"\n                            [ngClass]=\"'menu-item-' + data.layout.navigation.type\">\n                            <button type=\"button\" mat-button class=\"sidenav-btn\" [ngSwitch]=\"data.layout.navigation.type\" style=\"cursor: move;\">\n                                <!-- <mat-icon *ngIf=\"mode.value === navMode.icon || mode.value === navMode.block\">{{item.icon}}</mat-icon> -->\n                                <div *ngSwitchCase=\"'icon'\" class=\"manu-item-content-icon\">\n                                    <mat-icon>{{item.icon}}</mat-icon>\n                                </div>\n                                <div *ngSwitchCase=\"'text'\" class=\"manu-item-content-text\">\n                                    <span>{{item.text}}</span>\n                                </div>\n                                <div *ngSwitchCase=\"'block'\" class=\"manu-item-content-block\">\n                                    <mat-icon style=\"display: block;\">{{item.icon}}</mat-icon>\n                                    <span>{{item.text}}</span>\n                                </div>\n                                <div *ngSwitchCase=\"'inline'\" class=\"manu-item-content-inline\">\n                                    <mat-icon style=\"display: inline-block\">{{item.icon}}</mat-icon>\n                                    <span style=\"display: inline-block\">{{item.text}}</span>\n                                </div>\n                            </button>\n                            <div style=\"padding-left:15px\">\n                                <div style=\"display: block;width: 50px;\">\n                                    <mat-icon (click)=\"onAddMenuItem(item)\" class=\"layout-menu-item-icon layout-menu-item-edit\">edit</mat-icon>\n                                    <mat-icon (click)=\"onRemoveMenuItem(i, item)\" class=\"layout-menu-item-icon layout-menu-item-delete\">clear</mat-icon>\n                                </div>\n                                <div class=\"layout-menu-item-link; display: block\">{{getViewName(item)}}</div>\n                            </div>\n                        </mat-list-item>\n                    </mat-list>\n                </div>\n            </div>\n            <div style=\"display: inline-block;margin-top: 25px;margin-left: 10px;top: 0px;position: absolute;\">\n                <div class=\"my-form-field\" style=\"display: block;\">\n                    <span>{{'dlg.layout-lbl-smode' | translate}}</span>\n                    <mat-select [(value)]=\"data.layout.navigation.mode\" style=\"width: 300px\">\n                        <mat-option *ngFor=\"let mode of navMode | enumToArray\" [value]=\"mode.key\">\n                            {{ mode.value }}\n                        </mat-option>\n                    </mat-select>\n                </div>\n                <div class=\"my-form-field\" style=\"display: block; margin-top: 10px\">\n                    <span>{{'dlg.layout-lbl-type' | translate}}</span>\n                    <mat-select [(value)]=\"data.layout.navigation.type\" style=\"width: 300px\">\n                        <mat-option *ngFor=\"let type of navType | enumToArray\" [value]=\"type.key\">\n                            {{ type.value }}\n                        </mat-option>\n                    </mat-select>\n                </div>\n            </div>\n\n            <!-- <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n                <div style=\"display: block;\">\n                    <div class=\"toolbox\">\n                        <button mat-icon-button (click)=\"onAddEvent()\">\n                            <mat-icon>add_circle_outline</mat-icon>\n                        </button>\n                    </div>\n                </div>\n                <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n                    <flex-event [property]=\"property\" [views]=\"views\" #flexevent *ngIf=\"eventsSupported\" style=\"padding-bottom: 5px\"></flex-event>\n                </div>\n            </div> -->\n        </mat-tab>\n        <mat-tab label=\"{{'dlg.layout-header' | translate}}\">\n            <!-- <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n                        <div style=\"display: block;\">\n                            <div class=\"toolbox\">\n                                <button mat-icon-button (click)=\"onAddEvent()\">\n                                    <mat-icon>add_circle_outline</mat-icon>\n                                </button>\n                            </div>\n                        </div>\n                        <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n                            <flex-event [property]=\"property\" [views]=\"views\" #flexevent *ngIf=\"eventsSupported\" style=\"padding-bottom: 5px\"></flex-event>\n                        </div>\n                    </div> -->\n        </mat-tab>\n    </mat-tab-group>\n    <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n        <button mat-raised-button [mat-dialog-close]=\"\">{{'dlg.cancel' | translate}}</button>\n        <button mat-raised-button color=\"primary\" (click)=\"onOkClick\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/layout-property/layout-property.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return LayoutPropertyComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DialogMenuItem; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__helpers_define__ = __webpack_require__("../../../../../src/app/_helpers/define.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+var LayoutPropertyComponent = (function () {
+    function LayoutPropertyComponent(data, dialog, translateService) {
+        this.data = data;
+        this.dialog = dialog;
+        this.translateService = translateService;
+        this.draggableListLeft = [];
+        this.horizontalLayoutActive = false;
+        this.verticalLayout = {
+            container: "row",
+            list: "column",
+            dndHorizontal: false
+        };
+        this.horizontalLayout = {
+            container: "row",
+            list: "row",
+            dndHorizontal: true
+        };
+        if (!data.layout) {
+            data.layout = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["k" /* LayoutSettings */]();
+        }
+        this.startView = data.layout.start;
+        this.sideMode = data.layout.navigation.mode;
+        if (!data.layout.navigation.items) {
+            data.layout.navigation.items = [];
+        }
+        this.draggableListLeft = data.layout.navigation.items;
+        this.setHorizontalLayout(this.horizontalLayoutActive);
+    }
+    LayoutPropertyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.navMode = __WEBPACK_IMPORTED_MODULE_3__models_hmi__["n" /* NaviModeType */];
+        this.navType = __WEBPACK_IMPORTED_MODULE_3__models_hmi__["m" /* NaviItemType */];
+        Object.keys(this.navMode).forEach(function (key) {
+            _this.translateService.get(_this.navMode[key]).subscribe(function (txt) { _this.navMode[key] = txt; });
+        });
+        Object.keys(this.navType).forEach(function (key) {
+            _this.translateService.get(_this.navType[key]).subscribe(function (txt) { _this.navType[key] = txt; });
+        });
+    };
+    LayoutPropertyComponent.prototype.onAddMenuItem = function (item) {
+        var _this = this;
+        var eitem = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["l" /* NaviItem */]();
+        if (item) {
+            eitem = JSON.parse(JSON.stringify(item));
+        }
+        var views = JSON.parse(JSON.stringify(this.data.views));
+        views.unshift({ id: '', name: '' });
+        var dialogRef = this.dialog.open(DialogMenuItem, {
+            minWidth: '350px',
+            data: { item: eitem, views: views },
+            position: { top: '90px' }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result) {
+                if (item) {
+                    item.icon = result.item.icon;
+                    item.text = result.item.text;
+                    item.view = result.item.view;
+                    item.link = result.item.link;
+                    if (item.view) {
+                        item.link = '';
+                    }
+                }
+                else {
+                    var nitem = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["l" /* NaviItem */]();
+                    nitem.icon = result.item.icon;
+                    nitem.text = result.item.text;
+                    nitem.view = result.item.view;
+                    nitem.link = result.item.link;
+                    if (nitem.view) {
+                        nitem.link = '';
+                    }
+                    _this.draggableListLeft.push(nitem);
+                }
+            }
+        });
+        // this.winRef.nativeWindow.svgEditor.showDocProperties();
+    };
+    LayoutPropertyComponent.prototype.onRemoveMenuItem = function (index, item) {
+        this.draggableListLeft.splice(index, 1);
+    };
+    LayoutPropertyComponent.prototype.onDragStart = function (event) {
+        this.currentDraggableEvent = event;
+    };
+    LayoutPropertyComponent.prototype.setHorizontalLayout = function (horizontalLayoutActive) {
+        this.layout = (horizontalLayoutActive) ? this.horizontalLayout : this.verticalLayout;
+    };
+    LayoutPropertyComponent.prototype.onDragged = function (item, list, effect) {
+        if (effect === "move") {
+            var index = list.indexOf(item);
+            list.splice(index, 1);
+        }
+    };
+    LayoutPropertyComponent.prototype.onDragEnd = function (event) {
+        this.currentDraggableEvent = event;
+    };
+    LayoutPropertyComponent.prototype.onDrop = function (event, list) {
+        if (list && (event.dropEffect === "copy" || event.dropEffect === "move")) {
+            var index = event.index;
+            if (typeof index === "undefined") {
+                index = list.length;
+            }
+            list.splice(index, 0, event.data);
+        }
+    };
+    LayoutPropertyComponent.prototype.onOkClick = function () {
+        var _this = this;
+        this.data.layout.navigation.items = [];
+        this.draggableListLeft.forEach(function (item) {
+            var nitem = new __WEBPACK_IMPORTED_MODULE_3__models_hmi__["l" /* NaviItem */]();
+            nitem.icon = item.icon;
+            nitem.text = item.text;
+            nitem.view = item.view;
+            nitem.link = item.link;
+            _this.data.layout.navigation.items.push(nitem);
+        });
+    };
+    LayoutPropertyComponent.prototype.getViewName = function (vid) {
+        if (vid.view) {
+            var view = this.data.views.find(function (x) { return x.id === vid.view; });
+            if (view) {
+                return view.name;
+            }
+        }
+        else if (vid.link) {
+            return vid.link;
+        }
+        else {
+            return '';
+        }
+    };
+    LayoutPropertyComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-layout-property',
+            template: __webpack_require__("../../../../../src/app/editor/layout-property/layout-property.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/editor/layout-property/layout-property.component.css")]
+        }),
+        __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [Object, __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */]])
+    ], LayoutPropertyComponent);
+    return LayoutPropertyComponent;
+}());
+
+var DialogMenuItem = (function () {
+    function DialogMenuItem(dialogRef, data) {
+        this.dialogRef = dialogRef;
+        this.data = data;
+        // defaultColor = Utils.defaultColor;
+        this.icons = __WEBPACK_IMPORTED_MODULE_4__helpers_define__["a" /* Define */].materialIcons;
+    }
+    DialogMenuItem.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    DialogMenuItem.prototype.onOkClick = function () {
+        this.dialogRef.close(true);
+    };
+    DialogMenuItem = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'dialog-menuitem',
+            template: __webpack_require__("../../../../../src/app/editor/layout-property/menuitem.dialog.html"),
+        }),
+        __param(1, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogRef */], Object])
+    ], DialogMenuItem);
+    return DialogMenuItem;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/editor/layout-property/menuitem.dialog.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n    <h1 mat-dialog-title style=\"display:inline-block\" mat-dialog-draggable>{{'dlg.menuitem-title' | translate}}</h1>\r\n    <div mat-dialog-content>\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>Icon</span>\r\n            <mat-select [(value)]=\"data.item.icon\" style=\"width: 60px; height: 30px\" #iconsel>\r\n                <mat-select-trigger>\r\n                    <mat-icon>{{iconsel.value}}</mat-icon>\r\n                </mat-select-trigger>\r\n                <mat-option *ngFor=\"let icon of icons\" [value]=\"icon\">\r\n                    <mat-icon class=\"\">{{ icon }}</mat-icon>\r\n                </mat-option>\r\n            </mat-select>\r\n        </div>\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>{{'dlg.menuitem-text' | translate}}</span>\r\n            <input [(ngModel)]=\"data.item.text\" type=\"text\" style=\"width:100%\">\r\n        </div>\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>{{'dlg.menuitem-view' | translate}}</span>\r\n            <mat-select [(value)]=\"data.item.view\" style=\"width: 300px\">\r\n                <mat-option *ngFor=\"let view of data.views\" [value]=\"view.id\">\r\n                    {{ view.name }}\r\n                </mat-option>\r\n            </mat-select>\r\n        </div>\r\n        <div class=\"my-form-field\" style=\"display: block;margin-bottom: 10px;\">\r\n            <span>{{'dlg.menuitem-link' | translate}}</span>\r\n            <input [(ngModel)]=\"data.item.link\" type=\"text\" style=\"width:100%\" [readonly]=\"data.item.view\">\r\n        </div>        \r\n    </div>\r\n    <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n        <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\r\n        <button mat-raised-button color=\"primary\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\r\n    </div>\r\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/fuxa-view/fuxa-view.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4094,7 +5165,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".view-container {\r\n    display: table;\r\n    margin: 0 auto;\r\n}\r\n\r\n.fab-card {\r\n    position: absolute;\r\n    width: 1300px;\r\n    height: 800px;\r\n    /* background-color:black; */\r\n    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.26); */\r\n    box-shadow: 0px 1px 4px 1px #888888;\r\n}\r\n\r\n.card-close {\r\n    position: absolute;\r\n    top: 0px;\r\n    right: 0px;\r\n    height: 22px;\r\n    width: 100%;\r\n    color: rgba(0,0,0,0.7);\r\n    background-color: transparent;\r\n    font-size: 12px;\r\n    cursor: move !important;\r\n}\r\n\r\n.card-close i {\r\n    float: right;\r\n}\r\n\r\n.dialog-modal {\r\n    /* display: none; */\r\n    position: fixed; /* Stay in place */\r\n    z-index: 1; /* Sit on top */\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%; /* Full width */\r\n    height: 100%; /* Full height */\r\n    overflow: auto; /* Enable scroll if needed */\r\n    background-color: rgb(0,0,0); /* Fallback color */\r\n    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\r\n}\r\n  \r\n  /* Modal Content/Box */\r\n.dialog-modal-content {\r\n    /* background-color: #fefefe; */\r\n    margin: 15% auto; /*15% from the top and centered */\r\n    /* padding: 20px; */\r\n    border: 1px solid #888;\r\n    width: 80%; /* Could be more or less, depending on screen size */\r\n}\r\n\r\n.dialog-modal-close {\r\n    position: relative;\r\n    top: 0px;\r\n    right: 0px;\r\n    height: 22px;\r\n    width: 100%;\r\n    color: rgba(0,0,0,0.7);\r\n    background-color: transparent;\r\n    font-size: 12px;\r\n    cursor: move !important;\r\n}\r\n\r\n.dialog-modal-close i {\r\n    float: right;\r\n}", ""]);
+exports.push([module.i, ".view-container {\n    display: table;\n    margin: 5px auto;\n}\n\n.fab-card {\n    position: absolute;\n    width: 1300px;\n    height: 800px;\n    /* background-color:black; */\n    /* box-shadow: 0 2px 5px 0 rgba(0,0,0,.26); */\n    box-shadow: 0px 1px 4px 1px #888888;\n}\n\n.card-close {\n    position: absolute;\n    top: 0px;\n    right: 0px;\n    height: 22px;\n    width: 100%;\n    color: rgba(0,0,0,0.7);\n    background-color: transparent;\n    font-size: 12px;\n    cursor: move !important;\n}\n\n.card-close i {\n    float: right;\n}\n\n.dialog-modal {\n    /* display: none; */\n    position: fixed; /* Stay in place */\n    z-index: 1; /* Sit on top */\n    left: 0;\n    top: 0;\n    width: 100%; /* Full width */\n    height: 100%; /* Full height */\n    overflow: auto; /* Enable scroll if needed */\n    background-color: rgb(0,0,0); /* Fallback color */\n    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\n}\n  \n  /* Modal Content/Box */\n.dialog-modal-content {\n    /* background-color: #fefefe; */\n    margin: 15% auto; /*15% from the top and centered */\n    /* padding: 20px; */\n    border: 1px solid #888;\n    width: 80%; /* Could be more or less, depending on screen size */\n}\n\n.dialog-modal-close {\n    position: relative;\n    top: 0px;\n    right: 0px;\n    height: 22px;\n    width: 100%;\n    color: rgba(0,0,0,0.7);\n    background-color: transparent;\n    font-size: 12px;\n    cursor: move !important;\n}\n\n.dialog-modal-close i {\n    float: right;\n}", ""]);
 
 // exports
 
@@ -4121,6 +5192,8 @@ module.exports = "<div #dataContainer class=\"view-container\">\n</div>\n<div cl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util__ = __webpack_require__("../../../../util/util.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_util__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4134,9 +5207,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var FuxaViewComponent = (function () {
-    function FuxaViewComponent(el) {
+    function FuxaViewComponent(el, viewContainerRef, resolver) {
         this.el = el;
+        this.viewContainerRef = viewContainerRef;
+        this.resolver = resolver;
         this.cards = [];
     }
     FuxaViewComponent.prototype.ngOnInit = function () {
@@ -4184,7 +5260,8 @@ var FuxaViewComponent = (function () {
             // this.gaugesManager.initGaugesMap();
             for (var key in view.items) {
                 console.log(key);
-                this.gaugesManager.bindGauge(this.id, view.items[key], function (gatobindclick) {
+                var gauge = this.gaugesManager.initElementAdded(view.items[key], this.resolver, this.viewContainerRef, true);
+                this.gaugesManager.bindGauge(gauge, this.id, view.items[key], function (gatobindclick) {
                     _this.onBindClick(gatobindclick);
                 }, function (gatobindhtmlevent) {
                     _this.onBindHtmlEvent(gatobindhtmlevent);
@@ -4192,21 +5269,23 @@ var FuxaViewComponent = (function () {
             }
             var self_1 = this;
             this.subscriptionOnChange = this.gaugesManager.onchange.subscribe(function (sig) {
-                console.log('lab sig ' + sig.id + ' ' + sig.value);
-                try {
-                    var gas = self_1.gaugesManager.getGaugeSettings(self_1.id, sig.id);
-                    if (gas) {
-                        for (var i = 0; i < gas.length; i++) {
-                            var ga = gas[i];
-                            // console.log('gaid: ' + ga.id);
-                            var svgeles = _this.getSvgElements(ga.id);
-                            for (var y = 0; y < svgeles.length; y++) {
-                                _this.gaugesManager.processValue(ga, svgeles[y], sig);
+                // console.log('lab sig ' + sig.id + ' ' + sig.value);
+                if (!Object(__WEBPACK_IMPORTED_MODULE_3_util__["isUndefined"])(sig.value)) {
+                    try {
+                        var gas = _this.gaugesManager.getGaugeSettings(_this.id, sig.id);
+                        if (gas) {
+                            for (var i = 0; i < gas.length; i++) {
+                                var ga = gas[i];
+                                // console.log('gaid: ' + ga.id);
+                                var svgeles = _this.getSvgElements(ga.id);
+                                for (var y = 0; y < svgeles.length; y++) {
+                                    _this.gaugesManager.processValue(ga, svgeles[y], sig);
+                                }
                             }
                         }
                     }
-                }
-                catch (err) {
+                    catch (err) {
+                    }
                 }
             });
         }
@@ -4219,17 +5298,17 @@ var FuxaViewComponent = (function () {
                 console.log('click -');
                 var event = self.gaugesManager.getBindClick(ga);
                 if (event && event.length > 0 && event[0].action && event[0].actparam) {
-                    var actindex = Object.keys(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */]).indexOf(event[0].action);
-                    if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].onpage) === actindex) {
+                    var actindex = Object.keys(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */]).indexOf(event[0].action);
+                    if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].onpage) === actindex) {
                         self.loadPage(ev, event[0].actparam);
                     }
-                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].onwindow) === actindex) {
+                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].onwindow) === actindex) {
                         self.onOpenCard(ga.id, ev, event[0].actparam);
                     }
-                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].ondialog) === actindex) {
+                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].ondialog) === actindex) {
                         self.openDialog(ev, event[0].actparam);
                     }
-                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].onSetValue) === actindex) {
+                    else if (Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */]).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].onSetValue) === actindex) {
                         self.onSetValue(ga, event[0].actparam);
                     }
                     // self.createComponent(event[0].name, ev.x, ev.y);
@@ -4365,11 +5444,11 @@ var FuxaViewComponent = (function () {
     ], FuxaViewComponent.prototype, "id", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["l" /* View */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["q" /* View */])
     ], FuxaViewComponent.prototype, "view", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["i" /* Hmi */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["j" /* Hmi */])
     ], FuxaViewComponent.prototype, "hmi", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -4389,7 +5468,9 @@ var FuxaViewComponent = (function () {
             template: __webpack_require__("../../../../../src/app/fuxa-view/fuxa-view.component.html"),
             styles: [__webpack_require__("../../../../../src/app/fuxa-view/fuxa-view.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* ViewContainerRef */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */]])
     ], FuxaViewComponent);
     return FuxaViewComponent;
 }());
@@ -4406,6 +5487,168 @@ var DialogModalModel = (function () {
         this.id = id;
     }
     return DialogModalModel;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/gauges/chart-property/chart-property.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/gauges/chart-property/chart-property.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div style=\"width: 100%;min-height: 400px;position: relative;padding-bottom: 40px\">\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  <mat-tab-group style=\"width: 100%;\">\n    <mat-tab label=\"{{'gauges.property-props' | translate}}\">\n      <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n        <div style=\"display: block;\">\n          <div class=\"my-form-field\" style=\"width: 400px;\">\n            <span>{{'chart.property-chart' | translate}}</span>\n            <mat-select [formControl]=\"chartCtrl\">\n              <mat-select-search [formControl]=\"chartFilterCtrl\"></mat-select-search>\n              <mat-option *ngFor=\"let chart of filteredChart | async\" [value]=\"chart\">\n                {{ chart.name }}\n              </mat-option>\n            </mat-select>\n          </div>\n          <div class=\"my-form-field\" style=\"width: 200px;float: right;margin-right: 10px;\">\n            <span>{{'chart.property-chart-type' | translate}}</span>\n            <mat-select [(value)]=\"chartViewValue\" >\n              <mat-option *ngFor=\"let ev of chartViewType | enumToArray\" [value]=\"ev.key\">\n                {{ ev.value }}\n              </mat-option>\n            </mat-select>\n          </div>          \n        </div>\n        <div style=\"display: block; width:100%\">\n          <mat-list class=\"list\" style=\"padding-left: 8px;padding-right: 8px;\">\n            <div style=\"height: calc(100% - 36px); overflow-y: auto\" *ngIf=\"chartCtrl.value\">\n                <mat-list-item *ngFor=\"let tag of chartCtrl.value.lines\" style=\"font-size:14px;height: 27px;\">\n                    <div style=\"width: 50%;\">\n                        <span>{{tag.name}}</span>\n                    </div>\n                    <div style=\"width: 40%;\">\n                        <span>{{tag.device}}</span>\n                    </div>\n                    <div [style.background-color]=\"tag.color\" style=\"height:20px; width:30px\">\n                    </div>\n                </mat-list-item>\n            </div>\n        </mat-list>\n        </div>\n      </div>\n    </mat-tab>\n  </mat-tab-group>\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\n  </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/gauges/chart-property/chart-property.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartPropertyComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__ = __webpack_require__("../../../../rxjs/_esm5/ReplaySubject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__models_chart__ = __webpack_require__("../../../../../src/app/_models/chart.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+var __param = (this && this.__param) || function (paramIndex, decorator) {
+    return function (target, key) { decorator(target, key, paramIndex); }
+};
+
+
+
+
+
+
+
+
+var ChartPropertyComponent = (function () {
+    function ChartPropertyComponent(dialogRef, translateService, data) {
+        this.dialogRef = dialogRef;
+        this.translateService = translateService;
+        this.data = data;
+        this.chartViewType = __WEBPACK_IMPORTED_MODULE_7__models_chart__["c" /* ChartViewType */];
+        this.chartCtrl = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormControl */]();
+        this.chartFilterCtrl = new __WEBPACK_IMPORTED_MODULE_3__angular_forms__["b" /* FormControl */]();
+        this.filteredChart = new __WEBPACK_IMPORTED_MODULE_2_rxjs_ReplaySubject__["a" /* ReplaySubject */](1);
+        this._onDestroy = new __WEBPACK_IMPORTED_MODULE_5_rxjs_Subject__["b" /* Subject */]();
+    }
+    ChartPropertyComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        Object.keys(this.chartViewType).forEach(function (key) {
+            _this.translateService.get(_this.chartViewType[key]).subscribe(function (txt) { _this.chartViewType[key] = txt; });
+        });
+        this.loadChart();
+        var selected = null;
+        if (this.data.settings.property) {
+            this.chartViewValue = this.data.settings.property.type;
+            this.data.charts.forEach(function (chart) {
+                if (chart.id === _this.data.settings.property.id) {
+                    selected = chart;
+                }
+            });
+        }
+        if (selected) {
+            this.chartCtrl.setValue(selected);
+        }
+    };
+    ChartPropertyComponent.prototype.ngOnDestroy = function () {
+        this._onDestroy.next();
+        this._onDestroy.complete();
+    };
+    ChartPropertyComponent.prototype.onNoClick = function () {
+        this.dialogRef.close();
+    };
+    ChartPropertyComponent.prototype.onOkClick = function () {
+        if (this.chartCtrl.value) {
+            this.data.settings.property = { id: this.chartCtrl.value.id, type: this.chartViewValue };
+            this.data.settings.name = this.chartCtrl.value.name;
+        }
+        else {
+            this.data.settings.name = '';
+            this.data.settings.property = null;
+        }
+    };
+    ChartPropertyComponent.prototype.loadChart = function (toset) {
+        var _this = this;
+        // load the initial chart list
+        this.filteredChart.next(this.data.charts.slice());
+        // listen for search field value changes
+        this.chartFilterCtrl.valueChanges
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["takeUntil"])(this._onDestroy))
+            .subscribe(function () {
+            _this.filterChart();
+        });
+        if (toset) {
+            var idx_1 = -1;
+            this.data.charts.every(function (value, index, _arr) {
+                if (value.id === toset) {
+                    idx_1 = index;
+                    return false;
+                }
+                return true;
+            });
+            if (idx_1 >= 0) {
+                this.chartCtrl.setValue(this.data.charts[idx_1]);
+            }
+        }
+    };
+    ChartPropertyComponent.prototype.filterChart = function () {
+        if (!this.data.charts) {
+            return;
+        }
+        // get the search keyword
+        var search = this.chartFilterCtrl.value;
+        if (!search) {
+            this.filteredChart.next(this.data.charts.slice());
+            return;
+        }
+        else {
+            search = search.toLowerCase();
+        }
+        // filter the variable
+        this.filteredChart.next(this.data.charts.filter(function (chart) { return chart.name.toLowerCase().indexOf(search) > -1; }));
+    };
+    ChartPropertyComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-chart-property',
+            template: __webpack_require__("../../../../../src/app/gauges/chart-property/chart-property.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/gauges/chart-property/chart-property.component.css")]
+        }),
+        __param(2, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_1__angular_material__["a" /* MAT_DIALOG_DATA */])),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_material__["l" /* MatDialogRef */],
+            __WEBPACK_IMPORTED_MODULE_6__ngx_translate_core__["c" /* TranslateService */], Object])
+    ], ChartPropertyComponent);
+    return ChartPropertyComponent;
 }());
 
 
@@ -4854,6 +6097,129 @@ var HtmlButtonComponent = (function (_super) {
 
 /***/ }),
 
+/***/ "../../../../../src/app/gauges/controls/html-chart/html-chart.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/gauges/controls/html-chart/html-chart.component.html":
+/***/ (function(module, exports) {
+
+module.exports = ""
+
+/***/ }),
+
+/***/ "../../../../../src/app/gauges/controls/html-chart/html-chart.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HtmlChartComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__gauge_base_gauge_base_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-base/gauge-base.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helpers_utils__ = __webpack_require__("../../../../../src/app/_helpers/utils.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gui_helpers_ngx_dygraphs_ngx_dygraphs_component__ = __webpack_require__("../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var HtmlChartComponent = (function (_super) {
+    __extends(HtmlChartComponent, _super);
+    function HtmlChartComponent(resolver) {
+        var _this = _super.call(this) || this;
+        _this.resolver = resolver;
+        return _this;
+    }
+    HtmlChartComponent.prototype.ngOnInit = function () { };
+    HtmlChartComponent.getSignal = function (pro) {
+        return pro.variableIds;
+    };
+    HtmlChartComponent.processValue = function (ga, svgele, sig, gauge) {
+        // console.log(sig);
+        gauge.addValue(sig.id, sig.value);
+    };
+    HtmlChartComponent.initElement = function (gab, resolver, viewContainerRef, isview, chartRange) {
+        var ele = document.getElementById(gab.id);
+        if (ele) {
+            var htmlChart = __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].searchTreeStartWith(ele, this.prefixD);
+            if (htmlChart) {
+                var factory = resolver.resolveComponentFactory(__WEBPACK_IMPORTED_MODULE_3__gui_helpers_ngx_dygraphs_ngx_dygraphs_component__["a" /* NgxDygraphsComponent */]);
+                var componentRef = viewContainerRef.createComponent(factory);
+                if (gab.property) {
+                    componentRef.instance.withToolbar = (gab.property.type === 'history') ? true : false;
+                }
+                var options = { interactionModel: {} }; // option to remove interaction in editor modus
+                if (isview) {
+                    options = null;
+                }
+                componentRef.instance.defOptions = Object.assign(componentRef.instance.defOptions, options);
+                componentRef.instance.isEditor = !isview;
+                componentRef.instance.rangeType = chartRange;
+                componentRef.instance.id = gab.id;
+                componentRef.changeDetectorRef.detectChanges();
+                var loaderComponentElement = componentRef.location.nativeElement;
+                htmlChart.appendChild(loaderComponentElement);
+                componentRef.instance.resize(htmlChart.clientHeight - ((componentRef.instance.withToolbar) ? 34 : 0), htmlChart.clientWidth);
+                return componentRef.instance;
+            }
+        }
+    };
+    HtmlChartComponent.detectChange = function (gab) {
+        var ele = document.getElementById(gab.id);
+        if (ele) {
+            var htmlChart = __WEBPACK_IMPORTED_MODULE_2__helpers_utils__["b" /* Utils */].searchTreeStartWith(ele, this.prefixD);
+            var txt = htmlChart.namespaceURI;
+        }
+    };
+    HtmlChartComponent.TypeTag = "svg-ext-html_chart";
+    HtmlChartComponent.LabelTag = "HtmlChart";
+    HtmlChartComponent.prefixD = "D-HXC_";
+    HtmlChartComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "html-chart",
+            template: __webpack_require__("../../../../../src/app/gauges/controls/html-chart/html-chart.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/gauges/controls/html-chart/html-chart.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["p" /* ComponentFactoryResolver */]])
+    ], HtmlChartComponent);
+    return HtmlChartComponent;
+}(__WEBPACK_IMPORTED_MODULE_1__gauge_base_gauge_base_component__["a" /* GaugeBaseComponent */]));
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/gauges/controls/html-input/html-input.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4930,7 +6296,7 @@ var HtmlInputComponent = (function (_super) {
         if (ele) {
             var input = __WEBPACK_IMPORTED_MODULE_3__helpers_utils__["b" /* Utils */].searchTreeStartWith(ele, this.prefix);
             if (input) {
-                var event_1 = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["a" /* Event */]();
+                var event_1 = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["b" /* Event */]();
                 event_1.dom = input;
                 event_1.type = 'key-enter';
                 event_1.ga = ga;
@@ -5075,7 +6441,7 @@ var HtmlSelectComponent = (function (_super) {
         if (ele) {
             var select = __WEBPACK_IMPORTED_MODULE_3__helpers_utils__["b" /* Utils */].searchTreeStartWith(ele, this.prefix);
             if (select) {
-                var event_1 = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["a" /* Event */]();
+                var event_1 = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["b" /* Event */]();
                 event_1.dom = select;
                 event_1.type = 'change';
                 event_1.ga = ga;
@@ -5289,7 +6655,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gauges/gauge-base/gauge-base.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"svg-property-split2\" *ngIf=\"settings\">\r\n  <div class=\"svg-property\" title=\"Gauge name\">\r\n    <span>name</span>\r\n    <input type=\"text\" id=\"gaugename\" [(ngModel)]=\"settings.name\"  type=\"text\" readonly />\r\n  </div>\r\n  <div class=\"svg-property\" style=\"display:block !important; padding: 0px 10px 5px 10px;\" title=\"Change rectangle height\">\r\n    <!-- <span>settings</span> -->\r\n    <button mat-button color=\"primary\" style=\"background-color: dimgrey;color:white; display: inline-block\" (click)=\"onEdit()\">Property</button>\r\n  </div>\r\n</div>"
+module.exports = "<div class=\"svg-property-split2\" *ngIf=\"settings\">\r\n  <div class=\"svg-property\" title=\"Gauge name\">\r\n    <span>name</span>\r\n    <input type=\"text\" id=\"gaugename\" [(ngModel)]=\"settings.name\"  type=\"text\" readonly />\r\n  </div>\r\n  <div class=\"svg-property\" style=\"display:block !important; padding: 0px 10px 5px 10px;\" title=\"Change rectangle height\">\r\n    <!-- <span>settings</span> -->\r\n    <button mat-button color=\"primary\" style=\"background-color: dimgrey;color:white; display: inline-block\" (click)=\"onEdit()\">{{'gauges.property-title' | translate}}</button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -5345,9 +6711,9 @@ var GaugeBaseComponent = (function () {
         if (!pro.events) {
             return null;
         }
-        var idxtype = Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventType */]).indexOf(type);
+        var idxtype = Object.values(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["e" /* GaugeEventType */]).indexOf(type);
         pro.events.forEach(function (ev) {
-            if (Object.keys(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventType */]).indexOf(ev.type) === idxtype) {
+            if (Object.keys(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["e" /* GaugeEventType */]).indexOf(ev.type) === idxtype) {
                 res.push(ev);
             }
         });
@@ -5367,7 +6733,7 @@ var GaugeBaseComponent = (function () {
     ], GaugeBaseComponent.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["g" /* GaugeSettings */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["h" /* GaugeSettings */])
     ], GaugeBaseComponent.prototype, "settings", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -5413,7 +6779,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gauges/gauge-property/flex-event/flex-event.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div *ngFor=\"let item of events; index as i\" class=\"item\">\n  <div class=\"my-form-field\" style=\"width: 140px;\">\n    <span>Type</span>\n    <mat-select [(value)]=\"item.type\" >\n      <mat-option *ngFor=\"let ev of eventType | enumToArray\" [value]=\"ev.key\">\n        {{ ev.value }}\n      </mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"width: 140px;padding-left: 20px\">\n    <span>Action</span>\n    <mat-select [(value)]=\"item.action\" (change)=\"item.actparam = '';\">\n      <mat-option *ngFor=\"let type of actionType | enumToArray\" [value]=\"type.key\">\n        {{ type.value }}\n      </mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"width: 200px;padding-left: 20px\" *ngIf=\"withDestination(item.action)\">\n    <span>Destination</span>\n    <mat-select [(value)]=\"item.actparam\">\n      <mat-option *ngFor=\"let v of views; index as i\" [(value)]=\"v.id\">{{v.name}}</mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"padding-left: 20px;\" *ngIf=\"withSetValue(item.action)\">\n    <span>Value</span>\n    <input numberOnly [(ngModel)]=\"item.actparam\" type=\"text\" style=\"width: 100px\">\n  </div>\n  <div class=\"item-remove\">\n    <button mat-icon-button (click)=\"onRemoveEvent(i)\" class=\"remove\">\n      <mat-icon>clear</mat-icon>\n    </button>\n  </div>\n</div>"
+module.exports = "<div *ngFor=\"let item of events; index as i\" class=\"item\">\n  <div class=\"my-form-field\" style=\"width: 140px;\">\n    <span>{{'gauges.property-event-type' | translate}}</span>\n    <mat-select [(value)]=\"item.type\" >\n      <mat-option *ngFor=\"let ev of eventType | enumToArray\" [value]=\"ev.key\">\n        {{ ev.value }}\n      </mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"width: 140px;padding-left: 20px\">\n    <span>{{'gauges.property-event-action' | translate}}</span>\n    <mat-select [(value)]=\"item.action\" (change)=\"item.actparam = '';\">\n      <mat-option *ngFor=\"let type of actionType | enumToArray\" [value]=\"type.key\">\n        {{ type.value }}\n      </mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"width: 200px;padding-left: 20px\" *ngIf=\"withDestination(item.action)\">\n    <span>{{'gauges.property-event-destination' | translate}}</span>\n    <mat-select [(value)]=\"item.actparam\">\n      <mat-option *ngFor=\"let v of views; index as i\" [(value)]=\"v.id\">{{v.name}}</mat-option>\n    </mat-select>\n  </div>\n  <div class=\"my-form-field\" style=\"padding-left: 20px;\" *ngIf=\"withSetValue(item.action)\">\n    <span>{{'gauges.property-event-value' | translate}}</span>\n    <input numberOnly [(ngModel)]=\"item.actparam\" type=\"text\" style=\"width: 100px\">\n  </div>\n  <div class=\"item-remove\">\n    <button mat-icon-button (click)=\"onRemoveEvent(i)\" class=\"remove\">\n      <mat-icon>clear</mat-icon>\n    </button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -5439,8 +6805,8 @@ var FlexEventComponent = (function () {
     function FlexEventComponent() {
     }
     FlexEventComponent.prototype.ngOnInit = function () {
-        this.eventType = __WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventType */];
-        this.actionType = __WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */];
+        this.eventType = __WEBPACK_IMPORTED_MODULE_1__models_hmi__["e" /* GaugeEventType */];
+        this.actionType = __WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */];
         if (this.property) {
             this.events = this.property.events;
         }
@@ -5455,7 +6821,7 @@ var FlexEventComponent = (function () {
         return result;
     };
     FlexEventComponent.prototype.onAddEvent = function () {
-        var ga = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["b" /* GaugeEvent */]();
+        var ga = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEvent */]();
         this.addEvent(ga);
     };
     FlexEventComponent.prototype.onRemoveEvent = function (index) {
@@ -5463,12 +6829,12 @@ var FlexEventComponent = (function () {
     };
     FlexEventComponent.prototype.withDestination = function (action) {
         var a = Object.keys(this.actionType).indexOf(action);
-        var b = Object.values(this.actionType).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].onSetValue);
+        var b = Object.values(this.actionType).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].onSetValue);
         return (a >= 0 && a != b) ? true : false;
     };
     FlexEventComponent.prototype.withSetValue = function (action) {
         var a = Object.keys(this.actionType).indexOf(action);
-        var b = Object.values(this.actionType).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["c" /* GaugeEventActionType */].onSetValue);
+        var b = Object.values(this.actionType).indexOf(__WEBPACK_IMPORTED_MODULE_1__models_hmi__["d" /* GaugeEventActionType */].onSetValue);
         return (a === b) ? true : false;
     };
     FlexEventComponent.prototype.addEvent = function (ge) {
@@ -5479,7 +6845,7 @@ var FlexEventComponent = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["e" /* GaugeProperty */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_hmi__["f" /* GaugeProperty */])
     ], FlexEventComponent.prototype, "property", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -5521,7 +6887,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gauges/gauge-property/flex-head/flex-head.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"head\" style=\"padding-top: 10px;\">\n    <div class=\"my-form-field\" style=\"width: 220px;\">\n      <span>Device</span>\n      <mat-select [formControl]=\"deviceCtrl\" (selectionChange)=\"onDeviceChange($event.source)\">\n        <mat-select-search [formControl]=\"deviceFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let device of filteredDevice | async\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"width: 400px;float: right;margin-right: 10px;\">\n      <span>Variable</span>\n      <mat-select [formControl]=\"variableCtrl\" (selectionChange)=\"onVariableChange($event.source)\">\n        <mat-select-search [formControl]=\"variableFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let vari of filteredVariable | async\" [value]=\"vari\">\n          {{ vari.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n  </div>\n  <flex-input [ranges]=\"property.ranges\" [default]=\"defaultValue\" #flexinput *ngIf=\"withInput\" [inputType]=\"withInput\" style=\"padding-bottom: 5px\"></flex-input>\n  <div *ngIf=\"withAlarm\" class=\"head\" style=\"padding-top: 15px;\">\n    <div class=\"my-form-field\" style=\"width: 220px;\">\n      <span>Device</span>\n      <mat-select [formControl]=\"alarmDeviceCtrl\" (selectionChange)=\"onAlarmDeviceChange($event.source)\" class=\"select-item\">\n        <mat-select-search [formControl]=\"alarmDeviceFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let device of filteredAlarmDevice | async\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"width: 400px;float: right;margin-right: 10px;\">\n      <span>Alarm</span>\n      <mat-select [formControl]=\"alarmCtrl\" (selectionChange)=\"onAlarmChange($event.source)\">\n        <mat-select-search [formControl]=\"alarmFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let vari of filteredAlarm | async\" [value]=\"vari\">\n          {{ vari.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div style=\"display: block; width:100%\">\n      <div class=\"my-form-field\" style=\"width: 60px;float: right;margin-right: 10px; top: 5px;\">\n        <span>Color</span>\n        <input [(colorPicker)]=\"property.alarmColor\" [style.background]=\"property.alarmColor\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n            [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n            [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 10px 0 0 0;\"\n            [cpPosition]=\"'left'\"/>        \n        <!-- <mat-select class=\"panel-color\" style=\"padding: 10px 0 0 0;\" disableOptionCentering panelClass=\"panel-color-class\" [(value)]=\"property.alarmColor\"\n          [style.background-color]=\"property.alarmColor\" (selectionChange)=\"onAlarmColorChange($event.source)\">\n          <mat-option class=\"option-color\" value=\"green\" style=\"background-color: green\"></mat-option>\n          <mat-option class=\"option-color\" value=\"yellow\" style=\"background-color: yellow\"></mat-option>\n          <mat-option class=\"option-color\" value=\"red\" style=\"background-color: red\"></mat-option>\n          <mat-option class=\"option-color\" value=\"blue\" style=\"background-color: blue\"></mat-option>\n          <mat-option class=\"option-color\" value=\"gray\" style=\"background-color: gray\"></mat-option>\n        </mat-select> -->\n      </div>\n    </div>\n  </div>\n</div>"
+module.exports = "<div class=\"container\">\n  <div class=\"head\" style=\"padding-top: 10px;\">\n    <div class=\"my-form-field\" style=\"width: 220px;\">\n      <span>{{'gauges.property-head-device' | translate}}</span>\n      <mat-select [formControl]=\"deviceCtrl\" (selectionChange)=\"onDeviceChange($event.source)\">\n        <mat-select-search [formControl]=\"deviceFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let device of filteredDevice | async\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"width: 400px;float: right;margin-right: 10px;\">\n      <span>{{'gauges.property-head-variable' | translate}}</span>\n      <mat-select [formControl]=\"variableCtrl\" (selectionChange)=\"onVariableChange($event.source)\">\n        <mat-select-search [formControl]=\"variableFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let vari of filteredVariable | async\" [value]=\"vari\">\n          {{ vari.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n  </div>\n  <flex-input [ranges]=\"property.ranges\" [default]=\"defaultValue\" #flexinput *ngIf=\"withInput\" [inputType]=\"withInput\" style=\"padding-bottom: 5px\"></flex-input>\n  <div *ngIf=\"withAlarm\" class=\"head\" style=\"padding-top: 15px;\">\n    <div class=\"my-form-field\" style=\"width: 220px;\">\n      <span>{{'gauges.property-head-device' | translate}}</span>\n      <mat-select [formControl]=\"alarmDeviceCtrl\" (selectionChange)=\"onAlarmDeviceChange($event.source)\" class=\"select-item\">\n        <mat-select-search [formControl]=\"alarmDeviceFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let device of filteredAlarmDevice | async\" [value]=\"device\">\n          {{ device.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div class=\"my-form-field\" style=\"width: 400px;float: right;margin-right: 10px;\">\n      <span>{{'gauges.property-head-alarm' | translate}}</span>\n      <mat-select [formControl]=\"alarmCtrl\" (selectionChange)=\"onAlarmChange($event.source)\">\n        <mat-select-search [formControl]=\"alarmFilterCtrl\"></mat-select-search>\n        <mat-option *ngFor=\"let vari of filteredAlarm | async\" [value]=\"vari\">\n          {{ vari.name }}\n        </mat-option>\n      </mat-select>\n    </div>\n    <div style=\"display: block; width:100%\">\n      <div class=\"my-form-field\" style=\"width: 60px;float: right;margin-right: 10px; top: 5px;\">\n        <span>{{'gauges.property-head-color' | translate}}</span>\n        <input [(colorPicker)]=\"property.alarmColor\" [style.background]=\"property.alarmColor\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n            [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n            [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 10px 0 0 0;\"\n            [cpPosition]=\"'left'\"/>        \n        <!-- <mat-select class=\"panel-color\" style=\"padding: 10px 0 0 0;\" disableOptionCentering panelClass=\"panel-color-class\" [(value)]=\"property.alarmColor\"\n          [style.background-color]=\"property.alarmColor\" (selectionChange)=\"onAlarmColorChange($event.source)\">\n          <mat-option class=\"option-color\" value=\"green\" style=\"background-color: green\"></mat-option>\n          <mat-option class=\"option-color\" value=\"yellow\" style=\"background-color: yellow\"></mat-option>\n          <mat-option class=\"option-color\" value=\"red\" style=\"background-color: red\"></mat-option>\n          <mat-option class=\"option-color\" value=\"blue\" style=\"background-color: blue\"></mat-option>\n          <mat-option class=\"option-color\" value=\"gray\" style=\"background-color: gray\"></mat-option>\n        </mat-select> -->\n      </div>\n    </div>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -5584,7 +6950,7 @@ var FlexHeadComponent = (function () {
     FlexHeadComponent.prototype.ngOnInit = function () {
         var _this = this;
         if (!this.property) {
-            this.property = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeProperty */]();
+            this.property = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["f" /* GaugeProperty */]();
         }
         var seldevice = null;
         var selalarmdevice = null;
@@ -5612,7 +6978,7 @@ var FlexHeadComponent = (function () {
             this.onDeviceChange(this.deviceCtrl);
             if (this.property.variable) {
                 for (var i = 0; i < this.variable.length; i++) {
-                    if (this.variable[i].name === this.property.variable) {
+                    if (this.variable[i].id === this.property.variable) {
                         this.currentTag = this.variable[i];
                     }
                 }
@@ -5659,7 +7025,7 @@ var FlexHeadComponent = (function () {
     };
     FlexHeadComponent.prototype.onVariableChange = function (event) {
         if (event.value) {
-            this.property.variable = (event.value.id) ? event.value.id : event.value.name;
+            this.property.variable = event.value.name;
             this.property.variableId = __WEBPACK_IMPORTED_MODULE_7__services_hmi_service__["a" /* HmiService */].toVariableId(this.property.variableSrc, this.property.variable);
         }
         this.currentTag = event.value;
@@ -5687,7 +7053,6 @@ var FlexHeadComponent = (function () {
         if (event.value) {
             this.property.alarm = (event.value.id) ? event.value.id : event.value.name;
             this.property.alarmId = __WEBPACK_IMPORTED_MODULE_7__services_hmi_service__["a" /* HmiService */].toVariableId(this.property.alarmSrc, this.property.alarm);
-            ;
         }
     };
     FlexHeadComponent.prototype.onAlarmColorChange = function (event) {
@@ -5843,7 +7208,7 @@ var FlexHeadComponent = (function () {
     ], FlexHeadComponent.prototype, "data", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeProperty */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__models_hmi__["f" /* GaugeProperty */])
     ], FlexHeadComponent.prototype, "property", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('flexinput'),
@@ -5886,7 +7251,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gauges/gauge-property/flex-input/flex-input.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"grid-conta\">\n  <div *ngFor=\"let item of ranges; index as i\" class=\"item\">\n    <div *ngIf=\"isWithRange()\">\n      <div *ngIf=\"slideView\" class=\"item-range\">\n        <div class=\"my-form-field\">\n          <span>Min</span>\n          <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n          <span>Max</span>\n          <input numberOnly [(ngModel)]=\"item.max\" type=\"text\" style=\"width: 80px\">\n        </div>\n      </div>\n      <div class=\"item-range input-slider\" *ngIf=\"!slideView\">\n        <ng5-slider [(value)]=\"item.min\" [(highValue)]=\"item.max\" [options]=\"options\"></ng5-slider>\n      </div>\n      <div class=\"my-form-field\" style=\"width: 60px; top: 6px;\" *ngIf=\"isWithRangeColor()\">\n        <span>Color</span>\n        <input [(colorPicker)]=\"item.color\" [style.background]=\"item.color\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n            [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n            [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 8px 0 0 0;\"\n            [cpPosition]=\"'left'\"/>\n        <!-- <mat-select class=\"panel-color\" style=\"padding: 8px 0 0 0;\" disableOptionCentering panelClass=\"panel-color-class\"\n          [(value)]=\"selected\" (change)=\"item.color = selected\" [style.background-color]=\"item.color\">\n          <mat-option class=\"option-color\" value=\"green\" style=\"background-color:limegreen\"></mat-option>\n          <mat-option class=\"option-color\" value=\"yellow\" style=\"background-color: yellow\"></mat-option>\n          <mat-option class=\"option-color\" value=\"red\" style=\"background-color: red\"></mat-option>\n          <mat-option class=\"option-color\" value=\"blue\" style=\"background-color: blue\"></mat-option>\n          <mat-option class=\"option-color\" value=\"gray\" style=\"background-color: gray\"></mat-option>\n        </mat-select> -->\n      </div>\n      <div class=\"item-remove\">\n        <button mat-icon-button (click)=\"onRemoveInput(i)\" class=\"remove\">\n          <mat-icon>clear</mat-icon>\n        </button>\n      </div>\n    </div>\n    <div *ngIf=\"isMinMax()\">\n      <div class=\"item-minmax\">\n        <div class=\"my-form-field\">\n          <span>Min</span>\n          <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n          <span>Max</span>\n          <input numberOnly [(ngModel)]=\"item.max\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 30px\">\n          <!-- <span>Unit</span>\n          <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 60px;text-align: center !important\"> -->\n        </div>\n        <div class=\"my-form-field\" style=\"width: 60px;padding-left: 20px; top: 4px;\">\n          <span>Color</span>\n          <input [(colorPicker)]=\"item.color\" [style.background]=\"getColor(item)\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n          [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n          [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 8px 0 0 0;\"\n          [cpPosition]=\"'left'\"/>          \n        </div>\n        <!-- <mat-checkbox class=\"input-minmax-cb\" style=\"padding-left: 30px\" [(ngModel)]=\"withLabel\">Range</mat-checkbox> -->\n        <!-- <mat-checkbox class=\"input-minmax-cb\" style=\"padding-left: 20px\" [(ngModel)]=\"withValue\">Value</mat-checkbox> -->\n      </div>\n    </div>\n    <div *ngIf=\"isWithStep()\" class=\"item-step\">\n      <div class=\"my-form-field\">\n        <span>Value</span>\n        <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n      </div>\n      <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n        <span>Label</span>\n        <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 160px;text-align: left !important\">\n      </div>\n    </div>\n    <div *ngIf=\"isWithUnit()\" class=\"item-step\">\n      <div class=\"my-form-field\">\n          <span>Unit</span>\n          <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 60px;text-align: center !important\">\n      </div>\n    </div>    \n  </div>\n</div>"
+module.exports = "<div class=\"grid-conta\">\n  <div *ngFor=\"let item of ranges; index as i\" class=\"item\">\n    <div *ngIf=\"isWithRange()\">\n      <div *ngIf=\"slideView\" class=\"item-range\">\n        <div class=\"my-form-field\">\n          <span>{{'gauges.property-input-min' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n          <span>{{'gauges.property-input-max' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"item.max\" type=\"text\" style=\"width: 80px\">\n        </div>\n      </div>\n      <div class=\"item-range input-slider\" *ngIf=\"!slideView\">\n        <ng5-slider [(value)]=\"item.min\" [(highValue)]=\"item.max\" [options]=\"options\"></ng5-slider>\n      </div>\n      <div class=\"my-form-field\" style=\"width: 60px; top: 6px;\" *ngIf=\"isWithRangeColor()\">\n        <span>{{'gauges.property-input-color' | translate}}</span>\n        <input [(colorPicker)]=\"item.color\" [style.background]=\"item.color\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n            [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n            [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 8px 0 0 0;\"\n            [cpPosition]=\"'left'\"/>\n        <!-- <mat-select class=\"panel-color\" style=\"padding: 8px 0 0 0;\" disableOptionCentering panelClass=\"panel-color-class\"\n          [(value)]=\"selected\" (change)=\"item.color = selected\" [style.background-color]=\"item.color\">\n          <mat-option class=\"option-color\" value=\"green\" style=\"background-color:limegreen\"></mat-option>\n          <mat-option class=\"option-color\" value=\"yellow\" style=\"background-color: yellow\"></mat-option>\n          <mat-option class=\"option-color\" value=\"red\" style=\"background-color: red\"></mat-option>\n          <mat-option class=\"option-color\" value=\"blue\" style=\"background-color: blue\"></mat-option>\n          <mat-option class=\"option-color\" value=\"gray\" style=\"background-color: gray\"></mat-option>\n        </mat-select> -->\n      </div>\n      <div class=\"item-remove\">\n        <button mat-icon-button (click)=\"onRemoveInput(i)\" class=\"remove\">\n          <mat-icon>clear</mat-icon>\n        </button>\n      </div>\n    </div>\n    <div *ngIf=\"isMinMax()\">\n      <div class=\"item-minmax\">\n        <div class=\"my-form-field\">\n          <span>{{'gauges.property-input-min' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n          <span>{{'gauges.property-input-max' | translate}}</span>\n          <input numberOnly [(ngModel)]=\"item.max\" type=\"text\" style=\"width: 80px\">\n        </div>\n        <div class=\"my-form-field\" style=\"padding-left: 30px\">\n          <!-- <span>Unit</span>\n          <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 60px;text-align: center !important\"> -->\n        </div>\n        <div class=\"my-form-field\" style=\"width: 60px;padding-left: 20px; top: 4px;\">\n          <span>{{'gauges.property-input-color' | translate}}</span>\n          <input [(colorPicker)]=\"item.color\" [style.background]=\"getColor(item)\" [cpPresetColors]=\"defaultColor\" [cpOKButton]=\"true\" \n          [cpCancelButton]=\"true\" [cpCancelButtonClass]=\"'cpCancelButtonClass'\" [cpCancelButtonText]=\"'Cancel'\"\n          [cpOKButtonText]=\"'OK'\" [cpOKButtonClass]=\"'cpOKButtonClass'\" class=\"panel-color\" style=\"padding: 8px 0 0 0;\"\n          [cpPosition]=\"'left'\"/>          \n        </div>\n        <!-- <mat-checkbox class=\"input-minmax-cb\" style=\"padding-left: 30px\" [(ngModel)]=\"withLabel\">Range</mat-checkbox> -->\n        <!-- <mat-checkbox class=\"input-minmax-cb\" style=\"padding-left: 20px\" [(ngModel)]=\"withValue\">Value</mat-checkbox> -->\n      </div>\n    </div>\n    <div *ngIf=\"isWithStep()\" class=\"item-step\">\n      <div class=\"my-form-field\">\n        <span>{{'gauges.property-input-value' | translate}}</span>\n        <input numberOnly [(ngModel)]=\"item.min\" type=\"text\" style=\"width: 80px\">\n      </div>\n      <div class=\"my-form-field\" style=\"padding-left: 20px;\">\n        <span>{{'gauges.property-input-label' | translate}}</span>\n        <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 160px;text-align: left !important\">\n      </div>\n    </div>\n    <div *ngIf=\"isWithUnit()\" class=\"item-step\">\n      <div class=\"my-form-field\">\n          <span>{{'gauges.property-input-unit' | translate}}</span>\n          <input [(ngModel)]=\"item.text\" type=\"text\" style=\"width: 60px;text-align: center !important\">\n      </div>\n    </div>    \n  </div>\n</div>"
 
 /***/ }),
 
@@ -5926,7 +7291,7 @@ var FlexInputComponent = (function () {
     FlexInputComponent.prototype.ngOnInit = function () {
         if (!this.ranges) {
             this.ranges = [];
-            var ip = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["f" /* GaugeRangeProperty */]();
+            var ip = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["g" /* GaugeRangeProperty */]();
             if (this.isWithStep()) {
                 ip.type = this.type;
                 ip.min = 1;
@@ -5956,7 +7321,7 @@ var FlexInputComponent = (function () {
         // });
     };
     FlexInputComponent.prototype.onAddInput = function () {
-        var ip = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["f" /* GaugeRangeProperty */]();
+        var ip = new __WEBPACK_IMPORTED_MODULE_1__models_hmi__["g" /* GaugeRangeProperty */]();
         ip.type = this.type;
         this.addInput(ip);
     };
@@ -6110,7 +7475,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gauges/gauge-property/gauge-property.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!-- <h1 mat-dialog-title style=\"display:inline-block; cursor:move\" mat-dialog-draggable>Property</h1> -->\n<!-- <div style=\"width: 100%;\"> -->\n<div style=\"width: 100%;min-height: 400px;position: relative;padding-bottom: 40px\">\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  <mat-tab-group style=\"width: 100%;\">\n    <mat-tab label=\"Property\">\n      <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n        <div style=\"display: block;\">\n          <div class=\"my-form-field\">\n            <span>Name</span>\n            <input [(ngModel)]=\"data.settings.name\" style=\"width: 220px\" type=\"text\">\n          </div>\n          <div class=\"toolbox\" *ngIf=\"isToolboxToShow()\">\n            <button mat-icon-button (click)=\"onAddInput()\">\n              <mat-icon>add_circle_outline</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"slideView = !slideView;onRangeViewToggle()\" *ngIf=\"isRangeToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"slideView\">toll</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"!slideView\">input</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"withAlarm = !withAlarm;onAlarmToggle();\" *ngIf=\"isAlarmToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"!withAlarm\">notifications</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"withAlarm\">notifications_off</mat-icon>\n            </button>\n          </div>\n        </div>\n        <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n          <flex-head [data]=\"data\" [property]=\"property\" #flexhead></flex-head>\n        </div>\n      </div>\n    </mat-tab>\n    <mat-tab label=\"Events\" *ngIf=\"eventsSupported\">\n      <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n        <div style=\"display: block;\">\n          <div class=\"toolbox\">\n            <button mat-icon-button (click)=\"onAddEvent()\">\n              <mat-icon>add_circle_outline</mat-icon>\n            </button>\n            <!-- <button mat-icon-button (click)=\"slideView = !slideView;onRangeViewToggle()\" *ngIf=\"isRangeToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"slideView\">toll</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"!slideView\">input</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"withAlarm = !withAlarm;onAlarmToggle();\" *ngIf=\"isAlarmToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"!withAlarm\">notifications</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"withAlarm\">notifications_off</mat-icon>\n            </button> -->\n          </div>\n        </div>\n        <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n          <flex-event [property]=\"property\" [views]=\"views\" #flexevent *ngIf=\"eventsSupported\" style=\"padding-bottom: 5px\"></flex-event>\n        </div>\n      </div>\n    </mat-tab>\n  </mat-tab-group>\n  <!-- <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px; margin-top: 5px\"> -->\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\n  </div>\n</div>"
+module.exports = "<!-- <h1 mat-dialog-title style=\"display:inline-block; cursor:move\" mat-dialog-draggable>Property</h1> -->\n<!-- <div style=\"width: 100%;\"> -->\n<div style=\"width: 100%;min-height: 400px;position: relative;padding-bottom: 40px\">\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;cursor:pointer;color:gray;position: relative; top: 10px; right: 0px\">clear</mat-icon>\n  <mat-tab-group style=\"width: 100%;\">\n    <mat-tab label=\"{{'gauges.property-props' | translate}}\">\n      <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n        <div style=\"display: block;\">\n          <div class=\"my-form-field\">\n            <span>{{'gauges.property-name' | translate}}</span>\n            <input [(ngModel)]=\"data.settings.name\" style=\"width: 220px\" type=\"text\">\n          </div>\n          <div class=\"toolbox\" *ngIf=\"isToolboxToShow()\">\n            <button mat-icon-button (click)=\"onAddInput()\">\n              <mat-icon>add_circle_outline</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"slideView = !slideView;onRangeViewToggle()\" *ngIf=\"isRangeToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"slideView\">toll</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"!slideView\">input</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"withAlarm = !withAlarm;onAlarmToggle();\" *ngIf=\"isAlarmToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"!withAlarm\">notifications</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"withAlarm\">notifications_off</mat-icon>\n            </button>\n          </div>\n        </div>\n        <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n          <flex-head [data]=\"data\" [property]=\"property\" #flexhead></flex-head>\n        </div>\n      </div>\n    </mat-tab>\n    <mat-tab label=\"{{'gauges.property-events' | translate}}\" *ngIf=\"eventsSupported\">\n      <div style=\"max-height: 540px; overflow-y: auto; overflow-x: hidden; padding-top: 15px;\">\n        <div style=\"display: block;\">\n          <div class=\"toolbox\">\n            <button mat-icon-button (click)=\"onAddEvent()\">\n              <mat-icon>add_circle_outline</mat-icon>\n            </button>\n            <!-- <button mat-icon-button (click)=\"slideView = !slideView;onRangeViewToggle()\" *ngIf=\"isRangeToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"slideView\">toll</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"!slideView\">input</mat-icon>\n            </button>\n            <button mat-icon-button (click)=\"withAlarm = !withAlarm;onAlarmToggle();\" *ngIf=\"isAlarmToShow()\">\n              <mat-icon class=\"header-icon\" *ngIf=\"!withAlarm\">notifications</mat-icon>\n              <mat-icon class=\"header-icon\" *ngIf=\"withAlarm\">notifications_off</mat-icon>\n            </button> -->\n          </div>\n        </div>\n        <div mat-dialog-content style=\"overflow: hidden; width:100%\">\n          <flex-event [property]=\"property\" [views]=\"views\" #flexevent *ngIf=\"eventsSupported\" style=\"padding-bottom: 5px\"></flex-event>\n        </div>\n      </div>\n    </mat-tab>\n  </mat-tab-group>\n  <!-- <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px; margin-top: 5px\"> -->\n  <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\n    <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\n    <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\n  </div>\n</div>"
 
 /***/ }),
 
@@ -6253,6 +7618,7 @@ var GaugeDialogType;
     GaugeDialogType[GaugeDialogType["ValueWithRef"] = 4] = "ValueWithRef";
     GaugeDialogType[GaugeDialogType["Step"] = 5] = "Step";
     GaugeDialogType[GaugeDialogType["MinMax"] = 6] = "MinMax";
+    GaugeDialogType[GaugeDialogType["Chart"] = 7] = "Chart";
 })(GaugeDialogType || (GaugeDialogType = {}));
 
 
@@ -6265,20 +7631,23 @@ var GaugeDialogType;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GaugesManager; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__ = __webpack_require__("../../../../../src/app/gauges/switch/switch.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__ = __webpack_require__("../../../../../src/app/gauges/controls/value/value.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/compressor/compressor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/valve/valve.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/motor/motor.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/exchanger/exchanger.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-input/html-input.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-button/html-button.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-select/html-select.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-progress/gauge-progress.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-semaphore/gauge-semaphore.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_chart__ = __webpack_require__("../../../../../src/app/_models/chart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__ = __webpack_require__("../../../../../src/app/gauges/switch/switch.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__ = __webpack_require__("../../../../../src/app/gauges/controls/value/value.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/compressor/compressor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/valve/valve.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/motor/motor.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__ = __webpack_require__("../../../../../src/app/gauges/proc-eng/exchanger/exchanger.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__ = __webpack_require__("../../../../../src/app/gauges/gauge-property/gauge-property.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-input/html-input.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-button/html-button.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-select/html-select.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__ = __webpack_require__("../../../../../src/app/gauges/controls/html-chart/html-chart.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-progress/gauge-progress.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__ = __webpack_require__("../../../../../src/app/gauges/controls/gauge-semaphore/gauge-semaphore.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6304,23 +7673,42 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var GaugesManager = (function () {
-    function GaugesManager(hmiService, dialog) {
+    function GaugesManager(hmiService, translateService, dialog) {
         var _this = this;
         this.hmiService = hmiService;
+        this.translateService = translateService;
         this.dialog = dialog;
         this.onchange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         this.onevent = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
         // signalGaugeMap = new ViewSignalGaugeMap();      // map of all gauges (GaugeSettings) pro signals
         this.eventGauge = {};
         this.mapGaugeView = {};
-        this.gaugeWithProperty = [__WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].TypeTag,
-            __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag,
-            __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag];
-        this.gaugeWithEvents = [__WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag];
+        this.memorySigGauges = {};
+        this.mapChart = {};
+        this.gaugeWithProperty = [__WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].TypeTag,
+            __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag,
+            __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag];
+        this.gaugeWithEvents = [__WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag, __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag];
         this.hmiService.onVariableChanged.subscribe(function (sig) {
             try {
                 _this.onchange.emit(sig);
+            }
+            catch (err) {
+            }
+        });
+        this.hmiService.onDaqResult.subscribe(function (message) {
+            try {
+                if (_this.mapChart[message.gid]) {
+                    var gauge = _this.mapChart[message.gid];
+                    for (var i = 0; i < message.values.length; i++) {
+                        message.values[i][0] = new Date(message.values[i][0]);
+                    }
+                    gauge.setValues(message.values);
+                }
             }
             catch (err) {
             }
@@ -6335,49 +7723,53 @@ var GaugesManager = (function () {
     GaugesManager.prototype.createSettings = function (id, type) {
         var gs = null;
         switch (type) {
-            case __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].LabelTag;
                 break;
-            case __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag:
-                gs = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["g" /* GaugeSettings */](id, type);
-                gs.label = __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].LabelTag;
+            case __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].LabelTag;
+                break;
+            case __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag:
+                gs = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["h" /* GaugeSettings */](id, type);
+                gs.label = __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].LabelTag;
                 break;
         }
         return gs;
@@ -6392,11 +7784,14 @@ var GaugesManager = (function () {
         return this.gaugeWithProperty.indexOf(type) > -1;
     };
     GaugesManager.prototype.isToInitInEditor = function (ga) {
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-            __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].initElement(ga);
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+            __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].initElement(ga);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-            __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].initElement(ga);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+            __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].initElement(ga);
+        }
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag) {
+            __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].detectChange(ga);
         }
         return false;
     };
@@ -6413,16 +7808,28 @@ var GaugesManager = (function () {
     };
     /**
      * bind dom view, gauge with signal (for animation) and event
+     * @param gaugekey
+     * @param gauge
      * @param domViewId
      * @param ga
      * @param bindclick
      * @param bindhtmlevent
      */
-    GaugesManager.prototype.bindGauge = function (domViewId, ga, bindclick, bindhtmlevent) {
-        var sigs = this.getBindSignals(ga);
-        if (sigs) {
-            for (var i = 0; i < sigs.length; i++) {
-                this.hmiService.addSignalGaugeToMap(domViewId, sigs[i], ga);
+    GaugesManager.prototype.bindGauge = function (gauge, domViewId, ga, bindclick, bindhtmlevent) {
+        var sigsid = this.getBindSignals(ga);
+        if (sigsid) {
+            for (var i = 0; i < sigsid.length; i++) {
+                this.hmiService.addSignalGaugeToMap(domViewId, sigsid[i], ga);
+                // check for special gauge to save in memory binded to sigid (chart-html)
+                if (gauge) {
+                    if (!this.memorySigGauges[sigsid[i]]) {
+                        this.memorySigGauges[sigsid[i]] = {};
+                        this.memorySigGauges[sigsid[i]][ga.id] = gauge;
+                    }
+                    else if (!this.memorySigGauges[sigsid[i]][ga.id]) {
+                        this.memorySigGauges[sigsid[i]][ga.id] = gauge;
+                    }
+                }
             }
         }
         var clicks = this.getBindClick(ga);
@@ -6451,7 +7858,15 @@ var GaugesManager = (function () {
      * @param domViewId
      */
     GaugesManager.prototype.unbindGauge = function (domViewId) {
-        this.hmiService.removeSignalGaugeFromMap(domViewId);
+        var _this = this;
+        // first remove special gauge like chart from memorySigGauges
+        var sigGaugeSettingsIdremoved = this.hmiService.removeSignalGaugeFromMap(domViewId);
+        Object.keys(sigGaugeSettingsIdremoved).forEach(function (sid) {
+            if (_this.memorySigGauges[sid] && _this.memorySigGauges[sid][sigGaugeSettingsIdremoved[sid]]) {
+                delete _this.memorySigGauges[sid][sigGaugeSettingsIdremoved[sid]];
+            }
+        });
+        // remove mapped gauge for events of this view
         Object.values(this.mapGaugeView).forEach(function (val) {
             if (val[domViewId]) {
                 delete val[domViewId];
@@ -6459,8 +7874,8 @@ var GaugesManager = (function () {
         });
     };
     GaugesManager.prototype.checkElementToInit = function (ga) {
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].initElement(ga);
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].initElement(ga);
         }
         // } else if (ga.type === GaugeProgressComponent.TypeTag) {
         //   return GaugeProgressComponent.initElement(ga);
@@ -6480,107 +7895,130 @@ var GaugesManager = (function () {
     };
     /**
      * get all signals mapped in all dom views
+     * @param fulltext a copy with item name and source
      */
-    GaugesManager.prototype.getMappedGaugesSignals = function () {
-        return this.hmiService.getMappedVariables();
+    GaugesManager.prototype.getMappedGaugesSignals = function (fulltext) {
+        return this.hmiService.getMappedVariables(fulltext);
     };
     GaugesManager.prototype.getBindSignals = function (ga) {
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].getSignals(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getSignal(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getSignal(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getSignal(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getSignal(ga.property);
-        }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getSignal(ga.property);
+        if (ga.property) {
+            if (ga.type === __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].getSignals(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getSignal(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getSignal(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getSignal(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getSignal(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
+                return __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getSignal(ga.property);
+            }
+            else if (ga.type === __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag) {
+                var sigs = this.hmiService.getChartSignal(ga.property.id);
+                return sigs;
+            }
         }
         return null;
     };
     GaugesManager.prototype.getBindClick = function (ga) {
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_4__models_hmi__["d" /* GaugeEventType */].click);
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeEventType */].click);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_4__models_hmi__["d" /* GaugeEventType */].click);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeEventType */].click);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_4__models_hmi__["d" /* GaugeEventType */].click);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeEventType */].click);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_4__models_hmi__["d" /* GaugeEventType */].click);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeEventType */].click);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_4__models_hmi__["d" /* GaugeEventType */].click);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getEvents(ga.property, __WEBPACK_IMPORTED_MODULE_6__models_hmi__["e" /* GaugeEventType */].click);
         }
         return null;
     };
     GaugesManager.prototype.getHtmlEvents = function (ga) {
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getHtmlEvents(ga);
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getHtmlEvents(ga);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getHtmlEvents(ga);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getHtmlEvents(ga);
         }
         return null;
     };
+    /**
+     * manage to which gauge to forward the process function
+     * @param ga
+     * @param svgele
+     * @param sig
+     */
     GaugesManager.prototype.processValue = function (ga, svgele, sig) {
+        var _this = this;
         // console.log('gaid: ' + ga.id);
-        if (ga.type === __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].processValue(ga, svgele, sig);
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].processValue(ga, svgele, sig);
         }
-        else if (ga.type === __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].processValue(ga, svgele, sig);
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].processValue(ga, svgele, sig);
+        }
+        else if (ga.type === __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag) {
+            if (ga.property.type !== 'history' && this.memorySigGauges[sig.id]) {
+                Object.keys(this.memorySigGauges[sig.id]).forEach(function (k) {
+                    if (k === ga.id) {
+                        __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].processValue(ga, svgele, sig, _this.memorySigGauges[sig.id][k]);
+                    }
+                });
+            }
         }
     };
     GaugesManager.prototype.putEvent = function (event) {
@@ -6594,71 +8032,74 @@ var GaugesManager = (function () {
         this.hmiService.putSignalValue(sigid, val);
     };
     GaugesManager.getEditDialogTypeToUse = function (type) {
-        if (type === __WEBPACK_IMPORTED_MODULE_3__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
+        if (type === __WEBPACK_IMPORTED_MODULE_5__switch_switch_component__["a" /* SwitchComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_7__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
+        else if (type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_valve_valve_component__["a" /* ValveComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
+        else if (type === __WEBPACK_IMPORTED_MODULE_10__proc_eng_motor_motor_component__["a" /* MotorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_5__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].ValueAndUnit;
+        else if (type === __WEBPACK_IMPORTED_MODULE_7__controls_value_value_component__["a" /* ValueComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].ValueAndUnit;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_6__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
+        else if (type === __WEBPACK_IMPORTED_MODULE_8__proc_eng_compressor_compressor_component__["a" /* CompressorComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_9__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
+        else if (type === __WEBPACK_IMPORTED_MODULE_11__proc_eng_exchanger_exchanger_component__["a" /* ExchangerComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].RangeWithAlarm;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
+        else if (type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
+        else if (type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].OnlyValue;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Step;
+        else if (type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Step;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].MinMax;
+        else if (type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].MinMax;
         }
-        else if (type === __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_10__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Range;
+        else if (type === __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Range;
+        }
+        else if (type === __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_12__gauge_property_gauge_property_component__["a" /* GaugeDialogType */].Chart;
         }
     };
     GaugesManager.getDefaultValue = function (type) {
-        if (type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-            return __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getDefaultValue();
+        if (type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+            return __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getDefaultValue();
         }
         return null;
     };
     GaugesManager.checkGaugeColor = function (ele, eles, colors) {
         if (ele && eles && (eles.length <= 1 || !eles[1])) {
-            if (ele.type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-                colors.fill = __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getFillColor(eles[0]);
-                colors.stroke = __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getStrokeColor(eles[0]);
+            if (ele.type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+                colors.fill = __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getFillColor(eles[0]);
+                colors.stroke = __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].getStrokeColor(eles[0]);
                 return true;
             }
-            else if (ele.type === __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
-                colors.fill = __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getFillColor(eles[0]);
-                colors.stroke = __WEBPACK_IMPORTED_MODULE_15__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getStrokeColor(eles[0]);
+            else if (ele.type === __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].TypeTag) {
+                colors.fill = __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getFillColor(eles[0]);
+                colors.stroke = __WEBPACK_IMPORTED_MODULE_18__controls_gauge_semaphore_gauge_semaphore_component__["a" /* GaugeSemaphoreComponent */].getStrokeColor(eles[0]);
                 return true;
             }
-            else if (ele.type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-                colors.fill = __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getFillColor(eles[0]);
-                colors.stroke = __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getStrokeColor(eles[0]);
+            else if (ele.type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+                colors.fill = __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getFillColor(eles[0]);
+                colors.stroke = __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].getStrokeColor(eles[0]);
                 return true;
             }
-            else if (ele.type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-                colors.fill = __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getFillColor(eles[0]);
-                colors.stroke = __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getStrokeColor(eles[0]);
+            else if (ele.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+                colors.fill = __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getFillColor(eles[0]);
+                colors.stroke = __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].getStrokeColor(eles[0]);
                 return true;
             }
-            else if (ele.type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-                colors.fill = __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getFillColor(eles[0]);
-                colors.stroke = __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getStrokeColor(eles[0]);
+            else if (ele.type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+                colors.fill = __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getFillColor(eles[0]);
+                colors.stroke = __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].getStrokeColor(eles[0]);
                 return true;
             }
         }
@@ -6667,19 +8108,72 @@ var GaugesManager = (function () {
     GaugesManager.initElementColor = function (bkcolor, color, elems) {
         for (var i = 0; i < elems.length; i++) {
             var type = elems[i].getAttribute('type');
-            if (type === __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
-                __WEBPACK_IMPORTED_MODULE_14__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].initElementColor(bkcolor, color, elems[i]);
+            if (type === __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].TypeTag) {
+                __WEBPACK_IMPORTED_MODULE_17__controls_gauge_progress_gauge_progress_component__["a" /* GaugeProgressComponent */].initElementColor(bkcolor, color, elems[i]);
             }
-            else if (type === __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
-                __WEBPACK_IMPORTED_MODULE_12__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].initElementColor(bkcolor, color, elems[i]);
+            else if (type === __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].TypeTag) {
+                __WEBPACK_IMPORTED_MODULE_14__controls_html_button_html_button_component__["a" /* HtmlButtonComponent */].initElementColor(bkcolor, color, elems[i]);
             }
-            else if (type === __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
-                __WEBPACK_IMPORTED_MODULE_11__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].initElementColor(bkcolor, color, elems[i]);
+            else if (type === __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].TypeTag) {
+                __WEBPACK_IMPORTED_MODULE_13__controls_html_input_html_input_component__["a" /* HtmlInputComponent */].initElementColor(bkcolor, color, elems[i]);
             }
-            else if (type === __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
-                __WEBPACK_IMPORTED_MODULE_13__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].initElementColor(bkcolor, color, elems[i]);
+            else if (type === __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].TypeTag) {
+                __WEBPACK_IMPORTED_MODULE_15__controls_html_select_html_select_component__["a" /* HtmlSelectComponent */].initElementColor(bkcolor, color, elems[i]);
             }
         }
+    };
+    /**
+     * initialize the gauge element found in svg,
+     * in svg is only a 'div' that have to be dynamic build and render from angular
+     * @param ga gauge settings
+     * @param res reference to factory
+     * @param ref reference to factory
+     * @param isview in view or editor, in editor have to disable mouse activity
+     */
+    GaugesManager.prototype.initElementAdded = function (ga, res, ref, isview) {
+        var _this = this;
+        // add variable
+        var sigsid = this.getBindSignals(ga);
+        if (sigsid) {
+            for (var i = 0; i < sigsid.length; i++) {
+                this.hmiService.addSignal(sigsid[i], ga);
+            }
+        }
+        if (ga.type === __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].TypeTag) {
+            // prepare attribute
+            var chartRange_1 = __WEBPACK_IMPORTED_MODULE_4__models_chart__["b" /* ChartRangeType */];
+            Object.keys(chartRange_1).forEach(function (key) {
+                _this.translateService.get(chartRange_1[key]).subscribe(function (txt) { chartRange_1[key] = txt; });
+            });
+            var gauge_1 = __WEBPACK_IMPORTED_MODULE_16__controls_html_chart_html_chart_component__["a" /* HtmlChartComponent */].initElement(ga, res, ref, isview, chartRange_1);
+            gauge_1.init();
+            if (ga.property) {
+                var chart = this.hmiService.getChart(ga.property.id);
+                chart.lines.forEach(function (line) {
+                    var sigid = __WEBPACK_IMPORTED_MODULE_3__services_hmi_service__["a" /* HmiService */].toVariableId(line.device, line.id);
+                    var sigProperty = _this.hmiService.getMappedVariable(sigid, true);
+                    if (sigProperty) {
+                        gauge_1.addLine(sigid, sigProperty.name, line.color);
+                    }
+                });
+                gauge_1.setOptions({ title: chart.name });
+            }
+            this.mapChart[ga.id] = gauge_1;
+            gauge_1.resize();
+            gauge_1.onTimeRange.subscribe(function (data) {
+                console.log(ga.id + ' ' + data);
+                _this.hmiService.queryDaqValues(data);
+            });
+            gauge_1.setRange(Object.keys(chartRange_1)[0]);
+            // gauge.onTimeRange = this.onTimeRange;
+            return gauge_1;
+        }
+    };
+    /**
+     * clear memory object used from view, some reset
+     */
+    GaugesManager.prototype.clearMemory = function () {
+        this.memorySigGauges = {};
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
@@ -6691,7 +8185,8 @@ var GaugesManager = (function () {
     ], GaugesManager.prototype, "onevent", void 0);
     GaugesManager = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["C" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_hmi_service__["a" /* HmiService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__services_hmi_service__["a" /* HmiService */],
+            __WEBPACK_IMPORTED_MODULE_2__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_material__["i" /* MatDialog */]])
     ], GaugesManager);
     return GaugesManager;
@@ -7258,7 +8753,7 @@ var SwitchComponent = (function (_super) {
     SwitchComponent.LabelTag = 'Switch';
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__models_hmi__["g" /* GaugeSettings */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__models_hmi__["h" /* GaugeSettings */])
     ], SwitchComponent.prototype, "settings", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
@@ -7309,7 +8804,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/gui-helpers/confirm-dialog/confirm-dialog.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\r\n    <div style=\"margin-top: 20px;margin-bottom: 20px;\">\r\n        {{msgtoconfirm}}\r\n    </div>\r\n\r\n    <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\r\n        <button mat-raised-button (click)=\"onNoClick()\">CANCEL</button>\r\n        <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>OK</button>\r\n    </div>\r\n</div>"
+module.exports = "<div style=\"width: 100%;position: relative;padding-bottom: 40px\">\r\n    <div style=\"margin-top: 20px;margin-bottom: 20px;\">\r\n        {{msgtoconfirm}}\r\n    </div>\r\n\r\n    <div mat-dialog-actions style=\"display: inline-block; position: absolute; bottom: 10px; right: 10px\">\r\n        <button mat-raised-button (click)=\"onNoClick()\">{{'dlg.cancel' | translate}}</button>\r\n        <button mat-raised-button color=\"primary\" (click)=\"onOkClick()\" [mat-dialog-close]=\"data\" cdkFocusInitial>{{'dlg.ok' | translate}}</button>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -7725,6 +9220,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7737,6 +9233,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+
 
 
 
@@ -7820,13 +9317,14 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
  * }
  */
 var MatSelectSearchComponent = (function () {
-    function MatSelectSearchComponent(matSelect, changeDetectorRef) {
+    function MatSelectSearchComponent(matSelect, translateService, changeDetectorRef) {
         this.matSelect = matSelect;
+        this.translateService = translateService;
         this.changeDetectorRef = changeDetectorRef;
         /** Label of the search placeholder */
-        this.placeholderLabel = 'Suche';
+        this.placeholderLabel = '';
         /** Label to be shown when no entries are found. Set to null if no message should be shown. */
-        this.noEntriesFoundLabel = 'Keine Optionen gefunden';
+        this.noEntriesFoundLabel = '';
         this.onChange = function (_) { };
         this.onTouched = function (_) { };
         /** Whether the backdrop class has been set */
@@ -7907,7 +9405,10 @@ var MatSelectSearchComponent = (function () {
         this._onDestroy.complete();
     };
     MatSelectSearchComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
         this.setOverlayClass();
+        this.translateService.get('general.search').subscribe(function (txt) { _this.placeholderLabel = txt; });
+        this.translateService.get('general.search-notfound').subscribe(function (txt) { _this.noEntriesFoundLabel = txt; });
     };
     /**
      * Handles the key down event with MatSelect.
@@ -8060,6 +9561,7 @@ var MatSelectSearchComponent = (function () {
         }),
         __param(0, Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["B" /* Inject */])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSelect */])),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_material__["A" /* MatSelect */],
+            __WEBPACK_IMPORTED_MODULE_5__ngx_translate_core__["c" /* TranslateService */],
             __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]])
     ], MatSelectSearchComponent);
     return MatSelectSearchComponent;
@@ -8111,6 +9613,303 @@ var MatSelectSearchModule = (function () {
         })
     ], MatSelectSearchModule);
     return MatSelectSearchModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".mychart-panel {\n    display: block;\n    margin: 0 auto;\n    /*height: 600px;\n    width: 1000px;*/\n}\n.mychart-graph {\n    display: block;\n    margin: 0 auto;\n    /*height: 600px;*/\n    height: 100% !important;\n    width: 100% !important;\n}\n\n.mychar-toolbar {\n  display: block;\n  height: 34px !important;\n  width: 100% !important;\n  background-color:transparent;\n}\n\n.mychar-toolbar-button {\n  /* width: 30px; */\n  height: 26px;\n  cursor: pointer;\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n  border: 0;\n  background-color: #fff;\n  border-radius: 2px;\n\n}\n.mychar-toolbar-space {\n  /* min-width: calc(100% - 250px); */\n  /* width: calc(100% - 250px); */\n  width:100%;\n  height: 26px;\n  background-color: rgba(0, 0, 0, 0.1);\n  line-height: 26px;\n}\n\n.mychart-toolbar-select {\n  width:160px;\n  padding: 4px 3px 5px 4px;\n  background-color: #fff;\n  position: relative;\n  top: -5px;\n}\n\n.toolbar-cmp {\n  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 1px -2px rgba(0, 0, 0, 0.2);\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);\n}\n.toolbar-cmp:active {\n  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.01), 0 1px 3px 0 rgba(0, 0, 0, 0.01), 0 1px 1px -2px rgba(0, 0, 0, 0.02);\n  /* background-color: rgba(0, 0, 0, 0.01); */\n}\n\n.ng-dygraphs {\n  position: relative; }\n  .ng-dygraphs .name-nodes-holder {\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-direction: row;\n        flex-direction: row;\n    padding-right: 30px;\n    padding-left: 30px; }\n  .ng-dygraphs .ng-dygraphs-chart-container {\n    background-color: #fff;\n    padding: 0;\n    margin: 0px;}\n    .ng-dygraphs .ng-dygraphs-chart-container .nodata {\n      display: -ms-flexbox;\n      display: flex;\n      -ms-flex-pack: center;\n    justify-content: center;\n     -ms-flex-align: center;\n        align-items: center;\n      color: #5c5c5c;\n      font-weight: bold;\n      font-size: 24px; \n      display: flex;\n      -ms-flex-line-pack: center;\n          align-content: center; }\n    .ng-dygraphs .ng-dygraphs-chart-container .hide {\n       display: none; }\n  .ng-dygraphs .loader-holder {\n    position: absolute;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-align: center;\n        align-items: center;\n    width: 100%;\n    height: 100%;\n    background-color: #fff;\n    z-index: 55;\n    opacity: 0.9; }\n  .ng-dygraphs .loader {\n    color: #0dc5c1;\n    font-size: 20px;\n    margin: 100px auto;\n    width: 1em;\n    height: 1em;\n    border-radius: 50%;\n    position: relative;\n    text-indent: -9999em;\n    animation: load4 1.3s infinite linear;\n    transform: translateZ(0); }\n\n@keyframes load4 {\n  0%,\n  100% {\n    box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0; }\n  12.5% {\n    box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em; }\n  25% {\n    box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em; }\n  37.5% {\n    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em; }\n  50% {\n    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em; }\n  62.5% {\n    box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em; }\n  75% {\n    box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0; }\n  87.5% {\n    box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em; } }", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<!-- <div class=\"ng-dygraphs\">\n    <div *ngIf=\"loadingInProgress\" class=\"loader-holder\">\n        <div class=\"loader\"></div>\n    </div>\n    <div class=\"ng-dygraphs-chart-container\">\n        <div [ngClass]=\"{'hide': !data?.length}\" #chart [style.width.px]=\"chartWidth\" [style.height.px]=\"chartHeight\">\n        </div>\n        <div *ngIf=\"!data?.length\" class=\"nodata\" [style.width.px]=\"chartWidth\" [style.height.px]=\"chartHeight\">\n            {{noDataLabel}}\n        </div>\n    </div>\n</div> -->\n<div class=\"mychart-panel\">\n    <div class=\"mychar-toolbar\" *ngIf=\"withToolbar\">\n        <div class=\"mychar-toolbar-space\" *ngIf=\"isEditor\">Toolbar</div>\n        <div style=\"display: block; float:right; padding-right: 5px;\" class=\"my-form-field\" *ngIf=\"!isEditor\">\n            <mat-select [(value)]=\"rangeTypeValue\" class=\"mychart-toolbar-select toolbar-cmp\" (selectionChange)=\"onRangeChanged($event.source.value)\">\n                <mat-option *ngFor=\"let ev of rangeType | enumToArray\" [value]=\"ev.key\">\n                  {{ ev.value }}\n                </mat-option>\n            </mat-select>            \n            <!-- <button class=\"mychar-toolbar-button toolbar-cmp\" style=\"margin-top:1px\" (click)=\"onClick('T')\">T</button> -->\n            <button class=\"mychar-toolbar-button toolbar-cmp\" style=\"margin-top:1px\" (click)=\"onClick('B')\">\n                <i class=\"material-icons\" style=\"font-size: 22px; cursor: pointer;\">chevron_left</i>\n            </button>\n            <button class=\"mychar-toolbar-button toolbar-cmp\" style=\"margin-top:1px\" (click)=\"onClick('F')\">\n                <i class=\"material-icons\" style=\"font-size: 22px; cursor: pointer;\">chevron_right</i>\n            </button>\n          </div>\n    </div>\n    <div class=\"mychart-graph\" #chart>\n    </div>\n    <div *ngIf=\"!data?.length\" class=\"nodata\">\n        {{noDataLabel}}\n    </div>\n    <div *ngIf=\"loadingInProgress\" class=\"loader-holder\">\n        <div class=\"loader\"></div>\n    </div>\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NgxDygraphsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_chart__ = __webpack_require__("../../../../../src/app/_models/chart.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util__ = __webpack_require__("../../../../util/util.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_util___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_util__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var NgxDygraphsComponent = (function () {
+    function NgxDygraphsComponent() {
+        this.onTimeRange = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.withToolbar = false;
+        this.isEditor = false;
+        this.range = { from: Date.now(), to: Date.now() };
+        //   public chartWidth: number;
+        //   public chartHeight: number;
+        this.mapData = {};
+        this.defOptions = {
+            // width: "auto",
+            // height: "auto",
+            labels: ['Date', 'Temperature'],
+            colors: [],
+            // xlabel: "X label text",
+            // ylabel: "Y label text",
+            title: 'My Title',
+            animatedZooms: true,
+            connectSeparatedPoints: true,
+            legend: 'always',
+            labelsSeparateLines: true,
+            // pointSize: 2,
+            titleHeight: 20,
+            axisLabelFontSize: 12
+        };
+        this.sampleData = [[new Date('1967/09/14'), 0], [new Date('1968/09/14'), 1]];
+        //   private watchRangeSelector(graph) {
+        //     const observer = new MutationObserver(function(mutations) {
+        //       // called on style changes of range selector handles
+        //       if (mutations.length === 2) {
+        //         // both range selector handles have style changed -> assume move
+        //         // Zoom to the same zoom to trigger zoomCallback
+        //         const zoomCallback = graph.getFunctionOption("zoomCallback");
+        //         const [minX, maxX] = graph.xAxisRange();
+        //         zoomCallback.call(graph, minX, maxX, graph.yAxisRanges());
+        //       }
+        //     });
+        //     Array.from(
+        //       document.getElementsByClassName("dygraph-rangesel-zoomhandle")
+        //     ).forEach(
+        //       // work on range selector handles
+        //       function(element, idx, arr) {
+        //         // watch for style changes
+        //         observer.observe(element, {
+        //           attributes: true,
+        //           attributeFilter: ["style"]
+        //         });
+        //       }
+        //     );
+        //   }
+    }
+    NgxDygraphsComponent.prototype.ngOnInit = function () {
+        this.options = Object.assign(this.defOptions, this.options);
+        this.noDataLabel = this.noDataLabel || 'NO DATA AVAILABLE';
+        // this.chartWidth = (this.options && this.options.width) || 380;
+        // this.chartHeight = (this.options && this.options.height) || 240;
+    };
+    NgxDygraphsComponent.prototype.ngAfterViewInit = function () {
+        var _this = this;
+        this.data = this.sampleData;
+        this.dygraph = new Dygraph(this.chart.nativeElement, this.data, this.options);
+        this.loadingInProgress = false;
+        this.dygraph.ready(function (graph) {
+            var sc = {};
+            _this.ngOnChanges(sc);
+            // test to change css legend
+            var cols = document.getElementsByClassName('dygraph-legend');
+            for (var i = 0; i < cols.length; i++) {
+                cols[i].style.fontSize = '12px';
+            }
+        });
+        if (this.withToolbar && !this.isEditor) {
+            this.onRangeChanged(this.rangeTypeValue);
+        }
+    };
+    /**
+     * ngOnChanges
+     * @method ngOnChanges
+     * @return {void}
+     */
+    NgxDygraphsComponent.prototype.ngOnChanges = function (changes) {
+        if (!changes) {
+            return;
+        }
+        if (!this.data || !this.data.length) {
+            this.loadingInProgress = false;
+            return;
+        }
+        this.loadingInProgress = true;
+        var options = Object.assign({}, this.options);
+        // if (!options.width) {
+        //   options.width = this.chartWidth;
+        // }
+        // if (!options.height) {
+        //   options.height = this.chartHeight;
+        // }
+        if (!options.legend) {
+            options.legend = 'always';
+        }
+        // this.resize();
+        // setTimeout(() => {
+        //   this.dygraph = new Dygraph(this.chart.nativeElement, this.data, options);
+        //   this.loadingInProgress = false;
+        //   this.dygraph.ready(graph => {
+        //     this.watchRangeSelector(graph);
+        //   });
+        // }, 500);
+    };
+    NgxDygraphsComponent.prototype.onClick = function (ev) {
+        var msg = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["a" /* DaqQuery */]();
+        msg.gid = this.id;
+        msg.event = ev;
+        if (ev === 'B') {
+            this.range.to = new Date(this.range.from).getTime();
+            this.range.from = new Date(this.range.from).setTime(new Date(this.range.from).getTime() - (__WEBPACK_IMPORTED_MODULE_1__models_chart__["a" /* ChartRangeConverter */].ChartRangeToHours(this.rangeTypeValue) * 60 * 60 * 1000));
+        }
+        else if (ev === 'F') {
+            this.range.from = new Date(this.range.to).getTime();
+            this.range.to = new Date(this.range.from).setTime(new Date(this.range.from).getTime() + (__WEBPACK_IMPORTED_MODULE_1__models_chart__["a" /* ChartRangeConverter */].ChartRangeToHours(this.rangeTypeValue) * 60 * 60 * 1000));
+        }
+        msg.sids = Object.keys(this.mapData);
+        msg.from = this.range.from;
+        msg.to = this.range.to;
+        this.onTimeRange.emit(msg);
+    };
+    NgxDygraphsComponent.prototype.onRangeChanged = function (ev) {
+        if (ev) {
+            this.range.from = Date.now();
+            this.range.to = Date.now();
+            this.range.from = new Date(this.range.from).setTime(new Date(this.range.from).getTime() - (__WEBPACK_IMPORTED_MODULE_1__models_chart__["a" /* ChartRangeConverter */].ChartRangeToHours(ev) * 60 * 60 * 1000));
+            var msg = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["a" /* DaqQuery */]();
+            msg.event = ev;
+            msg.gid = this.id;
+            msg.sids = Object.keys(this.mapData);
+            msg.from = this.range.from;
+            msg.to = this.range.to;
+            this.onTimeRange.emit(msg);
+        }
+    };
+    NgxDygraphsComponent.prototype.resize = function (height, width) {
+        var chart = this.chart.nativeElement;
+        var w = chart.parentNode.clientWidth;
+        var h = chart.parentNode.clientHeight;
+        if (height) {
+            h = height;
+        }
+        if (width) {
+            w = width;
+        }
+        chart.style.height = h + 'px';
+        chart.style.width = w + 'px';
+        this.dygraph.updateOptions({ height: h, width: w });
+        this.dygraph.resize(width, height);
+    };
+    NgxDygraphsComponent.prototype.changeVisibility = function (index, value) {
+        this.dygraph.setVisibility(index, value);
+    };
+    NgxDygraphsComponent.prototype.init = function () {
+        this.options.labels = ['DateTime'];
+        this.mapData = {};
+        this.data = [];
+    };
+    NgxDygraphsComponent.prototype.setRange = function (startRange) {
+        if (this.withToolbar && !this.isEditor) {
+            this.rangeTypeValue = startRange;
+            this.onRangeChanged(this.rangeTypeValue);
+        }
+    };
+    NgxDygraphsComponent.prototype.setOptions = function (options) {
+        try {
+            this.options = Object.assign(this.options, options);
+            this.dygraph.updateOptions(this.options);
+        }
+        catch (e) {
+        }
+    };
+    NgxDygraphsComponent.prototype.addLine = function (id, name, color) {
+        if (!this.mapData[id]) {
+            this.mapData[id] = this.options.labels.length;
+            this.options.labels.push(name);
+            this.options.colors.push(color);
+            this.dygraph.updateOptions({ labels: this.options.labels, colors: this.options.colors });
+        }
+    };
+    NgxDygraphsComponent.prototype.addValue = function (id, value) {
+        // console.log(value);
+        if (this.mapData[id] && !Object(__WEBPACK_IMPORTED_MODULE_3_util__["isUndefined"])(value)) {
+            var row = Array(this.options.labels.length).fill(null);
+            row[0] = new Date();
+            row[this.mapData[id]] = parseFloat(value);
+            this.data.push(row);
+            // check to remove old value
+            if (this.data.length > 1000) {
+                this.data.shift();
+            }
+            this.dygraph.updateOptions({ file: this.data });
+        }
+    };
+    NgxDygraphsComponent.prototype.setValues = function (values) {
+        this.data = values;
+        this.dygraph.updateOptions({ file: this.data, dateWindow: [this.range.from, this.range.to] });
+    };
+    NgxDygraphsComponent.prototype.clear = function () {
+        this.data = [];
+        this.dygraph.updateOptions({ file: this.data });
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", String)
+    ], NgxDygraphsComponent.prototype, "id", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Object)
+    ], NgxDygraphsComponent.prototype, "options", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", Object)
+    ], NgxDygraphsComponent.prototype, "data", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", String)
+    ], NgxDygraphsComponent.prototype, "noDataLabel", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
+    ], NgxDygraphsComponent.prototype, "onTimeRange", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('chart'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* ElementRef */])
+    ], NgxDygraphsComponent.prototype, "chart", void 0);
+    NgxDygraphsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'ngx-dygraphs',
+            template: __webpack_require__("../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/gui-helpers/ngx-dygraphs/ngx-dygraphs.component.css")]
+        })
+        /**
+         * Wrapper arround Dygraphs
+         *
+         * @class NgDygraphsComponent
+         */
+    ], NgxDygraphsComponent);
+    return NgxDygraphsComponent;
 }());
 
 
@@ -8316,7 +10115,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "\r\n.header-panel {\r\n    z-index: 9999 !important;\r\n    position: fixed;\r\n    top: 0px;\r\n    left: 0px;\r\n    background-color: rgba(33,33,33,0.92);\r\n    color: rgba(255,255,255,1);\r\n    height: 40px;\r\n    width: 200px;\r\n}\r\n\r\n.header-help {\r\n    z-index: 9999 !important;\r\n    position: fixed;\r\n    top: 0px;\r\n    right: 30px;\r\n    /* background-color: rgba(33,33,33,0.92); */\r\n    color: rgba(255,255,255,1);\r\n    height: 36px;\r\n    width: 36px;\r\n\r\n}\r\n\r\n.main-btn {\r\n    height: 34px;\r\n    width: 34px;\r\n    min-width: unset !important;\r\n    padding:unset !important;\r\n    line-height: 34px;\r\n    margin-left: 5px;\r\n    margin-right: 5px;\r\n  }\r\n  \r\n  .main-btn mat-icon {\r\n    font-size: 24px;\r\n    height: unset;\r\n    width: unset;\r\n  }\r\n\r\n.header-menu {\r\n    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); \r\n}\r\n\r\n.header-icon {\r\n    padding: 0 14px;\r\n}\r\n\r\n.menu-separator {\r\n    border-top-color: rgba(0,0,0,1);\r\n}\r\n\r\n::ng-deep .leftbar-item-menu {\r\n    background-color: rgba(47,47,47,1);\r\n}\r\n::ng-deep .mat-menu-item {\r\n    font-size: 11px;\r\n    color: rgba(255,255,255,1);\r\n    height: 30px !important;\r\n    line-height: unset !important;\r\n  }", ""]);
+exports.push([module.i, "\r\n.header-panel {\r\n    z-index: 9999 !important;\r\n    position: fixed;\r\n    top: 0px;\r\n    left: 0px;\r\n    background-color: rgba(33,33,33,0.92);\r\n    color: rgba(255,255,255,1);\r\n    height: 40px;\r\n    width: 200px;\r\n}\r\n\r\n.header-help {\r\n    z-index: 9999 !important;\r\n    position: fixed;\r\n    top: 0px;\r\n    right: 25px;\r\n    /* background-color: rgba(33,33,33,0.92); */\r\n    color: rgba(255,255,255,1);\r\n    height: 36px;\r\n    width: 36px;\r\n\r\n}\r\n\r\n.main-btn {\r\n    height: 34px;\r\n    width: 34px;\r\n    min-width: unset !important;\r\n    padding:unset !important;\r\n    line-height: 34px;\r\n    margin-left: 5px;\r\n    margin-right: 5px;\r\n  }\r\n  \r\n  .main-btn mat-icon {\r\n    font-size: 24px;\r\n    height: unset;\r\n    width: unset;\r\n  }\r\n\r\n.header-menu {\r\n    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2); \r\n}\r\n\r\n.header-icon {\r\n    padding: 0 14px;\r\n}\r\n\r\n.menu-separator {\r\n    border-top-color: rgba(0,0,0,1);\r\n}\r\n\r\n::ng-deep .leftbar-item-menu {\r\n    background-color: rgba(47,47,47,1);\r\n}\r\n::ng-deep .mat-menu-item {\r\n    font-size: 11px;\r\n    color: rgba(255,255,255,1);\r\n    height: 30px !important;\r\n    line-height: unset !important;\r\n  }", ""]);
 
 // exports
 
@@ -8329,7 +10128,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/header/header.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"header-panel\" *ngIf=\"ineditor\">\r\n  <button mat-button title=\"Save Project\" [matMenuTriggerFor]=\"prjview\" class=\"main-btn\">\r\n    <mat-icon aria-label=\"Save Project\">save</mat-icon>\r\n  </button>\r\n  <mat-menu #prjview=\"matMenu\" class=\"leftbar-item-menu header-menu\" yPosition=\"below\" [overlapTrigger]=\"false\">\r\n    <button mat-menu-item (click)=\"onNewProject()\">New Project</button>\r\n    <mat-divider class=\"menu-separator\"></mat-divider>\r\n    <button mat-menu-item (click)=\"onSaveProject()\">Save Project</button>\r\n    <button mat-menu-item (click)=\"onSaveProjectAs()\">Save Project As...</button>\r\n    <mat-divider class=\"menu-separator\"></mat-divider>\r\n    <button mat-menu-item (click)=\"onOpenProject();$event.stopPropagation()\">Open Project</button>\r\n    <!-- <button mat-menu-item (click)=\"onImportVariable();$event.stopPropagation()\">Import Variable</button> -->\r\n    <input type=\"file\" #fileImportInput style=\"display: none\" id=\"projectFileUpload\" (change)=\"onFileChangeListener($event)\"\r\n      accept=\".fuxap\" />\r\n  </mat-menu>\r\n  <button mat-button title=\"View pages editor\" class=\"main-btn\" (click)=\"goTo('/editor')\">\r\n      <mat-icon aria-label=\"View pages editor\">widgets</mat-icon>\r\n  </button>\r\n  <button mat-button title=\"View Devices settings\" class=\"main-btn\" (click)=\"goTo('/device')\">\r\n      <mat-icon aria-label=\"View Devices settings\">device_hub</mat-icon>\r\n  </button>  \r\n</div>\r\n<div class=\"header-help\" *ngIf=\"ineditor && !winele\">\r\n    <button mat-button title=\"Help\" [matMenuTriggerFor]=\"helpmenu\" class=\"device-btn\" style=\"padding-top: 3px !important;\">\r\n        <mat-icon aria-label=\"Show FUXA Help\">help_outline</mat-icon>\r\n    </button>\r\n    <mat-menu #helpmenu=\"matMenu\" class=\"leftbar-item-menu header-menu\" yPosition=\"below\" [overlapTrigger]=\"false\">\r\n        <button mat-menu-item (click)=\"onShowHelp('help')\">Tutorial</button>\r\n        <mat-divider class=\"menu-separator\"></mat-divider>\r\n        <button mat-menu-item (click)=\"onShowHelp('info')\">Info</button>\r\n    </mat-menu>\r\n</div>\r\n<app-tutorial #tutorial></app-tutorial>\r\n"
+module.exports = "<div class=\"header-panel\" *ngIf=\"ineditor\">\r\n  <button mat-button title=\"{{'header.save-project' | translate}}\" [matMenuTriggerFor]=\"prjview\" #prjviewtrigger=\"matMenuTrigger\" class=\"main-btn\"\r\n   (click)=\"prjedittrigger.closeMenu()\">\r\n    <mat-icon aria-label=\"Save Project\">save</mat-icon>\r\n  </button>\r\n  <mat-menu #prjview=\"matMenu\" class=\"leftbar-item-menu header-menu\" yPosition=\"below\" [overlapTrigger]=\"false\">\r\n    <button mat-menu-item (click)=\"onNewProject()\">{{'header.new-project' | translate}}</button>\r\n    <mat-divider class=\"menu-separator\"></mat-divider>\r\n    <button mat-menu-item (click)=\"onSaveProject()\">{{'header.save-project' | translate}}</button>\r\n    <button mat-menu-item (click)=\"onSaveProjectAs()\">{{'header.saveas-project' | translate}}</button>\r\n    <mat-divider class=\"menu-separator\"></mat-divider>\r\n    <button mat-menu-item (click)=\"onOpenProject();$event.stopPropagation()\">{{'header.open-project' | translate}}</button>\r\n    <!-- <button mat-menu-item (click)=\"onImportVariable();$event.stopPropagation()\">Import Variable</button> -->\r\n    <input type=\"file\" #fileImportInput style=\"display: none\" id=\"projectFileUpload\" (change)=\"onFileChangeListener($event)\"\r\n      accept=\".fuxap\" />\r\n  </mat-menu>\r\n  <button mat-button title=\"{{'header.edit-project' | translate}}\" [matMenuTriggerFor]=\"prjedit\" #prjedittrigger=\"matMenuTrigger\" class=\"main-btn\"\r\n   (click)=\"prjviewtrigger.closeMenu()\">\r\n      <mat-icon aria-label=\"Edit Views\">widgets</mat-icon>\r\n  </button>\r\n  <mat-menu #prjedit=\"matMenu\" class=\"leftbar-item-menu header-menu\" yPosition=\"below\" [overlapTrigger]=\"false\">\r\n    <button mat-menu-item (click)=\"goTo('/editor')\">{{'header.edit-views' | translate}}</button>\r\n    <button mat-menu-item (click)=\"goTo('/device')\">{{'header.edit-devices' | translate}}</button>\r\n    <button mat-menu-item (click)=\"onChartConfig()\">{{'header.edit-charts' | translate}}</button>\r\n  </mat-menu>\r\n\r\n</div>\r\n<div class=\"header-help\" *ngIf=\"ineditor && !winele\">\r\n    <button mat-button title=\"{{'header.help' | translate}}\" [matMenuTriggerFor]=\"helpmenu\" class=\"main-btn\" style=\"padding-top: 3px !important;\">\r\n        <mat-icon aria-label=\"HELP\">help_outline</mat-icon>\r\n    </button>\r\n    <mat-menu #helpmenu=\"matMenu\" class=\"leftbar-item-menu header-menu\" yPosition=\"below\" [overlapTrigger]=\"false\">\r\n        <button mat-menu-item (click)=\"onShowHelp('help')\">{{'header.help-tutorial' | translate}}</button>\r\n        <mat-divider class=\"menu-separator\"></mat-divider>\r\n        <button mat-menu-item (click)=\"onShowHelp('info')\">{{'header.help-info' | translate}}</button>\r\n    </mat-menu>\r\n</div>\r\n<app-tutorial #tutorial></app-tutorial>\r\n"
 
 /***/ }),
 
@@ -8343,9 +10142,11 @@ module.exports = "<div class=\"header-panel\" *ngIf=\"ineditor\">\r\n  <button m
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__help_tutorial_tutorial_component__ = __webpack_require__("../../../../../src/app/help/tutorial/tutorial.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__editor_chart_config_chart_config_component__ = __webpack_require__("../../../../../src/app/editor/chart-config/chart-config.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__help_tutorial_tutorial_component__ = __webpack_require__("../../../../../src/app/help/tutorial/tutorial.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__ = __webpack_require__("../../../../@ngx-translate/core/@ngx-translate/core.es5.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8365,11 +10166,14 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 
 
 
+
+
 var HeaderComponent = (function () {
-    function HeaderComponent(router, dialog, projectService) {
+    function HeaderComponent(router, dialog, translateService, projectService) {
         var _this = this;
         this.router = router;
         this.dialog = dialog;
+        this.translateService = translateService;
         this.projectService = projectService;
         this.ineditor = false;
         this.winele = false;
@@ -8395,11 +10199,29 @@ var HeaderComponent = (function () {
     HeaderComponent.prototype.onClick = function (targetElement) {
         this.sidenav.close();
     };
+    HeaderComponent.prototype.onChartConfig = function () {
+        this.chartConfig();
+    };
     HeaderComponent.prototype.onShowHelp = function (page) {
-        var data = new __WEBPACK_IMPORTED_MODULE_5__models_hmi__["h" /* HelpData */]();
+        var data = new __WEBPACK_IMPORTED_MODULE_6__models_hmi__["i" /* HelpData */]();
         data.page = page;
         data.tag = 'device';
         this.showHelp(data);
+    };
+    HeaderComponent.prototype.chartConfig = function () {
+        var _this = this;
+        var chartscopy = JSON.parse(JSON.stringify(this.projectService.getCharts()));
+        var devices = this.projectService.getDevices();
+        var dialogRef = this.dialog.open(__WEBPACK_IMPORTED_MODULE_4__editor_chart_config_chart_config_component__["a" /* ChartConfigComponent */], {
+            minWidth: '900px',
+            data: { charts: chartscopy, devices: devices }
+        });
+        dialogRef.afterClosed().subscribe(function (result) {
+            if (result) {
+                _this.projectService.setCharts(result.charts);
+                _this.projectService.saveProject();
+            }
+        });
     };
     HeaderComponent.prototype.showHelp = function (data) {
         console.log('show help: ' + data.page);
@@ -8424,7 +10246,9 @@ var HeaderComponent = (function () {
     //#region Project Events
     HeaderComponent.prototype.onNewProject = function () {
         try {
-            if (window.confirm('You want to save the Project change?')) {
+            var msg_1 = '';
+            this.translateService.get('msg.project-save-ask').subscribe(function (txt) { msg_1 = txt; });
+            if (window.confirm(msg_1)) {
                 this.onSaveProject();
                 this.projectService.setNewProject();
             }
@@ -8462,7 +10286,9 @@ var HeaderComponent = (function () {
             _this.projectService.setProject(prj, true);
         };
         reader.onerror = function () {
-            alert('Unable to read ' + input.files[0]);
+            var msg = 'Unable to read ' + input.files[0];
+            // this.translateService.get('msg.project-load-error', {value: input.files[0]}).subscribe((txt: string) => { msg = txt });
+            alert(msg);
         };
         reader.readAsText(input.files[0]);
     };
@@ -8482,7 +10308,7 @@ var HeaderComponent = (function () {
     ], HeaderComponent.prototype, "sidenav", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('tutorial'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_6__help_tutorial_tutorial_component__["a" /* TutorialComponent */])
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_7__help_tutorial_tutorial_component__["a" /* TutorialComponent */])
     ], HeaderComponent.prototype, "tutorial", void 0);
     HeaderComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
@@ -8491,9 +10317,10 @@ var HeaderComponent = (function () {
             template: __webpack_require__("../../../../../src/app/header/header.component.html"),
             styles: [__webpack_require__("../../../../../src/app/header/header.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["i" /* MatDialog */],
-            __WEBPACK_IMPORTED_MODULE_4__services_project_service__["a" /* ProjectService */]])
+            __WEBPACK_IMPORTED_MODULE_8__ngx_translate_core__["c" /* TranslateService */],
+            __WEBPACK_IMPORTED_MODULE_5__services_project_service__["a" /* ProjectService */]])
     ], HeaderComponent);
     return HeaderComponent;
 }());
@@ -8524,7 +10351,7 @@ var DialogInfo = (function () {
 /***/ "../../../../../src/app/header/info.dialog.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div mat-dialog-title style=\"display:inline-block\">\r\n      <div class=\"logo\" style=\"display: inline-block\"></div>\r\n      <div style=\"font-size: 18px;display: inline-block;vertical-align: super;padding-left: 5px;\">FUXA</div>\r\n  </div>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content style=\"margin-bottom: 10px;\">\r\n    <div style=\"display: block\">\r\n      Version: {{data.version}}\r\n    </div>\r\n    <div style=\"display: block; font-size: 13px;margin-top: 10px;\">\r\n        developed by <span><b>frango</b>team</span>\r\n      </div>\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button [mat-dialog-close]=\"data\">OK</button>\r\n  </div>\r\n</div>"
+module.exports = "<div>\r\n  <div mat-dialog-title style=\"display:inline-block\">\r\n      <div class=\"logo\" style=\"display: inline-block\"></div>\r\n      <div style=\"font-size: 18px;display: inline-block;vertical-align: super;padding-left: 5px;\">{{'dlg.info-title' | translate}}</div>\r\n  </div>\r\n  <mat-icon (click)=\"onNoClick()\" style=\"float:right;margin-right:-10px;margin-top:-10px;cursor:pointer;color:gray;\">clear</mat-icon>\r\n  <div mat-dialog-content style=\"margin-bottom: 10px;\">\r\n    <div style=\"display: block\">\r\n        {{'header.info-version' | translate}} {{data.version}}\r\n    </div>\r\n    <div style=\"display: block; font-size: 13px;margin-top: 10px;\">\r\n        developed by <span><b>frango</b>team</span>\r\n      </div>\r\n  </div>\r\n  <div mat-dialog-actions style=\"float:right; margin-bottom:0px;padding-bottom:0px\">\r\n    <button mat-raised-button [mat-dialog-close]=\"data\">{{'dlg.ok' | translate}}</button>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -8549,7 +10376,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/help/tutorial/tutorial.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div draggable [draggableHeight]=\"30\" class=\"tutorial-panel\" *ngIf=\"show\">\n    <style>\n        pre {\n            white-space: pre-line;\n        }\n    </style>\n    <div class=\"tutorial-header\">\n        <div class=\"tutorial-title\">\n            FUXA-editor Tutorial\n        </div>\n        <div class=\"tutorial-close\" (click)=\"close()\">\n            &times;\n        </div>\n    </div>\n    <div class=\"tutorial-body\">\n        <mat-accordion multi=\"true\">\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Basic Layout\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Basic content\n\n            </mat-expansion-panel>\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Page editor\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Page editor content\n            </mat-expansion-panel>\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Device\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Device content\n            </mat-expansion-panel>\n        </mat-accordion>\n    </div>\n</div>"
+module.exports = "<div draggable [draggableHeight]=\"30\" class=\"tutorial-panel\" *ngIf=\"show\">\n    <style>\n        pre {\n            white-space: pre-line;\n        }\n    </style>\n    <div class=\"tutorial-header\">\n        <div class=\"tutorial-title\">\n            {{'tutorial.title' | translate}}\n        </div>\n        <div class=\"tutorial-close\" (click)=\"close()\">\n            &times;\n        </div>\n    </div>\n    <div class=\"tutorial-body\">\n        <mat-accordion multi=\"true\">\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Basic Layout\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Basic content\n\n            </mat-expansion-panel>\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Page editor\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Page editor content\n            </mat-expansion-panel>\n            <mat-expansion-panel class=\"my-expansion-panel\">\n                <mat-expansion-panel-header class=\"header\" [collapsedHeight]=\"'40px'\" [expandedHeight]=\"'40px'\">\n                    <mat-panel-title>\n                        Device\n                    </mat-panel-title>\n                    <mat-panel-description>\n\n                    </mat-panel-description>\n                </mat-expansion-panel-header>\n                Device content\n            </mat-expansion-panel>\n        </mat-accordion>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -8601,7 +10428,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, ".home-body {\r\n    display: table;\r\n    margin: 0 auto;\r\n}\r\n\r\n.home-info {\r\n    \r\n}", ""]);
+exports.push([module.i, ".home-body {\r\n    display: table;\r\n    margin: 0 auto;\r\n}\r\n\r\n.home-info {\r\n    \r\n}\r\n\r\n.header {\r\n    display: block;\r\n    z-index: 9999 !important;\r\n    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2) !important; \r\n    /* min-height: 46px !important; */\r\n    /* max-height: 46px !important; */\r\n    height: 46px !important;\r\n    padding-left: 4px;\r\n    padding-right: 10px;\r\n}\r\n\r\n\r\n.sidenav {\r\n    padding: 0px 0px 0px 0px;\r\n    background-color: rgba(44, 44, 44, 1) !important;\r\n    color: rgba(255, 255, 255, 1) !important;\r\n    /* max-width: 100px; */\r\n    display: inline-block !important;\r\n    top:0px;\r\n}\r\n\r\n.sidenav-container {\r\n    width: 100%;\r\n    height: 100% !important;\r\n    background-color:#FFFFFF;\r\n}\r\n\r\n::ng-deep .mat-drawer-backdrop.mat-drawer-shown {\r\n    background-color: transparent;\r\n}  ", ""]);
 
 // exports
 
@@ -8614,7 +10441,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<app-fuxa-view *ngIf=\"homeView\" class=\"home-body\" id=\"home\" [view]=\"homeView\" [hmi]=\"hmi\" [gaugesManager]=\"gaugesManager\"></app-fuxa-view>\n<div *ngIf=\"!homeView\" class=\"home-body home-info\">\n  <p>\n    Wait...go to editor, map the devices, design your visualization and bind the devices variables.\n  </p>\n</div>"
+module.exports = "<mat-sidenav-container class=\"sidenav-container\">\n  <mat-sidenav #matsidenav *ngIf=\"showSidenav\" class=\"sidenav\" [mode]=\"showSidenav\">\n    <app-sidenav #sidenav [sidenav]=\"matsidenav\" (goToPage)=\"onGoToPage($event)\" (goToLink)=\"onGoToLink($event)\"></app-sidenav>\n  </mat-sidenav>\n\n  <mat-sidenav-content>\n    <div class=\"header\">\n      <button mat-icon-button *ngIf=\"showSidenav && this.showSidenav !== 'side'\" (click)=\"(matsidenav.opened) ? matsidenav.close() : matsidenav.open()\" class=\"sidenav-toogle\">\n        <mat-icon aria-label=\"Menu\">menu</mat-icon>\n      </button>\n    </div>\n    <app-fuxa-view *ngIf=\"showHomeView\" #fuxaview class=\"home-body\" id=\"home\" [view]=\"homeView\" [hmi]=\"hmi\" [gaugesManager]=\"gaugesManager\"></app-fuxa-view>\n    <!-- <app-fuxa-view [hidden]=\"!showHomeView\" #fuxaview class=\"home-body\" id=\"home\" [view]=\"homeView\" [hmi]=\"hmi\" [gaugesManager]=\"gaugesManager\"></app-fuxa-view> -->\n    <!-- <app-iframe [hidden]=\"isLoading && !showHomeLink\" #iframeview [link]=\"homeLink\" class=\"home-body\"></app-iframe> -->\n    <div [style.visibility]=\"(showHomeView) ? 'hidden' : 'visible' \" class=\"home-body home-info\">\n      <p>\n        {{'msg.home-welcome' | translate}}.\n      </p>\n    </div>\n  </mat-sidenav-content>\n\n</mat-sidenav-container>"
 
 /***/ }),
 
@@ -8624,10 +10451,14 @@ module.exports = "<app-fuxa-view *ngIf=\"homeView\" class=\"home-body\" id=\"hom
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomeComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sidenav_sidenav_component__ = __webpack_require__("../../../../../src/app/sidenav/sidenav.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__fuxa_view_fuxa_view_component__ = __webpack_require__("../../../../../src/app/fuxa-view/fuxa-view.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_hmi_service__ = __webpack_require__("../../../../../src/app/_services/hmi.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_project_service__ = __webpack_require__("../../../../../src/app/_services/project.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__ = __webpack_require__("../../../../../src/app/gauges/gauges.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__models_hmi__ = __webpack_require__("../../../../../src/app/_models/hmi.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8642,28 +10473,51 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 var HomeComponent = (function () {
-    function HomeComponent(projectService, hmiService, gaugesManager) {
+    function HomeComponent(projectService, router, hmiService, gaugesManager) {
         this.projectService = projectService;
+        this.router = router;
         this.hmiService = hmiService;
         this.gaugesManager = gaugesManager;
-        this.homeView = null;
-        this.hmi = new __WEBPACK_IMPORTED_MODULE_4__models_hmi__["i" /* Hmi */]();
+        // @ViewChild('iframeview') iframeview: IframeComponent;
+        this.homeView = new __WEBPACK_IMPORTED_MODULE_8__models_hmi__["q" /* View */]();
+        this.hmi = new __WEBPACK_IMPORTED_MODULE_8__models_hmi__["j" /* Hmi */]();
+        this.showSidenav = 'over';
+        this.showHomeView = false;
+        this.homeLink = '';
+        this.showHomeLink = false;
     }
     HomeComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.subscriptionLoad = this.projectService.onLoadHmi.subscribe(function (res) {
-            try {
-                _this.loadHmi();
-            }
-            catch (e) {
-                console.log(e);
-            }
-        });
+        try {
+            this.subscriptionLoad = this.projectService.onLoadHmi.subscribe(function (res) {
+                try {
+                    _this.loadHmi();
+                }
+                catch (e) {
+                    console.log(e);
+                }
+            });
+        }
+        catch (e) {
+            console.log(e);
+        }
     };
     HomeComponent.prototype.ngAfterViewInit = function () {
         var _this = this;
         try {
+            // this.subscriptionLoad = this.projectService.onLoadHmi.subscribe(res => {
+            //   try {
+            //     this.loadHmi();
+            //   }
+            //   catch (e) {
+            //     console.log(e);
+            //   }
+            // });
             this.loadHmi();
             if (!this.homeView) {
                 setTimeout(function () {
@@ -8684,6 +10538,31 @@ var HomeComponent = (function () {
         catch (e) {
         }
     };
+    HomeComponent.prototype.onGoToPage = function (event) {
+        var view = this.hmi.views.find(function (x) { return x.id === event; });
+        if (view) {
+            this.homeView = view;
+            this.fuxaview.loadHmi(this.homeView);
+        }
+        this.showHomeLink = false;
+        this.showHomeView = (this.homeView) ? true : false;
+    };
+    HomeComponent.prototype.onGoToLink = function (event) {
+        if (event.indexOf('://') >= 0) {
+            // this.showHomeView = false;
+            // this.showHomeLink = true;
+            // this.iframeview.loadLink(event);
+        }
+        else {
+            this.router.navigate([event]).then(function (data) {
+                console.log('Route ' + event + ' exists, redirection is done');
+            }).catch(function (e) {
+                console.log('Route ' + event + '  not found, redirection stopped with no error raised');
+                // try iframe link
+            });
+        }
+        console.log(event);
+    };
     HomeComponent.prototype.askValue = function () {
         this.hmiService.askDeviceValues();
     };
@@ -8691,22 +10570,164 @@ var HomeComponent = (function () {
         this.hmiService.askDeviceStatus();
     };
     HomeComponent.prototype.loadHmi = function () {
-        this.hmi = this.projectService.getHmi();
+        var _this = this;
+        var hmi = this.projectService.getHmi();
+        if (hmi) {
+            this.hmi = hmi;
+        }
         if (this.hmi && this.hmi.views && this.hmi.views.length > 0) {
-            this.homeView = this.hmi.views[0];
+            if (this.hmi.layout.start) {
+                var startView = this.hmi.views.find(function (x) { return x.id === _this.hmi.layout.start; });
+                if (startView) {
+                    this.homeView = startView;
+                }
+            }
+            else {
+                this.homeView = this.hmi.views[0];
+            }
+            // check sidenav
+            var nvoid = __WEBPACK_IMPORTED_MODULE_8__models_hmi__["n" /* NaviModeType */][this.hmi.layout.navigation.mode];
+            if (this.hmi.layout && nvoid !== __WEBPACK_IMPORTED_MODULE_8__models_hmi__["n" /* NaviModeType */].void) {
+                if (nvoid === __WEBPACK_IMPORTED_MODULE_8__models_hmi__["n" /* NaviModeType */].over) {
+                    this.showSidenav = 'over';
+                }
+                else if (nvoid === __WEBPACK_IMPORTED_MODULE_8__models_hmi__["n" /* NaviModeType */].fix) {
+                    this.showSidenav = 'side';
+                    this.matsidenav.open();
+                }
+                else if (nvoid === __WEBPACK_IMPORTED_MODULE_8__models_hmi__["n" /* NaviModeType */].push) {
+                    this.showSidenav = 'push';
+                }
+                this.sidenav.setLayout(this.hmi.layout);
+            }
+            else {
+                this.showSidenav = null;
+            }
+        }
+        this.showHomeView = (this.homeView) ? true : false;
+        if (this.homeView && this.fuxaview) {
+            this.fuxaview.loadHmi(this.homeView);
         }
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('sidenav'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_3__sidenav_sidenav_component__["a" /* SidenavComponent */])
+    ], HomeComponent.prototype, "sidenav", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('matsidenav'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSidenav */])
+    ], HomeComponent.prototype, "matsidenav", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_12" /* ViewChild */])('fuxaview'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_4__fuxa_view_fuxa_view_component__["a" /* FuxaViewComponent */])
+    ], HomeComponent.prototype, "fuxaview", void 0);
     HomeComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-home',
             template: __webpack_require__("../../../../../src/app/home/home.component.html"),
             styles: [__webpack_require__("../../../../../src/app/home/home.component.css")]
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__services_project_service__["a" /* ProjectService */],
-            __WEBPACK_IMPORTED_MODULE_1__services_hmi_service__["a" /* HmiService */],
-            __WEBPACK_IMPORTED_MODULE_3__gauges_gauges_component__["a" /* GaugesManager */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__services_project_service__["a" /* ProjectService */],
+            __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_5__services_hmi_service__["a" /* HmiService */],
+            __WEBPACK_IMPORTED_MODULE_7__gauges_gauges_component__["a" /* GaugesManager */]])
     ], HomeComponent);
     return HomeComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/iframe/iframe.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/iframe/iframe.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<iframe width=\"100%\" height=\"100%\" frameBorder=\"0\" [src]=\"urlSafe\"></iframe>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/iframe/iframe.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IframeComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var IframeComponent = (function () {
+    function IframeComponent(activeroute, sanitizer) {
+        this.activeroute = activeroute;
+        this.sanitizer = sanitizer;
+    }
+    IframeComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        if (this.link) {
+            // input
+            this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.link);
+        }
+        else {
+            this.subscription = this.activeroute.params.subscribe(function (params) {
+                // routing
+                _this.link = params['url'];
+                _this.urlSafe = _this.sanitizer.bypassSecurityTrustResourceUrl(_this.link);
+            });
+        }
+    };
+    IframeComponent.prototype.ngOnDestroy = function () {
+        if (this.subscription) {
+            this.subscription.unsubscribe();
+        }
+    };
+    IframeComponent.prototype.loadLink = function (link) {
+        this.link = link;
+        if (this.link) {
+            this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.link);
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", String)
+    ], IframeComponent.prototype, "link", void 0);
+    IframeComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-iframe',
+            template: __webpack_require__("../../../../../src/app/iframe/iframe.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/iframe/iframe.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], IframeComponent);
+    return IframeComponent;
 }());
 
 
@@ -8772,7 +10793,7 @@ var LabComponent = (function () {
         this.gaugesManager = gaugesManager;
         this.testerService = testerService;
         this.currentView = null;
-        this.hmi = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["i" /* Hmi */]();
+        this.hmi = new __WEBPACK_IMPORTED_MODULE_2__models_hmi__["j" /* Hmi */]();
         this.labView = null;
     }
     LabComponent.prototype.ngOnInit = function () {
@@ -8800,7 +10821,7 @@ var LabComponent = (function () {
         }
     };
     LabComponent.prototype.onTest = function () {
-        this.tester.setSignals(this.gaugesManager.getMappedGaugesSignals());
+        this.tester.setSignals(this.gaugesManager.getMappedGaugesSignals(true));
         this.testerService.toggle(true);
     };
     LabComponent.prototype.loadHmi = function () {
@@ -8877,7 +10898,7 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatCheckboxModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatStepperModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatDatepickerModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDialogModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatExpansionModule */],
@@ -8893,15 +10914,15 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatRadioModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRippleModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["P" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["Q" /* MatTooltipModule */],
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_2__angular_cdk_table__["m" /* CdkTableModule */],
@@ -8911,7 +10932,7 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["e" /* MatCardModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["f" /* MatCheckboxModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["g" /* MatChipsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["I" /* MatStepperModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["K" /* MatStepperModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["h" /* MatDatepickerModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["k" /* MatDialogModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["m" /* MatExpansionModule */],
@@ -8927,19 +10948,118 @@ var MaterialModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["y" /* MatRadioModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["z" /* MatRippleModule */],
                 __WEBPACK_IMPORTED_MODULE_1__angular_material__["B" /* MatSelectModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["C" /* MatSidenavModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSliderModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["D" /* MatSlideToggleModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSnackBarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSortModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["L" /* MatTableModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["M" /* MatTabsModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatToolbarModule */],
-                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatTooltipModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["E" /* MatSidenavModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["G" /* MatSliderModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["F" /* MatSlideToggleModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["H" /* MatSnackBarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["J" /* MatSortModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["N" /* MatTableModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["O" /* MatTabsModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["P" /* MatToolbarModule */],
+                __WEBPACK_IMPORTED_MODULE_1__angular_material__["Q" /* MatTooltipModule */],
             ]
         })
     ], MaterialModule);
     return MaterialModule;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidenav/sidenav.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, " ", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidenav/sidenav.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"sidenav-menu\" *ngIf=\"showSidenav\" style=\"height: 100%\" [ngClass]=\"'sidenav-menu-' + layout.navigation.type\">\r\n    <mat-list >\r\n        <mat-list-item style=\"height: 35px; font-weight: bold; padding-left: 10px;padding-bottom: 10px;margin-bottom: 10px\">\r\n            {{'sidenav.title' | translate}}\r\n        </mat-list-item>\r\n        <mat-list-item *ngFor=\"let item of layout.navigation.items; let i = index\" [ngClass]=\"'menu-item-' + layout.navigation.type\">\r\n            <button type=\"button\" mat-button class=\"sidenav-btn\" (click)=\"onGoTo(item)\" [ngSwitch]=\"layout.navigation.type\">\r\n                <div *ngSwitchCase=\"'icon'\" class=\"manu-item-content-icon\">\r\n                    <mat-icon>{{item.icon}}</mat-icon>\r\n                </div>\r\n                <div *ngSwitchCase=\"'text'\" class=\"manu-item-content-text\">\r\n                    <span>{{item.text}}</span>\r\n                </div>\r\n                <div *ngSwitchCase=\"'block'\" class=\"manu-item-content-block\">\r\n                    <mat-icon style=\"display: block;\">{{item.icon}}</mat-icon>\r\n                    <span>{{item.text}}</span>\r\n                </div>\r\n                <div *ngSwitchCase=\"'inline'\" class=\"manu-item-content-inline\">\r\n                    <mat-icon style=\"display: inline-block\">{{item.icon}}</mat-icon>\r\n                    <span style=\"display: inline-block\">{{item.text}}</span>\r\n                </div>\r\n            </button>\r\n        </mat-list-item>\r\n    </mat-list>\r\n</div>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/sidenav/sidenav.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SidenavComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_material__ = __webpack_require__("../../../material/esm5/material.es5.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var SidenavComponent = (function () {
+    function SidenavComponent(router, changeDetector) {
+        this.router = router;
+        this.changeDetector = changeDetector;
+        this.goToPage = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.goToLink = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */]();
+        this.layout = null;
+        this.showSidenav = false;
+    }
+    SidenavComponent.prototype.ngAfterViewInit = function () {
+    };
+    SidenavComponent.prototype.ngAfterContentChecked = function () {
+        this.showSidenav = (this.layout) ? true : false;
+        this.changeDetector.detectChanges();
+    };
+    SidenavComponent.prototype.onGoTo = function (item) {
+        if (item.view) {
+            this.goToPage.emit(item.view);
+        }
+        else if (item.link) {
+            this.goToLink.emit(item.link);
+        }
+    };
+    SidenavComponent.prototype.setLayout = function (ly) {
+        this.layout = ly;
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["F" /* Input */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2__angular_material__["D" /* MatSidenav */])
+    ], SidenavComponent.prototype, "sidenav", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
+    ], SidenavComponent.prototype, "goToPage", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["R" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["x" /* EventEmitter */])
+    ], SidenavComponent.prototype, "goToLink", void 0);
+    SidenavComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-sidenav',
+            template: __webpack_require__("../../../../../src/app/sidenav/sidenav.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/sidenav/sidenav.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["k" /* ChangeDetectorRef */]])
+    ], SidenavComponent);
+    return SidenavComponent;
 }());
 
 
@@ -8967,7 +11087,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/tester/tester.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div draggable  [draggableHeight]=\"30\" class=\"tester-panel\" *ngIf=\"show\">\r\n  <style>\r\n    pre {\r\n      white-space: pre-line;\r\n    }\r\n  </style>\r\n  <div name=\"dlgTesterForm\">\r\n    <div class=\"tester-header\">\r\n      <div class=\"tester-title\">\r\n        Variable\r\n      </div>\r\n      <div class=\"tester-close\" (click)=\"close()\">\r\n        &times;\r\n      </div>\r\n    </div>\r\n    <div class=\"tester-body\">\r\n      <div class=\"_svg-property\" mat-dialog-actions>\r\n        <!-- <button mat-button color=\"warn\" type=\"button\" class=\"\" (click)=\"setDemo(true)\">\r\n          Start\r\n        </button>\r\n        <button mat-button color=\"warn\" type=\"button\" class=\"\" (click)=\"setDemo(false)\">\r\n          End\r\n        </button> -->\r\n      </div>\r\n      <br>\r\n      <div *ngFor=\"let item of items\">\r\n        <div class=\"svg-property\">\r\n          <span>{{item.source}} {{item.name}} :</span>\r\n          <input id=\"item.name\" [(ngModel)]=\"item.value\" type=\"text\" class=\"no-spinners\" />\r\n          <button type=\"button\" class=\"\" (click)=\"setSignal(item)\">\r\n            >>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tester-output\">\r\n      <span *ngFor=\"let item of output; index as i\" class=\"output-item\">\r\n        {{item}}\r\n      </span>\r\n    </div>\r\n  </div>\r\n</div>"
+module.exports = "<div draggable  [draggableHeight]=\"30\" class=\"tester-panel\" *ngIf=\"show\">\r\n  <style>\r\n    pre {\r\n      white-space: pre-line;\r\n    }\r\n  </style>\r\n  <div name=\"dlgTesterForm\">\r\n    <div class=\"tester-header\">\r\n      <div class=\"tester-title\">\r\n        {{'tester.title' | translate}}\r\n      </div>\r\n      <div class=\"tester-close\" (click)=\"close()\">\r\n        &times;\r\n      </div>\r\n    </div>\r\n    <div class=\"tester-body\">\r\n      <div class=\"_svg-property\" mat-dialog-actions>\r\n        <!-- <button mat-button color=\"warn\" type=\"button\" class=\"\" (click)=\"setDemo(true)\">\r\n          Start\r\n        </button>\r\n        <button mat-button color=\"warn\" type=\"button\" class=\"\" (click)=\"setDemo(false)\">\r\n          End\r\n        </button> -->\r\n      </div>\r\n      <br>\r\n      <div *ngFor=\"let item of items\">\r\n        <div class=\"svg-property\">\r\n          <span>{{item.source}} - {{item.name}} :</span>\r\n          <input id=\"item.name\" [(ngModel)]=\"item.value\" type=\"text\" class=\"no-spinners\" />\r\n          <button type=\"button\" class=\"\" (click)=\"setSignal(item)\">\r\n            >>\r\n          </button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"tester-output\">\r\n      <span *ngFor=\"let item of output; index as i\" class=\"output-item\">\r\n        {{item}}\r\n      </span>\r\n    </div>\r\n  </div>\r\n</div>"
 
 /***/ }),
 
@@ -9023,7 +11143,7 @@ var TesterComponent = (function () {
     };
     TesterComponent.prototype.setSignal = function (sig) {
         this.hmiService.setSignalValue(sig);
-        this.addOutput('set ' + sig.id + ' ' + sig.value);
+        this.addOutput('set ' + sig.source + ' - ' + sig.name + ' = ' + sig.value);
     };
     TesterComponent.prototype.setSignals = function (items) {
         this.items = items;
@@ -9151,9 +11271,9 @@ var environment = {
     version: __webpack_require__("../../../../../package.json").version,
     production: false,
     apiEndpoint: null,
-    apiPort: 1881,
-    serverEnabled: false,
-    type: 'demo'
+    apiPort: null,
+    serverEnabled: true,
+    type: null
 };
 
 
