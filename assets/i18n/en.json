@@ -1,6 +1,10 @@
 {
     "with param": "sample {{value}}",
 
+    "app.home": "Home",
+    "app.lab": "Lab",
+    "app.editor": "Editor",
+
     "header.new-project": "New Project",
     "header.save-project": "Save Project",
     "header.saveas-project": "Save Project As...",
@@ -90,9 +94,12 @@
     "general.username": "Username",
     "general.password": "Password",
     "general.clientId": "Client ID",
+    "general.authority": "Authority",
+    "general.grant-type": "Grant type",
 
 
     "tester.title": "Variable",
+    "tester.send": "Send",
 
     "item.navsmode-none": "None",
     "item.navsmode-push": "Push",
@@ -154,6 +161,10 @@
     "chart.legend-bottom": "bottom",
     "chart.legend-never": "never",
 
+    "chart.labels-serie": "Serie",
+    "chart.labels-time": "Time",
+    "chart.labels-title": "Title",
+
     "editor.views": "Views",
     "editor.view-delete": "Delete",
     "editor.view-rename": "Rename",
@@ -196,6 +207,7 @@
     "editor.interactivity-id-title": "Identify the element",
     "editor.interactivity-class": "class:",
     "editor.interactivity-class-title": "Element class",
+    "editor.interactivity-name": "name",
 
     "editor.cmenu-cut": "Cut",
     "editor.cmenu-copy": "Copy",
@@ -434,7 +446,7 @@
     "device.property-hide": "Hide Device property",
     "device.security-none": "None",
     "device.security-sign": "Sign",
-    "device.security-signandencrypt": "Sign & Encript",
+    "device.security-signandencrypt": "Sign & Encrypt",
 
     "device.browsetopics-property-title": "Broker Topics to subscribe and publish",
     "device.discovery-topics": "Browser Topics on broker",
@@ -451,9 +463,11 @@
     "device.tag-property-max": "Max",
     "device.tag-property-divisor": "Divisor",
     "device.tag-property-address-offset": "Address offset (1-65536)",
+    "device.tag-property-obj-name": "Object Name",
+    "device.tag-property-path": "Path",
     "device.tag-array-id": "Array ID:",
     "device.tag-array-value": "Value:",
-    
+
     "users.list-title": "Users settings",
     "users.list-name": "Username",
     "users.list-groups": "Groups",
